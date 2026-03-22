@@ -2,76 +2,84 @@
 export const galleryItems = [
   {
     id: 1,
-    title: "Residential Pest Control",
-    description: "Complete interior and exterior treatment for a family home in San Juan",
+    title: "Control de Plagas Residencial",
+    description: "Tratamiento completo interior y exterior para hogar familiar en San Juan",
     category: "residential",
     location: "San Juan, PR",
+    image: "/images/residential-service.jpg",
     featured: true
   },
   {
     id: 2,
-    title: "Restaurant Pest Management",
-    description: "Comprehensive commercial pest control program for a busy restaurant",
+    title: "Control de Plagas Comercial",
+    description: "Programa integral de control de plagas para restaurante",
     category: "commercial",
     location: "Bayamón, PR",
+    image: "/images/commercial-service.jpg",
     featured: true
   },
   {
     id: 3,
-    title: "Termite Treatment",
-    description: "Full termite treatment and prevention for a residential property",
+    title: "Tratamiento de Termitas",
+    description: "Tratamiento completo y prevención de termitas en propiedad residencial",
     category: "termite",
     location: "Carolina, PR",
+    image: "/images/termite-inspection.jpg",
     featured: true
   },
   {
     id: 4,
-    title: "Hotel Pest Control",
-    description: "Ongoing pest management program for a boutique hotel",
+    title: "Control de Cucarachas",
+    description: "Eliminación efectiva de cucarachas en cocina comercial",
     category: "commercial",
     location: "Condado, PR",
+    image: "/images/roach-treatment.jpg",
     featured: true
   },
   {
     id: 5,
-    title: "Mosquito Reduction Program",
-    description: "Yard treatment and breeding site elimination",
+    title: "Programa de Reducción de Mosquitos",
+    description: "Tratamiento de patio y eliminación de criaderos",
     category: "mosquito",
     location: "Guaynabo, PR",
-    featured: false
+    image: "/images/mosquito-treatment.jpg",
+    featured: true
   },
   {
     id: 6,
-    title: "Warehouse Rodent Control",
-    description: "Rodent exclusion and monitoring for distribution facility",
+    title: "Control de Roedores",
+    description: "Exclusión y monitoreo de roedores para almacén",
     category: "commercial",
     location: "Caguas, PR",
-    featured: false
+    image: "/images/rodent-control.jpg",
+    featured: true
   },
   {
     id: 7,
-    title: "Condo Complex Treatment",
-    description: "Multi-unit residential pest control program",
+    title: "Control de Hormigas",
+    description: "Tratamiento especializado para eliminar colonias de hormigas",
     category: "residential",
     location: "Isla Verde, PR",
+    image: "/images/ant-control.jpg",
     featured: true
   },
   {
     id: 8,
-    title: "Healthcare Facility",
-    description: "Sensitive environment pest management for medical office",
-    category: "commercial",
+    title: "Resultado Final",
+    description: "Cocina completamente libre de plagas después del tratamiento",
+    category: "residential",
     location: "Ponce, PR",
-    featured: false
+    image: "/images/clean-kitchen.jpg",
+    featured: true
   }
 ] as const
 
 export const galleryCategories = [
-  { id: "all", name: "All Projects" },
-  { id: "residential", name: "Residential" },
-  { id: "commercial", name: "Commercial" },
-  { id: "termite", name: "Termite" },
-  { id: "mosquito", name: "Mosquito" }
+  { id: "all", name: "Todos los Proyectos" },
+  { id: "residential", name: "Residencial" },
+  { id: "commercial", name: "Comercial" },
+  { id: "termite", name: "Termitas" },
+  { id: "mosquito", name: "Mosquitos" }
 ] as const
 
 export type GalleryItem = (typeof galleryItems)[number]

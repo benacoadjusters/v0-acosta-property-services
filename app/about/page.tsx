@@ -1,5 +1,6 @@
 import { Metadata } from "next"
 import Link from "next/link"
+import Image from "next/image"
 import { CheckCircle2, Shield, Heart, Award, Users, Target, Phone } from "lucide-react"
 import { Button } from "@/components/ui/button"
 import { Card, CardContent } from "@/components/ui/card"
@@ -7,30 +8,30 @@ import { CTASection } from "@/components/sections/cta-section"
 import { company } from "@/content/company"
 
 export const metadata: Metadata = {
-  title: "About Us",
-  description: `Learn about ${company.name} - professional pest control and property services in Puerto Rico since 2010. Our story, mission, and values.`,
+  title: "Sobre Nosotros",
+  description: `Conoce a ${company.name} - servicios profesionales de control de plagas en Puerto Rico desde 2022. Nuestra historia, misión y valores.`,
 }
 
 const teamMembers = [
   {
-    name: "Roberto Acosta",
-    role: "Founder & CEO",
-    description: "With over 20 years in the pest control industry, Roberto founded Acosta Property Services to bring reliable, professional service to Puerto Rico."
+    name: "Fundador",
+    role: "CEO y Director",
+    description: "Con visión y dedicación, fundó Acosta Property Services para brindar servicio profesional y confiable a Puerto Rico."
   },
   {
-    name: "María Torres",
-    role: "Operations Manager",
-    description: "María ensures our team delivers consistent, high-quality service across all our service areas."
+    name: "Equipo de Operaciones",
+    role: "Gestión de Servicios",
+    description: "Nuestro equipo asegura que cada servicio se entregue con la más alta calidad en todas las áreas de cobertura."
   },
   {
-    name: "Carlos Vega",
-    role: "Lead Technician",
-    description: "Carlos leads our technician team with 15 years of hands-on experience in pest control and fumigation."
+    name: "Técnicos Certificados",
+    role: "Especialistas en Campo",
+    description: "Profesionales capacitados con experiencia en control de plagas y fumigación para hogares y negocios."
   },
   {
-    name: "Ana Rodríguez",
-    role: "Customer Service Manager",
-    description: "Ana and her team ensure every customer receives prompt, friendly service from first call to follow-up."
+    name: "Servicio al Cliente",
+    role: "Atención Personalizada",
+    description: "Garantizamos que cada cliente reciba atención rápida y amigable desde la primera llamada hasta el seguimiento."
   }
 ]
 
@@ -42,16 +43,16 @@ export default function AboutPage() {
         <div className="container mx-auto px-4">
           <div className="grid lg:grid-cols-2 gap-12 items-center">
             <div>
-              <span className="text-primary font-semibold text-sm uppercase tracking-wider">About Us</span>
+              <span className="text-primary font-semibold text-sm uppercase tracking-wider">Sobre Nosotros</span>
               <h1 className="text-4xl md:text-5xl font-bold text-foreground mt-3 mb-6 text-balance">
-                Protecting Puerto Rico Since 2010
+                Protegiendo Puerto Rico Desde 2022
               </h1>
               <p className="text-xl text-muted-foreground mb-8 text-pretty">
                 {company.about.story}
               </p>
               <div className="flex flex-col sm:flex-row gap-4">
                 <Button asChild size="lg">
-                  <Link href="/contact">Get Free Estimate</Link>
+                  <Link href="/contact">Solicitar Cotización</Link>
                 </Button>
                 <Button asChild size="lg" variant="outline">
                   <a href={`tel:${company.phoneClean}`}>
@@ -61,14 +62,28 @@ export default function AboutPage() {
                 </Button>
               </div>
             </div>
-            <div className="grid grid-cols-2 gap-4">
-              {company.stats.map((stat, i) => (
-                <div key={i} className="bg-card p-6 rounded-xl border text-center">
-                  <div className="text-3xl md:text-4xl font-bold text-primary mb-2">{stat.value}</div>
-                  <div className="text-muted-foreground">{stat.label}</div>
-                </div>
-              ))}
+            <div className="relative aspect-video rounded-2xl overflow-hidden shadow-xl">
+              <Image
+                src="/images/team.jpg"
+                alt="Equipo de Acosta Property Services"
+                fill
+                className="object-cover"
+              />
             </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Stats */}
+      <section className="py-12 bg-card border-y">
+        <div className="container mx-auto px-4">
+          <div className="grid grid-cols-2 md:grid-cols-4 gap-6">
+            {company.stats.map((stat, i) => (
+              <div key={i} className="text-center">
+                <div className="text-3xl md:text-4xl font-bold text-primary mb-1">{stat.value}</div>
+                <div className="text-muted-foreground text-sm">{stat.label}</div>
+              </div>
+            ))}
           </div>
         </div>
       </section>
@@ -80,7 +95,7 @@ export default function AboutPage() {
             <div className="flex h-16 w-16 items-center justify-center rounded-full bg-primary/10 mx-auto mb-6">
               <Target className="h-8 w-8 text-primary" />
             </div>
-            <h2 className="text-3xl md:text-4xl font-bold text-foreground mb-6">Our Mission</h2>
+            <h2 className="text-3xl md:text-4xl font-bold text-foreground mb-6">Nuestra Misión</h2>
             <p className="text-xl text-muted-foreground text-pretty">
               {company.about.mission}
             </p>
@@ -92,9 +107,9 @@ export default function AboutPage() {
       <section className="py-16 md:py-20 bg-secondary">
         <div className="container mx-auto px-4">
           <div className="text-center max-w-2xl mx-auto mb-12">
-            <h2 className="text-3xl md:text-4xl font-bold text-foreground mb-4">Our Values</h2>
+            <h2 className="text-3xl md:text-4xl font-bold text-foreground mb-4">Nuestros Valores</h2>
             <p className="text-muted-foreground text-lg">
-              These core values guide everything we do and how we serve our customers.
+              Estos valores guían todo lo que hacemos y cómo servimos a nuestros clientes.
             </p>
           </div>
 
@@ -120,17 +135,17 @@ export default function AboutPage() {
       <section className="py-16 md:py-20 bg-background">
         <div className="container mx-auto px-4">
           <div className="text-center max-w-2xl mx-auto mb-12">
-            <h2 className="text-3xl md:text-4xl font-bold text-foreground mb-4">Meet Our Team</h2>
+            <h2 className="text-3xl md:text-4xl font-bold text-foreground mb-4">Nuestro Equipo</h2>
             <p className="text-muted-foreground text-lg">
-              Our experienced team is dedicated to providing the best pest control service in Puerto Rico.
+              Un equipo dedicado a brindar el mejor servicio de control de plagas en Puerto Rico.
             </p>
           </div>
 
           <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
             {teamMembers.map((member, i) => (
               <Card key={i} className="overflow-hidden">
-                <div className="aspect-square bg-secondary flex items-center justify-center">
-                  <Users className="h-20 w-20 text-muted-foreground/30" />
+                <div className="aspect-video bg-secondary flex items-center justify-center">
+                  <Users className="h-12 w-12 text-muted-foreground/30" />
                 </div>
                 <CardContent className="p-4">
                   <h3 className="font-bold text-lg">{member.name}</h3>
@@ -147,9 +162,9 @@ export default function AboutPage() {
       <section className="py-16 md:py-20 bg-primary text-primary-foreground">
         <div className="container mx-auto px-4">
           <div className="text-center max-w-2xl mx-auto mb-12">
-            <h2 className="text-3xl md:text-4xl font-bold mb-4">Why Trust Acosta Property Services?</h2>
+            <h2 className="text-3xl md:text-4xl font-bold mb-4">¿Por Qué Confiar en Nosotros?</h2>
             <p className="opacity-80 text-lg">
-              We've built our reputation on reliability, quality, and customer satisfaction.
+              Hemos construido nuestra reputación en confiabilidad, calidad y satisfacción del cliente.
             </p>
           </div>
 

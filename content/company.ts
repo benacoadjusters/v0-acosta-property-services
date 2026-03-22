@@ -3,12 +3,12 @@ export const company = {
   name: "Acosta Property Services",
   shortName: "Acosta",
   tagline: "Protecting What Matters Most",
-  description: "Professional pest control and property services for homes and businesses across Puerto Rico. Trusted by thousands of customers since 2010.",
+  description: "Professional pest control and property services for homes and businesses across Puerto Rico. Trusted by over 300 customers.",
   
   // Contact Information
-  phone: "(787) 555-0123",
-  phoneClean: "7875550123",
-  email: "info@acostapropertyservices.com",
+  phone: "(787) 403-9980",
+  phoneClean: "7874039980",
+  email: "mail@acostapropertyservices.com",
   
   // Address
   address: {
@@ -72,15 +72,15 @@ export const company = {
   
   // Stats / Achievements
   stats: [
-    { value: "15+", label: "Years Experience" },
-    { value: "10,000+", label: "Happy Customers" },
-    { value: "50+", label: "Municipalities Served" },
+    { value: "4", label: "Years Experience" },
+    { value: "300+", label: "Happy Customers" },
+    { value: "78", label: "Municipalities Served" },
     { value: "24/7", label: "Emergency Support" }
   ],
   
   // About Content
   about: {
-    story: "Founded in 2010, Acosta Property Services began with a simple mission: to provide Puerto Rico with reliable, professional pest control services that families and businesses can trust. What started as a small family operation has grown into one of the island's most respected property service providers.",
+    story: "Founded in 2022, Acosta Property Services began with a simple mission: to provide Puerto Rico with reliable, professional pest control services that families and businesses can trust. In just 4 years, we have grown from a small family operation to serving over 300 satisfied customers across the entire island.",
     mission: "Our mission is to protect homes and businesses from pests while prioritizing the safety of families, pets, and the environment. We believe in delivering exceptional service with integrity, transparency, and a commitment to excellence.",
     values: [
       {

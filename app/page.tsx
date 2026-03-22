@@ -63,7 +63,7 @@ export default function HomePage() {
               </h1>
               <p className="text-lg text-muted-foreground max-w-lg text-pretty">
                 Control de plagas profesional para hogares y negocios en todo Puerto Rico. 
-                Mas de 15 anos de experiencia protegiendo familias y empresas.
+                4 años de experiencia protegiendo familias y empresas.
               </p>
               <div className="flex flex-col sm:flex-row gap-4">
                 <Button asChild size="lg" className="bg-accent hover:bg-accent/90 text-accent-foreground font-semibold">
@@ -93,10 +93,10 @@ export default function HomePage() {
             <div className="relative">
               <div className="relative aspect-[4/3] rounded-2xl overflow-hidden bg-muted shadow-2xl">
                 <Image
-                  src="/images/logo.png"
-                  alt="Acosta Property Services"
+                  src="/images/hero-pest-control.jpg"
+                  alt="Técnico de Acosta Property Services realizando servicio de control de plagas"
                   fill
-                  className="object-contain p-8 bg-card"
+                  className="object-cover"
                   priority
                 />
               </div>
@@ -106,7 +106,7 @@ export default function HomePage() {
                     <Award className="h-6 w-6 text-primary" />
                   </div>
                   <div>
-                    <p className="text-2xl font-bold text-foreground">500+</p>
+                    <p className="text-2xl font-bold text-foreground">300+</p>
                     <p className="text-sm text-muted-foreground">Clientes Satisfechos</p>
                   </div>
                 </div>
@@ -121,11 +121,11 @@ export default function HomePage() {
         <div className="container mx-auto px-4 py-8">
           <div className="grid grid-cols-2 md:grid-cols-4 gap-6 md:gap-8">
             <div className="text-center">
-              <p className="text-3xl md:text-4xl font-bold text-primary">15+</p>
-              <p className="text-sm text-muted-foreground mt-1">Anos de Experiencia</p>
+              <p className="text-3xl md:text-4xl font-bold text-primary">4</p>
+              <p className="text-sm text-muted-foreground mt-1">Años de Experiencia</p>
             </div>
             <div className="text-center">
-              <p className="text-3xl md:text-4xl font-bold text-primary">500+</p>
+              <p className="text-3xl md:text-4xl font-bold text-primary">300+</p>
               <p className="text-sm text-muted-foreground mt-1">Clientes Atendidos</p>
             </div>
             <div className="text-center">
@@ -133,8 +133,8 @@ export default function HomePage() {
               <p className="text-sm text-muted-foreground mt-1">Municipios Cubiertos</p>
             </div>
             <div className="text-center">
-              <p className="text-3xl md:text-4xl font-bold text-primary">4.9</p>
-              <p className="text-sm text-muted-foreground mt-1">Rating Promedio</p>
+              <p className="text-3xl md:text-4xl font-bold text-primary">100%</p>
+              <p className="text-sm text-muted-foreground mt-1">Toda la Isla</p>
             </div>
           </div>
         </div>
@@ -263,19 +263,39 @@ export default function HomePage() {
             <div className="relative">
               <div className="grid grid-cols-2 gap-4">
                 <div className="space-y-4">
-                  <div className="aspect-square rounded-2xl bg-primary/10 flex items-center justify-center">
-                    <Shield className="h-16 w-16 text-primary" />
+                  <div className="relative aspect-square rounded-2xl overflow-hidden">
+                    <Image
+                      src="/images/residential-service.jpg"
+                      alt="Servicio residencial de control de plagas"
+                      fill
+                      className="object-cover"
+                    />
                   </div>
-                  <div className="aspect-[4/3] rounded-2xl bg-accent/20 flex items-center justify-center">
-                    <Award className="h-12 w-12 text-accent" />
+                  <div className="relative aspect-[4/3] rounded-2xl overflow-hidden">
+                    <Image
+                      src="/images/commercial-service.jpg"
+                      alt="Servicio comercial de control de plagas"
+                      fill
+                      className="object-cover"
+                    />
                   </div>
                 </div>
                 <div className="space-y-4 pt-8">
-                  <div className="aspect-[4/3] rounded-2xl bg-secondary flex items-center justify-center">
-                    <Users className="h-12 w-12 text-secondary-foreground" />
+                  <div className="relative aspect-[4/3] rounded-2xl overflow-hidden">
+                    <Image
+                      src="/images/team.jpg"
+                      alt="Equipo de Acosta Property Services"
+                      fill
+                      className="object-cover"
+                    />
                   </div>
-                  <div className="aspect-square rounded-2xl bg-primary/10 flex items-center justify-center">
-                    <Clock className="h-16 w-16 text-primary" />
+                  <div className="relative aspect-square rounded-2xl overflow-hidden">
+                    <Image
+                      src="/images/service-truck.jpg"
+                      alt="Camión de servicio de Acosta Property Services"
+                      fill
+                      className="object-cover"
+                    />
                   </div>
                 </div>
               </div>

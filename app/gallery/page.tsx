@@ -1,7 +1,7 @@
 "use client"
 
 import { useState } from "react"
-import { Metadata } from "next"
+import Image from "next/image"
 import Link from "next/link"
 import { MapPin, Filter } from "lucide-react"
 import { Button } from "@/components/ui/button"
@@ -22,12 +22,12 @@ export default function GalleryPage() {
       <section className="bg-secondary py-16 md:py-20">
         <div className="container mx-auto px-4">
           <div className="max-w-3xl">
-            <span className="text-primary font-semibold text-sm uppercase tracking-wider">Our Work</span>
+            <span className="text-primary font-semibold text-sm uppercase tracking-wider">Nuestro Trabajo</span>
             <h1 className="text-4xl md:text-5xl font-bold text-foreground mt-3 mb-6 text-balance">
-              Project Gallery
+              Galería de Proyectos
             </h1>
             <p className="text-xl text-muted-foreground text-pretty">
-              See examples of our work across residential and commercial properties throughout Puerto Rico. From general pest control to specialized treatments, we deliver results.
+              Vea ejemplos de nuestro trabajo en propiedades residenciales y comerciales en todo Puerto Rico. Desde control general de plagas hasta tratamientos especializados, entregamos resultados.
             </p>
           </div>
         </div>
@@ -39,7 +39,7 @@ export default function GalleryPage() {
           <div className="flex items-center gap-4 overflow-x-auto pb-2">
             <span className="flex items-center gap-2 text-sm text-muted-foreground shrink-0">
               <Filter className="h-4 w-4" />
-              Filter:
+              Filtrar:
             </span>
             {galleryCategories.map((category) => (
               <Button
@@ -65,8 +65,13 @@ export default function GalleryPage() {
                 key={item.id}
                 className="group relative aspect-[4/3] overflow-hidden rounded-xl bg-secondary cursor-pointer"
               >
-                {/* Placeholder background */}
-                <div className="absolute inset-0 bg-gradient-to-br from-primary/20 to-primary/5" />
+                {/* Image */}
+                <Image
+                  src={item.image}
+                  alt={item.title}
+                  fill
+                  className="object-cover transition-transform duration-300 group-hover:scale-105"
+                />
                 
                 {/* Hover overlay */}
                 <div className="absolute inset-0 bg-gradient-to-t from-foreground/90 via-foreground/40 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
@@ -83,7 +88,10 @@ export default function GalleryPage() {
 
                 {/* Category badge */}
                 <div className="absolute top-3 left-3 px-3 py-1 bg-card/90 backdrop-blur rounded-full text-xs font-medium capitalize">
-                  {item.category}
+                  {item.category === "residential" && "Residencial"}
+                  {item.category === "commercial" && "Comercial"}
+                  {item.category === "termite" && "Termitas"}
+                  {item.category === "mosquito" && "Mosquitos"}
                 </div>
               </div>
             ))}
@@ -91,7 +99,7 @@ export default function GalleryPage() {
 
           {filteredItems.length === 0 && (
             <div className="text-center py-12">
-              <p className="text-muted-foreground">No projects found in this category.</p>
+              <p className="text-muted-foreground">No se encontraron proyectos en esta categoría.</p>
             </div>
           )}
         </div>
@@ -102,13 +110,13 @@ export default function GalleryPage() {
         <div className="container mx-auto px-4">
           <div className="max-w-3xl mx-auto text-center">
             <h2 className="text-2xl font-bold text-foreground mb-4">
-              See the Results for Yourself
+              Vea los Resultados por Sí Mismo
             </h2>
             <p className="text-muted-foreground mb-6">
-              These projects represent just a sample of the thousands of homes and businesses we've protected across Puerto Rico. Contact us to see how we can help with your pest control needs.
+              Estos proyectos representan solo una muestra de las propiedades que hemos protegido en Puerto Rico. Contáctenos para ver cómo podemos ayudarle con sus necesidades de control de plagas.
             </p>
             <Button asChild>
-              <Link href="/contact">Get Your Free Estimate</Link>
+              <Link href="/contact">Obtener Cotización Gratis</Link>
             </Button>
           </div>
         </div>
