@@ -1,4 +1,5 @@
 import Link from "next/link"
+import Image from "next/image"
 import { Phone, Mail, MapPin, Clock, Facebook, Instagram } from "lucide-react"
 import { Button } from "@/components/ui/button"
 import { company } from "@/content/company"
@@ -8,44 +9,19 @@ import { serviceAreas } from "@/content/service-areas"
 export function SiteFooter() {
   return (
     <footer className="bg-foreground text-background">
-      {/* CTA Section */}
-      <div className="bg-primary text-primary-foreground">
-        <div className="container mx-auto px-4 py-12 md:py-16">
-          <div className="flex flex-col items-center text-center gap-6">
-            <h2 className="text-2xl md:text-3xl lg:text-4xl font-bold text-balance max-w-2xl">
-              Ready to Protect Your Property?
-            </h2>
-            <p className="text-primary-foreground/80 max-w-xl text-pretty">
-              Get a free, no-obligation estimate today. Our expert technicians are ready to help you enjoy a pest-free home or business.
-            </p>
-            <div className="flex flex-col sm:flex-row gap-4">
-              <Button asChild size="lg" className="bg-accent text-accent-foreground hover:bg-accent/90 font-semibold">
-                <Link href="/contact">Get Free Estimate</Link>
-              </Button>
-              <Button asChild size="lg" variant="outline" className="border-primary-foreground text-primary-foreground hover:bg-primary-foreground hover:text-primary">
-                <a href={`tel:${company.phoneClean}`}>
-                  <Phone className="mr-2 h-5 w-5" />
-                  Call {company.phone}
-                </a>
-              </Button>
-            </div>
-          </div>
-        </div>
-      </div>
-
       {/* Main Footer */}
       <div className="container mx-auto px-4 py-12 md:py-16">
         <div className="grid gap-8 md:grid-cols-2 lg:grid-cols-5">
           {/* Company Info */}
           <div className="lg:col-span-2">
-            <Link href="/" className="flex items-center gap-2 mb-4">
-              <div className="flex h-10 w-10 items-center justify-center rounded-lg bg-primary text-primary-foreground font-bold text-lg">
-                A
-              </div>
-              <div className="flex flex-col">
-                <span className="text-lg font-bold leading-tight">Acosta</span>
-                <span className="text-xs text-background/60 leading-tight">Property Services</span>
-              </div>
+            <Link href="/" className="inline-block mb-4 bg-background/95 rounded-lg p-2">
+              <Image
+                src="/images/logo.png"
+                alt="Acosta Property Services"
+                width={180}
+                height={60}
+                className="h-14 w-auto"
+              />
             </Link>
             <p className="text-background/70 mb-6 max-w-sm text-pretty">
               {company.description}
