@@ -1,51 +1,21 @@
 "use client"
 
 import Link from "next/link"
-import { Bug, Home, Building2, ArrowRight, CheckCircle2, Rat, Leaf } from "lucide-react"
+import Image from "next/image"
+import { Home, Building2, ArrowRight, CheckCircle2, Spray, Target, Bug } from "lucide-react"
 import { Button } from "@/components/ui/button"
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card"
 import { CTASection } from "@/components/sections/cta-section"
 import { useLanguage } from "@/lib/language-context"
+import { services } from "@/content/services"
 
 export default function ServicesPage() {
   const { language, t } = useLanguage()
 
-  const serviceCategories = [
-    {
-      id: "pest-control",
-      icon: Bug,
-      name: t.services.pestControlTitle,
-      description: t.services.pestControlDesc,
-      href: "/services/pest-control"
-    },
-    {
-      id: "termite",
-      icon: Bug,
-      name: language === "es" ? "Control de Termitas" : "Termite Control",
-      description: language === "es" 
-        ? "Proteccion especializada contra termitas subterraneas y de madera seca."
-        : "Specialized protection against subterranean and drywood termites.",
-      href: "/services/termite-control"
-    },
-    {
-      id: "rodent",
-      icon: Rat,
-      name: language === "es" ? "Control de Roedores" : "Rodent Control",
-      description: language === "es"
-        ? "Eliminacion efectiva de ratas y ratones con metodos seguros."
-        : "Effective elimination of rats and mice with safe methods.",
-      href: "/services/rodent-control"
-    },
-    {
-      id: "fumigation",
-      icon: Leaf,
-      name: language === "es" ? "Fumigacion" : "Fumigation",
-      description: language === "es"
-        ? "Servicios de fumigacion profesional para todo tipo de plagas."
-        : "Professional fumigation services for all types of pests.",
-      href: "/services/fumigation"
-    },
-  ]
+  const methodIcons = {
+    spray: Spray,
+    target: Target,
+  }
 
   return (
     <>
@@ -55,44 +25,69 @@ export default function ServicesPage() {
           <div className="max-w-3xl">
             <span className="text-primary font-semibold text-sm uppercase tracking-wider">{t.nav.services}</span>
             <h1 className="text-4xl md:text-5xl font-bold text-foreground mt-3 mb-6 text-balance">
-              {language === "es" ? "Servicios Profesionales de Control de Plagas" : "Professional Pest Control Services"}
+              {language === "es" ? "Servicios de Control de Plagas" : "Pest Control Services"}
             </h1>
             <p className="text-xl text-muted-foreground text-pretty">
               {language === "es"
-                ? "Desde control de plagas hasta fumigacion, ofrecemos servicios completos para proteger tu hogar o negocio en todo Puerto Rico."
-                : "From pest control to fumigation, we offer comprehensive services to protect your home or business across Puerto Rico."}
+                ? "Ofrecemos dos métodos principales de control de plagas: fumigación profesional y exterminación por trampas. Ambos métodos son seguros y efectivos para proteger tu propiedad."
+                : "We offer two main pest control methods: professional fumigation and trap extermination. Both methods are safe and effective to protect your property."}
             </p>
           </div>
         </div>
       </section>
 
-      {/* Service Categories */}
+      {/* Methods Section */}
       <section className="py-16 md:py-20 bg-background">
         <div className="container mx-auto px-4">
-          <h2 className="text-2xl md:text-3xl font-bold text-foreground mb-8">
-            {language === "es" ? "Servicios de Control de Plagas" : "Pest Control Services"}
+          <h2 className="text-2xl md:text-3xl font-bold text-foreground mb-4">
+            {t.serviceCategories.methods}
           </h2>
-          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
-            {serviceCategories.map((service) => {
-              const Icon = service.icon
+          <p className="text-muted-foreground text-lg mb-10 max-w-2xl">
+            {language === "es"
+              ? "Utilizamos los métodos más efectivos según el tipo de plaga y las necesidades de tu propiedad."
+              : "We use the most effective methods depending on the type of pest and your property's needs."}
+          </p>
+          
+          <div className="grid md:grid-cols-2 gap-8">
+            {services.methods.map((method) => {
+              const Icon = method.icon === "spray" ? Spray : Target
+              const name = language === "es" ? method.nameEs : method.nameEn
+              const description = language === "es" ? method.descriptionEs : method.descriptionEn
+              const benefits = language === "es" ? method.benefits.es : method.benefits.en
+
               return (
-                <Card key={service.id} className="group hover:shadow-lg transition-shadow">
+                <Card key={method.id} className="overflow-hidden">
+                  <div className="relative aspect-video">
+                    <Image
+                      src={method.image}
+                      alt={name}
+                      fill
+                      className="object-cover"
+                    />
+                  </div>
                   <CardHeader>
-                    <div className="flex h-14 w-14 items-center justify-center rounded-xl bg-primary/10 mb-4 group-hover:bg-primary/20 transition-colors">
-                      <Icon className="h-7 w-7 text-primary" />
+                    <div className="flex items-center gap-3 mb-2">
+                      <div className="flex h-12 w-12 items-center justify-center rounded-xl bg-primary/10">
+                        <Icon className="h-6 w-6 text-primary" />
+                      </div>
+                      <CardTitle className="text-2xl">{name}</CardTitle>
                     </div>
-                    <CardTitle className="text-xl">{service.name}</CardTitle>
                     <CardDescription className="text-base">
-                      {service.description}
+                      {description}
                     </CardDescription>
                   </CardHeader>
                   <CardContent>
-                    <Button asChild variant="outline" className="w-full">
-                      <Link href={service.href}>
-                        {t.ui.learnMore}
-                        <ArrowRight className="ml-2 h-4 w-4" />
-                      </Link>
-                    </Button>
+                    <h4 className="font-semibold mb-3">
+                      {language === "es" ? "Beneficios:" : "Benefits:"}
+                    </h4>
+                    <ul className="space-y-2">
+                      {benefits.map((benefit, i) => (
+                        <li key={i} className="flex items-start gap-2">
+                          <CheckCircle2 className="h-5 w-5 text-primary mt-0.5 shrink-0" />
+                          <span className="text-muted-foreground">{benefit}</span>
+                        </li>
+                      ))}
+                    </ul>
                   </CardContent>
                 </Card>
               )
@@ -101,112 +96,149 @@ export default function ServicesPage() {
         </div>
       </section>
 
-      {/* Residential vs Commercial */}
+      {/* Pests We Control */}
       <section className="py-16 md:py-20 bg-secondary">
+        <div className="container mx-auto px-4">
+          <h2 className="text-2xl md:text-3xl font-bold text-foreground mb-4">
+            {t.serviceCategories.commonPests}
+          </h2>
+          <p className="text-muted-foreground text-lg mb-10 max-w-2xl">
+            {language === "es"
+              ? "Controlamos todo tipo de plagas comunes en Puerto Rico con los métodos más apropiados."
+              : "We control all types of common pests in Puerto Rico with the most appropriate methods."}
+          </p>
+          
+          <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-4">
+            {services.pests.map((pest) => {
+              const name = language === "es" ? pest.nameEs : pest.nameEn
+              const methodLabels = pest.methods.map(m => 
+                language === "es" 
+                  ? (m === "fumigation" ? "Fumigación" : "Trampas")
+                  : (m === "fumigation" ? "Fumigation" : "Traps")
+              )
+
+              return (
+                <Card key={pest.id} className="p-4 text-center hover:shadow-md transition-shadow">
+                  <Bug className="h-8 w-8 text-primary mx-auto mb-3" />
+                  <h3 className="font-semibold text-sm mb-1">{name}</h3>
+                  <p className="text-xs text-muted-foreground">
+                    {methodLabels.join(" / ")}
+                  </p>
+                </Card>
+              )
+            })}
+          </div>
+        </div>
+      </section>
+
+      {/* Residential vs Commercial */}
+      <section className="py-16 md:py-20 bg-background">
         <div className="container mx-auto px-4">
           <div className="text-center max-w-2xl mx-auto mb-12">
             <h2 className="text-3xl md:text-4xl font-bold text-foreground mb-4">
-              {language === "es" ? "Soluciones Para Cada Propiedad" : "Solutions for Every Property"}
+              {language === "es" ? "Servicios Por Tipo de Propiedad" : "Services by Property Type"}
             </h2>
-            <p className="text-muted-foreground text-lg">
-              {language === "es"
-                ? "Ya seas propietario de hogar o negocio, tenemos programas especializados para tus necesidades."
-                : "Whether you're a homeowner or business owner, we have specialized programs to meet your needs."}
-            </p>
           </div>
 
           <div className="grid md:grid-cols-2 gap-8">
             {/* Residential */}
-            <Card className="p-8">
-              <div className="flex items-center gap-4 mb-6">
-                <div className="flex h-14 w-14 items-center justify-center rounded-xl bg-primary text-primary-foreground">
-                  <Home className="h-7 w-7" />
-                </div>
-                <div>
-                  <h3 className="text-2xl font-bold">{t.services.residentialTitle}</h3>
-                  <p className="text-muted-foreground">{language === "es" ? "Para hogares" : "For homeowners"}</p>
-                </div>
+            <Card className="overflow-hidden">
+              <div className="relative aspect-video">
+                <Image
+                  src={services.serviceTypes.residential.image}
+                  alt={language === "es" ? services.serviceTypes.residential.titleEs : services.serviceTypes.residential.titleEn}
+                  fill
+                  className="object-cover"
+                />
               </div>
-              <p className="text-muted-foreground mb-6">{t.services.residentialDesc}</p>
-              <ul className="space-y-3 mb-6">
-                {(language === "es" 
-                  ? ["Proteccion de familia y mascotas", "Tratamientos programados", "Respuesta de emergencia", "Garantia de satisfaccion"]
-                  : ["Family and pet safe treatments", "Scheduled treatments", "Emergency response", "Satisfaction guarantee"]
-                ).map((benefit, i) => (
-                  <li key={i} className="flex items-start gap-3">
-                    <CheckCircle2 className="h-5 w-5 text-primary mt-0.5 shrink-0" />
-                    <span>{benefit}</span>
-                  </li>
-                ))}
-              </ul>
-              <Button asChild>
-                <Link href="/services/residential-pest-control">
-                  {language === "es" ? "Explorar Servicios Residenciales" : "Explore Residential Services"}
-                  <ArrowRight className="ml-2 h-4 w-4" />
-                </Link>
-              </Button>
+              <CardContent className="p-6">
+                <div className="flex items-center gap-4 mb-4">
+                  <div className="flex h-12 w-12 items-center justify-center rounded-xl bg-primary text-primary-foreground">
+                    <Home className="h-6 w-6" />
+                  </div>
+                  <h3 className="text-2xl font-bold">
+                    {language === "es" ? services.serviceTypes.residential.titleEs : services.serviceTypes.residential.titleEn}
+                  </h3>
+                </div>
+                <p className="text-muted-foreground mb-4">
+                  {language === "es" ? services.serviceTypes.residential.descriptionEs : services.serviceTypes.residential.descriptionEn}
+                </p>
+                <ul className="space-y-2 mb-6">
+                  {(language === "es" ? services.serviceTypes.residential.benefits.es : services.serviceTypes.residential.benefits.en).slice(0, 4).map((benefit, i) => (
+                    <li key={i} className="flex items-start gap-2">
+                      <CheckCircle2 className="h-5 w-5 text-primary mt-0.5 shrink-0" />
+                      <span className="text-sm">{benefit}</span>
+                    </li>
+                  ))}
+                </ul>
+                <Button asChild className="w-full">
+                  <Link href="/contact">
+                    {t.ui.getQuote}
+                    <ArrowRight className="ml-2 h-4 w-4" />
+                  </Link>
+                </Button>
+              </CardContent>
             </Card>
 
             {/* Commercial */}
-            <Card className="p-8">
-              <div className="flex items-center gap-4 mb-6">
-                <div className="flex h-14 w-14 items-center justify-center rounded-xl bg-accent text-accent-foreground">
-                  <Building2 className="h-7 w-7" />
-                </div>
-                <div>
-                  <h3 className="text-2xl font-bold">{t.services.commercialTitle}</h3>
-                  <p className="text-muted-foreground">{language === "es" ? "Para negocios" : "For businesses"}</p>
-                </div>
+            <Card className="overflow-hidden">
+              <div className="relative aspect-video">
+                <Image
+                  src={services.serviceTypes.commercial.image}
+                  alt={language === "es" ? services.serviceTypes.commercial.titleEs : services.serviceTypes.commercial.titleEn}
+                  fill
+                  className="object-cover"
+                />
               </div>
-              <p className="text-muted-foreground mb-6">{t.services.commercialDesc}</p>
-              <ul className="space-y-3 mb-6">
-                {(language === "es"
-                  ? ["Cumplimiento de salud y seguridad", "Minima interrupcion de operaciones", "Documentacion para auditorias", "Servicio 24/7 disponible"]
-                  : ["Health & safety compliance", "Minimal operational disruption", "Audit documentation", "24/7 service available"]
-                ).map((benefit, i) => (
-                  <li key={i} className="flex items-start gap-3">
-                    <CheckCircle2 className="h-5 w-5 text-accent mt-0.5 shrink-0" />
-                    <span>{benefit}</span>
-                  </li>
-                ))}
-              </ul>
-              <Button asChild className="bg-accent text-accent-foreground hover:bg-accent/90">
-                <Link href="/services/commercial-pest-control">
-                  {language === "es" ? "Explorar Servicios Comerciales" : "Explore Commercial Services"}
-                  <ArrowRight className="ml-2 h-4 w-4" />
-                </Link>
-              </Button>
+              <CardContent className="p-6">
+                <div className="flex items-center gap-4 mb-4">
+                  <div className="flex h-12 w-12 items-center justify-center rounded-xl bg-accent text-accent-foreground">
+                    <Building2 className="h-6 w-6" />
+                  </div>
+                  <h3 className="text-2xl font-bold">
+                    {language === "es" ? services.serviceTypes.commercial.titleEs : services.serviceTypes.commercial.titleEn}
+                  </h3>
+                </div>
+                <p className="text-muted-foreground mb-4">
+                  {language === "es" ? services.serviceTypes.commercial.descriptionEs : services.serviceTypes.commercial.descriptionEn}
+                </p>
+                <ul className="space-y-2 mb-6">
+                  {(language === "es" ? services.serviceTypes.commercial.benefits.es : services.serviceTypes.commercial.benefits.en).slice(0, 4).map((benefit, i) => (
+                    <li key={i} className="flex items-start gap-2">
+                      <CheckCircle2 className="h-5 w-5 text-accent mt-0.5 shrink-0" />
+                      <span className="text-sm">{benefit}</span>
+                    </li>
+                  ))}
+                </ul>
+                <Button asChild className="w-full bg-accent text-accent-foreground hover:bg-accent/90">
+                  <Link href="/contact">
+                    {t.ui.getQuote}
+                    <ArrowRight className="ml-2 h-4 w-4" />
+                  </Link>
+                </Button>
+              </CardContent>
             </Card>
           </div>
         </div>
       </section>
 
-      {/* Why Choose Us */}
-      <section className="py-16 md:py-20 bg-background">
+      {/* Industries */}
+      <section className="py-16 md:py-20 bg-secondary">
         <div className="container mx-auto px-4">
-          <div className="max-w-3xl mx-auto text-center">
-            <h2 className="text-3xl md:text-4xl font-bold text-foreground mb-6">
-              {t.home.whyChooseUs}
-            </h2>
-            <p className="text-muted-foreground text-lg mb-8">{t.home.whyChooseUsDesc}</p>
-            <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
-              <div className="text-center p-4 bg-secondary rounded-lg">
-                <div className="text-3xl font-bold text-primary">4</div>
-                <div className="text-sm text-muted-foreground">{t.home.statsYears}</div>
+          <h2 className="text-2xl md:text-3xl font-bold text-foreground mb-4 text-center">
+            {language === "es" ? "Industrias que Servimos" : "Industries We Serve"}
+          </h2>
+          <p className="text-muted-foreground text-lg mb-10 max-w-2xl mx-auto text-center">
+            {language === "es"
+              ? "Experiencia en control de plagas para diversos tipos de negocios."
+              : "Pest control experience for various types of businesses."}
+          </p>
+          <div className="grid grid-cols-2 md:grid-cols-4 gap-4 max-w-4xl mx-auto">
+            {(language === "es" ? services.serviceTypes.commercial.industries.es : services.serviceTypes.commercial.industries.en).map((industry, i) => (
+              <div key={i} className="bg-card p-4 rounded-lg text-center border">
+                <span className="text-sm font-medium">{industry}</span>
               </div>
-              <div className="text-center p-4 bg-secondary rounded-lg">
-                <div className="text-3xl font-bold text-primary">300+</div>
-                <div className="text-sm text-muted-foreground">{t.home.statsClients}</div>
-              </div>
-              <div className="text-center p-4 bg-secondary rounded-lg">
-                <div className="text-3xl font-bold text-primary">78</div>
-                <div className="text-sm text-muted-foreground">{t.home.statsMunicipios}</div>
-              </div>
-              <div className="text-center p-4 bg-secondary rounded-lg">
-                <div className="text-3xl font-bold text-primary">100%</div>
-                <div className="text-sm text-muted-foreground">{t.home.statsIsland}</div>
-              </div>
-            </div>
+            ))}
           </div>
         </div>
       </section>

@@ -12,11 +12,11 @@ export const company = {
   
   // Address
   address: {
-    street: "123 Calle Principal",
+    street: "1537 Av. Juan Ponce de León",
     city: "San Juan",
     state: "PR",
-    zip: "00901",
-    full: "123 Calle Principal, San Juan, PR 00901"
+    zip: "00926",
+    full: "1537 Av. Juan Ponce de León, San Juan, PR 00926"
   },
   
   // Business Hours

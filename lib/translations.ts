@@ -15,7 +15,10 @@ export const translations = {
       pestControl: "Control de Plagas",
       residential: "Residencial",
       commercial: "Comercial",
-      commonPests: "Plagas Comunes",
+      commonPests: "Plagas que Controlamos",
+      fumigation: "Fumigación",
+      traps: "Exterminación por Trampas",
+      methods: "Métodos de Control",
     },
     // Common UI
     ui: {
@@ -171,7 +174,10 @@ export const translations = {
       pestControl: "Pest Control",
       residential: "Residential",
       commercial: "Commercial",
-      commonPests: "Common Pests",
+      commonPests: "Pests We Control",
+      fumigation: "Fumigation",
+      traps: "Trap Extermination",
+      methods: "Control Methods",
     },
     // Common UI
     ui: {

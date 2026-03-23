@@ -27,16 +27,14 @@ import { useLanguage } from "@/lib/language-context"
 
 const serviceCategories = {
   es: [
-    { name: "Control de Plagas General", href: "/services/pest-control", description: "Eliminacion completa de todo tipo de plagas" },
-    { name: "Servicio Residencial", href: "/services/residential-pest-control", description: "Proteccion para tu hogar y familia" },
-    { name: "Servicio Comercial", href: "/services/commercial-pest-control", description: "Mantiene tu negocio libre de plagas" },
-    { name: "Plagas Comunes", href: "/pests", description: "Informacion sobre plagas en Puerto Rico" },
+    { name: "Todos los Servicios", href: "/services", description: "Ver todos nuestros servicios de control de plagas" },
+    { name: "Fumigación", href: "/services#fumigation", description: "Tratamiento químico profesional para eliminar plagas" },
+    { name: "Exterminación por Trampas", href: "/services#traps", description: "Sistema de trampas para roedores y plagas" },
   ],
   en: [
-    { name: "General Pest Control", href: "/services/pest-control", description: "Complete elimination of all types of pests" },
-    { name: "Residential Service", href: "/services/residential-pest-control", description: "Protection for your home and family" },
-    { name: "Commercial Service", href: "/services/commercial-pest-control", description: "Keep your business pest-free" },
-    { name: "Common Pests", href: "/pests", description: "Information about pests in Puerto Rico" },
+    { name: "All Services", href: "/services", description: "View all our pest control services" },
+    { name: "Fumigation", href: "/services#fumigation", description: "Professional chemical treatment to eliminate pests" },
+    { name: "Trap Extermination", href: "/services#traps", description: "Trap systems for rodents and pests" },
   ],
 }
 

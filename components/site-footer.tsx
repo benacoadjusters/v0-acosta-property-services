@@ -9,36 +9,28 @@ import { useLanguage } from "@/lib/language-context"
 const footerLinks = {
   es: {
     services: [
-      { name: "Control de Plagas", href: "/services/pest-control" },
-      { name: "Residencial", href: "/services/residential-pest-control" },
-      { name: "Comercial", href: "/services/commercial-pest-control" },
+      { name: "Todos los Servicios", href: "/services" },
+      { name: "Fumigación", href: "/services#fumigation" },
+      { name: "Exterminación por Trampas", href: "/services#traps" },
     ],
     company: [
       { name: "Nosotros", href: "/about" },
-      { name: "Galeria", href: "/gallery" },
-      { name: "Preguntas", href: "/faq" },
+      { name: "Galería", href: "/gallery" },
+      { name: "Preguntas Frecuentes", href: "/faq" },
       { name: "Contacto", href: "/contact" },
-    ],
-    resources: [
-      { name: "Plagas Comunes", href: "/pests" },
-      { name: "Cotizacion Gratis", href: "/contact" },
     ],
   },
   en: {
     services: [
-      { name: "Pest Control", href: "/services/pest-control" },
-      { name: "Residential", href: "/services/residential-pest-control" },
-      { name: "Commercial", href: "/services/commercial-pest-control" },
+      { name: "All Services", href: "/services" },
+      { name: "Fumigation", href: "/services#fumigation" },
+      { name: "Trap Extermination", href: "/services#traps" },
     ],
     company: [
       { name: "About Us", href: "/about" },
       { name: "Gallery", href: "/gallery" },
       { name: "FAQ", href: "/faq" },
       { name: "Contact", href: "/contact" },
-    ],
-    resources: [
-      { name: "Common Pests", href: "/pests" },
-      { name: "Free Quote", href: "/contact" },
     ],
   },
 }
@@ -108,6 +100,10 @@ export function SiteFooter() {
                   <p>{t.contact.saturday}: 9AM-2PM</p>
                 </div>
               </div>
+              <div className="flex items-start gap-3 text-background/80">
+                <MapPin className="h-4 w-4 text-accent mt-0.5 shrink-0" />
+                <span>{company.address.full}</span>
+              </div>
             </div>
           </div>
 
@@ -143,19 +139,7 @@ export function SiteFooter() {
                 </li>
               ))}
             </ul>
-            <h3 className="font-semibold text-lg mb-3 mt-6">{t.footer.resourcesTitle}</h3>
-            <ul className="space-y-2 text-sm">
-              {links.resources.map((link) => (
-                <li key={link.href}>
-                  <Link 
-                    href={link.href} 
-                    className="text-background/70 hover:text-background transition-colors"
-                  >
-                    {link.name}
-                  </Link>
-                </li>
-              ))}
-            </ul>
+            
           </div>
         </div>
       </div>
