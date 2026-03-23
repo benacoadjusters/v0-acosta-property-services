@@ -11,8 +11,13 @@ import { Label } from "@/components/ui/label"
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select"
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card"
 import { company } from "@/content/company"
-import { serviceAreas } from "@/content/service-areas"
 import { useLanguage } from "@/lib/language-context"
+
+const municipalities = [
+  "San Juan", "Bayamón", "Carolina", "Ponce", "Caguas", 
+  "Guaynabo", "Mayagüez", "Trujillo Alto", "Arecibo", "Fajardo",
+  "Humacao", "Aguadilla", "Vega Baja", "Toa Baja", "Dorado"
+]
 
 const serviceOptions = {
   es: [
@@ -193,7 +198,7 @@ export function ContactForm() {
                   <SelectValue placeholder={language === "es" ? "Selecciona tu area" : "Select your area"} />
                 </SelectTrigger>
                 <SelectContent>
-                  {serviceAreas.featuredMunicipalities.map((area) => (
+                  {municipalities.map((area) => (
                     <SelectItem key={area} value={area.toLowerCase()}>
                       {area}
                     </SelectItem>
