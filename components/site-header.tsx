@@ -3,16 +3,14 @@
 import * as React from "react"
 import Link from "next/link"
 import Image from "next/image"
-import { Menu, Phone, Clock, ChevronDown, Globe } from "lucide-react"
+import { Menu, Phone, Clock, Globe } from "lucide-react"
 import { Button } from "@/components/ui/button"
 import { Sheet, SheetContent, SheetTrigger, SheetTitle, SheetDescription } from "@/components/ui/sheet"
 import {
   NavigationMenu,
-  NavigationMenuContent,
   NavigationMenuItem,
   NavigationMenuLink,
   NavigationMenuList,
-  NavigationMenuTrigger,
   navigationMenuTriggerStyle,
 } from "@/components/ui/navigation-menu"
 import {
@@ -21,29 +19,12 @@ import {
   DropdownMenuItem,
   DropdownMenuTrigger,
 } from "@/components/ui/dropdown-menu"
-import { cn } from "@/lib/utils"
 import { company } from "@/content/company"
 import { useLanguage } from "@/lib/language-context"
 
-const serviceCategories = {
-  es: [
-    { name: "Todos los Servicios", href: "/services", description: "Ver todos nuestros servicios de control de plagas" },
-    { name: "Fumigación", href: "/services#fumigation", description: "Tratamiento químico profesional para eliminar plagas" },
-    { name: "Exterminación por Trampas", href: "/services#traps", description: "Sistema de trampas para roedores y plagas" },
-  ],
-  en: [
-    { name: "All Services", href: "/services", description: "View all our pest control services" },
-    { name: "Fumigation", href: "/services#fumigation", description: "Professional chemical treatment to eliminate pests" },
-    { name: "Trap Extermination", href: "/services#traps", description: "Trap systems for rodents and pests" },
-  ],
-}
-
 export function SiteHeader() {
   const [isOpen, setIsOpen] = React.useState(false)
-  const [mobileServicesOpen, setMobileServicesOpen] = React.useState(false)
   const { language, setLanguage, t } = useLanguage()
-
-  const services = serviceCategories[language]
 
   return (
     <header className="sticky top-0 z-50 w-full">
@@ -120,26 +101,9 @@ export function SiteHeader() {
               </NavigationMenuItem>
               
               <NavigationMenuItem>
-                <NavigationMenuTrigger>{t.nav.services}</NavigationMenuTrigger>
-                <NavigationMenuContent>
-                  <ul className="grid w-[320px] gap-2 p-4">
-                    {services.map((item) => (
-                      <li key={item.href}>
-                        <NavigationMenuLink asChild>
-                          <Link
-                            href={item.href}
-                            className="block select-none rounded-md p-3 leading-none no-underline outline-none transition-colors hover:bg-accent hover:text-accent-foreground focus:bg-accent focus:text-accent-foreground"
-                          >
-                            <div className="text-sm font-medium leading-none mb-1">{item.name}</div>
-                            <p className="text-sm leading-snug text-muted-foreground">
-                              {item.description}
-                            </p>
-                          </Link>
-                        </NavigationMenuLink>
-                      </li>
-                    ))}
-                  </ul>
-                </NavigationMenuContent>
+                <NavigationMenuLink asChild className={navigationMenuTriggerStyle()}>
+                  <Link href="/services">{t.nav.services}</Link>
+                </NavigationMenuLink>
               </NavigationMenuItem>
 
               <NavigationMenuItem>
@@ -204,28 +168,13 @@ export function SiteHeader() {
                       </Link>
                     </li>
                     <li>
-                      <button
-                        onClick={() => setMobileServicesOpen(!mobileServicesOpen)}
-                        className="flex w-full items-center justify-between py-2 text-lg font-medium hover:text-primary transition-colors"
+                      <Link 
+                        href="/services" 
+                        className="block py-2 text-lg font-medium hover:text-primary transition-colors"
+                        onClick={() => setIsOpen(false)}
                       >
                         {t.nav.services}
-                        <ChevronDown className={cn("h-5 w-5 transition-transform", mobileServicesOpen && "rotate-180")} />
-                      </button>
-                      {mobileServicesOpen && (
-                        <ul className="ml-4 mt-2 space-y-2 border-l-2 border-muted pl-4">
-                          {services.map((item) => (
-                            <li key={item.href}>
-                              <Link 
-                                href={item.href}
-                                className="block py-1 text-muted-foreground hover:text-primary transition-colors"
-                                onClick={() => setIsOpen(false)}
-                              >
-                                {item.name}
-                              </Link>
-                            </li>
-                          ))}
-                        </ul>
-                      )}
+                      </Link>
                     </li>
                     <li>
                       <Link 

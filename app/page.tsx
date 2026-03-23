@@ -2,9 +2,8 @@
 
 import Link from "next/link"
 import Image from "next/image"
-import { Phone, ArrowRight, Shield, Clock, Award, Users, CheckCircle2, Bug, Home, Building2 } from "lucide-react"
+import { Phone, ArrowRight, Shield, Clock, Award, CheckCircle2 } from "lucide-react"
 import { Button } from "@/components/ui/button"
-import { Card, CardContent } from "@/components/ui/card"
 import { company } from "@/content/company"
 import { useLanguage } from "@/lib/language-context"
 
@@ -93,89 +92,7 @@ export default function HomePage() {
         </div>
       </section>
 
-      {/* Services Preview */}
-      <section className="py-16 md:py-24">
-        <div className="container mx-auto px-4">
-          <div className="max-w-3xl mx-auto text-center mb-12">
-            <h2 className="text-3xl md:text-4xl font-bold text-foreground mb-4 text-balance">
-              {t.home.servicesTitle}
-            </h2>
-            <p className="text-lg text-muted-foreground text-pretty">
-              {t.home.servicesDesc}
-            </p>
-          </div>
-          
-          <div className="grid md:grid-cols-3 gap-6">
-            <Card className="group hover:shadow-lg transition-all border-2 hover:border-primary/20 overflow-hidden">
-              <div className="relative h-48">
-                <Image
-                  src="/images/hero-pest-control.jpg"
-                  alt={t.services.pestControlTitle}
-                  fill
-                  className="object-cover group-hover:scale-105 transition-transform duration-300"
-                />
-                <div className="absolute inset-0 bg-gradient-to-t from-black/70 to-transparent" />
-                <div className="absolute bottom-4 left-4">
-                  <Bug className="h-8 w-8 text-white" />
-                </div>
-              </div>
-              <CardContent className="p-6">
-                <h3 className="text-xl font-semibold mb-2">{t.services.pestControlTitle}</h3>
-                <p className="text-muted-foreground mb-4">{t.services.pestControlDesc}</p>
-                <Link href="/services/pest-control" className="inline-flex items-center text-primary font-medium hover:underline">
-                  {t.ui.learnMore} <ArrowRight className="ml-1 h-4 w-4" />
-                </Link>
-              </CardContent>
-            </Card>
-            
-            <Card className="group hover:shadow-lg transition-all border-2 hover:border-primary/20 overflow-hidden">
-              <div className="relative h-48">
-                <Image
-                  src="/images/residential-service.jpg"
-                  alt={t.services.residentialTitle}
-                  fill
-                  className="object-cover group-hover:scale-105 transition-transform duration-300"
-                />
-                <div className="absolute inset-0 bg-gradient-to-t from-black/70 to-transparent" />
-                <div className="absolute bottom-4 left-4">
-                  <Home className="h-8 w-8 text-white" />
-                </div>
-              </div>
-              <CardContent className="p-6">
-                <h3 className="text-xl font-semibold mb-2">{t.services.residentialTitle}</h3>
-                <p className="text-muted-foreground mb-4">{t.services.residentialDesc}</p>
-                <Link href="/services/residential-pest-control" className="inline-flex items-center text-primary font-medium hover:underline">
-                  {t.ui.learnMore} <ArrowRight className="ml-1 h-4 w-4" />
-                </Link>
-              </CardContent>
-            </Card>
-            
-            <Card className="group hover:shadow-lg transition-all border-2 hover:border-primary/20 overflow-hidden">
-              <div className="relative h-48">
-                <Image
-                  src="/images/commercial-service.jpg"
-                  alt={t.services.commercialTitle}
-                  fill
-                  className="object-cover group-hover:scale-105 transition-transform duration-300"
-                />
-                <div className="absolute inset-0 bg-gradient-to-t from-black/70 to-transparent" />
-                <div className="absolute bottom-4 left-4">
-                  <Building2 className="h-8 w-8 text-white" />
-                </div>
-              </div>
-              <CardContent className="p-6">
-                <h3 className="text-xl font-semibold mb-2">{t.services.commercialTitle}</h3>
-                <p className="text-muted-foreground mb-4">{t.services.commercialDesc}</p>
-                <Link href="/services/commercial-pest-control" className="inline-flex items-center text-primary font-medium hover:underline">
-                  {t.ui.learnMore} <ArrowRight className="ml-1 h-4 w-4" />
-                </Link>
-              </CardContent>
-            </Card>
-          </div>
-        </div>
-      </section>
-
-      {/* Why Choose Us */}
+      {{/* Why Choose Us */}
       <section className="py-16 md:py-24 bg-secondary/30">
         <div className="container mx-auto px-4">
           <div className="grid lg:grid-cols-2 gap-12 items-center">
