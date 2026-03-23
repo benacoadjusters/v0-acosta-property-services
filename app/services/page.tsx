@@ -2,7 +2,7 @@
 
 import Link from "next/link"
 import Image from "next/image"
-import { Home, Building2, ArrowRight, CheckCircle2, Spray, Target, Bug } from "lucide-react"
+import { Home, Building2, ArrowRight, CheckCircle2, SprayCan, Target, Bug } from "lucide-react"
 import { Button } from "@/components/ui/button"
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card"
 import { CTASection } from "@/components/sections/cta-section"
@@ -13,7 +13,7 @@ export default function ServicesPage() {
   const { language, t } = useLanguage()
 
   const methodIcons = {
-    spray: Spray,
+    spray: SprayCan,
     target: Target,
   }
 
@@ -50,7 +50,7 @@ export default function ServicesPage() {
           
           <div className="grid md:grid-cols-2 gap-8">
             {services.methods.map((method) => {
-              const Icon = method.icon === "spray" ? Spray : Target
+              const Icon = method.icon === "spray" ? SprayCan : Target
               const name = language === "es" ? method.nameEs : method.nameEn
               const description = language === "es" ? method.descriptionEs : method.descriptionEn
               const benefits = language === "es" ? method.benefits.es : method.benefits.en
