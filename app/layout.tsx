@@ -1,6 +1,7 @@
-import type { Metadata } from 'next'
+import type { Metadata, Viewport } from 'next'
 import { Inter, Playfair_Display } from 'next/font/google'
 import { Analytics } from '@vercel/analytics/next'
+import { LanguageProvider } from '@/lib/language-context'
 import { SiteHeader } from '@/components/site-header'
 import { SiteFooter } from '@/components/site-footer'
 import { company } from '@/content/company'
@@ -18,37 +19,38 @@ const playfair = Playfair_Display({
 
 export const metadata: Metadata = {
   title: {
-    default: `${company.name} | Professional Pest Control in Puerto Rico`,
+    default: `${company.name} | Control de Plagas Profesional en Puerto Rico`,
     template: `%s | ${company.name}`
   },
-  description: company.description,
+  description: "Servicios profesionales de control de plagas para hogares y negocios en todo Puerto Rico. Mas de 300 clientes satisfechos.",
   keywords: [
-    "pest control",
-    "fumigation",
-    "termite control",
-    "rodent control",
+    "control de plagas",
+    "fumigacion",
+    "control de termitas",
+    "control de roedores",
     "Puerto Rico",
-    "exterminator",
-    "residential pest control",
-    "commercial pest control"
+    "exterminador",
+    "plagas residencial",
+    "plagas comercial"
   ],
   authors: [{ name: company.name }],
   openGraph: {
     type: "website",
-    locale: "en_US",
+    locale: "es_PR",
     siteName: company.name,
-    title: `${company.name} | Professional Pest Control in Puerto Rico`,
-    description: company.description,
-  },
-  twitter: {
-    card: "summary_large_image",
-    title: `${company.name} | Professional Pest Control in Puerto Rico`,
-    description: company.description,
+    title: `${company.name} | Control de Plagas Profesional en Puerto Rico`,
+    description: "Servicios profesionales de control de plagas para hogares y negocios en todo Puerto Rico.",
   },
   robots: {
     index: true,
     follow: true,
   },
+}
+
+export const viewport: Viewport = {
+  themeColor: "#5B8A7A",
+  width: "device-width",
+  initialScale: 1,
 }
 
 export default function RootLayout({
@@ -57,13 +59,15 @@ export default function RootLayout({
   children: React.ReactNode
 }>) {
   return (
-    <html lang="en">
+    <html lang="es" suppressHydrationWarning>
       <body className={`${inter.variable} ${playfair.variable} font-sans antialiased`}>
-        <SiteHeader />
-        <main className="min-h-screen">
-          {children}
-        </main>
-        <SiteFooter />
+        <LanguageProvider>
+          <SiteHeader />
+          <main className="min-h-screen">
+            {children}
+          </main>
+          <SiteFooter />
+        </LanguageProvider>
         <Analytics />
       </body>
     </html>

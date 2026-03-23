@@ -1,17 +1,33 @@
+"use client"
+
 import Link from "next/link"
 import { Phone } from "lucide-react"
 import { Button } from "@/components/ui/button"
 import { company } from "@/content/company"
+import { useLanguage } from "@/lib/language-context"
 
 interface CTASectionProps {
-  title?: string
-  description?: string
+  titleEs?: string
+  titleEn?: string
+  descriptionEs?: string
+  descriptionEn?: string
 }
 
 export function CTASection({ 
-  title = "Ready to Get Started?",
-  description = "Contact us today for a free, no-obligation estimate. Our expert technicians are ready to help."
+  titleEs,
+  titleEn,
+  descriptionEs,
+  descriptionEn,
 }: CTASectionProps) {
+  const { language, t } = useLanguage()
+
+  const title = language === "es" 
+    ? (titleEs || t.home.ctaTitle) 
+    : (titleEn || t.home.ctaTitle)
+  const description = language === "es"
+    ? (descriptionEs || t.home.ctaDesc)
+    : (descriptionEn || t.home.ctaDesc)
+
   return (
     <section className="bg-primary text-primary-foreground py-16 md:py-20">
       <div className="container mx-auto px-4">
@@ -24,12 +40,12 @@ export function CTASection({
           </p>
           <div className="flex flex-col sm:flex-row gap-4">
             <Button asChild size="lg" className="bg-accent text-accent-foreground hover:bg-accent/90 font-semibold">
-              <Link href="/contact">Get Free Estimate</Link>
+              <Link href="/contact">{t.ui.getQuote}</Link>
             </Button>
             <Button asChild size="lg" variant="outline" className="border-primary-foreground text-primary-foreground hover:bg-primary-foreground hover:text-primary">
               <a href={`tel:${company.phoneClean}`}>
                 <Phone className="mr-2 h-5 w-5" />
-                Call {company.phone}
+                {t.ui.callNow}
               </a>
             </Button>
           </div>

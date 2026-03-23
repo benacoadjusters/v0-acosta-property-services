@@ -1,20 +1,18 @@
+"use client"
+
 import { Suspense } from "react"
-import { Phone, Mail, MapPin, Clock } from "lucide-react"
+import { Phone, Mail, Clock } from "lucide-react"
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card"
 import { Button } from "@/components/ui/button"
 import { company } from "@/content/company"
 import { ContactForm } from "@/components/contact-form"
-
-export const metadata = {
-  title: "Contact Us | Acosta Property Services",
-  description: "Get a free pest control estimate. Contact Acosta Property Services for residential and commercial pest control in Puerto Rico.",
-}
+import { useLanguage } from "@/lib/language-context"
 
 function ContactFormFallback() {
   return (
     <Card>
       <CardHeader>
-        <CardTitle className="text-2xl">Request a Free Estimate</CardTitle>
+        <CardTitle className="text-2xl">...</CardTitle>
       </CardHeader>
       <CardContent>
         <div className="space-y-6 animate-pulse">
@@ -35,18 +33,20 @@ function ContactFormFallback() {
 }
 
 export default function ContactPage() {
+  const { t } = useLanguage()
+
   return (
     <>
       {/* Hero */}
       <section className="bg-secondary py-16 md:py-20">
         <div className="container mx-auto px-4">
           <div className="max-w-3xl">
-            <span className="text-primary font-semibold text-sm uppercase tracking-wider">Contact Us</span>
+            <span className="text-primary font-semibold text-sm uppercase tracking-wider">{t.nav.contact}</span>
             <h1 className="text-4xl md:text-5xl font-bold text-foreground mt-3 mb-6 text-balance">
-              Get Your Free Estimate
+              {t.contact.title}
             </h1>
             <p className="text-xl text-muted-foreground text-pretty">
-              Ready to protect your property? Fill out the form below and we'll contact you within 24 hours. For immediate assistance, give us a call.
+              {t.contact.subtitle}
             </p>
           </div>
         </div>
@@ -67,7 +67,7 @@ export default function ContactPage() {
             <div className="space-y-6">
               <Card>
                 <CardHeader>
-                  <CardTitle>Contact Information</CardTitle>
+                  <CardTitle>{t.contact.infoTitle}</CardTitle>
                 </CardHeader>
                 <CardContent className="space-y-4">
                   <a 
@@ -77,7 +77,7 @@ export default function ContactPage() {
                     <Phone className="h-5 w-5 text-primary mt-0.5" />
                     <div>
                       <div className="font-medium">{company.phone}</div>
-                      <div className="text-sm text-muted-foreground">Call or text</div>
+                      <div className="text-sm text-muted-foreground">{t.ui.callNow}</div>
                     </div>
                   </a>
                   <a 
@@ -87,35 +87,23 @@ export default function ContactPage() {
                     <Mail className="h-5 w-5 text-primary mt-0.5" />
                     <div>
                       <div className="font-medium">{company.email}</div>
-                      <div className="text-sm text-muted-foreground">Email us anytime</div>
+                      <div className="text-sm text-muted-foreground">{t.ui.email}</div>
                     </div>
                   </a>
-                  <div className="flex items-start gap-4 p-3">
-                    <MapPin className="h-5 w-5 text-primary mt-0.5" />
-                    <div>
-                      <div className="font-medium">{company.address.city}, {company.address.state}</div>
-                      <div className="text-sm text-muted-foreground">{company.address.full}</div>
-                    </div>
-                  </div>
                 </CardContent>
               </Card>
 
               <Card>
                 <CardHeader>
-                  <CardTitle>Business Hours</CardTitle>
+                  <CardTitle>{t.contact.hoursTitle}</CardTitle>
                 </CardHeader>
                 <CardContent className="space-y-3">
                   <div className="flex items-center gap-3">
                     <Clock className="h-5 w-5 text-primary" />
                     <div className="text-sm">
-                      <div>{company.hours.weekdays}</div>
-                      <div>{company.hours.saturday}</div>
-                      <div className="text-muted-foreground">{company.hours.sunday}</div>
-                    </div>
-                  </div>
-                  <div className="pt-3 border-t">
-                    <div className="text-sm text-primary font-medium">
-                      {company.hours.emergency}
+                      <div>{t.contact.weekdays}: 8AM-6PM</div>
+                      <div>{t.contact.saturday}: 9AM-2PM</div>
+                      <div className="text-muted-foreground">{t.contact.sunday}: {t.contact.closed}</div>
                     </div>
                   </div>
                 </CardContent>
@@ -123,30 +111,18 @@ export default function ContactPage() {
 
               <Card className="bg-primary text-primary-foreground">
                 <CardContent className="p-6 text-center">
-                  <h3 className="font-bold text-lg mb-2">Need Immediate Help?</h3>
+                  <h3 className="font-bold text-lg mb-2">{t.contact.emergencyTitle}</h3>
                   <p className="opacity-80 text-sm mb-4">
-                    For urgent pest problems, call us directly for same-day service.
+                    {t.contact.emergencyDesc}
                   </p>
                   <Button asChild variant="secondary" className="w-full">
                     <a href={`tel:${company.phoneClean}`}>
                       <Phone className="mr-2 h-5 w-5" />
-                      Call Now
+                      {t.ui.callNow}
                     </a>
                   </Button>
                 </CardContent>
               </Card>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      {/* Map Placeholder */}
-      <section className="bg-secondary">
-        <div className="container mx-auto px-4 py-16">
-          <div className="aspect-[21/9] bg-muted rounded-xl flex items-center justify-center">
-            <div className="text-center">
-              <MapPin className="h-12 w-12 text-muted-foreground/50 mx-auto mb-4" />
-              <p className="text-muted-foreground">Map placeholder - Add your Google Maps embed here</p>
             </div>
           </div>
         </div>

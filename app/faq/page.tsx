@@ -1,4 +1,5 @@
-import { Metadata } from "next"
+"use client"
+
 import Link from "next/link"
 import { Phone, MessageCircle } from "lucide-react"
 import { Button } from "@/components/ui/button"
@@ -11,52 +12,39 @@ import {
 import { CTASection } from "@/components/sections/cta-section"
 import { faqs } from "@/content/faqs"
 import { company } from "@/content/company"
-
-export const metadata: Metadata = {
-  title: "Frequently Asked Questions",
-  description: "Find answers to common questions about pest control services, pricing, treatments, and more. Contact us if you need additional help.",
-}
-
-const faqCategories = [
-  { id: "general", title: "General Questions", data: faqs.general },
-  { id: "pestControl", title: "Pest Control", data: faqs.pestControl },
-  { id: "termite", title: "Termite Control", data: faqs.termite },
-  { id: "commercial", title: "Commercial Services", data: faqs.commercial },
-  { id: "pricing", title: "Pricing & Payment", data: faqs.pricing },
-]
-
-// JSON-LD Schema for FAQ
-const faqSchema = {
-  "@context": "https://schema.org",
-  "@type": "FAQPage",
-  "mainEntity": Object.values(faqs).flat().map(faq => ({
-    "@type": "Question",
-    "name": faq.question,
-    "acceptedAnswer": {
-      "@type": "Answer",
-      "text": faq.answer
-    }
-  }))
-}
+import { useLanguage } from "@/lib/language-context"
 
 export default function FAQPage() {
+  const { language, t } = useLanguage()
+
+  const faqCategories = language === "es" ? [
+    { id: "general", title: "Preguntas Generales", data: faqs.general },
+    { id: "pestControl", title: "Control de Plagas", data: faqs.pestControl },
+    { id: "termite", title: "Control de Termitas", data: faqs.termite },
+    { id: "commercial", title: "Servicios Comerciales", data: faqs.commercial },
+    { id: "pricing", title: "Precios y Pagos", data: faqs.pricing },
+  ] : [
+    { id: "general", title: "General Questions", data: faqs.general },
+    { id: "pestControl", title: "Pest Control", data: faqs.pestControl },
+    { id: "termite", title: "Termite Control", data: faqs.termite },
+    { id: "commercial", title: "Commercial Services", data: faqs.commercial },
+    { id: "pricing", title: "Pricing & Payment", data: faqs.pricing },
+  ]
+
   return (
     <>
-      <script
-        type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }}
-      />
-
       {/* Hero */}
       <section className="bg-secondary py-16 md:py-20">
         <div className="container mx-auto px-4">
           <div className="max-w-3xl mx-auto text-center">
-            <span className="text-primary font-semibold text-sm uppercase tracking-wider">Support</span>
+            <span className="text-primary font-semibold text-sm uppercase tracking-wider">
+              {language === "es" ? "Soporte" : "Support"}
+            </span>
             <h1 className="text-4xl md:text-5xl font-bold text-foreground mt-3 mb-6 text-balance">
-              Frequently Asked Questions
+              {t.faq.title}
             </h1>
             <p className="text-xl text-muted-foreground text-pretty">
-              Find answers to common questions about our pest control services. Can't find what you're looking for? Contact us directly.
+              {t.faq.subtitle}
             </p>
           </div>
         </div>
@@ -97,10 +85,10 @@ export default function FAQPage() {
           <div className="max-w-2xl mx-auto text-center">
             <MessageCircle className="h-12 w-12 text-primary mx-auto mb-4" />
             <h2 className="text-2xl md:text-3xl font-bold text-foreground mb-4">
-              Still Have Questions?
+              {t.faq.stillHaveQuestions}
             </h2>
             <p className="text-muted-foreground mb-8">
-              Our friendly team is here to help. Contact us by phone or email and we'll get back to you as soon as possible.
+              {t.faq.contactTeam}
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Button asChild size="lg">
@@ -110,7 +98,7 @@ export default function FAQPage() {
                 </a>
               </Button>
               <Button asChild size="lg" variant="outline">
-                <Link href="/contact">Send Us a Message</Link>
+                <Link href="/contact">{t.ui.contactUs}</Link>
               </Button>
             </div>
           </div>

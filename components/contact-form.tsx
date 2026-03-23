@@ -12,9 +12,34 @@ import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card"
 import { company } from "@/content/company"
 import { serviceAreas } from "@/content/service-areas"
+import { useLanguage } from "@/lib/language-context"
+
+const serviceOptions = {
+  es: [
+    { value: "general", label: "Control de Plagas General" },
+    { value: "termite", label: "Control de Termitas" },
+    { value: "rodent", label: "Control de Roedores" },
+    { value: "mosquito", label: "Control de Mosquitos" },
+    { value: "bed-bug", label: "Tratamiento de Chinches" },
+    { value: "commercial", label: "Servicios Comerciales" },
+    { value: "inspection", label: "Inspeccion Gratis" },
+    { value: "other", label: "Otro" },
+  ],
+  en: [
+    { value: "general", label: "General Pest Control" },
+    { value: "termite", label: "Termite Control" },
+    { value: "rodent", label: "Rodent Control" },
+    { value: "mosquito", label: "Mosquito Control" },
+    { value: "bed-bug", label: "Bed Bug Treatment" },
+    { value: "commercial", label: "Commercial Services" },
+    { value: "inspection", label: "Free Inspection" },
+    { value: "other", label: "Other" },
+  ],
+}
 
 export function ContactForm() {
   const searchParams = useSearchParams()
+  const { language, t } = useLanguage()
   const [isSubmitted, setIsSubmitted] = useState(false)
   const [isSubmitting, setIsSubmitting] = useState(false)
   const [formData, setFormData] = useState({
@@ -24,10 +49,9 @@ export function ContactForm() {
     service: "",
     area: "",
     message: "",
-    preferredContact: "phone",
+    propertyType: "residential",
   })
 
-  // Pre-fill from URL params (from quick quote form)
   useEffect(() => {
     const name = searchParams.get("name")
     const phone = searchParams.get("phone")
@@ -46,10 +70,7 @@ export function ContactForm() {
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault()
     setIsSubmitting(true)
-    
-    // Simulate form submission
     await new Promise(resolve => setTimeout(resolve, 1000))
-    
     setIsSubmitting(false)
     setIsSubmitted(true)
   }
@@ -63,16 +84,18 @@ export function ContactForm() {
               <CheckCircle2 className="h-10 w-10 text-primary" />
             </div>
             <h2 className="text-2xl md:text-3xl font-bold text-foreground mb-4">
-              Thank You!
+              {t.contact.successMessage}
             </h2>
             <p className="text-lg text-muted-foreground mb-8">
-              We've received your request and will contact you within 24 hours. For immediate assistance, call us at{" "}
+              {language === "es" 
+                ? `Para asistencia inmediata, llamanos al `
+                : `For immediate assistance, call us at `}
               <a href={`tel:${company.phoneClean}`} className="text-primary font-medium">
                 {company.phone}
               </a>
             </p>
             <Button asChild>
-              <Link href="/">Return to Home</Link>
+              <Link href="/">{language === "es" ? "Volver al Inicio" : "Return to Home"}</Link>
             </Button>
           </div>
         </CardContent>
@@ -83,27 +106,27 @@ export function ContactForm() {
   return (
     <Card>
       <CardHeader>
-        <CardTitle className="text-2xl">Request a Free Estimate</CardTitle>
+        <CardTitle className="text-2xl">{t.contact.formTitle}</CardTitle>
       </CardHeader>
       <CardContent>
         <form onSubmit={handleSubmit} className="space-y-6">
           <div className="grid md:grid-cols-2 gap-6">
             <div className="space-y-2">
-              <Label htmlFor="name">Full Name *</Label>
+              <Label htmlFor="name">{t.contact.nameLabel} *</Label>
               <Input
                 id="name"
-                placeholder="John Smith"
+                placeholder={t.contact.namePlaceholder}
                 value={formData.name}
                 onChange={(e) => setFormData({ ...formData, name: e.target.value })}
                 required
               />
             </div>
             <div className="space-y-2">
-              <Label htmlFor="email">Email Address *</Label>
+              <Label htmlFor="email">{t.contact.emailLabel} *</Label>
               <Input
                 id="email"
                 type="email"
-                placeholder="john@example.com"
+                placeholder={t.contact.emailPlaceholder}
                 value={formData.email}
                 onChange={(e) => setFormData({ ...formData, email: e.target.value })}
                 required
@@ -113,29 +136,28 @@ export function ContactForm() {
 
           <div className="grid md:grid-cols-2 gap-6">
             <div className="space-y-2">
-              <Label htmlFor="phone">Phone Number *</Label>
+              <Label htmlFor="phone">{t.contact.phoneLabel} *</Label>
               <Input
                 id="phone"
                 type="tel"
-                placeholder="(787) 555-0123"
+                placeholder={t.contact.phonePlaceholder}
                 value={formData.phone}
                 onChange={(e) => setFormData({ ...formData, phone: e.target.value })}
                 required
               />
             </div>
             <div className="space-y-2">
-              <Label htmlFor="preferredContact">Preferred Contact Method</Label>
+              <Label htmlFor="propertyType">{t.contact.propertyLabel}</Label>
               <Select
-                value={formData.preferredContact}
-                onValueChange={(value) => setFormData({ ...formData, preferredContact: value })}
+                value={formData.propertyType}
+                onValueChange={(value) => setFormData({ ...formData, propertyType: value })}
               >
-                <SelectTrigger id="preferredContact">
+                <SelectTrigger id="propertyType">
                   <SelectValue />
                 </SelectTrigger>
                 <SelectContent>
-                  <SelectItem value="phone">Phone</SelectItem>
-                  <SelectItem value="email">Email</SelectItem>
-                  <SelectItem value="text">Text Message</SelectItem>
+                  <SelectItem value="residential">{t.contact.propertyResidential}</SelectItem>
+                  <SelectItem value="commercial">{t.contact.propertyCommercial}</SelectItem>
                 </SelectContent>
               </Select>
             </div>
@@ -143,35 +165,32 @@ export function ContactForm() {
 
           <div className="grid md:grid-cols-2 gap-6">
             <div className="space-y-2">
-              <Label htmlFor="service">Service Needed *</Label>
+              <Label htmlFor="service">{t.contact.serviceLabel} *</Label>
               <Select
                 value={formData.service}
                 onValueChange={(value) => setFormData({ ...formData, service: value })}
                 required
               >
                 <SelectTrigger id="service">
-                  <SelectValue placeholder="Select a service" />
+                  <SelectValue placeholder={t.contact.servicePlaceholder} />
                 </SelectTrigger>
                 <SelectContent>
-                  <SelectItem value="general">General Pest Control</SelectItem>
-                  <SelectItem value="termite">Termite Control</SelectItem>
-                  <SelectItem value="rodent">Rodent Control</SelectItem>
-                  <SelectItem value="mosquito">Mosquito Control</SelectItem>
-                  <SelectItem value="bed-bug">Bed Bug Treatment</SelectItem>
-                  <SelectItem value="commercial">Commercial Services</SelectItem>
-                  <SelectItem value="inspection">Free Inspection</SelectItem>
-                  <SelectItem value="other">Other</SelectItem>
+                  {serviceOptions[language].map((option) => (
+                    <SelectItem key={option.value} value={option.value}>
+                      {option.label}
+                    </SelectItem>
+                  ))}
                 </SelectContent>
               </Select>
             </div>
             <div className="space-y-2">
-              <Label htmlFor="area">Service Area</Label>
+              <Label htmlFor="area">{language === "es" ? "Municipio" : "Municipality"}</Label>
               <Select
                 value={formData.area}
                 onValueChange={(value) => setFormData({ ...formData, area: value })}
               >
                 <SelectTrigger id="area">
-                  <SelectValue placeholder="Select your area" />
+                  <SelectValue placeholder={language === "es" ? "Selecciona tu area" : "Select your area"} />
                 </SelectTrigger>
                 <SelectContent>
                   {serviceAreas.featuredMunicipalities.map((area) => (
@@ -179,40 +198,41 @@ export function ContactForm() {
                       {area}
                     </SelectItem>
                   ))}
-                  <SelectItem value="other">Other</SelectItem>
+                  <SelectItem value="other">{language === "es" ? "Otro" : "Other"}</SelectItem>
                 </SelectContent>
               </Select>
             </div>
           </div>
 
           <div className="space-y-2">
-            <Label htmlFor="message">Tell Us About Your Pest Issue</Label>
+            <Label htmlFor="message">{t.contact.messageLabel}</Label>
             <Textarea
               id="message"
-              placeholder="Please describe the pest issue you're experiencing, including location and any signs you've noticed..."
+              placeholder={t.contact.messagePlaceholder}
               rows={5}
               value={formData.message}
               onChange={(e) => setFormData({ ...formData, message: e.target.value })}
             />
           </div>
 
-          <div className="flex flex-col sm:flex-row gap-4">
-            <Button type="submit" size="lg" className="flex-1" disabled={isSubmitting}>
-              {isSubmitting ? (
-                "Submitting..."
-              ) : (
-                <>
-                  <Send className="mr-2 h-5 w-5" />
-                  Submit Request
-                </>
-              )}
-            </Button>
-          </div>
+          <Button type="submit" size="lg" className="w-full" disabled={isSubmitting}>
+            {isSubmitting ? (
+              language === "es" ? "Enviando..." : "Submitting..."
+            ) : (
+              <>
+                <Send className="mr-2 h-5 w-5" />
+                {t.contact.submitButton}
+              </>
+            )}
+          </Button>
 
-          <p className="text-sm text-muted-foreground">
-            By submitting this form, you agree to our{" "}
-            <Link href="/privacy" className="underline hover:text-foreground">Privacy Policy</Link>.
-            We'll never share your information.
+          <p className="text-sm text-muted-foreground text-center">
+            {language === "es" 
+              ? "Al enviar este formulario, aceptas nuestra "
+              : "By submitting this form, you agree to our "}
+            <Link href="/privacy" className="underline hover:text-foreground">
+              {t.footer.privacy}
+            </Link>.
           </p>
         </form>
       </CardContent>
