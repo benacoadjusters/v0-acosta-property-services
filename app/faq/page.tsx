@@ -17,18 +17,20 @@ import { useLanguage } from "@/lib/language-context"
 export default function FAQPage() {
   const { language, t } = useLanguage()
 
+  const currentFaqs = faqs[language]
+  
   const faqCategories = language === "es" ? [
-    { id: "general", title: "Preguntas Generales", data: faqs.general },
-    { id: "pestControl", title: "Control de Plagas", data: faqs.pestControl },
-    { id: "termite", title: "Control de Termitas", data: faqs.termite },
-    { id: "commercial", title: "Servicios Comerciales", data: faqs.commercial },
-    { id: "pricing", title: "Precios y Pagos", data: faqs.pricing },
+    { id: "general", title: "Preguntas Generales", data: currentFaqs.general },
+    { id: "pestControl", title: "Control de Plagas", data: currentFaqs.pestControl },
+    { id: "termite", title: "Control de Termitas", data: currentFaqs.termite },
+    { id: "commercial", title: "Servicios Comerciales", data: currentFaqs.commercial },
+    { id: "pricing", title: "Precios y Pagos", data: currentFaqs.pricing },
   ] : [
-    { id: "general", title: "General Questions", data: faqs.general },
-    { id: "pestControl", title: "Pest Control", data: faqs.pestControl },
-    { id: "termite", title: "Termite Control", data: faqs.termite },
-    { id: "commercial", title: "Commercial Services", data: faqs.commercial },
-    { id: "pricing", title: "Pricing & Payment", data: faqs.pricing },
+    { id: "general", title: "General Questions", data: currentFaqs.general },
+    { id: "pestControl", title: "Pest Control", data: currentFaqs.pestControl },
+    { id: "termite", title: "Termite Control", data: currentFaqs.termite },
+    { id: "commercial", title: "Commercial Services", data: currentFaqs.commercial },
+    { id: "pricing", title: "Pricing & Payment", data: currentFaqs.pricing },
   ]
 
   return (
