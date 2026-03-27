@@ -64,21 +64,21 @@ export const services = {
       id: "cockroaches",
       nameEs: "Cucarachas",
       nameEn: "Cockroaches",
-      icon: "bug",
+      icon: "cockroach",
       methods: ["fumigation"]
     },
     {
       id: "ants",
       nameEs: "Hormigas",
       nameEn: "Ants",
-      icon: "bug",
+      icon: "ant",
       methods: ["fumigation"]
     },
     {
       id: "termites",
       nameEs: "Comején / Termitas",
       nameEn: "Termites",
-      icon: "bug",
+      icon: "termite",
       methods: ["fumigation"]
     },
     {
@@ -92,42 +92,42 @@ export const services = {
       id: "mosquitoes",
       nameEs: "Mosquitos",
       nameEn: "Mosquitoes",
-      icon: "bug",
+      icon: "mosquito",
       methods: ["fumigation"]
     },
     {
       id: "spiders",
       nameEs: "Arañas",
       nameEn: "Spiders",
-      icon: "bug",
+      icon: "spider",
       methods: ["fumigation"]
     },
     {
       id: "bedbugs",
       nameEs: "Chinches",
       nameEn: "Bed Bugs",
-      icon: "bug",
+      icon: "bedbug",
       methods: ["fumigation"]
     },
     {
       id: "flies",
       nameEs: "Moscas",
       nameEn: "Flies",
-      icon: "bug",
+      icon: "fly",
       methods: ["fumigation", "traps"]
     },
     {
       id: "wasps",
       nameEs: "Avispas y Abejas",
       nameEn: "Wasps and Bees",
-      icon: "bug",
+      icon: "wasp",
       methods: ["fumigation"]
     },
     {
       id: "scorpions",
       nameEs: "Alacranes",
       nameEn: "Scorpions",
-      icon: "bug",
+      icon: "scorpion",
       methods: ["fumigation"]
     }
   ],

@@ -42,7 +42,7 @@ export function CTASection({
             <Button asChild size="lg" className="bg-accent text-accent-foreground hover:bg-accent/90 font-semibold">
               <Link href="/contact">{t.ui.getQuote}</Link>
             </Button>
-            <Button asChild size="lg" variant="outline" className="border-primary-foreground text-primary-foreground hover:bg-primary-foreground hover:text-primary">
+            <Button asChild size="lg" className="bg-background text-foreground hover:bg-background/90 font-semibold">
               <a href={`tel:${company.phoneClean}`}>
                 <Phone className="mr-2 h-5 w-5" />
                 {t.ui.callNow}

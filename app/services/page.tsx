@@ -2,7 +2,7 @@
 
 import Link from "next/link"
 import Image from "next/image"
-import { Home, Building2, ArrowRight, CheckCircle2, SprayCan, Target, Bug } from "lucide-react"
+import { Home, Building2, ArrowRight, CheckCircle2, SprayCan, Target, Bug, Rat, Shell, Bird, Leaf, CircleDot, Sparkles, Hexagon, Skull, Zap } from "lucide-react"
 import { Button } from "@/components/ui/button"
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card"
 import { CTASection } from "@/components/sections/cta-section"
@@ -15,6 +15,19 @@ export default function ServicesPage() {
   const methodIcons = {
     spray: SprayCan,
     target: Target,
+  }
+
+  const pestIcons: Record<string, React.ElementType> = {
+    cockroach: Bug,
+    ant: Hexagon,
+    termite: Leaf,
+    rat: Rat,
+    mosquito: Zap,
+    spider: Sparkles,
+    bedbug: CircleDot,
+    fly: Bird,
+    wasp: Shell,
+    scorpion: Skull,
   }
 
   return (
@@ -116,10 +129,11 @@ export default function ServicesPage() {
                   ? (m === "fumigation" ? "Fumigación" : "Trampas")
                   : (m === "fumigation" ? "Fumigation" : "Traps")
               )
+              const PestIcon = pestIcons[pest.icon] || Bug
 
               return (
                 <Card key={pest.id} className="p-4 text-center hover:shadow-md transition-shadow">
-                  <Bug className="h-8 w-8 text-primary mx-auto mb-3" />
+                  <PestIcon className="h-8 w-8 text-primary mx-auto mb-3" />
                   <h3 className="font-semibold text-sm mb-1">{name}</h3>
                   <p className="text-xs text-muted-foreground">
                     {methodLabels.join(" / ")}
