@@ -2,33 +2,16 @@
 
 import Link from "next/link"
 import Image from "next/image"
-import { Home, Building2, ArrowRight, CheckCircle2, SprayCan, Target, Bug, Rat, Shell, Bird, Leaf, CircleDot, Sparkles, Hexagon, Skull, Zap } from "lucide-react"
+import { Home, Building2, ArrowRight, CheckCircle2, SprayCan, Target, Bug } from "lucide-react"
 import { Button } from "@/components/ui/button"
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card"
 import { CTASection } from "@/components/sections/cta-section"
 import { useLanguage } from "@/lib/language-context"
 import { services } from "@/content/services"
+import { pestIconMap } from "@/components/pest-icons"
 
 export default function ServicesPage() {
   const { language, t } = useLanguage()
-
-  const methodIcons = {
-    spray: SprayCan,
-    target: Target,
-  }
-
-  const pestIcons: Record<string, React.ElementType> = {
-    cockroach: Bug,
-    ant: Hexagon,
-    termite: Leaf,
-    rat: Rat,
-    mosquito: Zap,
-    spider: Sparkles,
-    bedbug: CircleDot,
-    fly: Bird,
-    wasp: Shell,
-    scorpion: Skull,
-  }
 
   return (
     <>
@@ -129,7 +112,7 @@ export default function ServicesPage() {
                   ? (m === "fumigation" ? "Fumigación" : "Trampas")
                   : (m === "fumigation" ? "Fumigation" : "Traps")
               )
-              const PestIcon = pestIcons[pest.icon] || Bug
+              const PestIcon = pestIconMap[pest.icon] || Bug
 
               return (
                 <Card key={pest.id} className="p-4 text-center hover:shadow-md transition-shadow">
