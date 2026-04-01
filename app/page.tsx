@@ -85,7 +85,7 @@ export default function HomePage() {
               <p className="text-sm opacity-80 mt-1">{t.home.statsMunicipios}</p>
             </div>
             <div className="text-center">
-              <p className="text-3xl md:text-4xl font-bold">100%</p>
+              <p className="text-xl md:text-2xl font-bold">{t.home.statsIslandCoverage}</p>
               <p className="text-sm opacity-80 mt-1">{t.home.statsIsland}</p>
             </div>
           </div>
@@ -226,7 +226,7 @@ export default function HomePage() {
                   {t.ui.getQuote}
                 </Link>
               </Button>
-              <Button asChild size="lg" variant="outline" className="border-primary-foreground text-primary-foreground hover:bg-primary-foreground hover:text-primary">
+              <Button asChild size="lg" className="bg-white text-primary hover:bg-white/90 font-semibold">
                 <a href={`tel:${company.phoneClean}`}>
                   <Phone className="mr-2 h-5 w-5" />
                   {company.phone}
