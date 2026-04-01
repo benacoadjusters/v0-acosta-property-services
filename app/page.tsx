@@ -174,7 +174,7 @@ export default function HomePage() {
                   <div className="relative aspect-square rounded-2xl overflow-hidden shadow-lg">
                     <Image
                       src="/images/service-truck.jpg"
-                      alt="Vehiculo"
+                      alt="Vehículo de servicio"
                       fill
                       className="object-cover"
                     />
@@ -197,7 +197,7 @@ export default function HomePage() {
               {t.home.coverageDesc}
             </p>
             <div className="flex flex-wrap justify-center gap-3">
-              {['San Juan', 'Bayamon', 'Carolina', 'Ponce', 'Caguas', 'Guaynabo', 'Mayaguez', 'Arecibo'].map((city) => (
+              {['San Juan', 'Bayamón', 'Carolina', 'Ponce', 'Caguas', 'Guaynabo', 'Mayagüez', 'Arecibo'].map((city) => (
                 <span 
                   key={city}
                   className="inline-flex items-center rounded-full bg-secondary px-4 py-2 text-sm font-medium text-secondary-foreground"
