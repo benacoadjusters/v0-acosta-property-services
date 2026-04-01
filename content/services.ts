@@ -8,14 +8,14 @@ export const services = {
       nameEn: "Fumigation",
       shortDescEs: "Tratamiento químico profesional para eliminar plagas de manera efectiva.",
       shortDescEn: "Professional chemical treatment to effectively eliminate pests.",
-      descriptionEs: "Nuestro servicio de fumigación utiliza productos de última generación, seguros para su familia y mascotas cuando se siguen las instrucciones. Aplicamos tratamientos en interiores y exteriores para garantizar la eliminación completa de plagas.",
-      descriptionEn: "Our fumigation service uses state-of-the-art products, safe for your family and pets when instructions are followed. We apply treatments indoors and outdoors to ensure complete pest elimination.",
+      descriptionEs: "Nuestro servicio de fumigación utiliza productos de última generación registrados en la EPA. Antes de cada tratamiento, proporcionamos instrucciones detalladas de preparación y precaución para garantizar la protección adecuada de su familia y mascotas. Aplicamos tratamientos en interiores y exteriores para la eliminación completa de plagas.",
+      descriptionEn: "Our fumigation service uses state-of-the-art EPA-registered products. Before each treatment, we provide detailed preparation and precautionary instructions to ensure proper protection for your family and pets. We apply treatments indoors and outdoors for complete pest elimination.",
       icon: "spray",
       image: "/images/mosquito-treatment.jpg",
       benefits: {
         es: [
           "Eliminación rápida y efectiva",
-          "Productos registrados por EPA",
+          "Productos registrados en la EPA",
           "Cobertura interior y exterior",
           "Efecto residual de protección",
           "Garantía condicionada de servicio"

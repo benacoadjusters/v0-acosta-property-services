@@ -10,7 +10,7 @@ export const faqs = {
       },
       {
         question: "¿Son seguros sus tratamientos para niños y mascotas?",
-        answer: "Utilizamos productos registrados por la EPA y seguimos protocolos de seguridad establecidos. Sin embargo, es responsabilidad del cliente seguir estrictamente las instrucciones proporcionadas por nuestros técnicos antes, durante y después del tratamiento. Esto incluye: desalojar el área tratada por el tiempo indicado, mantener niños y mascotas alejados hasta que los productos sequen completamente, y seguir todas las precauciones escritas que le entregaremos. El incumplimiento de estas instrucciones puede comprometer la seguridad y exime a la empresa de responsabilidad por cualquier incidente."
+        answer: "Utilizamos productos registrados en la EPA y seguimos protocolos de seguridad establecidos. Antes de cada tratamiento, proporcionamos instrucciones detalladas de preparación y precaución que debe seguir para garantizar la protección de su familia y mascotas. Esto incluye: desalojar el área tratada por el tiempo indicado, mantener niños y mascotas alejados hasta que los productos sequen completamente, y seguir las precauciones que le entregaremos por escrito. Su colaboración siguiendo estas instrucciones es esencial para un tratamiento exitoso y seguro."
       },
       {
         question: "¿Ofrecen cotizaciones gratis?",
