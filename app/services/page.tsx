@@ -3,7 +3,7 @@
 import { useState } from "react"
 import Link from "next/link"
 import Image from "next/image"
-import { Home, Building2, ArrowRight, CheckCircle2, SprayCan, Target, Bug } from "lucide-react"
+import { Home, Building2, ArrowRight, CheckCircle2, SprayCan, Target, Bug, Leaf } from "lucide-react"
 import { Button } from "@/components/ui/button"
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card"
 import { Dialog, DialogContent, DialogHeader, DialogTitle, DialogDescription } from "@/components/ui/dialog"
@@ -29,11 +29,24 @@ export default function ServicesPage() {
             <h1 className="text-4xl md:text-5xl font-bold text-foreground mt-3 mb-6 text-balance">
               {language === "es" ? "Servicios de Control de Plagas" : "Pest Control Services"}
             </h1>
-            <p className="text-xl text-muted-foreground text-pretty">
+            <p className="text-xl text-muted-foreground text-pretty mb-6">
               {language === "es"
-                ? "Ofrecemos fumigación profesional y exterminación por trampas. Contamos con el Certificado 4 de CESPET para tratamiento de césped y ornamentales."
-                : "We offer professional fumigation and trap extermination. We hold CESPET Certificate 4 for lawn and ornamental treatment."}
+                ? "Ofrecemos soluciones integrales de control de plagas: fumigación, trampeo, y control biológico. Aplicamos el método más adecuado según el tipo de plaga y las necesidades de su propiedad."
+                : "We offer comprehensive pest control solutions: fumigation, trapping, and biological control. We apply the most appropriate method based on the pest type and your property's needs."}
             </p>
+            <div className="flex flex-wrap gap-3">
+              <span className="inline-flex items-center gap-2 bg-primary/10 border border-primary/20 text-primary px-4 py-2 rounded-full text-sm font-medium">
+                <CheckCircle2 className="h-4 w-4" />
+                {language === "es" ? "Certificado 8A - Control de Plagas" : "Certificate 8A - Pest Control"}
+              </span>
+              <span className="inline-flex items-center gap-2 bg-primary/10 border border-primary/20 text-primary px-4 py-2 rounded-full text-sm font-medium">
+                <CheckCircle2 className="h-4 w-4" />
+                {language === "es" ? "Certificado 4 - Césped y Ornamentales" : "Certificate 4 - Lawn & Ornamentals"}
+              </span>
+              <span className="inline-flex items-center gap-2 bg-muted text-muted-foreground px-4 py-2 rounded-full text-sm">
+                {language === "es" ? "Certificados por el Departamento de Agricultura de PR" : "Certified by PR Department of Agriculture"}
+              </span>
+            </div>
           </div>
         </div>
       </section>
@@ -52,7 +65,7 @@ export default function ServicesPage() {
           
           <div className="grid md:grid-cols-2 gap-8">
             {services.methods.map((method) => {
-              const Icon = method.icon === "spray" ? SprayCan : Target
+              const Icon = method.icon === "spray" ? SprayCan : method.icon === "leaf" ? Leaf : Target
               const name = language === "es" ? method.nameEs : method.nameEn
               const description = language === "es" ? method.descriptionEs : method.descriptionEn
               const benefits = language === "es" ? method.benefits.es : method.benefits.en
@@ -114,29 +127,34 @@ export default function ServicesPage() {
           <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 gap-4">
             {services.pests.map((pest) => {
               const name = language === "es" ? pest.nameEs : pest.nameEn
-              const methodLabels = pest.methods.map(m => 
-                language === "es" 
-                  ? (m === "fumigation" ? "Fumigación" : "Trampas")
-                  : (m === "fumigation" ? "Fumigation" : "Traps")
-              )
+              const methodLabels = pest.methods.map(m => {
+                if (language === "es") {
+                  if (m === "fumigation") return "Fumigación"
+                  if (m === "traps") return "Trampas"
+                  if (m === "biological") return "Control Biológico"
+                  return m
+                } else {
+                  if (m === "fumigation") return "Fumigation"
+                  if (m === "traps") return "Traps"
+                  if (m === "biological") return "Biological Control"
+                  return m
+                }
+              })
               const PestIcon = pestIconMap[pest.icon] || Bug
 
               return (
                 <Card 
                   key={pest.id} 
-                  className="p-4 text-center hover:shadow-lg transition-all cursor-pointer hover:border-primary group"
+                  className="p-3 text-center hover:shadow-md transition-all cursor-pointer hover:border-primary group"
                   onClick={() => {
                     setSelectedPest(pest)
                     setSelectedImageIndex(0)
                   }}
                 >
-                  <PestIcon className="h-10 w-10 text-primary mx-auto mb-3 group-hover:scale-110 transition-transform" />
-                  <h3 className="font-semibold text-sm mb-1 line-clamp-2">{name}</h3>
-                  <p className="text-xs text-muted-foreground">
+                  <PestIcon className="h-8 w-8 text-primary mx-auto mb-2 group-hover:scale-110 transition-transform" />
+                  <h3 className="font-semibold text-xs mb-1 line-clamp-2">{name}</h3>
+                  <p className="text-[10px] text-muted-foreground line-clamp-1">
                     {methodLabels.join(" / ")}
-                  </p>
-                  <p className="text-xs text-primary mt-2 opacity-0 group-hover:opacity-100 transition-opacity">
-                    {language === "es" ? "Ver más" : "See more"}
                   </p>
                 </Card>
               )
@@ -159,11 +177,19 @@ export default function ServicesPage() {
                   {language === "es" ? selectedPest.nameEs : selectedPest.nameEn}
                 </DialogTitle>
                 <DialogDescription>
-                  {selectedPest.methods.map(m => 
-                    language === "es" 
-                      ? (m === "fumigation" ? "Fumigación" : "Trampas")
-                      : (m === "fumigation" ? "Fumigation" : "Traps")
-                  ).join(" / ")}
+                  {selectedPest.methods.map(m => {
+                    if (language === "es") {
+                      if (m === "fumigation") return "Fumigación"
+                      if (m === "traps") return "Trampas"
+                      if (m === "biological") return "Control Biológico"
+                      return m
+                    } else {
+                      if (m === "fumigation") return "Fumigation"
+                      if (m === "traps") return "Traps"
+                      if (m === "biological") return "Biological Control"
+                      return m
+                    }
+                  }).join(" / ")}
                 </DialogDescription>
               </DialogHeader>
               
@@ -221,18 +247,21 @@ export default function ServicesPage() {
                     {language === "es" ? "Método de Control" : "Control Method"}
                   </h4>
                   <div className="flex flex-wrap gap-2">
-                    {selectedPest.methods.map(method => (
-                      <span 
-                        key={method}
-                        className="inline-flex items-center gap-1.5 bg-primary/10 text-primary px-3 py-1.5 rounded-full text-sm"
-                      >
-                        {method === "fumigation" ? <SprayCan className="h-4 w-4" /> : <Target className="h-4 w-4" />}
-                        {language === "es" 
-                          ? (method === "fumigation" ? "Fumigación" : "Trampas")
-                          : (method === "fumigation" ? "Fumigation" : "Traps")
-                        }
-                      </span>
-                    ))}
+                    {selectedPest.methods.map(method => {
+                      const MethodIcon = method === "fumigation" ? SprayCan : method === "biological" ? Leaf : Target
+                      const label = language === "es"
+                        ? (method === "fumigation" ? "Fumigación" : method === "biological" ? "Control Biológico" : "Trampas")
+                        : (method === "fumigation" ? "Fumigation" : method === "biological" ? "Biological Control" : "Traps")
+                      return (
+                        <span 
+                          key={method}
+                          className="inline-flex items-center gap-1.5 bg-primary/10 text-primary px-3 py-1.5 rounded-full text-sm"
+                        >
+                          <MethodIcon className="h-4 w-4" />
+                          {label}
+                        </span>
+                      )
+                    })}
                   </div>
                 </div>
                 

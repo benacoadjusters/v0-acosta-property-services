@@ -55,6 +55,33 @@ export const services = {
           "Reinfestation prevention"
         ]
       }
+    },
+    {
+      id: "biological",
+      nameEs: "Control Biológico",
+      nameEn: "Biological Control",
+      shortDescEs: "Estrategia sostenible usando enemigos naturales de las plagas.",
+      shortDescEn: "Sustainable strategy using natural pest enemies.",
+      descriptionEs: "El control biológico es una estrategia sostenible y eficiente que utiliza enemigos naturales como depredadores, parasitoides y microorganismos para combatir plagas, reduciendo la dependencia de productos químicos. Ideal para jardines, invernaderos, césped y áreas verdes donde se busca mantener la calidad estética sin dañar el medio ambiente. Utilizamos agentes como mariquitas, crisopas, avispas parasitoides, ácaros depredadores, nematodos entomopatógenos y bacterias como Bacillus thuringiensis según el tipo de plaga.",
+      descriptionEn: "Biological control is a sustainable and efficient strategy that uses natural enemies such as predators, parasitoids and microorganisms to combat pests, reducing dependence on chemicals. Ideal for gardens, greenhouses, lawns and green areas where aesthetic quality is sought without harming the environment. We use agents such as ladybugs, lacewings, parasitoid wasps, predatory mites, entomopathogenic nematodes and bacteria like Bacillus thuringiensis depending on the pest type.",
+      icon: "leaf",
+      image: "/images/garden-care.jpg",
+      benefits: {
+        es: [
+          "Ecológico y sostenible",
+          "Sin residuos químicos",
+          "Seguro para plantas y animales",
+          "Control a largo plazo",
+          "Ideal para césped y ornamentales"
+        ],
+        en: [
+          "Ecological and sustainable",
+          "No chemical residues",
+          "Safe for plants and animals",
+          "Long-term control",
+          "Ideal for lawns and ornamentals"
+        ]
+      }
     }
   ],
 
@@ -79,7 +106,7 @@ export const services = {
       nameEs: "Hormigas",
       nameEn: "Ants",
       icon: "ant",
-      methods: ["fumigation"],
+      methods: ["fumigation", "biological"],
       images: [
         { src: "/images/pests/ant-fire.jpg", labelEs: "Hormiga de Fuego", labelEn: "Fire Ant" },
         { src: "/images/pests/ant-carpenter.jpg", labelEs: "Hormiga Carpintera", labelEn: "Carpenter Ant" },
@@ -121,7 +148,7 @@ export const services = {
       nameEs: "Mosquitos",
       nameEn: "Mosquitoes",
       icon: "mosquito",
-      methods: ["fumigation"],
+      methods: ["fumigation", "biological"],
       images: [
         { src: "/images/pests/mosquito-aedes.jpg", labelEs: "Mosquito Aedes aegypti", labelEn: "Aedes aegypti Mosquito" },
         { src: "/images/pests/mosquito.jpg", labelEs: "Mosquito Común", labelEn: "Common Mosquito" }
@@ -134,7 +161,7 @@ export const services = {
       nameEs: "Arañas",
       nameEn: "Spiders",
       icon: "spider",
-      methods: ["fumigation"],
+      methods: ["fumigation", "biological"],
       images: [
         { src: "/images/pests/spider-brownwidow.jpg", labelEs: "Viuda Marrón", labelEn: "Brown Widow Spider" },
         { src: "/images/pests/spider.jpg", labelEs: "Araña de Casa", labelEn: "House Spider" }
@@ -239,7 +266,7 @@ export const services = {
       nameEs: "Polillas",
       nameEn: "Moths",
       icon: "moth",
-      methods: ["fumigation"],
+      methods: ["biological", "fumigation"],
       images: [
         { src: "/images/pests/moth-clothes.jpg", labelEs: "Polilla de la Ropa", labelEn: "Clothes Moth" },
         { src: "/images/pests/moth-pantry.jpg", labelEs: "Polilla de Despensa", labelEn: "Pantry Moth" }
@@ -252,7 +279,7 @@ export const services = {
       nameEs: "Áfidos / Pulgones",
       nameEn: "Aphids",
       icon: "aphid",
-      methods: ["fumigation"],
+      methods: ["biological", "fumigation"],
       images: [
         { src: "/images/pests/aphid-green.jpg", labelEs: "Áfido Verde", labelEn: "Green Aphid" },
         { src: "/images/pests/aphid-black.jpg", labelEs: "Áfido Negro", labelEn: "Black Aphid" }
