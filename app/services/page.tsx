@@ -258,7 +258,7 @@ export default function ServicesPage() {
           </div>
 
           <div className="grid md:grid-cols-2 gap-8">
-            {services.clientTypes.map((clientType) => {
+            {services.customerTypes.map((clientType) => {
               const isResidential = clientType.id === "residential"
               const Icon = isResidential ? Home : Building2
               const name = language === "es" ? clientType.nameEs : clientType.nameEn
