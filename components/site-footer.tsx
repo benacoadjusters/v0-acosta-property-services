@@ -19,6 +19,10 @@ const footerLinks = {
       { name: "Preguntas Frecuentes", href: "/faq" },
       { name: "Contacto", href: "/contact" },
     ],
+    legal: [
+      { name: "Términos y Condiciones", href: "/terms-and-conditions" },
+      { name: "Política de Privacidad", href: "/privacy-policy" },
+    ],
   },
   en: {
     services: [
@@ -31,6 +35,10 @@ const footerLinks = {
       { name: "Gallery", href: "/gallery" },
       { name: "FAQ", href: "/faq" },
       { name: "Contact", href: "/contact" },
+    ],
+    legal: [
+      { name: "Terms and Conditions", href: "/terms-and-conditions" },
+      { name: "Privacy Policy", href: "/privacy-policy" },
     ],
   },
 }
@@ -139,7 +147,19 @@ export function SiteFooter() {
                 </li>
               ))}
             </ul>
-            
+            <h3 className="font-semibold text-lg mt-6 mb-4">{t.footer.legalTitle}</h3>
+            <ul className="space-y-2 text-sm">
+              {links.legal.map((link) => (
+                <li key={link.href}>
+                  <Link
+                    href={link.href}
+                    className="text-background/70 hover:text-background transition-colors"
+                  >
+                    {link.name}
+                  </Link>
+                </li>
+              ))}
+            </ul>
           </div>
         </div>
       </div>
@@ -150,10 +170,10 @@ export function SiteFooter() {
           <div className="flex flex-col md:flex-row items-center justify-between gap-4 text-sm text-background/60">
             <p>&copy; {new Date().getFullYear()} {company.name}. {t.footer.copyright}</p>
             <div className="flex items-center gap-4">
-              <Link href="/privacy" className="hover:text-background transition-colors">
+              <Link href="/privacy-policy" className="hover:text-background transition-colors">
                 {t.footer.privacy}
               </Link>
-              <Link href="/terms" className="hover:text-background transition-colors">
+              <Link href="/terms-and-conditions" className="hover:text-background transition-colors">
                 {t.footer.terms}
               </Link>
             </div>

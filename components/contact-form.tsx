@@ -56,6 +56,8 @@ export function ContactForm() {
     message: "",
     propertyType: "residential",
   })
+  const [acceptedTerms, setAcceptedTerms] = useState(false)
+  const [acceptedMarketing, setAcceptedMarketing] = useState(false)
 
   useEffect(() => {
     const name = searchParams.get("name")
@@ -220,7 +222,62 @@ export function ContactForm() {
             />
           </div>
 
-          <Button type="submit" size="lg" className="w-full" disabled={isSubmitting}>
+          {/* Required acceptance checkbox */}
+          <div className="flex items-start gap-3">
+            <input
+              id="acceptTerms"
+              type="checkbox"
+              checked={acceptedTerms}
+              onChange={(e) => setAcceptedTerms(e.target.checked)}
+              required
+              className="mt-1 h-4 w-4 shrink-0 rounded border border-input accent-primary cursor-pointer"
+            />
+            <label htmlFor="acceptTerms" className="text-sm text-muted-foreground leading-relaxed cursor-pointer">
+              {language === "es" ? (
+                <>
+                  He leído y acepto los{" "}
+                  <Link href="/terms-and-conditions" className="underline hover:text-foreground font-medium">
+                    Términos y Condiciones
+                  </Link>{" "}
+                  y la{" "}
+                  <Link href="/privacy-policy" className="underline hover:text-foreground font-medium">
+                    Política de Privacidad
+                  </Link>
+                  . *
+                </>
+              ) : (
+                <>
+                  I have read and accept the{" "}
+                  <Link href="/terms-and-conditions" className="underline hover:text-foreground font-medium">
+                    Terms and Conditions
+                  </Link>{" "}
+                  and{" "}
+                  <Link href="/privacy-policy" className="underline hover:text-foreground font-medium">
+                    Privacy Policy
+                  </Link>
+                  . *
+                </>
+              )}
+            </label>
+          </div>
+
+          {/* Optional marketing consent checkbox */}
+          <div className="flex items-start gap-3">
+            <input
+              id="acceptMarketing"
+              type="checkbox"
+              checked={acceptedMarketing}
+              onChange={(e) => setAcceptedMarketing(e.target.checked)}
+              className="mt-1 h-4 w-4 shrink-0 rounded border border-input accent-primary cursor-pointer"
+            />
+            <label htmlFor="acceptMarketing" className="text-sm text-muted-foreground leading-relaxed cursor-pointer">
+              {language === "es"
+                ? `Acepto recibir comunicaciones promocionales de ${company.name} por llamada, SMS, WhatsApp o correo electrónico. Mi consentimiento no es condición de compra. La frecuencia de mensajes puede variar. Pueden aplicar tarifas de mensajes y datos. Puedo revocar mi consentimiento en cualquier momento.`
+                : `I agree to receive promotional communications from ${company.name} by call, SMS, WhatsApp, or email. Consent is not a condition of purchase. Message frequency may vary. Message and data rates may apply. I can withdraw my consent at any time.`}
+            </label>
+          </div>
+
+          <Button type="submit" size="lg" className="w-full" disabled={isSubmitting || !acceptedTerms}>
             {isSubmitting ? (
               language === "es" ? "Enviando..." : "Submitting..."
             ) : (
@@ -230,15 +287,6 @@ export function ContactForm() {
               </>
             )}
           </Button>
-
-          <p className="text-sm text-muted-foreground text-center">
-            {language === "es" 
-              ? "Al enviar este formulario, aceptas nuestra "
-              : "By submitting this form, you agree to our "}
-            <Link href="/privacy" className="underline hover:text-foreground">
-              {t.footer.privacy}
-            </Link>.
-          </p>
         </form>
       </CardContent>
     </Card>
