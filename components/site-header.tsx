@@ -13,12 +13,7 @@ import {
   NavigationMenuList,
   navigationMenuTriggerStyle,
 } from "@/components/ui/navigation-menu"
-import {
-  DropdownMenu,
-  DropdownMenuContent,
-  DropdownMenuItem,
-  DropdownMenuTrigger,
-} from "@/components/ui/dropdown-menu"
+
 import { company } from "@/content/company"
 import { useLanguage } from "@/lib/language-context"
 
@@ -48,22 +43,16 @@ export function SiteHeader() {
             </a>
             
             {/* Language Toggle */}
-            <DropdownMenu>
-              <DropdownMenuTrigger asChild>
-                <Button variant="ghost" size="sm" className="text-primary-foreground hover:bg-primary-foreground/10 gap-2">
-                  <Globe className="h-4 w-4" />
-                  <span className="uppercase">{language}</span>
-                </Button>
-              </DropdownMenuTrigger>
-              <DropdownMenuContent align="end">
-                <DropdownMenuItem onClick={() => setLanguage("es")} className={language === "es" ? "bg-accent" : ""}>
-                  Espanol
-                </DropdownMenuItem>
-                <DropdownMenuItem onClick={() => setLanguage("en")} className={language === "en" ? "bg-accent" : ""}>
-                  English
-                </DropdownMenuItem>
-              </DropdownMenuContent>
-            </DropdownMenu>
+            <Button
+              variant="ghost"
+              size="sm"
+              className="text-primary-foreground hover:bg-primary-foreground/10 gap-1.5 font-semibold"
+              onClick={() => setLanguage(language === "es" ? "en" : "es")}
+              aria-label={language === "es" ? "Switch to English" : "Cambiar a Español"}
+            >
+              <Globe className="h-4 w-4" />
+              <span className="uppercase">{language === "es" ? "ES" : "EN"}</span>
+            </Button>
             
             <Button 
               asChild 
@@ -216,24 +205,15 @@ export function SiteHeader() {
                 </nav>
                 <div className="border-t p-4 space-y-3">
                   {/* Mobile Language Toggle */}
-                  <div className="flex gap-2">
-                    <Button 
-                      variant={language === "es" ? "default" : "outline"} 
-                      size="sm" 
-                      className="flex-1"
-                      onClick={() => setLanguage("es")}
-                    >
-                      Espanol
-                    </Button>
-                    <Button 
-                      variant={language === "en" ? "default" : "outline"} 
-                      size="sm" 
-                      className="flex-1"
-                      onClick={() => setLanguage("en")}
-                    >
-                      English
-                    </Button>
-                  </div>
+                  <Button
+                    variant="outline"
+                    size="sm"
+                    className="w-full gap-2"
+                    onClick={() => setLanguage(language === "es" ? "en" : "es")}
+                  >
+                    <Globe className="h-4 w-4" />
+                    {language === "es" ? "Switch to English" : "Cambiar a Español"}
+                  </Button>
                   <a 
                     href={`tel:${company.phoneClean}`} 
                     className="flex items-center gap-2 text-primary font-medium"

@@ -11,16 +11,16 @@ export default function TermsAndConditionsPage() {
   return (
     <>
       {/* Hero */}
-      <section className="bg-secondary py-16 md:py-20">
+      <section className="bg-secondary py-12 md:py-20">
         <div className="container mx-auto px-4">
-          <div className="max-w-3xl">
+          <div className="max-w-3xl mx-auto">
             <span className="text-primary font-semibold text-sm uppercase tracking-wider">
-              {es ? "Legal" : "Legal"}
+              Legal
             </span>
-            <h1 className="text-4xl md:text-5xl font-bold text-foreground mt-3 mb-4 text-balance">
+            <h1 className="text-3xl md:text-5xl font-bold text-foreground mt-3 mb-4 text-balance">
               {es ? "Términos y Condiciones" : "Terms and Conditions"}
             </h1>
-            <p className="text-lg text-muted-foreground text-pretty">
+            <p className="text-base md:text-lg text-muted-foreground text-pretty">
               {es
                 ? "Términos aplicables al uso de este sitio web, sus formularios y las solicitudes de servicios realizadas a través de la plataforma."
                 : "Terms governing the use of this website, its forms, and service requests submitted through the platform."}
@@ -33,11 +33,10 @@ export default function TermsAndConditionsPage() {
       </section>
 
       {/* Content */}
-      <section className="py-16 md:py-20 bg-background">
+      <section className="py-10 md:py-20 bg-background">
         <div className="container mx-auto px-4">
-          <div className="max-w-3xl mx-auto prose prose-neutral dark:prose-invert max-w-none">
-
-            <div className="space-y-10">
+          <div className="max-w-3xl mx-auto">
+            <div className="space-y-8 md:space-y-10">
 
               {/* 1 */}
               <div>

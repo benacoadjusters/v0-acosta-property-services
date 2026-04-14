@@ -11,16 +11,16 @@ export default function PrivacyPolicyPage() {
   return (
     <>
       {/* Hero */}
-      <section className="bg-secondary py-16 md:py-20">
+      <section className="bg-secondary py-12 md:py-20">
         <div className="container mx-auto px-4">
-          <div className="max-w-3xl">
+          <div className="max-w-3xl mx-auto">
             <span className="text-primary font-semibold text-sm uppercase tracking-wider">
-              {es ? "Legal" : "Legal"}
+              Legal
             </span>
-            <h1 className="text-4xl md:text-5xl font-bold text-foreground mt-3 mb-4 text-balance">
+            <h1 className="text-3xl md:text-5xl font-bold text-foreground mt-3 mb-4 text-balance">
               {es ? "Política de Privacidad" : "Privacy Policy"}
             </h1>
-            <p className="text-lg text-muted-foreground text-pretty">
+            <p className="text-base md:text-lg text-muted-foreground text-pretty">
               {es
                 ? "Cómo recopilamos, usamos, compartimos y protegemos la información personal obtenida a través de este sitio web y sus formularios."
                 : "How we collect, use, share, and protect personal information obtained through this website and its forms."}
@@ -33,10 +33,10 @@ export default function PrivacyPolicyPage() {
       </section>
 
       {/* Content */}
-      <section className="py-16 md:py-20 bg-background">
+      <section className="py-10 md:py-20 bg-background">
         <div className="container mx-auto px-4">
           <div className="max-w-3xl mx-auto">
-            <div className="space-y-10">
+            <div className="space-y-8 md:space-y-10">
 
               {/* 1 */}
               <div>
