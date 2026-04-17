@@ -15,62 +15,62 @@ export default function AboutPage() {
     { 
       name: "Gabriel Acosta", 
       role: "Presidente e Inspector", 
-      description: "Fundador y lider de Acosta Property Services. Con vision empresarial y experiencia en campo, dirige las operaciones y realiza inspecciones especializadas para garantizar la calidad de cada servicio.",
+      description: "Fundador y lider de Acosta Property Services. Con vision empresarial y amplia experiencia en campo, dirige todas las operaciones de la empresa y realiza inspecciones especializadas para garantizar la calidad de cada servicio que ofrecemos a nuestros clientes.",
       image: "/images/team/gabriel.png"
     },
     { 
-      name: "Shari", 
+      name: "Sharimar Sanchez", 
       role: "Supervisora de Operaciones", 
-      description: "Coordina y supervisa todas las operaciones diarias, asegurando que cada servicio se ejecute con eficiencia y los mas altos estandares de calidad.",
+      description: "Coordina y supervisa todas las operaciones diarias de la empresa, asegurando que cada servicio se ejecute con eficiencia, puntualidad y los mas altos estandares de calidad para la satisfaccion de nuestros clientes.",
       image: "/images/team/shari.png"
     },
     { 
-      name: "Victor", 
+      name: "Victor Camacho", 
       role: "Exterminador", 
-      description: "Tecnico certificado especializado en control de plagas. Con amplia experiencia en fumigacion y tratamientos, garantiza la eliminacion efectiva de plagas en cada propiedad.",
+      description: "Tecnico certificado especializado en control de plagas con amplia experiencia en fumigacion, tratamientos quimicos y biologicos. Garantiza la eliminacion efectiva de plagas en cada propiedad que visitamos.",
       image: "/images/team/victor.png"
     },
     { 
-      name: "Luis", 
+      name: "Luis Munoz", 
       role: "Especialista en IT", 
-      description: "Responsable de la infraestructura tecnologica de la empresa, optimizando sistemas y procesos para brindar un servicio mas agil y eficiente a nuestros clientes.",
+      description: "Responsable de toda la infraestructura tecnologica de la empresa. Optimiza sistemas, procesos y herramientas digitales para brindar un servicio mas agil, eficiente y moderno a todos nuestros clientes.",
       image: "/images/team/luis.png"
     },
     { 
-      name: "Roderih", 
+      name: "Roderih Avila", 
       role: "Marketing", 
-      description: "Encargado de la estrategia de comunicacion y presencia digital de la empresa, conectando con la comunidad puertorriqueña y dando a conocer nuestros servicios.",
+      description: "Encargado de la estrategia de comunicacion, publicidad y presencia digital de la empresa. Conecta con la comunidad puertorriquena a traves de redes sociales y campanas para dar a conocer nuestros servicios.",
       image: "/images/team/roderih.png"
     }
   ] : [
     { 
       name: "Gabriel Acosta", 
       role: "President & Inspector", 
-      description: "Founder and leader of Acosta Property Services. With business vision and field experience, he directs operations and performs specialized inspections to ensure quality in every service.",
+      description: "Founder and leader of Acosta Property Services. With business vision and extensive field experience, he directs all company operations and performs specialized inspections to ensure the quality of every service we offer to our clients.",
       image: "/images/team/gabriel.png"
     },
     { 
-      name: "Shari", 
+      name: "Sharimar Sanchez", 
       role: "Operations Supervisor", 
-      description: "Coordinates and supervises all daily operations, ensuring each service is executed with efficiency and the highest quality standards.",
+      description: "Coordinates and supervises all daily company operations, ensuring each service is executed with efficiency, punctuality and the highest quality standards for our clients satisfaction.",
       image: "/images/team/shari.png"
     },
     { 
-      name: "Victor", 
+      name: "Victor Camacho", 
       role: "Exterminator", 
-      description: "Certified technician specialized in pest control. With extensive experience in fumigation and treatments, ensures effective pest elimination in every property.",
+      description: "Certified technician specialized in pest control with extensive experience in fumigation, chemical and biological treatments. Ensures effective pest elimination in every property we visit.",
       image: "/images/team/victor.png"
     },
     { 
-      name: "Luis", 
+      name: "Luis Munoz", 
       role: "IT Specialist", 
-      description: "Responsible for the company's technological infrastructure, optimizing systems and processes to provide faster and more efficient service to our clients.",
+      description: "Responsible for all company technological infrastructure. Optimizes systems, processes and digital tools to provide faster, more efficient and modern service to all our clients.",
       image: "/images/team/luis.png"
     },
     { 
-      name: "Roderih", 
+      name: "Roderih Avila", 
       role: "Marketing", 
-      description: "In charge of the company's communication strategy and digital presence, connecting with the Puerto Rican community and promoting our services.",
+      description: "In charge of communication strategy, advertising and digital presence for the company. Connects with the Puerto Rican community through social media and campaigns to promote our services.",
       image: "/images/team/roderih.png"
     }
   ]
@@ -227,7 +227,7 @@ export default function AboutPage() {
                 <CardContent className="p-4 text-center">
                   <h3 className="font-bold text-lg">{member.name}</h3>
                   <p className="text-primary text-sm font-medium mb-2">{member.role}</p>
-                  <p className="text-muted-foreground text-sm line-clamp-3">{member.description}</p>
+                  <p className="text-muted-foreground text-sm">{member.description}</p>
                 </CardContent>
               </Card>
             ))}
