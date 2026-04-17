@@ -67,21 +67,21 @@ export function SiteHeader() {
 
       {/* Main navigation */}
       <div className="border-b bg-card/95 backdrop-blur supports-[backdrop-filter]:bg-card/80">
-        <div className="container mx-auto flex h-20 items-center justify-between px-4 gap-4">
-          {/* Logo */}
-          <Link href="/" className="flex items-center shrink-0">
+        <div className="container mx-auto flex h-24 items-center justify-between px-4">
+          {/* Logo - Bigger */}
+          <Link href="/" className="flex items-center">
             <Image
               src="/images/logo.png"
               alt="Acosta Property Services"
-              width={180}
-              height={60}
-              className="h-14 w-auto"
+              width={280}
+              height={100}
+              className="h-20 w-auto"
               priority
             />
           </Link>
 
           {/* Desktop Navigation */}
-          <NavigationMenu className="hidden lg:flex flex-1 justify-center">
+          <NavigationMenu className="hidden lg:flex">
             <NavigationMenuList>
               <NavigationMenuItem>
                 <NavigationMenuLink asChild className={navigationMenuTriggerStyle()}>
