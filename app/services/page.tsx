@@ -31,8 +31,8 @@ export default function ServicesPage() {
             </h1>
             <p className="text-xl text-muted-foreground text-pretty mb-6">
               {language === "es"
-                ? "Ofrecemos soluciones integrales de control de plagas: fumigación, trampeo, y control biológico. Aplicamos el método más adecuado según el tipo de plaga y las necesidades de su propiedad."
-                : "We offer comprehensive pest control solutions: fumigation, trapping, and biological control. We apply the most appropriate method based on the pest type and your property's needs."}
+                ? "Ofrecemos soluciones integrales de control de plagas: fumigación, trampeo, y control biológico. Aplicamos el método más adecuado según el tipo de plaga y las necesidades de su propiedad. Certificados por el Departamento de Agricultura y Comercio de Puerto Rico."
+                : "We offer comprehensive pest control solutions: fumigation, trapping, and biological control. We apply the most appropriate method based on the pest type and your property's needs. Certified by the Puerto Rico Department of Agriculture and Commerce."}
             </p>
             <div className="flex flex-wrap gap-3">
               <span className="inline-flex items-center gap-2 bg-primary/10 border border-primary/20 text-primary px-4 py-2 rounded-full text-sm font-medium">
@@ -42,9 +42,6 @@ export default function ServicesPage() {
               <span className="inline-flex items-center gap-2 bg-primary/10 border border-primary/20 text-primary px-4 py-2 rounded-full text-sm font-medium">
                 <CheckCircle2 className="h-4 w-4" />
                 {language === "es" ? "Certificado 4 - Césped y Ornamentales" : "Certificate 4 - Lawn & Ornamentals"}
-              </span>
-              <span className="inline-flex items-center gap-2 bg-muted text-muted-foreground px-4 py-2 rounded-full text-sm">
-                {language === "es" ? "Certificados por el Departamento de Agricultura de PR" : "Certified by PR Department of Agriculture"}
               </span>
             </div>
           </div>
