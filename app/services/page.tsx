@@ -3,7 +3,7 @@
 import { useState } from "react"
 import Link from "next/link"
 import Image from "next/image"
-import { Home, Building2, ArrowRight, CheckCircle2, SprayCan, Target, Bug, Leaf } from "lucide-react"
+import { Home, Building2, ArrowRight, CheckCircle2, SprayCan, Target, Bug, Leaf, X } from "lucide-react"
 import { Button } from "@/components/ui/button"
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card"
 import { Dialog, DialogContent, DialogHeader, DialogTitle, DialogDescription } from "@/components/ui/dialog"
@@ -167,6 +167,14 @@ export default function ServicesPage() {
             <>
               {/* Sticky header on mobile */}
               <DialogHeader className="sticky top-0 z-10 bg-background border-b p-4 md:p-6 md:border-b-0 md:relative shrink-0">
+                {/* Close button for mobile */}
+                <button
+                  onClick={() => setSelectedPest(null)}
+                  className="absolute right-4 top-4 rounded-sm opacity-70 ring-offset-background transition-opacity hover:opacity-100 focus:outline-none focus:ring-2 focus:ring-ring focus:ring-offset-2 md:hidden"
+                  aria-label={language === "es" ? "Cerrar" : "Close"}
+                >
+                  <X className="h-5 w-5" />
+                </button>
                 <DialogTitle className="text-xl md:text-2xl flex items-center gap-3 pr-8">
                   {(() => {
                     const PestIcon = pestIconMap[selectedPest.icon] || Bug
