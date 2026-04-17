@@ -12,15 +12,67 @@ export default function AboutPage() {
   const { language, t } = useLanguage()
 
   const teamMembers = language === "es" ? [
-    { name: "Fundador", role: "CEO y Director", description: "Con vision y dedicacion, fundo Acosta Property Services para brindar servicio profesional y confiable a Puerto Rico." },
-    { name: "Equipo de Operaciones", role: "Gestion de Servicios", description: "Nuestro equipo asegura que cada servicio se entregue con la mas alta calidad en todas las areas de cobertura." },
-    { name: "Tecnicos Certificados", role: "Especialistas en Campo", description: "Profesionales capacitados con experiencia en control de plagas y fumigacion para hogares y negocios." },
-    { name: "Servicio al Cliente", role: "Atencion Personalizada", description: "Garantizamos que cada cliente reciba atencion rapida y amigable desde la primera llamada hasta el seguimiento." }
+    { 
+      name: "Gabriel Acosta", 
+      role: "Presidente e Inspector", 
+      description: "Fundador y lider de Acosta Property Services. Con vision empresarial y experiencia en campo, dirige las operaciones y realiza inspecciones especializadas para garantizar la calidad de cada servicio.",
+      image: "/images/team/gabriel.png"
+    },
+    { 
+      name: "Shari", 
+      role: "Supervisora de Operaciones", 
+      description: "Coordina y supervisa todas las operaciones diarias, asegurando que cada servicio se ejecute con eficiencia y los mas altos estandares de calidad.",
+      image: "/images/team/shari.png"
+    },
+    { 
+      name: "Victor", 
+      role: "Exterminador", 
+      description: "Tecnico certificado especializado en control de plagas. Con amplia experiencia en fumigacion y tratamientos, garantiza la eliminacion efectiva de plagas en cada propiedad.",
+      image: "/images/team/victor.png"
+    },
+    { 
+      name: "Luis", 
+      role: "Especialista en IT", 
+      description: "Responsable de la infraestructura tecnologica de la empresa, optimizando sistemas y procesos para brindar un servicio mas agil y eficiente a nuestros clientes.",
+      image: "/images/team/luis.png"
+    },
+    { 
+      name: "Roderih", 
+      role: "Marketing", 
+      description: "Encargado de la estrategia de comunicacion y presencia digital de la empresa, conectando con la comunidad puertorriqueña y dando a conocer nuestros servicios.",
+      image: "/images/team/roderih.png"
+    }
   ] : [
-    { name: "Founder", role: "CEO & Director", description: "With vision and dedication, founded Acosta Property Services to provide professional and reliable service to Puerto Rico." },
-    { name: "Operations Team", role: "Service Management", description: "Our team ensures every service is delivered with the highest quality across all coverage areas." },
-    { name: "Certified Technicians", role: "Field Specialists", description: "Trained professionals with experience in pest control and fumigation for homes and businesses." },
-    { name: "Customer Service", role: "Personalized Attention", description: "We ensure every customer receives quick and friendly attention from the first call to follow-up." }
+    { 
+      name: "Gabriel Acosta", 
+      role: "President & Inspector", 
+      description: "Founder and leader of Acosta Property Services. With business vision and field experience, he directs operations and performs specialized inspections to ensure quality in every service.",
+      image: "/images/team/gabriel.png"
+    },
+    { 
+      name: "Shari", 
+      role: "Operations Supervisor", 
+      description: "Coordinates and supervises all daily operations, ensuring each service is executed with efficiency and the highest quality standards.",
+      image: "/images/team/shari.png"
+    },
+    { 
+      name: "Victor", 
+      role: "Exterminator", 
+      description: "Certified technician specialized in pest control. With extensive experience in fumigation and treatments, ensures effective pest elimination in every property.",
+      image: "/images/team/victor.png"
+    },
+    { 
+      name: "Luis", 
+      role: "IT Specialist", 
+      description: "Responsible for the company's technological infrastructure, optimizing systems and processes to provide faster and more efficient service to our clients.",
+      image: "/images/team/luis.png"
+    },
+    { 
+      name: "Roderih", 
+      role: "Marketing", 
+      description: "In charge of the company's communication strategy and digital presence, connecting with the Puerto Rican community and promoting our services.",
+      image: "/images/team/roderih.png"
+    }
   ]
 
   return (
@@ -141,16 +193,41 @@ export default function AboutPage() {
             <p className="text-muted-foreground text-lg">{t.about.teamDesc}</p>
           </div>
 
-          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
-            {teamMembers.map((member, i) => (
-              <Card key={i} className="overflow-hidden">
-                <div className="aspect-video bg-secondary flex items-center justify-center">
-                  <Users className="h-12 w-12 text-muted-foreground/30" />
+          {/* President card - featured */}
+          <div className="max-w-md mx-auto mb-10">
+            <Card className="overflow-hidden shadow-lg border-primary/20">
+              <div className="aspect-square relative bg-gradient-to-b from-secondary to-background">
+                <Image
+                  src={teamMembers[0].image}
+                  alt={teamMembers[0].name}
+                  fill
+                  className="object-cover object-top"
+                />
+              </div>
+              <CardContent className="p-6 text-center">
+                <h3 className="font-bold text-xl">{teamMembers[0].name}</h3>
+                <p className="text-primary font-semibold mb-3">{teamMembers[0].role}</p>
+                <p className="text-muted-foreground text-sm">{teamMembers[0].description}</p>
+              </CardContent>
+            </Card>
+          </div>
+
+          {/* Rest of team */}
+          <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-6">
+            {teamMembers.slice(1).map((member, i) => (
+              <Card key={i} className="overflow-hidden hover:shadow-lg transition-shadow">
+                <div className="aspect-square relative bg-gradient-to-b from-secondary to-background">
+                  <Image
+                    src={member.image}
+                    alt={member.name}
+                    fill
+                    className="object-cover object-top"
+                  />
                 </div>
-                <CardContent className="p-4">
+                <CardContent className="p-4 text-center">
                   <h3 className="font-bold text-lg">{member.name}</h3>
-                  <p className="text-primary text-sm mb-2">{member.role}</p>
-                  <p className="text-muted-foreground text-sm">{member.description}</p>
+                  <p className="text-primary text-sm font-medium mb-2">{member.role}</p>
+                  <p className="text-muted-foreground text-sm line-clamp-3">{member.description}</p>
                 </CardContent>
               </Card>
             ))}
