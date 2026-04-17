@@ -12,6 +12,7 @@ const footerLinks = {
       { name: "Todos los Servicios", href: "/services" },
       { name: "Fumigación", href: "/services#fumigation" },
       { name: "Exterminación por Trampas", href: "/services#traps" },
+      { name: "Control Biológico", href: "/services#biological" },
     ],
     company: [
       { name: "Nosotros", href: "/about" },
@@ -29,6 +30,7 @@ const footerLinks = {
       { name: "All Services", href: "/services" },
       { name: "Fumigation", href: "/services#fumigation" },
       { name: "Trap Extermination", href: "/services#traps" },
+      { name: "Biological Control", href: "/services#biological" },
     ],
     company: [
       { name: "About Us", href: "/about" },
