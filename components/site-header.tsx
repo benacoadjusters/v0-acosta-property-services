@@ -36,28 +36,28 @@ export function SiteHeader() {
               <span>{language === "es" ? "Lun-Vie: 8AM-6PM" : "Mon-Fri: 8AM-6PM"}</span>
             </div>
           </div>
-          <div className="flex w-full items-center justify-between gap-4 md:w-auto md:justify-end">
-            <a href={`tel:${company.phoneClean}`} className="flex items-center gap-2 md:hidden">
-              <Phone className="h-4 w-4" />
-              <span className="text-sm font-medium">{company.phone}</span>
+          <div className="flex w-full items-center justify-between gap-2 md:w-auto md:justify-end md:gap-4">
+            <a href={`tel:${company.phoneClean}`} className="flex items-center gap-1.5 md:hidden">
+              <Phone className="h-3.5 w-3.5 shrink-0" />
+              <span className="text-xs font-medium truncate">{company.phone}</span>
             </a>
             
             {/* Language Toggle */}
             <Button
               variant="ghost"
               size="sm"
-              className="text-primary-foreground hover:bg-primary-foreground/10 gap-1.5 font-semibold"
+              className="text-primary-foreground hover:bg-primary-foreground/10 gap-1 font-semibold px-2 md:px-3 md:gap-1.5"
               onClick={() => setLanguage(language === "es" ? "en" : "es")}
               aria-label={language === "es" ? "Switch to English" : "Cambiar a Español"}
             >
-              <Globe className="h-4 w-4" />
-              <span className="uppercase">{language === "es" ? "ES" : "EN"}</span>
+              <Globe className="h-3.5 w-3.5 md:h-4 md:w-4" />
+              <span className="uppercase text-xs md:text-sm">{language === "es" ? "ES" : "EN"}</span>
             </Button>
             
             <Button 
               asChild 
               size="sm" 
-              className="bg-accent text-accent-foreground hover:bg-accent/90 font-semibold"
+              className="bg-accent text-accent-foreground hover:bg-accent/90 font-semibold text-xs px-2 md:text-sm md:px-3"
             >
               <Link href="/contact">{t.ui.getQuote}</Link>
             </Button>
