@@ -37,11 +37,11 @@ export default function ServicesPage() {
             <div className="flex flex-wrap gap-3">
               <span className="inline-flex items-center gap-2 bg-primary/10 border border-primary/20 text-primary px-4 py-2 rounded-full text-sm font-medium">
                 <CheckCircle2 className="h-4 w-4" />
-                {language === "es" ? "Certificado 8A - Control de Plagas" : "Certificate 8A - Pest Control"}
+                {language === "es" ? "Categoría 8-A: Control de Plagas en Estructuras" : "Category 8-A: Structural Pest Control"}
               </span>
               <span className="inline-flex items-center gap-2 bg-primary/10 border border-primary/20 text-primary px-4 py-2 rounded-full text-sm font-medium">
                 <CheckCircle2 className="h-4 w-4" />
-                {language === "es" ? "Certificado 4 - Césped y Ornamentales" : "Certificate 4 - Lawn & Ornamentals"}
+                {language === "es" ? "Categoría 4: Control de Plagas en Césped y Ornamentales" : "Category 4: Lawn & Ornamental Pest Control"}
               </span>
             </div>
           </div>
