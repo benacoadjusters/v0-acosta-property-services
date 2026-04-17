@@ -162,16 +162,17 @@ export default function ServicesPage() {
 
       {/* Pest Detail Modal with multiple images */}
       <Dialog open={!!selectedPest} onOpenChange={() => setSelectedPest(null)}>
-        <DialogContent className="max-w-3xl max-h-[90vh] overflow-y-auto">
+        <DialogContent className="max-w-3xl max-h-[90vh] overflow-hidden flex flex-col p-0">
           {selectedPest && (
             <>
-              <DialogHeader>
-                <DialogTitle className="text-2xl flex items-center gap-3">
+              {/* Sticky header on mobile */}
+              <DialogHeader className="sticky top-0 z-10 bg-background border-b p-4 md:p-6 md:border-b-0 md:relative shrink-0">
+                <DialogTitle className="text-xl md:text-2xl flex items-center gap-3 pr-8">
                   {(() => {
                     const PestIcon = pestIconMap[selectedPest.icon] || Bug
-                    return <PestIcon className="h-8 w-8 text-primary" />
+                    return <PestIcon className="h-6 w-6 md:h-8 md:w-8 text-primary shrink-0" />
                   })()}
-                  {language === "es" ? selectedPest.nameEs : selectedPest.nameEn}
+                  <span className="line-clamp-2">{language === "es" ? selectedPest.nameEs : selectedPest.nameEn}</span>
                 </DialogTitle>
                 <DialogDescription>
                   {selectedPest.methods.map(m => {
@@ -190,7 +191,9 @@ export default function ServicesPage() {
                 </DialogDescription>
               </DialogHeader>
               
-              <div className="space-y-6 mt-4">
+              {/* Scrollable content */}
+              <div className="overflow-y-auto flex-1 p-4 md:p-6 md:pt-0">
+              <div className="space-y-6">
                 {/* Main Image */}
                 <div className="relative aspect-video rounded-lg overflow-hidden bg-muted">
                   <Image
@@ -268,6 +271,7 @@ export default function ServicesPage() {
                     <ArrowRight className="ml-2 h-4 w-4" />
                   </Link>
                 </Button>
+              </div>
               </div>
             </>
           )}
