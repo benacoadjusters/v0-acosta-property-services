@@ -15,31 +15,31 @@ export default function AboutPage() {
     { 
       name: "Gabriel Acosta", 
       role: "Presidente e Inspector", 
-      description: "Fundador y lider de Acosta Property Services. Con vision empresarial y amplia experiencia en campo, dirige todas las operaciones de la empresa y realiza inspecciones especializadas para garantizar la calidad de cada servicio que ofrecemos a nuestros clientes.",
+      description: "Fundador y líder de Acosta Property Services. Con visión empresarial y amplia experiencia en campo, dirige todas las operaciones de la empresa y realiza inspecciones especializadas para garantizar la calidad de cada servicio que ofrecemos a nuestros clientes.",
       image: "/images/team/gabriel.png"
     },
     { 
-      name: "Sharimar Sanchez", 
+      name: "Sharimar Sánchez", 
       role: "Supervisora de Operaciones", 
-      description: "Coordina y supervisa todas las operaciones diarias de la empresa, asegurando que cada servicio se ejecute con eficiencia, puntualidad y los mas altos estandares de calidad para la satisfaccion de nuestros clientes.",
+      description: "Coordina y supervisa todas las operaciones diarias de la empresa, asegurando que cada servicio se ejecute con eficiencia, puntualidad y los más altos estándares de calidad para la satisfacción de nuestros clientes.",
       image: "/images/team/shari.png"
     },
     { 
-      name: "Victor Camacho", 
+      name: "Víctor Camacho", 
       role: "Exterminador", 
-      description: "Tecnico certificado especializado en control de plagas con amplia experiencia en fumigacion, tratamientos quimicos y biologicos. Garantiza la eliminacion efectiva de plagas en cada propiedad que visitamos.",
+      description: "Técnico certificado especializado en control de plagas con amplia experiencia en fumigación, tratamientos químicos y biológicos. Garantiza la eliminación efectiva de plagas en cada propiedad que visitamos.",
       image: "/images/team/victor.png"
     },
     { 
-      name: "Luis Munoz", 
+      name: "Luis Muñoz", 
       role: "Especialista en IT", 
-      description: "Responsable de toda la infraestructura tecnologica de la empresa. Optimiza sistemas, procesos y herramientas digitales para brindar un servicio mas agil, eficiente y moderno a todos nuestros clientes.",
+      description: "Responsable de toda la infraestructura tecnológica de la empresa. Optimiza sistemas, procesos y herramientas digitales para brindar un servicio más ágil, eficiente y moderno a todos nuestros clientes.",
       image: "/images/team/luis.png"
     },
     { 
-      name: "Roderih Avila", 
+      name: "Roderih Ávila", 
       role: "Marketing", 
-      description: "Encargado de la estrategia de comunicacion, publicidad y presencia digital de la empresa. Conecta con la comunidad puertorriquena a traves de redes sociales y campanas para dar a conocer nuestros servicios.",
+      description: "Encargado de la estrategia de comunicación, publicidad y presencia digital de la empresa. Conecta con la comunidad puertorriqueña a través de redes sociales y campañas para dar a conocer nuestros servicios.",
       image: "/images/team/roderih.png"
     }
   ] : [
