@@ -10,9 +10,9 @@ const footerLinks = {
   es: {
     services: [
       { name: "Todos los Servicios", href: "/services" },
-      { name: "Fumigación", href: "/services#fumigation" },
-      { name: "Exterminación por Trampas", href: "/services#traps" },
-      { name: "Control Biológico", href: "/services#biological" },
+      { name: "Control de Plagas", href: "/services/pest-control" },
+      { name: "Jardinería", href: "/services/landscaping" },
+      { name: "Mitigación Ambiental", href: "/services/environmental", badge: "Próximo" },
     ],
     company: [
       { name: "Nosotros", href: "/about" },
@@ -28,9 +28,9 @@ const footerLinks = {
   en: {
     services: [
       { name: "All Services", href: "/services" },
-      { name: "Fumigation", href: "/services#fumigation" },
-      { name: "Trap Extermination", href: "/services#traps" },
-      { name: "Biological Control", href: "/services#biological" },
+      { name: "Pest Control", href: "/services/pest-control" },
+      { name: "Landscaping", href: "/services/landscaping" },
+      { name: "Environmental Mitigation", href: "/services/environmental", badge: "Soon" },
     ],
     company: [
       { name: "About Us", href: "/about" },
@@ -125,9 +125,14 @@ export function SiteFooter() {
                 <li key={link.href}>
                   <Link 
                     href={link.href} 
-                    className="text-background/70 hover:text-background transition-colors"
+                    className="text-background/70 hover:text-background transition-colors inline-flex items-center gap-2"
                   >
                     {link.name}
+                    {link.badge && (
+                      <span className="text-[10px] bg-orange-500/20 text-orange-300 px-1.5 py-0.5 rounded">
+                        {link.badge}
+                      </span>
+                    )}
                   </Link>
                 </li>
               ))}

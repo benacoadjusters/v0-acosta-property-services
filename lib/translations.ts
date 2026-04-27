@@ -37,8 +37,8 @@ export const translations = {
     },
     // Homepage
     home: {
-      heroTitle: "Protegemos Tu Hogar y Negocio",
-      heroSubtitle: "Control de plagas profesional para hogares y negocios en todo Puerto Rico. 4 años de experiencia protegiendo familias y empresas.",
+      heroTitle: "Cuidamos Tu Propiedad Como Merece",
+      heroSubtitle: "Servicios profesionales de control de plagas, jardinería y mantenimiento para hogares y negocios en todo Puerto Rico. 4 años de experiencia protegiendo familias y empresas.",
       trustedBy: "Confiado por más de 300 clientes en Puerto Rico",
       statsYears: "Años de Experiencia",
       statsClients: "Clientes Atendidos",
@@ -46,7 +46,7 @@ export const translations = {
       statsIsland: "Toda la Isla",
       statsIslandCoverage: "Cobertura Total",
       whyChooseUs: "¿Por Qué Elegirnos?",
-      whyChooseUsDesc: "Nos dedicamos a brindar el mejor servicio de control de plagas en Puerto Rico con un enfoque en resultados y satisfacción del cliente.",
+      whyChooseUsDesc: "Nos dedicamos a brindar los mejores servicios de mantenimiento de propiedades en Puerto Rico con un enfoque en resultados y satisfacción del cliente.",
       benefit1Title: "Respuesta Rápida",
       benefit1Desc: "Servicio en menos de 24 horas para emergencias de plagas.",
       benefit2Title: "Técnicos Certificados",
@@ -56,7 +56,7 @@ export const translations = {
       benefit4Title: "Productos Seguros",
       benefit4Desc: "Utilizamos productos registrados en la EPA. Proporcionamos instrucciones de preparación y precaución para cada tratamiento, asegurando la protección adecuada de su familia y mascotas.",
       servicesTitle: "Nuestros Servicios",
-      servicesDesc: "Ofrecemos soluciones completas de control de plagas para todo tipo de propiedades.",
+      servicesDesc: "Ofrecemos soluciones completas de mantenimiento y protección para todo tipo de propiedades.",
       coverageTitle: "Cobertura en Toda la Isla",
       coverageDesc: "Servimos a los 78 municipios de Puerto Rico. No importa dónde estés, llegamos a ti.",
       ctaTitle: "Protege Tu Propiedad Hoy",
@@ -146,7 +146,7 @@ export const translations = {
     },
     // Footer
     footer: {
-      description: "Servicios profesionales de control de plagas para hogares y negocios en todo Puerto Rico.",
+      description: "Servicios profesionales de control de plagas, jardinería y mantenimiento de propiedades para hogares y negocios en todo Puerto Rico.",
       servicesTitle: "Servicios",
       companyTitle: "Empresa",
       resourcesTitle: "Recursos",
@@ -197,8 +197,8 @@ export const translations = {
     },
     // Homepage
     home: {
-      heroTitle: "We Protect Your Home and Business",
-      heroSubtitle: "Professional pest control for homes and businesses across Puerto Rico. 4 years of experience protecting families and companies.",
+      heroTitle: "We Care for Your Property as It Deserves",
+      heroSubtitle: "Professional pest control, landscaping and maintenance services for homes and businesses across Puerto Rico. 4 years of experience protecting families and companies.",
       trustedBy: "Trusted by over 300 clients in Puerto Rico",
       statsYears: "Years Experience",
       statsClients: "Clients Served",
@@ -206,7 +206,7 @@ export const translations = {
       statsIsland: "Entire Island",
       statsIslandCoverage: "Full Coverage",
       whyChooseUs: "Why Choose Us",
-      whyChooseUsDesc: "We are dedicated to providing the best pest control service in Puerto Rico with a focus on results and customer satisfaction.",
+      whyChooseUsDesc: "We are dedicated to providing the best property maintenance services in Puerto Rico with a focus on results and customer satisfaction.",
       benefit1Title: "Fast Response",
       benefit1Desc: "Service in less than 24 hours for pest emergencies.",
       benefit2Title: "Certified Technicians",
@@ -216,7 +216,7 @@ export const translations = {
       benefit4Title: "Safe Products",
       benefit4Desc: "We use EPA-registered products. We provide preparation and precautionary instructions for each treatment, ensuring proper protection for your family and pets.",
       servicesTitle: "Our Services",
-      servicesDesc: "We offer complete pest control solutions for all types of properties.",
+      servicesDesc: "We offer complete maintenance and protection solutions for all types of properties.",
       coverageTitle: "Island-Wide Coverage",
       coverageDesc: "We serve all 78 municipalities of Puerto Rico. No matter where you are, we come to you.",
       ctaTitle: "Protect Your Property Today",
@@ -306,7 +306,7 @@ export const translations = {
     },
     // Footer
     footer: {
-      description: "Professional pest control services for homes and businesses across Puerto Rico.",
+      description: "Professional pest control, landscaping and property maintenance services for homes and businesses across Puerto Rico.",
       servicesTitle: "Services",
       companyTitle: "Company",
       resourcesTitle: "Resources",

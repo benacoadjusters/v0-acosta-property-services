@@ -2,13 +2,13 @@
 
 import Link from "next/link"
 import Image from "next/image"
-import { Phone, ArrowRight, Shield, Clock, Award, CheckCircle2 } from "lucide-react"
+import { Phone, ArrowRight, Shield, Clock, Award, CheckCircle2, Bug, TreePine, HardHat } from "lucide-react"
 import { Button } from "@/components/ui/button"
 import { company } from "@/content/company"
 import { useLanguage } from "@/lib/language-context"
 
 export default function HomePage() {
-  const { t } = useLanguage()
+  const { language, t } = useLanguage()
 
   return (
     <>
@@ -27,6 +27,21 @@ export default function HomePage() {
               <p className="text-lg text-muted-foreground max-w-lg text-pretty">
                 {t.home.heroSubtitle}
               </p>
+              {/* Service badges */}
+              <div className="flex flex-wrap gap-2">
+                <span className="inline-flex items-center gap-1.5 rounded-full bg-primary/10 px-3 py-1 text-sm font-medium text-primary">
+                  <Bug className="h-3.5 w-3.5" />
+                  {language === "es" ? "Control de Plagas" : "Pest Control"}
+                </span>
+                <span className="inline-flex items-center gap-1.5 rounded-full bg-green-500/10 px-3 py-1 text-sm font-medium text-green-700">
+                  <TreePine className="h-3.5 w-3.5" />
+                  {language === "es" ? "Jardinería" : "Landscaping"}
+                </span>
+                <span className="inline-flex items-center gap-1.5 rounded-full bg-orange-500/10 px-3 py-1 text-sm font-medium text-orange-700">
+                  <HardHat className="h-3.5 w-3.5" />
+                  {language === "es" ? "Mitigación Ambiental" : "Environmental Mitigation"}
+                </span>
+              </div>
               <div className="flex flex-col sm:flex-row gap-4">
                 <Button asChild size="lg" className="bg-accent hover:bg-accent/90 text-accent-foreground font-semibold">
                   <Link href="/contact">
@@ -43,14 +58,31 @@ export default function HomePage() {
               </div>
             </div>
             <div className="relative">
-              <div className="relative aspect-[4/3] rounded-2xl overflow-hidden bg-muted shadow-2xl">
-                <Image
-                  src="/images/hero-pest-control.jpg"
-                  alt="Acosta Property Services"
-                  fill
-                  className="object-cover"
-                  priority
-                />
+              <div className="grid grid-cols-2 gap-3">
+                <div className="relative aspect-[3/4] rounded-2xl overflow-hidden bg-muted shadow-xl">
+                  <Image
+                    src="/images/hero-pest-control.jpg"
+                    alt={language === "es" ? "Control de Plagas" : "Pest Control"}
+                    fill
+                    className="object-cover"
+                    priority
+                  />
+                  <div className="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-black/70 to-transparent p-3">
+                    <p className="text-white text-sm font-medium">{language === "es" ? "Control de Plagas" : "Pest Control"}</p>
+                  </div>
+                </div>
+                <div className="relative aspect-[3/4] rounded-2xl overflow-hidden bg-muted shadow-xl mt-8">
+                  <Image
+                    src="/images/hero-landscaping.jpg"
+                    alt={language === "es" ? "Jardinería" : "Landscaping"}
+                    fill
+                    className="object-cover"
+                    priority
+                  />
+                  <div className="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-black/70 to-transparent p-3">
+                    <p className="text-white text-sm font-medium">{language === "es" ? "Jardinería" : "Landscaping"}</p>
+                  </div>
+                </div>
               </div>
               <div className="absolute -bottom-6 -left-6 bg-card rounded-xl shadow-lg p-4 border hidden md:block">
                 <div className="flex items-center gap-3">
@@ -87,6 +119,126 @@ export default function HomePage() {
             <div className="text-center">
               <p className="text-xl md:text-2xl font-bold">{t.home.statsIslandCoverage}</p>
               <p className="text-sm opacity-80 mt-1">{t.home.statsIsland}</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Our Services - Categories */}
+      <section className="py-16 md:py-24 bg-background">
+        <div className="container mx-auto px-4">
+          <div className="text-center max-w-3xl mx-auto mb-12">
+            <h2 className="text-3xl md:text-4xl font-bold text-foreground mb-4 text-balance">
+              {t.home.servicesTitle}
+            </h2>
+            <p className="text-lg text-muted-foreground text-pretty">
+              {language === "es" 
+                ? "Soluciones integrales para el mantenimiento y protección de tu propiedad. Desde control de plagas hasta jardinería profesional."
+                : "Comprehensive solutions for the maintenance and protection of your property. From pest control to professional landscaping."}
+            </p>
+          </div>
+
+          <div className="grid md:grid-cols-3 gap-6">
+            {/* Pest Control */}
+            <Link href="/services/pest-control" className="group">
+              <div className="relative overflow-hidden rounded-2xl bg-card border shadow-sm hover:shadow-xl transition-all duration-300">
+                <div className="relative aspect-[4/3] overflow-hidden">
+                  <Image
+                    src="/images/hero-pest-control.jpg"
+                    alt={language === "es" ? "Control de Plagas" : "Pest Control"}
+                    fill
+                    className="object-cover group-hover:scale-105 transition-transform duration-300"
+                  />
+                  <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent" />
+                  <div className="absolute bottom-4 left-4 right-4">
+                    <div className="inline-flex items-center gap-2 rounded-full bg-primary px-3 py-1 text-sm font-medium text-primary-foreground mb-2">
+                      <Bug className="h-4 w-4" />
+                      {language === "es" ? "Activo" : "Active"}
+                    </div>
+                  </div>
+                </div>
+                <div className="p-6">
+                  <h3 className="text-xl font-bold text-foreground mb-2 group-hover:text-primary transition-colors">
+                    {language === "es" ? "Control de Plagas" : "Pest Control"}
+                  </h3>
+                  <p className="text-muted-foreground text-sm mb-4">
+                    {language === "es" 
+                      ? "Fumigación, trampeo y control biológico. Protegemos tu hogar y negocio de todo tipo de plagas con métodos seguros y efectivos."
+                      : "Fumigation, trapping and biological control. We protect your home and business from all types of pests with safe and effective methods."}
+                  </p>
+                  <span className="inline-flex items-center text-primary font-medium text-sm group-hover:gap-2 transition-all">
+                    {t.ui.learnMore}
+                    <ArrowRight className="ml-1 h-4 w-4 group-hover:translate-x-1 transition-transform" />
+                  </span>
+                </div>
+              </div>
+            </Link>
+
+            {/* Landscaping */}
+            <Link href="/services/landscaping" className="group">
+              <div className="relative overflow-hidden rounded-2xl bg-card border shadow-sm hover:shadow-xl transition-all duration-300">
+                <div className="relative aspect-[4/3] overflow-hidden">
+                  <Image
+                    src="/images/hero-landscaping.jpg"
+                    alt={language === "es" ? "Jardinería" : "Landscaping"}
+                    fill
+                    className="object-cover group-hover:scale-105 transition-transform duration-300"
+                  />
+                  <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent" />
+                  <div className="absolute bottom-4 left-4 right-4">
+                    <div className="inline-flex items-center gap-2 rounded-full bg-green-600 px-3 py-1 text-sm font-medium text-white mb-2">
+                      <TreePine className="h-4 w-4" />
+                      {language === "es" ? "Activo" : "Active"}
+                    </div>
+                  </div>
+                </div>
+                <div className="p-6">
+                  <h3 className="text-xl font-bold text-foreground mb-2 group-hover:text-green-600 transition-colors">
+                    {language === "es" ? "Jardinería" : "Landscaping"}
+                  </h3>
+                  <p className="text-muted-foreground text-sm mb-4">
+                    {language === "es" 
+                      ? "Mantenimiento de jardines, poda, corte de grama, diseño paisajístico y cuidado de áreas verdes para propiedades residenciales y comerciales."
+                      : "Garden maintenance, pruning, lawn mowing, landscape design and green area care for residential and commercial properties."}
+                  </p>
+                  <span className="inline-flex items-center text-green-600 font-medium text-sm group-hover:gap-2 transition-all">
+                    {t.ui.learnMore}
+                    <ArrowRight className="ml-1 h-4 w-4 group-hover:translate-x-1 transition-transform" />
+                  </span>
+                </div>
+              </div>
+            </Link>
+
+            {/* Environmental Mitigation - Coming Soon */}
+            <div className="group cursor-default">
+              <div className="relative overflow-hidden rounded-2xl bg-card border shadow-sm opacity-90">
+                <div className="relative aspect-[4/3] overflow-hidden bg-muted">
+                  <div className="absolute inset-0 flex items-center justify-center bg-gradient-to-br from-orange-100 to-orange-50">
+                    <HardHat className="h-20 w-20 text-orange-300" />
+                  </div>
+                  <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent" />
+                  <div className="absolute bottom-4 left-4 right-4">
+                    <div className="inline-flex items-center gap-2 rounded-full bg-orange-500 px-3 py-1 text-sm font-medium text-white mb-2">
+                      <HardHat className="h-4 w-4" />
+                      {language === "es" ? "Próximamente" : "Coming Soon"}
+                    </div>
+                  </div>
+                </div>
+                <div className="p-6">
+                  <h3 className="text-xl font-bold text-foreground mb-2">
+                    {language === "es" ? "Mitigación Ambiental" : "Environmental Mitigation"}
+                  </h3>
+                  <p className="text-muted-foreground text-sm mb-4">
+                    {language === "es" 
+                      ? "Próximamente ofreceremos servicios de mitigación de asbesto y plomo. Remoción segura y certificada para proteger la salud de tu familia."
+                      : "Coming soon: asbestos and lead mitigation services. Safe and certified removal to protect your family's health."}
+                  </p>
+                  <span className="inline-flex items-center text-orange-500 font-medium text-sm">
+                    {language === "es" ? "En construcción" : "Under development"}
+                    <Clock className="ml-2 h-4 w-4" />
+                  </span>
+                </div>
+              </div>
             </div>
           </div>
         </div>

@@ -3,14 +3,16 @@
 import * as React from "react"
 import Link from "next/link"
 import Image from "next/image"
-import { Menu, Phone, Clock, Globe } from "lucide-react"
+import { Menu, Phone, Clock, Globe, Bug, TreePine, HardHat, ChevronDown } from "lucide-react"
 import { Button } from "@/components/ui/button"
 import { Sheet, SheetContent, SheetTrigger, SheetTitle, SheetDescription } from "@/components/ui/sheet"
 import {
   NavigationMenu,
+  NavigationMenuContent,
   NavigationMenuItem,
   NavigationMenuLink,
   NavigationMenuList,
+  NavigationMenuTrigger,
   navigationMenuTriggerStyle,
 } from "@/components/ui/navigation-menu"
 
@@ -90,9 +92,75 @@ export function SiteHeader() {
               </NavigationMenuItem>
               
               <NavigationMenuItem>
-                <NavigationMenuLink asChild className={navigationMenuTriggerStyle()}>
-                  <Link href="/services">{t.nav.services}</Link>
-                </NavigationMenuLink>
+                <NavigationMenuTrigger>{t.nav.services}</NavigationMenuTrigger>
+                <NavigationMenuContent>
+                  <div className="w-[400px] p-4">
+                    <Link 
+                      href="/services"
+                      className="block mb-3 p-3 rounded-lg hover:bg-muted transition-colors"
+                    >
+                      <div className="font-medium text-foreground">
+                        {language === "es" ? "Todos los Servicios" : "All Services"}
+                      </div>
+                      <p className="text-sm text-muted-foreground">
+                        {language === "es" ? "Ver todas nuestras categorías de servicio" : "View all our service categories"}
+                      </p>
+                    </Link>
+                    <div className="border-t pt-3 space-y-1">
+                      <Link 
+                        href="/services/pest-control"
+                        className="flex items-center gap-3 p-3 rounded-lg hover:bg-muted transition-colors"
+                      >
+                        <div className="flex h-10 w-10 items-center justify-center rounded-lg bg-primary/10">
+                          <Bug className="h-5 w-5 text-primary" />
+                        </div>
+                        <div>
+                          <div className="font-medium text-foreground">
+                            {language === "es" ? "Control de Plagas" : "Pest Control"}
+                          </div>
+                          <p className="text-xs text-muted-foreground">
+                            {language === "es" ? "Fumigación, trampas, control biológico" : "Fumigation, traps, biological control"}
+                          </p>
+                        </div>
+                      </Link>
+                      <Link 
+                        href="/services/landscaping"
+                        className="flex items-center gap-3 p-3 rounded-lg hover:bg-muted transition-colors"
+                      >
+                        <div className="flex h-10 w-10 items-center justify-center rounded-lg bg-green-500/10">
+                          <TreePine className="h-5 w-5 text-green-600" />
+                        </div>
+                        <div>
+                          <div className="font-medium text-foreground">
+                            {language === "es" ? "Jardinería" : "Landscaping"}
+                          </div>
+                          <p className="text-xs text-muted-foreground">
+                            {language === "es" ? "Corte, poda, diseño paisajístico" : "Mowing, pruning, landscape design"}
+                          </p>
+                        </div>
+                      </Link>
+                      <Link 
+                        href="/services/environmental"
+                        className="flex items-center gap-3 p-3 rounded-lg hover:bg-muted transition-colors"
+                      >
+                        <div className="flex h-10 w-10 items-center justify-center rounded-lg bg-orange-500/10">
+                          <HardHat className="h-5 w-5 text-orange-600" />
+                        </div>
+                        <div className="flex-1">
+                          <div className="font-medium text-foreground flex items-center gap-2">
+                            {language === "es" ? "Mitigación Ambiental" : "Environmental Mitigation"}
+                            <span className="text-[10px] bg-orange-100 text-orange-700 px-1.5 py-0.5 rounded">
+                              {language === "es" ? "Próximo" : "Soon"}
+                            </span>
+                          </div>
+                          <p className="text-xs text-muted-foreground">
+                            {language === "es" ? "Asbesto y plomo - Próximamente" : "Asbestos & lead - Coming soon"}
+                          </p>
+                        </div>
+                      </Link>
+                    </div>
+                  </div>
+                </NavigationMenuContent>
               </NavigationMenuItem>
 
               <NavigationMenuItem>
@@ -157,13 +225,44 @@ export function SiteHeader() {
                       </Link>
                     </li>
                     <li>
-                      <Link 
-                        href="/services" 
-                        className="block py-2 text-lg font-medium hover:text-primary transition-colors"
-                        onClick={() => setIsOpen(false)}
-                      >
-                        {t.nav.services}
-                      </Link>
+                      <div className="py-2">
+                        <Link 
+                          href="/services" 
+                          className="block text-lg font-medium hover:text-primary transition-colors"
+                          onClick={() => setIsOpen(false)}
+                        >
+                          {t.nav.services}
+                        </Link>
+                        <div className="mt-2 ml-4 space-y-1 border-l-2 border-muted pl-3">
+                          <Link 
+                            href="/services/pest-control" 
+                            className="flex items-center gap-2 py-1.5 text-sm text-muted-foreground hover:text-primary transition-colors"
+                            onClick={() => setIsOpen(false)}
+                          >
+                            <Bug className="h-4 w-4 text-primary" />
+                            {language === "es" ? "Control de Plagas" : "Pest Control"}
+                          </Link>
+                          <Link 
+                            href="/services/landscaping" 
+                            className="flex items-center gap-2 py-1.5 text-sm text-muted-foreground hover:text-green-600 transition-colors"
+                            onClick={() => setIsOpen(false)}
+                          >
+                            <TreePine className="h-4 w-4 text-green-600" />
+                            {language === "es" ? "Jardinería" : "Landscaping"}
+                          </Link>
+                          <Link 
+                            href="/services/environmental" 
+                            className="flex items-center gap-2 py-1.5 text-sm text-muted-foreground hover:text-orange-600 transition-colors"
+                            onClick={() => setIsOpen(false)}
+                          >
+                            <HardHat className="h-4 w-4 text-orange-600" />
+                            {language === "es" ? "Mitigación Ambiental" : "Environmental"}
+                            <span className="text-[10px] bg-orange-100 text-orange-700 px-1 py-0.5 rounded">
+                              {language === "es" ? "Próximo" : "Soon"}
+                            </span>
+                          </Link>
+                        </div>
+                      </div>
                     </li>
                     <li>
                       <Link 
