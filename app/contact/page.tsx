@@ -52,67 +52,98 @@ export default function ContactPage() {
         </div>
       </section>
 
+      {/* Quick Contact Cards - Mobile First */}
+      <section className="py-8 bg-background lg:hidden">
+        <div className="container mx-auto px-4">
+          <div className="grid grid-cols-2 gap-3">
+            <a 
+              href={`tel:${company.phoneClean}`}
+              className="flex flex-col items-center gap-2 p-4 rounded-xl bg-primary text-primary-foreground text-center"
+            >
+              <Phone className="h-6 w-6" />
+              <span className="font-semibold text-sm">{t.ui.callNow}</span>
+            </a>
+            <a 
+              href={`mailto:${company.email}`}
+              className="flex flex-col items-center gap-2 p-4 rounded-xl bg-secondary text-foreground text-center"
+            >
+              <Mail className="h-6 w-6 text-primary" />
+              <span className="font-semibold text-sm">{t.ui.email}</span>
+            </a>
+          </div>
+        </div>
+      </section>
+
       {/* Contact Form & Info */}
-      <section className="py-16 md:py-20 bg-background">
+      <section className="py-8 md:py-16 bg-background">
         <div className="container mx-auto px-4">
           <div className="grid lg:grid-cols-3 gap-8 lg:gap-12">
-            {/* Form */}
-            <div className="lg:col-span-2">
-              <Suspense fallback={<ContactFormFallback />}>
-                <ContactForm />
-              </Suspense>
-            </div>
-
-            {/* Contact Info */}
-            <div className="space-y-6">
-              <Card>
-                <CardHeader>
-                  <CardTitle>{t.contact.infoTitle}</CardTitle>
+            {/* Contact Info - Shows first on mobile via order */}
+            <div className="space-y-4 lg:space-y-6 order-first lg:order-last">
+              {/* Desktop only contact cards */}
+              <Card className="hidden lg:block">
+                <CardHeader className="pb-3">
+                  <CardTitle className="text-lg">{t.contact.infoTitle}</CardTitle>
                 </CardHeader>
-                <CardContent className="space-y-4">
+                <CardContent className="space-y-3">
                   <a 
                     href={`tel:${company.phoneClean}`}
-                    className="flex items-start gap-4 p-3 rounded-lg hover:bg-secondary transition-colors"
+                    className="flex items-center gap-3 p-3 rounded-lg hover:bg-secondary transition-colors"
                   >
-                    <Phone className="h-5 w-5 text-primary mt-0.5" />
+                    <div className="flex h-10 w-10 shrink-0 items-center justify-center rounded-full bg-primary/10">
+                      <Phone className="h-5 w-5 text-primary" />
+                    </div>
                     <div>
-                      <div className="font-medium">{company.phone}</div>
-                      <div className="text-sm text-muted-foreground">{t.ui.callNow}</div>
+                      <div className="font-semibold">{company.phone}</div>
+                      <div className="text-xs text-muted-foreground">{t.ui.callNow}</div>
                     </div>
                   </a>
                   <a 
                     href={`mailto:${company.email}`}
-                    className="flex items-start gap-4 p-3 rounded-lg hover:bg-secondary transition-colors"
+                    className="flex items-center gap-3 p-3 rounded-lg hover:bg-secondary transition-colors"
                   >
-                    <Mail className="h-5 w-5 text-primary mt-0.5" />
+                    <div className="flex h-10 w-10 shrink-0 items-center justify-center rounded-full bg-primary/10">
+                      <Mail className="h-5 w-5 text-primary" />
+                    </div>
                     <div>
-                      <div className="font-medium">{company.email}</div>
-                      <div className="text-sm text-muted-foreground">{t.ui.email}</div>
+                      <div className="font-semibold text-sm">{company.email}</div>
+                      <div className="text-xs text-muted-foreground">{t.ui.email}</div>
                     </div>
                   </a>
                 </CardContent>
               </Card>
 
               <Card>
-                <CardHeader>
-                  <CardTitle>{t.contact.hoursTitle}</CardTitle>
+                <CardHeader className="pb-3">
+                  <CardTitle className="text-lg">{t.contact.hoursTitle}</CardTitle>
                 </CardHeader>
-                <CardContent className="space-y-3">
-                  <div className="flex items-center gap-3">
-                    <Clock className="h-5 w-5 text-primary" />
-                    <div className="text-sm">
-                      <div>{t.contact.weekdays}: 8AM-6PM</div>
-                      <div>{t.contact.saturday}: 9AM-2PM</div>
-                      <div className="text-muted-foreground">{t.contact.sunday}: {t.contact.closed}</div>
+                <CardContent>
+                  <div className="flex items-start gap-3">
+                    <div className="flex h-10 w-10 shrink-0 items-center justify-center rounded-full bg-primary/10">
+                      <Clock className="h-5 w-5 text-primary" />
+                    </div>
+                    <div className="text-sm space-y-1">
+                      <div className="flex justify-between gap-4">
+                        <span>{t.contact.weekdays}:</span>
+                        <span className="font-medium">8AM-6PM</span>
+                      </div>
+                      <div className="flex justify-between gap-4">
+                        <span>{t.contact.saturday}:</span>
+                        <span className="font-medium">9AM-2PM</span>
+                      </div>
+                      <div className="flex justify-between gap-4 text-muted-foreground">
+                        <span>{t.contact.sunday}:</span>
+                        <span>{t.contact.closed}</span>
+                      </div>
                     </div>
                   </div>
                 </CardContent>
               </Card>
 
               <Card className="bg-primary text-primary-foreground">
-                <CardContent className="p-6 text-center">
+                <CardContent className="p-5 text-center">
                   <h3 className="font-bold text-lg mb-2">{t.contact.emergencyTitle}</h3>
-                  <p className="opacity-80 text-sm mb-4">
+                  <p className="opacity-90 text-sm mb-4">
                     {t.contact.emergencyDesc}
                   </p>
                   <Button asChild variant="secondary" className="w-full">
@@ -123,6 +154,13 @@ export default function ContactPage() {
                   </Button>
                 </CardContent>
               </Card>
+            </div>
+
+            {/* Form */}
+            <div className="lg:col-span-2 order-last lg:order-first">
+              <Suspense fallback={<ContactFormFallback />}>
+                <ContactForm />
+              </Suspense>
             </div>
           </div>
         </div>

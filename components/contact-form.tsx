@@ -21,24 +21,32 @@ const municipalities = [
 
 const serviceOptions = {
   es: [
-    { value: "general", label: "Control de Plagas General" },
-    { value: "termite", label: "Control de Termitas" },
-    { value: "rodent", label: "Control de Roedores" },
-    { value: "mosquito", label: "Control de Mosquitos" },
-    { value: "bed-bug", label: "Tratamiento de Chinches" },
-    { value: "commercial", label: "Servicios Comerciales" },
-    { value: "inspection", label: "Inspeccion Gratis" },
-    { value: "other", label: "Otro" },
+    { value: "pest-general", label: "Control de Plagas - General", group: "plagas" },
+    { value: "pest-termite", label: "Control de Plagas - Termitas", group: "plagas" },
+    { value: "pest-rodent", label: "Control de Plagas - Roedores", group: "plagas" },
+    { value: "pest-mosquito", label: "Control de Plagas - Mosquitos", group: "plagas" },
+    { value: "pest-bed-bug", label: "Control de Plagas - Chinches", group: "plagas" },
+    { value: "landscaping-lawn", label: "Jardinería - Corte de Grama", group: "jardineria" },
+    { value: "landscaping-pruning", label: "Jardinería - Poda", group: "jardineria" },
+    { value: "landscaping-design", label: "Jardinería - Diseño Paisajístico", group: "jardineria" },
+    { value: "landscaping-maintenance", label: "Jardinería - Mantenimiento", group: "jardineria" },
+    { value: "commercial", label: "Servicios Comerciales", group: "otros" },
+    { value: "inspection", label: "Inspección Gratis", group: "otros" },
+    { value: "other", label: "Otro", group: "otros" },
   ],
   en: [
-    { value: "general", label: "General Pest Control" },
-    { value: "termite", label: "Termite Control" },
-    { value: "rodent", label: "Rodent Control" },
-    { value: "mosquito", label: "Mosquito Control" },
-    { value: "bed-bug", label: "Bed Bug Treatment" },
-    { value: "commercial", label: "Commercial Services" },
-    { value: "inspection", label: "Free Inspection" },
-    { value: "other", label: "Other" },
+    { value: "pest-general", label: "Pest Control - General", group: "pests" },
+    { value: "pest-termite", label: "Pest Control - Termites", group: "pests" },
+    { value: "pest-rodent", label: "Pest Control - Rodents", group: "pests" },
+    { value: "pest-mosquito", label: "Pest Control - Mosquitoes", group: "pests" },
+    { value: "pest-bed-bug", label: "Pest Control - Bed Bugs", group: "pests" },
+    { value: "landscaping-lawn", label: "Landscaping - Lawn Mowing", group: "landscaping" },
+    { value: "landscaping-pruning", label: "Landscaping - Pruning", group: "landscaping" },
+    { value: "landscaping-design", label: "Landscaping - Design", group: "landscaping" },
+    { value: "landscaping-maintenance", label: "Landscaping - Maintenance", group: "landscaping" },
+    { value: "commercial", label: "Commercial Services", group: "other" },
+    { value: "inspection", label: "Free Inspection", group: "other" },
+    { value: "other", label: "Other", group: "other" },
   ],
 }
 
@@ -112,38 +120,31 @@ export function ContactForm() {
 
   return (
     <Card>
-      <CardHeader>
-        <CardTitle className="text-2xl">{t.contact.formTitle}</CardTitle>
+      <CardHeader className="pb-4">
+        <CardTitle className="text-xl md:text-2xl">{t.contact.formTitle}</CardTitle>
+        <p className="text-sm text-muted-foreground mt-1">
+          {language === "es" ? "Los campos marcados con * son obligatorios" : "Fields marked with * are required"}
+        </p>
       </CardHeader>
       <CardContent>
-        <form onSubmit={handleSubmit} className="space-y-6">
-          <div className="grid md:grid-cols-2 gap-6">
-            <div className="space-y-2">
-              <Label htmlFor="name">{t.contact.nameLabel} *</Label>
-              <Input
-                id="name"
-                placeholder={t.contact.namePlaceholder}
-                value={formData.name}
-                onChange={(e) => setFormData({ ...formData, name: e.target.value })}
-                required
-              />
-            </div>
-            <div className="space-y-2">
-              <Label htmlFor="email">{t.contact.emailLabel} *</Label>
-              <Input
-                id="email"
-                type="email"
-                placeholder={t.contact.emailPlaceholder}
-                value={formData.email}
-                onChange={(e) => setFormData({ ...formData, email: e.target.value })}
-                required
-              />
-            </div>
+        <form onSubmit={handleSubmit} className="space-y-5">
+          {/* Name - Full width on mobile for easier input */}
+          <div className="space-y-2">
+            <Label htmlFor="name" className="text-sm font-medium">{t.contact.nameLabel} *</Label>
+            <Input
+              id="name"
+              placeholder={t.contact.namePlaceholder}
+              value={formData.name}
+              onChange={(e) => setFormData({ ...formData, name: e.target.value })}
+              required
+              className="h-11"
+            />
           </div>
 
-          <div className="grid md:grid-cols-2 gap-6">
+          {/* Phone and Email - Stack on mobile */}
+          <div className="grid sm:grid-cols-2 gap-4">
             <div className="space-y-2">
-              <Label htmlFor="phone">{t.contact.phoneLabel} *</Label>
+              <Label htmlFor="phone" className="text-sm font-medium">{t.contact.phoneLabel} *</Label>
               <Input
                 id="phone"
                 type="tel"
@@ -151,15 +152,70 @@ export function ContactForm() {
                 value={formData.phone}
                 onChange={(e) => setFormData({ ...formData, phone: e.target.value })}
                 required
+                className="h-11"
               />
             </div>
             <div className="space-y-2">
-              <Label htmlFor="propertyType">{t.contact.propertyLabel}</Label>
+              <Label htmlFor="email" className="text-sm font-medium">{t.contact.emailLabel} *</Label>
+              <Input
+                id="email"
+                type="email"
+                placeholder={t.contact.emailPlaceholder}
+                value={formData.email}
+                onChange={(e) => setFormData({ ...formData, email: e.target.value })}
+                required
+                className="h-11"
+              />
+            </div>
+          </div>
+
+          {/* Service and Property Type */}
+          <div className="grid sm:grid-cols-2 gap-4">
+            <div className="space-y-2">
+              <Label htmlFor="service" className="text-sm font-medium">{t.contact.serviceLabel} *</Label>
+              <Select
+                value={formData.service}
+                onValueChange={(value) => setFormData({ ...formData, service: value })}
+                required
+              >
+                <SelectTrigger id="service" className="h-11">
+                  <SelectValue placeholder={t.contact.servicePlaceholder} />
+                </SelectTrigger>
+                <SelectContent>
+                  <SelectItem value="header-pest" disabled className="font-semibold text-primary">
+                    {language === "es" ? "-- Control de Plagas --" : "-- Pest Control --"}
+                  </SelectItem>
+                  {serviceOptions[language].filter(o => o.group === (language === "es" ? "plagas" : "pests")).map((option) => (
+                    <SelectItem key={option.value} value={option.value}>
+                      {option.label.split(" - ")[1]}
+                    </SelectItem>
+                  ))}
+                  <SelectItem value="header-landscaping" disabled className="font-semibold text-green-600">
+                    {language === "es" ? "-- Jardinería --" : "-- Landscaping --"}
+                  </SelectItem>
+                  {serviceOptions[language].filter(o => o.group === (language === "es" ? "jardineria" : "landscaping")).map((option) => (
+                    <SelectItem key={option.value} value={option.value}>
+                      {option.label.split(" - ")[1]}
+                    </SelectItem>
+                  ))}
+                  <SelectItem value="header-other" disabled className="font-semibold text-muted-foreground">
+                    {language === "es" ? "-- Otros --" : "-- Other --"}
+                  </SelectItem>
+                  {serviceOptions[language].filter(o => o.group === (language === "es" ? "otros" : "other")).map((option) => (
+                    <SelectItem key={option.value} value={option.value}>
+                      {option.label}
+                    </SelectItem>
+                  ))}
+                </SelectContent>
+              </Select>
+            </div>
+            <div className="space-y-2">
+              <Label htmlFor="propertyType" className="text-sm font-medium">{t.contact.propertyLabel}</Label>
               <Select
                 value={formData.propertyType}
                 onValueChange={(value) => setFormData({ ...formData, propertyType: value })}
               >
-                <SelectTrigger id="propertyType">
+                <SelectTrigger id="propertyType" className="h-11">
                   <SelectValue />
                 </SelectTrigger>
                 <SelectContent>
@@ -170,116 +226,104 @@ export function ContactForm() {
             </div>
           </div>
 
-          <div className="grid md:grid-cols-2 gap-6">
-            <div className="space-y-2">
-              <Label htmlFor="service">{t.contact.serviceLabel} *</Label>
-              <Select
-                value={formData.service}
-                onValueChange={(value) => setFormData({ ...formData, service: value })}
-                required
-              >
-                <SelectTrigger id="service">
-                  <SelectValue placeholder={t.contact.servicePlaceholder} />
-                </SelectTrigger>
-                <SelectContent>
-                  {serviceOptions[language].map((option) => (
-                    <SelectItem key={option.value} value={option.value}>
-                      {option.label}
-                    </SelectItem>
-                  ))}
-                </SelectContent>
-              </Select>
-            </div>
-            <div className="space-y-2">
-              <Label htmlFor="area">{language === "es" ? "Municipio" : "Municipality"}</Label>
-              <Select
-                value={formData.area}
-                onValueChange={(value) => setFormData({ ...formData, area: value })}
-              >
-                <SelectTrigger id="area">
-                  <SelectValue placeholder={language === "es" ? "Selecciona tu area" : "Select your area"} />
-                </SelectTrigger>
-                <SelectContent>
-                  {municipalities.map((area) => (
-                    <SelectItem key={area} value={area.toLowerCase()}>
-                      {area}
-                    </SelectItem>
-                  ))}
-                  <SelectItem value="other">{language === "es" ? "Otro" : "Other"}</SelectItem>
-                </SelectContent>
-              </Select>
-            </div>
+          {/* Municipality - Full width */}
+          <div className="space-y-2">
+            <Label htmlFor="area" className="text-sm font-medium">{language === "es" ? "Municipio" : "Municipality"}</Label>
+            <Select
+              value={formData.area}
+              onValueChange={(value) => setFormData({ ...formData, area: value })}
+            >
+              <SelectTrigger id="area" className="h-11">
+                <SelectValue placeholder={language === "es" ? "Selecciona tu área" : "Select your area"} />
+              </SelectTrigger>
+              <SelectContent>
+                {municipalities.map((area) => (
+                  <SelectItem key={area} value={area.toLowerCase()}>
+                    {area}
+                  </SelectItem>
+                ))}
+                <SelectItem value="other">{language === "es" ? "Otro" : "Other"}</SelectItem>
+              </SelectContent>
+            </Select>
           </div>
 
+          {/* Message */}
           <div className="space-y-2">
-            <Label htmlFor="message">{t.contact.messageLabel}</Label>
+            <Label htmlFor="message" className="text-sm font-medium">{t.contact.messageLabel}</Label>
             <Textarea
               id="message"
               placeholder={t.contact.messagePlaceholder}
-              rows={5}
+              rows={4}
               value={formData.message}
               onChange={(e) => setFormData({ ...formData, message: e.target.value })}
+              className="resize-none"
             />
           </div>
 
-          {/* Required acceptance checkbox */}
-          <div className="flex items-start gap-3">
-            <input
-              id="acceptTerms"
-              type="checkbox"
-              checked={acceptedTerms}
-              onChange={(e) => setAcceptedTerms(e.target.checked)}
-              required
-              className="mt-1 h-4 w-4 shrink-0 rounded border border-input accent-primary cursor-pointer"
-            />
-            <label htmlFor="acceptTerms" className="text-sm text-muted-foreground leading-relaxed cursor-pointer">
-              {language === "es" ? (
-                <>
-                  He leído y acepto los{" "}
-                  <Link href="/terms-and-conditions" className="underline hover:text-foreground font-medium">
-                    Términos y Condiciones
-                  </Link>{" "}
-                  y la{" "}
-                  <Link href="/privacy-policy" className="underline hover:text-foreground font-medium">
-                    Política de Privacidad
-                  </Link>
-                  . *
-                </>
-              ) : (
-                <>
-                  I have read and accept the{" "}
-                  <Link href="/terms-and-conditions" className="underline hover:text-foreground font-medium">
-                    Terms and Conditions
-                  </Link>{" "}
-                  and{" "}
-                  <Link href="/privacy-policy" className="underline hover:text-foreground font-medium">
-                    Privacy Policy
-                  </Link>
-                  . *
-                </>
-              )}
-            </label>
+          {/* Consent Section */}
+          <div className="space-y-4 pt-2 border-t">
+            {/* Required acceptance checkbox */}
+            <div className="flex items-start gap-3 p-3 rounded-lg bg-secondary/50">
+              <input
+                id="acceptTerms"
+                type="checkbox"
+                checked={acceptedTerms}
+                onChange={(e) => setAcceptedTerms(e.target.checked)}
+                required
+                className="mt-0.5 h-5 w-5 shrink-0 rounded border border-input accent-primary cursor-pointer"
+              />
+              <label htmlFor="acceptTerms" className="text-sm text-foreground leading-relaxed cursor-pointer">
+                {language === "es" ? (
+                  <>
+                    He leído y acepto los{" "}
+                    <Link href="/terms-and-conditions" className="underline hover:text-primary font-medium text-primary">
+                      Términos y Condiciones
+                    </Link>{" "}
+                    y la{" "}
+                    <Link href="/privacy-policy" className="underline hover:text-primary font-medium text-primary">
+                      Política de Privacidad
+                    </Link>
+                    . *
+                  </>
+                ) : (
+                  <>
+                    I have read and accept the{" "}
+                    <Link href="/terms-and-conditions" className="underline hover:text-primary font-medium text-primary">
+                      Terms and Conditions
+                    </Link>{" "}
+                    and{" "}
+                    <Link href="/privacy-policy" className="underline hover:text-primary font-medium text-primary">
+                      Privacy Policy
+                    </Link>
+                    . *
+                  </>
+                )}
+              </label>
+            </div>
+
+            {/* Optional marketing consent checkbox */}
+            <div className="flex items-start gap-3 p-3 rounded-lg hover:bg-secondary/30 transition-colors">
+              <input
+                id="acceptMarketing"
+                type="checkbox"
+                checked={acceptedMarketing}
+                onChange={(e) => setAcceptedMarketing(e.target.checked)}
+                className="mt-0.5 h-5 w-5 shrink-0 rounded border border-input accent-primary cursor-pointer"
+              />
+              <label htmlFor="acceptMarketing" className="text-xs text-muted-foreground leading-relaxed cursor-pointer">
+                {language === "es"
+                  ? `Acepto recibir comunicaciones promocionales de ${company.name} por llamada, SMS, WhatsApp o correo electrónico. Mi consentimiento no es condición de compra.`
+                  : `I agree to receive promotional communications from ${company.name} by call, SMS, WhatsApp, or email. Consent is not a condition of purchase.`}
+              </label>
+            </div>
           </div>
 
-          {/* Optional marketing consent checkbox */}
-          <div className="flex items-start gap-3">
-            <input
-              id="acceptMarketing"
-              type="checkbox"
-              checked={acceptedMarketing}
-              onChange={(e) => setAcceptedMarketing(e.target.checked)}
-              className="mt-1 h-4 w-4 shrink-0 rounded border border-input accent-primary cursor-pointer"
-            />
-            <label htmlFor="acceptMarketing" className="text-sm text-muted-foreground leading-relaxed cursor-pointer">
-              {language === "es"
-                ? `Acepto recibir comunicaciones promocionales de ${company.name} por llamada, SMS, WhatsApp o correo electrónico. Mi consentimiento no es condición de compra. La frecuencia de mensajes puede variar. Pueden aplicar tarifas de mensajes y datos. Puedo revocar mi consentimiento en cualquier momento.`
-                : `I agree to receive promotional communications from ${company.name} by call, SMS, WhatsApp, or email. Consent is not a condition of purchase. Message frequency may vary. Message and data rates may apply. I can withdraw my consent at any time.`}
-            </label>
-          </div>
-
-          <Button type="submit" size="lg" className="w-full" disabled={isSubmitting || !acceptedTerms}>
+          <Button type="submit" size="lg" className="w-full h-12 text-base font-semibold" disabled={isSubmitting || !acceptedTerms}>
             {isSubmitting ? (
-              language === "es" ? "Enviando..." : "Submitting..."
+              <span className="flex items-center gap-2">
+                <span className="h-4 w-4 border-2 border-current border-t-transparent rounded-full animate-spin" />
+                {language === "es" ? "Enviando..." : "Submitting..."}
+              </span>
             ) : (
               <>
                 <Send className="mr-2 h-5 w-5" />
