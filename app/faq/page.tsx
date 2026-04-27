@@ -22,12 +22,14 @@ export default function FAQPage() {
   const faqCategories = language === "es" ? [
     { id: "general", title: "Preguntas Generales", data: currentFaqs.general },
     { id: "pestControl", title: "Control de Plagas", data: currentFaqs.pestControl },
+    { id: "landscaping", title: "Jardinería", data: currentFaqs.landscaping },
     { id: "termite", title: "Control de Termitas", data: currentFaqs.termite },
     { id: "commercial", title: "Servicios Comerciales", data: currentFaqs.commercial },
     { id: "pricing", title: "Precios y Pagos", data: currentFaqs.pricing },
   ] : [
     { id: "general", title: "General Questions", data: currentFaqs.general },
     { id: "pestControl", title: "Pest Control", data: currentFaqs.pestControl },
+    { id: "landscaping", title: "Landscaping", data: currentFaqs.landscaping },
     { id: "termite", title: "Termite Control", data: currentFaqs.termite },
     { id: "commercial", title: "Commercial Services", data: currentFaqs.commercial },
     { id: "pricing", title: "Pricing & Payment", data: currentFaqs.pricing },

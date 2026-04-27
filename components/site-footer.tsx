@@ -12,8 +12,10 @@ const footerLinks = {
       { name: "Todos los Servicios", href: "/services" },
       { name: "Control de Plagas", href: "/services/pest-control" },
       { name: "Jardinería", href: "/services/landscaping" },
-      { name: "Mitigación Ambiental", href: "/services/environmental", badge: "Próximo" },
-      { name: "Mantenimiento de Propiedades", href: "/services/property-maintenance", badge: "Próximo" },
+      { name: "Limpieza y Mantenimiento", href: "/services/cleaning-maintenance", badge: "Próximamente" },
+      { name: "Reparaciones / Pintura", href: "/services/repairs-painting", badge: "Próximamente" },
+      { name: "Mitigación Ambiental", href: "/services/environmental", badge: "Próximamente" },
+      { name: "Mitigación de Moho", href: "/services/mold-mitigation", badge: "Próximamente" },
     ],
     company: [
       { name: "Nosotros", href: "/about" },
@@ -31,8 +33,10 @@ const footerLinks = {
       { name: "All Services", href: "/services" },
       { name: "Pest Control", href: "/services/pest-control" },
       { name: "Landscaping", href: "/services/landscaping" },
+      { name: "Cleaning & Maintenance", href: "/services/cleaning-maintenance", badge: "Soon" },
+      { name: "Repairs / Painting", href: "/services/repairs-painting", badge: "Soon" },
       { name: "Environmental Mitigation", href: "/services/environmental", badge: "Soon" },
-      { name: "Property Maintenance", href: "/services/property-maintenance", badge: "Soon" },
+      { name: "Mold Mitigation", href: "/services/mold-mitigation", badge: "Soon" },
     ],
     company: [
       { name: "About Us", href: "/about" },
@@ -132,9 +136,10 @@ export function SiteFooter() {
                     {link.name}
                     {link.badge && (
                       <span className={`text-[10px] px-1.5 py-0.5 rounded ${
-                        link.href.includes('property-maintenance') 
-                          ? 'bg-blue-500/20 text-blue-300' 
-                          : 'bg-orange-500/20 text-orange-300'
+                        link.href.includes('cleaning-maintenance') ? 'bg-blue-500/20 text-blue-300' :
+                        link.href.includes('repairs-painting') ? 'bg-purple-500/20 text-purple-300' :
+                        link.href.includes('mold-mitigation') ? 'bg-teal-500/20 text-teal-300' :
+                        'bg-orange-500/20 text-orange-300'
                       }`}>
                         {link.badge}
                       </span>

@@ -3,7 +3,7 @@
 import * as React from "react"
 import Link from "next/link"
 import Image from "next/image"
-import { Menu, Phone, Clock, Globe, Bug, TreePine, HardHat, Wrench } from "lucide-react"
+import { Menu, Phone, Clock, Globe, Bug, TreePine, HardHat, Wrench, SprayCan, Paintbrush, Droplets } from "lucide-react"
 import { Button } from "@/components/ui/button"
 import { Sheet, SheetContent, SheetTrigger, SheetTitle, SheetDescription } from "@/components/ui/sheet"
 import {
@@ -131,6 +131,38 @@ export function SiteHeader() {
                   </Link>
                 </DropdownMenuItem>
                 <DropdownMenuItem asChild>
+                  <Link href="/services/cleaning-maintenance" className="flex items-center gap-3 p-3">
+                    <div className="flex h-8 w-8 shrink-0 items-center justify-center rounded-md bg-blue-500/10">
+                      <SprayCan className="h-4 w-4 text-blue-600" />
+                    </div>
+                    <div className="flex-1">
+                      <div className="flex items-center gap-2">
+                        <span className="font-medium">{language === "es" ? "Limpieza y Mantenimiento" : "Cleaning & Maintenance"}</span>
+                        <span className="text-[10px] bg-blue-100 text-blue-700 px-1.5 py-0.5 rounded font-medium">
+                          {language === "es" ? "Próximamente" : "Soon"}
+                        </span>
+                      </div>
+                      <p className="text-xs text-muted-foreground">{language === "es" ? "Limpieza profesional" : "Professional cleaning"}</p>
+                    </div>
+                  </Link>
+                </DropdownMenuItem>
+                <DropdownMenuItem asChild>
+                  <Link href="/services/repairs-painting" className="flex items-center gap-3 p-3">
+                    <div className="flex h-8 w-8 shrink-0 items-center justify-center rounded-md bg-purple-500/10">
+                      <Paintbrush className="h-4 w-4 text-purple-600" />
+                    </div>
+                    <div className="flex-1">
+                      <div className="flex items-center gap-2">
+                        <span className="font-medium">{language === "es" ? "Reparaciones / Pintura" : "Repairs / Painting"}</span>
+                        <span className="text-[10px] bg-purple-100 text-purple-700 px-1.5 py-0.5 rounded font-medium">
+                          {language === "es" ? "Próximamente" : "Soon"}
+                        </span>
+                      </div>
+                      <p className="text-xs text-muted-foreground">{language === "es" ? "Reparaciones menores" : "Minor repairs"}</p>
+                    </div>
+                  </Link>
+                </DropdownMenuItem>
+                <DropdownMenuItem asChild>
                   <Link href="/services/environmental" className="flex items-center gap-3 p-3">
                     <div className="flex h-8 w-8 shrink-0 items-center justify-center rounded-md bg-orange-500/10">
                       <HardHat className="h-4 w-4 text-orange-600" />
@@ -139,7 +171,7 @@ export function SiteHeader() {
                       <div className="flex items-center gap-2">
                         <span className="font-medium">{language === "es" ? "Mitigación Ambiental" : "Environmental"}</span>
                         <span className="text-[10px] bg-orange-100 text-orange-700 px-1.5 py-0.5 rounded font-medium">
-                          {language === "es" ? "Próximo" : "Soon"}
+                          {language === "es" ? "Próximamente" : "Soon"}
                         </span>
                       </div>
                       <p className="text-xs text-muted-foreground">{language === "es" ? "Asbesto y plomo" : "Asbestos & lead"}</p>
@@ -147,18 +179,18 @@ export function SiteHeader() {
                   </Link>
                 </DropdownMenuItem>
                 <DropdownMenuItem asChild>
-                  <Link href="/services/property-maintenance" className="flex items-center gap-3 p-3">
-                    <div className="flex h-8 w-8 shrink-0 items-center justify-center rounded-md bg-blue-500/10">
-                      <Wrench className="h-4 w-4 text-blue-600" />
+                  <Link href="/services/mold-mitigation" className="flex items-center gap-3 p-3">
+                    <div className="flex h-8 w-8 shrink-0 items-center justify-center rounded-md bg-teal-500/10">
+                      <Droplets className="h-4 w-4 text-teal-600" />
                     </div>
                     <div className="flex-1">
                       <div className="flex items-center gap-2">
-                        <span className="font-medium">{language === "es" ? "Mantenimiento" : "Maintenance"}</span>
-                        <span className="text-[10px] bg-blue-100 text-blue-700 px-1.5 py-0.5 rounded font-medium">
-                          {language === "es" ? "Próximo" : "Soon"}
+                        <span className="font-medium">{language === "es" ? "Mitigación de Moho" : "Mold Mitigation"}</span>
+                        <span className="text-[10px] bg-teal-100 text-teal-700 px-1.5 py-0.5 rounded font-medium">
+                          {language === "es" ? "Próximamente" : "Soon"}
                         </span>
                       </div>
-                      <p className="text-xs text-muted-foreground">{language === "es" ? "Reparaciones" : "Repairs"}</p>
+                      <p className="text-xs text-muted-foreground">{language === "es" ? "Remoción de moho" : "Mold removal"}</p>
                     </div>
                   </Link>
                 </DropdownMenuItem>
@@ -253,6 +285,28 @@ export function SiteHeader() {
                             {language === "es" ? "Jardinería" : "Landscaping"}
                           </Link>
                           <Link 
+                            href="/services/cleaning-maintenance" 
+                            className="flex items-center gap-2 py-1.5 text-sm text-muted-foreground hover:text-blue-600 transition-colors"
+                            onClick={() => setIsOpen(false)}
+                          >
+                            <SprayCan className="h-4 w-4 text-blue-600" />
+                            {language === "es" ? "Limpieza y Mantenimiento" : "Cleaning & Maintenance"}
+                            <span className="text-[10px] bg-blue-100 text-blue-700 px-1 py-0.5 rounded">
+                              {language === "es" ? "Próximamente" : "Soon"}
+                            </span>
+                          </Link>
+                          <Link 
+                            href="/services/repairs-painting" 
+                            className="flex items-center gap-2 py-1.5 text-sm text-muted-foreground hover:text-purple-600 transition-colors"
+                            onClick={() => setIsOpen(false)}
+                          >
+                            <Paintbrush className="h-4 w-4 text-purple-600" />
+                            {language === "es" ? "Reparaciones / Pintura" : "Repairs / Painting"}
+                            <span className="text-[10px] bg-purple-100 text-purple-700 px-1 py-0.5 rounded">
+                              {language === "es" ? "Próximamente" : "Soon"}
+                            </span>
+                          </Link>
+                          <Link 
                             href="/services/environmental" 
                             className="flex items-center gap-2 py-1.5 text-sm text-muted-foreground hover:text-orange-600 transition-colors"
                             onClick={() => setIsOpen(false)}
@@ -260,18 +314,18 @@ export function SiteHeader() {
                             <HardHat className="h-4 w-4 text-orange-600" />
                             {language === "es" ? "Mitigación Ambiental" : "Environmental"}
                             <span className="text-[10px] bg-orange-100 text-orange-700 px-1 py-0.5 rounded">
-                              {language === "es" ? "Próximo" : "Soon"}
+                              {language === "es" ? "Próximamente" : "Soon"}
                             </span>
                           </Link>
                           <Link 
-                            href="/services/property-maintenance" 
-                            className="flex items-center gap-2 py-1.5 text-sm text-muted-foreground hover:text-blue-600 transition-colors"
+                            href="/services/mold-mitigation" 
+                            className="flex items-center gap-2 py-1.5 text-sm text-muted-foreground hover:text-teal-600 transition-colors"
                             onClick={() => setIsOpen(false)}
                           >
-                            <Wrench className="h-4 w-4 text-blue-600" />
-                            {language === "es" ? "Mantenimiento" : "Maintenance"}
-                            <span className="text-[10px] bg-blue-100 text-blue-700 px-1 py-0.5 rounded">
-                              {language === "es" ? "Próximo" : "Soon"}
+                            <Droplets className="h-4 w-4 text-teal-600" />
+                            {language === "es" ? "Mitigación de Moho" : "Mold Mitigation"}
+                            <span className="text-[10px] bg-teal-100 text-teal-700 px-1 py-0.5 rounded">
+                              {language === "es" ? "Próximamente" : "Soon"}
                             </span>
                           </Link>
                         </div>

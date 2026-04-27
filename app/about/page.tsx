@@ -2,7 +2,7 @@
 
 import Link from "next/link"
 import Image from "next/image"
-import { CheckCircle2, Shield, Heart, Award, Users, Target, Phone, Bug, TreePine, HardHat, Wrench, ArrowRight } from "lucide-react"
+import { CheckCircle2, Shield, Heart, Award, Users, Target, Phone, Bug, TreePine, HardHat, SprayCan, Paintbrush, Droplets, ArrowRight } from "lucide-react"
 import { Button } from "@/components/ui/button"
 import { Card, CardContent } from "@/components/ui/card"
 import { company } from "@/content/company"
@@ -198,26 +198,24 @@ export default function AboutPage() {
             </p>
           </div>
 
-          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
+          {/* Active Services - Row 1 */}
+          <div className="grid md:grid-cols-2 gap-6 mb-6">
             {/* Pest Control */}
             <Link href="/services/pest-control" className="group">
               <Card className="h-full hover:shadow-lg transition-all hover:border-primary/50">
-                <CardContent className="p-6 text-center">
-                  <div className="flex h-14 w-14 items-center justify-center rounded-full bg-primary/10 mx-auto mb-4 group-hover:bg-primary/20 transition-colors">
+                <CardContent className="p-6 flex items-center gap-4">
+                  <div className="flex h-14 w-14 shrink-0 items-center justify-center rounded-full bg-primary/10 group-hover:bg-primary/20 transition-colors">
                     <Bug className="h-7 w-7 text-primary" />
                   </div>
-                  <h3 className="text-lg font-bold mb-2 group-hover:text-primary transition-colors">
-                    {language === "es" ? "Control de Plagas" : "Pest Control"}
-                  </h3>
-                  <p className="text-muted-foreground text-sm mb-3">
-                    {language === "es" 
-                      ? "Fumigación, trampas y control biológico para eliminar plagas de manera efectiva."
-                      : "Fumigation, traps and biological control to effectively eliminate pests."}
-                  </p>
-                  <span className="inline-flex items-center text-primary text-sm font-medium">
-                    {t.ui.learnMore}
-                    <ArrowRight className="ml-1 h-4 w-4 group-hover:translate-x-1 transition-transform" />
-                  </span>
+                  <div className="flex-1">
+                    <h3 className="text-lg font-bold mb-1 group-hover:text-primary transition-colors">
+                      {language === "es" ? "Control de Plagas" : "Pest Control"}
+                    </h3>
+                    <p className="text-muted-foreground text-sm">
+                      {language === "es" ? "Fumigación, trampas y control biológico" : "Fumigation, traps and biological control"}
+                    </p>
+                  </div>
+                  <ArrowRight className="h-5 w-5 text-muted-foreground group-hover:text-primary group-hover:translate-x-1 transition-all" />
                 </CardContent>
               </Card>
             </Link>
@@ -225,81 +223,55 @@ export default function AboutPage() {
             {/* Landscaping */}
             <Link href="/services/landscaping" className="group">
               <Card className="h-full hover:shadow-lg transition-all hover:border-green-500/50">
-                <CardContent className="p-6 text-center">
-                  <div className="flex h-14 w-14 items-center justify-center rounded-full bg-green-500/10 mx-auto mb-4 group-hover:bg-green-500/20 transition-colors">
+                <CardContent className="p-6 flex items-center gap-4">
+                  <div className="flex h-14 w-14 shrink-0 items-center justify-center rounded-full bg-green-500/10 group-hover:bg-green-500/20 transition-colors">
                     <TreePine className="h-7 w-7 text-green-600" />
                   </div>
-                  <h3 className="text-lg font-bold mb-2 group-hover:text-green-600 transition-colors">
-                    {language === "es" ? "Jardinería" : "Landscaping"}
-                  </h3>
-                  <p className="text-muted-foreground text-sm mb-3">
-                    {language === "es" 
-                      ? "Corte de grama, poda, diseño paisajístico y mantenimiento de áreas verdes."
-                      : "Lawn mowing, pruning, landscape design and green area maintenance."}
-                  </p>
-                  <span className="inline-flex items-center text-green-600 text-sm font-medium">
-                    {t.ui.learnMore}
-                    <ArrowRight className="ml-1 h-4 w-4 group-hover:translate-x-1 transition-transform" />
-                  </span>
-                </CardContent>
-              </Card>
-            </Link>
-
-            {/* Environmental */}
-            <Link href="/services/environmental" className="group">
-              <Card className="h-full hover:shadow-lg transition-all hover:border-orange-500/50 relative overflow-hidden">
-                <div className="absolute top-3 right-3">
-                  <span className="text-[10px] bg-orange-100 text-orange-700 px-2 py-1 rounded-full font-medium">
-                    {language === "es" ? "Próximamente" : "Coming Soon"}
-                  </span>
-                </div>
-                <CardContent className="p-6 text-center">
-                  <div className="flex h-14 w-14 items-center justify-center rounded-full bg-orange-500/10 mx-auto mb-4 group-hover:bg-orange-500/20 transition-colors">
-                    <HardHat className="h-7 w-7 text-orange-600" />
+                  <div className="flex-1">
+                    <h3 className="text-lg font-bold mb-1 group-hover:text-green-600 transition-colors">
+                      {language === "es" ? "Jardinería" : "Landscaping"}
+                    </h3>
+                    <p className="text-muted-foreground text-sm">
+                      {language === "es" ? "Corte, poda y diseño paisajístico" : "Mowing, pruning and landscape design"}
+                    </p>
                   </div>
-                  <h3 className="text-lg font-bold mb-2 group-hover:text-orange-600 transition-colors">
-                    {language === "es" ? "Mitigación Ambiental" : "Environmental Mitigation"}
-                  </h3>
-                  <p className="text-muted-foreground text-sm mb-3">
-                    {language === "es" 
-                      ? "Remoción segura y certificada de asbesto y plomo en propiedades."
-                      : "Safe and certified asbestos and lead removal in properties."}
-                  </p>
-                  <span className="inline-flex items-center text-orange-600 text-sm font-medium">
-                    {t.ui.learnMore}
-                    <ArrowRight className="ml-1 h-4 w-4 group-hover:translate-x-1 transition-transform" />
-                  </span>
+                  <ArrowRight className="h-5 w-5 text-muted-foreground group-hover:text-green-600 group-hover:translate-x-1 transition-all" />
                 </CardContent>
               </Card>
             </Link>
+          </div>
 
-            {/* Property Maintenance */}
-            <Link href="/services/property-maintenance" className="group">
-              <Card className="h-full hover:shadow-lg transition-all hover:border-blue-500/50 relative overflow-hidden">
-                <div className="absolute top-3 right-3">
-                  <span className="text-[10px] bg-blue-100 text-blue-700 px-2 py-1 rounded-full font-medium">
-                    {language === "es" ? "Próximamente" : "Coming Soon"}
-                  </span>
-                </div>
-                <CardContent className="p-6 text-center">
-                  <div className="flex h-14 w-14 items-center justify-center rounded-full bg-blue-500/10 mx-auto mb-4 group-hover:bg-blue-500/20 transition-colors">
-                    <Wrench className="h-7 w-7 text-blue-600" />
-                  </div>
-                  <h3 className="text-lg font-bold mb-2 group-hover:text-blue-600 transition-colors">
-                    {language === "es" ? "Mantenimiento" : "Property Maintenance"}
-                  </h3>
-                  <p className="text-muted-foreground text-sm mb-3">
-                    {language === "es" 
-                      ? "Reparaciones, pintura, plomería y mantenimiento general de propiedades."
-                      : "Repairs, painting, plumbing and general property maintenance."}
-                  </p>
-                  <span className="inline-flex items-center text-blue-600 text-sm font-medium">
-                    {t.ui.learnMore}
-                    <ArrowRight className="ml-1 h-4 w-4 group-hover:translate-x-1 transition-transform" />
-                  </span>
-                </CardContent>
-              </Card>
-            </Link>
+          {/* Coming Soon Services - Row 2 */}
+          <div className="text-center mb-4">
+            <span className="inline-flex items-center gap-2 text-sm text-muted-foreground">
+              {language === "es" ? "Próximamente" : "Coming Soon"}
+            </span>
+          </div>
+          <div className="grid grid-cols-2 lg:grid-cols-4 gap-4">
+            <Card className="text-center p-4 opacity-80">
+              <div className="flex h-10 w-10 items-center justify-center rounded-full bg-blue-500/10 mx-auto mb-2">
+                <SprayCan className="h-5 w-5 text-blue-600" />
+              </div>
+              <h3 className="font-semibold text-sm">{language === "es" ? "Limpieza y Mantenimiento" : "Cleaning & Maintenance"}</h3>
+            </Card>
+            <Card className="text-center p-4 opacity-80">
+              <div className="flex h-10 w-10 items-center justify-center rounded-full bg-purple-500/10 mx-auto mb-2">
+                <Paintbrush className="h-5 w-5 text-purple-600" />
+              </div>
+              <h3 className="font-semibold text-sm">{language === "es" ? "Reparaciones / Pintura" : "Repairs / Painting"}</h3>
+            </Card>
+            <Card className="text-center p-4 opacity-80">
+              <div className="flex h-10 w-10 items-center justify-center rounded-full bg-orange-500/10 mx-auto mb-2">
+                <HardHat className="h-5 w-5 text-orange-600" />
+              </div>
+              <h3 className="font-semibold text-sm">{language === "es" ? "Mitigación Ambiental" : "Environmental"}</h3>
+            </Card>
+            <Card className="text-center p-4 opacity-80">
+              <div className="flex h-10 w-10 items-center justify-center rounded-full bg-teal-500/10 mx-auto mb-2">
+                <Droplets className="h-5 w-5 text-teal-600" />
+              </div>
+              <h3 className="font-semibold text-sm">{language === "es" ? "Mitigación de Moho" : "Mold Mitigation"}</h3>
+            </Card>
           </div>
         </div>
       </section>

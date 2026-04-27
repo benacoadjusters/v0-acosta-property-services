@@ -64,6 +64,25 @@ export const faqs = {
       }
     ],
     
+    landscaping: [
+      {
+        question: "¿Con qué frecuencia debo programar el corte de grama?",
+        answer: "Recomendamos corte de grama cada 2-4 semanas dependiendo de la época del año, tipo de césped y condiciones climáticas. En temporada de lluvia, la grama crece más rápido y puede requerir cortes más frecuentes. Ofrecemos planes de mantenimiento regular para mantener su jardín en óptimas condiciones."
+      },
+      {
+        question: "¿Qué servicios de jardinería ofrecen?",
+        answer: "Ofrecemos servicios completos de jardinería que incluyen: corte de grama, poda de árboles y arbustos, diseño paisajístico, siembra de plantas y flores, fertilización, control de maleza, limpieza de áreas verdes y mantenimiento general de jardines. Cada servicio se adapta a las necesidades específicas de su propiedad."
+      },
+      {
+        question: "¿Puedo solicitar un diseño paisajístico completo?",
+        answer: "Sí, ofrecemos servicios de diseño paisajístico que incluyen planificación, selección de plantas adecuadas para el clima de Puerto Rico, e instalación completa. El diseño se realiza considerando factores como exposición solar, drenaje, mantenimiento requerido y sus preferencias estéticas."
+      },
+      {
+        question: "¿Los productos de fertilización y control de maleza son seguros?",
+        answer: "Utilizamos productos registrados y seguimos prácticas de aplicación segura. Le proporcionamos instrucciones sobre precauciones a seguir después del tratamiento, incluyendo tiempos de espera antes de permitir acceso de niños y mascotas al área tratada."
+      }
+    ],
+    
     commercial: [
       {
         question: "¿Ofrecen servicio fuera de horario para negocios?",
@@ -154,6 +173,25 @@ export const faqs = {
       {
         question: "Are termite treatments covered by homeowner's insurance?",
         answer: "In most cases, homeowner's insurance policies do NOT cover termite damage or treatments. We recommend verifying your policy directly with your insurer. This information is general and does not constitute insurance advice. Prevention is the best protection for your investment."
+      }
+    ],
+    
+    landscaping: [
+      {
+        question: "How often should I schedule lawn mowing?",
+        answer: "We recommend lawn mowing every 2-4 weeks depending on the season, grass type and weather conditions. During rainy season, grass grows faster and may require more frequent cuts. We offer regular maintenance plans to keep your garden in optimal condition."
+      },
+      {
+        question: "What landscaping services do you offer?",
+        answer: "We offer complete landscaping services including: lawn mowing, tree and shrub pruning, landscape design, planting flowers and plants, fertilization, weed control, green area cleaning and general garden maintenance. Each service is adapted to your property's specific needs."
+      },
+      {
+        question: "Can I request a complete landscape design?",
+        answer: "Yes, we offer landscape design services that include planning, selection of plants suitable for Puerto Rico's climate, and complete installation. The design is made considering factors such as sun exposure, drainage, required maintenance and your aesthetic preferences."
+      },
+      {
+        question: "Are fertilization and weed control products safe?",
+        answer: "We use registered products and follow safe application practices. We provide instructions on precautions to follow after treatment, including waiting times before allowing children and pets access to the treated area."
       }
     ],
     

@@ -2,7 +2,7 @@
 
 import Link from "next/link"
 import Image from "next/image"
-import { Phone, ArrowRight, Shield, Clock, Award, CheckCircle2, Bug, TreePine, HardHat, Wrench, Users, Layers } from "lucide-react"
+import { Phone, ArrowRight, Shield, Clock, Award, CheckCircle2, Bug, TreePine, HardHat, SprayCan, Paintbrush, Droplets, Users, Layers } from "lucide-react"
 import { Button } from "@/components/ui/button"
 import { company } from "@/content/company"
 import { useLanguage } from "@/lib/language-context"
@@ -37,13 +37,13 @@ export default function HomePage() {
                   <TreePine className="h-3.5 w-3.5" />
                   {language === "es" ? "Jardinería" : "Landscaping"}
                 </span>
-                <span className="inline-flex items-center gap-1.5 rounded-full bg-orange-500/10 px-3 py-1 text-sm font-medium text-orange-700">
-                  <HardHat className="h-3.5 w-3.5" />
-                  {language === "es" ? "Mitigación Ambiental" : "Environmental Mitigation"}
-                </span>
                 <span className="inline-flex items-center gap-1.5 rounded-full bg-blue-500/10 px-3 py-1 text-sm font-medium text-blue-700">
-                  <Wrench className="h-3.5 w-3.5" />
-                  {language === "es" ? "Mantenimiento" : "Maintenance"}
+                  <SprayCan className="h-3.5 w-3.5" />
+                  {language === "es" ? "Limpieza" : "Cleaning"}
+                </span>
+                <span className="inline-flex items-center gap-1.5 rounded-full bg-purple-500/10 px-3 py-1 text-sm font-medium text-purple-700">
+                  <Paintbrush className="h-3.5 w-3.5" />
+                  {language === "es" ? "Pintura" : "Painting"}
                 </span>
               </div>
               <div className="flex flex-col sm:flex-row gap-4">
@@ -142,11 +142,12 @@ export default function HomePage() {
             </p>
           </div>
 
-          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
+          {/* Active Services - 2 columns */}
+          <div className="grid md:grid-cols-2 gap-6 mb-8">
             {/* Pest Control */}
             <Link href="/services/pest-control" className="group">
               <div className="relative overflow-hidden rounded-2xl bg-card border shadow-sm hover:shadow-xl transition-all duration-300">
-                <div className="relative aspect-[4/3] overflow-hidden">
+                <div className="relative aspect-[16/9] overflow-hidden">
                   <Image
                     src="/images/hero-pest-control.jpg"
                     alt={language === "es" ? "Control de Plagas" : "Pest Control"}
@@ -157,7 +158,7 @@ export default function HomePage() {
                   <div className="absolute bottom-4 left-4 right-4">
                     <div className="inline-flex items-center gap-2 rounded-full bg-primary px-3 py-1 text-sm font-medium text-primary-foreground mb-2">
                       <Bug className="h-4 w-4" />
-                      {language === "es" ? "Activo" : "Active"}
+                      {language === "es" ? "Disponible" : "Available"}
                     </div>
                   </div>
                 </div>
@@ -167,10 +168,10 @@ export default function HomePage() {
                   </h3>
                   <p className="text-muted-foreground text-sm mb-4">
                     {language === "es" 
-                      ? "Fumigación, trampeo y control biológico. Protegemos tu hogar y negocio de todo tipo de plagas con métodos seguros y efectivos."
-                      : "Fumigation, trapping and biological control. We protect your home and business from all types of pests with safe and effective methods."}
+                      ? "Fumigación, trampeo y control biológico. Protegemos tu hogar y negocio de todo tipo de plagas."
+                      : "Fumigation, trapping and biological control. We protect your home and business from all types of pests."}
                   </p>
-                  <span className="inline-flex items-center text-primary font-medium text-sm group-hover:gap-2 transition-all">
+                  <span className="inline-flex items-center text-primary font-medium text-sm">
                     {t.ui.learnMore}
                     <ArrowRight className="ml-1 h-4 w-4 group-hover:translate-x-1 transition-transform" />
                   </span>
@@ -181,7 +182,7 @@ export default function HomePage() {
             {/* Landscaping */}
             <Link href="/services/landscaping" className="group">
               <div className="relative overflow-hidden rounded-2xl bg-card border shadow-sm hover:shadow-xl transition-all duration-300">
-                <div className="relative aspect-[4/3] overflow-hidden">
+                <div className="relative aspect-[16/9] overflow-hidden">
                   <Image
                     src="/images/hero-landscaping.jpg"
                     alt={language === "es" ? "Jardinería" : "Landscaping"}
@@ -192,7 +193,7 @@ export default function HomePage() {
                   <div className="absolute bottom-4 left-4 right-4">
                     <div className="inline-flex items-center gap-2 rounded-full bg-green-600 px-3 py-1 text-sm font-medium text-white mb-2">
                       <TreePine className="h-4 w-4" />
-                      {language === "es" ? "Activo" : "Active"}
+                      {language === "es" ? "Disponible" : "Available"}
                     </div>
                   </div>
                 </div>
@@ -202,78 +203,83 @@ export default function HomePage() {
                   </h3>
                   <p className="text-muted-foreground text-sm mb-4">
                     {language === "es" 
-                      ? "Mantenimiento de jardines, poda, corte de grama, diseño paisajístico y cuidado de áreas verdes para propiedades residenciales y comerciales."
-                      : "Garden maintenance, pruning, lawn mowing, landscape design and green area care for residential and commercial properties."}
+                      ? "Mantenimiento de jardines, poda, corte de grama y diseño paisajístico profesional."
+                      : "Garden maintenance, pruning, lawn mowing and professional landscape design."}
                   </p>
-                  <span className="inline-flex items-center text-green-600 font-medium text-sm group-hover:gap-2 transition-all">
+                  <span className="inline-flex items-center text-green-600 font-medium text-sm">
                     {t.ui.learnMore}
                     <ArrowRight className="ml-1 h-4 w-4 group-hover:translate-x-1 transition-transform" />
                   </span>
                 </div>
               </div>
             </Link>
+          </div>
 
-            {/* Environmental Mitigation - Coming Soon */}
+          {/* Coming Soon Services - 4 columns */}
+          <div className="text-center mb-6">
+            <span className="inline-flex items-center gap-2 rounded-full bg-muted px-4 py-2 text-sm font-medium text-muted-foreground">
+              <Clock className="h-4 w-4" />
+              {language === "es" ? "Próximamente" : "Coming Soon"}
+            </span>
+          </div>
+          <div className="grid grid-cols-2 lg:grid-cols-4 gap-4">
+            {/* Cleaning & Maintenance */}
             <div className="group cursor-default">
-              <div className="relative overflow-hidden rounded-2xl bg-card border shadow-sm opacity-90">
-                <div className="relative aspect-[4/3] overflow-hidden bg-muted">
-                  <div className="absolute inset-0 flex items-center justify-center bg-gradient-to-br from-orange-100 to-orange-50">
-                    <HardHat className="h-20 w-20 text-orange-300" />
-                  </div>
-                  <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent" />
-                  <div className="absolute bottom-4 left-4 right-4">
-                    <div className="inline-flex items-center gap-2 rounded-full bg-orange-500 px-3 py-1 text-sm font-medium text-white mb-2">
-                      <HardHat className="h-4 w-4" />
-                      {language === "es" ? "Próximamente" : "Coming Soon"}
-                    </div>
-                  </div>
+              <div className="relative overflow-hidden rounded-xl bg-card border shadow-sm p-5 text-center opacity-80 hover:opacity-100 transition-opacity">
+                <div className="flex h-12 w-12 items-center justify-center rounded-full bg-blue-500/10 mx-auto mb-3">
+                  <SprayCan className="h-6 w-6 text-blue-600" />
                 </div>
-                <div className="p-6">
-                  <h3 className="text-xl font-bold text-foreground mb-2">
-                    {language === "es" ? "Mitigación Ambiental" : "Environmental Mitigation"}
-                  </h3>
-                  <p className="text-muted-foreground text-sm mb-4">
-                    {language === "es" 
-                      ? "Próximamente ofreceremos servicios de mitigación de asbesto y plomo. Remoción segura y certificada para proteger la salud de tu familia."
-                      : "Coming soon: asbestos and lead mitigation services. Safe and certified removal to protect your family's health."}
-                  </p>
-                  <span className="inline-flex items-center text-orange-500 font-medium text-sm">
-                    {language === "es" ? "En construcción" : "Under development"}
-                    <Clock className="ml-2 h-4 w-4" />
-                  </span>
-                </div>
+                <h3 className="font-semibold text-foreground text-sm mb-1">
+                  {language === "es" ? "Limpieza y Mantenimiento" : "Cleaning & Maintenance"}
+                </h3>
+                <p className="text-xs text-muted-foreground">
+                  {language === "es" ? "Limpieza profesional" : "Professional cleaning"}
+                </p>
               </div>
             </div>
 
-            {/* Property Maintenance - Coming Soon */}
+            {/* Repairs / Painting */}
             <div className="group cursor-default">
-              <div className="relative overflow-hidden rounded-2xl bg-card border shadow-sm opacity-90">
-                <div className="relative aspect-[4/3] overflow-hidden bg-muted">
-                  <div className="absolute inset-0 flex items-center justify-center bg-gradient-to-br from-blue-100 to-blue-50">
-                    <Wrench className="h-20 w-20 text-blue-300" />
-                  </div>
-                  <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent" />
-                  <div className="absolute bottom-4 left-4 right-4">
-                    <div className="inline-flex items-center gap-2 rounded-full bg-blue-500 px-3 py-1 text-sm font-medium text-white mb-2">
-                      <Wrench className="h-4 w-4" />
-                      {language === "es" ? "Próximamente" : "Coming Soon"}
-                    </div>
-                  </div>
+              <div className="relative overflow-hidden rounded-xl bg-card border shadow-sm p-5 text-center opacity-80 hover:opacity-100 transition-opacity">
+                <div className="flex h-12 w-12 items-center justify-center rounded-full bg-purple-500/10 mx-auto mb-3">
+                  <Paintbrush className="h-6 w-6 text-purple-600" />
                 </div>
-                <div className="p-6">
-                  <h3 className="text-xl font-bold text-foreground mb-2">
-                    {language === "es" ? "Mantenimiento de Propiedades" : "Property Maintenance"}
-                  </h3>
-                  <p className="text-muted-foreground text-sm mb-4">
-                    {language === "es" 
-                      ? "Próximamente ofreceremos servicios de mantenimiento general, reparaciones menores y cuidado integral de propiedades."
-                      : "Coming soon: general maintenance services, minor repairs and comprehensive property care."}
-                  </p>
-                  <span className="inline-flex items-center text-blue-500 font-medium text-sm">
-                    {language === "es" ? "En construcción" : "Under development"}
-                    <Clock className="ml-2 h-4 w-4" />
-                  </span>
+                <h3 className="font-semibold text-foreground text-sm mb-1">
+                  {language === "es" ? "Reparaciones / Pintura" : "Repairs / Painting"}
+                </h3>
+                <p className="text-xs text-muted-foreground">
+                  {language === "es" ? "Reparaciones menores" : "Minor repairs"}
+                </p>
+              </div>
+            </div>
+
+            {/* Environmental Mitigation */}
+            <div className="group cursor-default">
+              <div className="relative overflow-hidden rounded-xl bg-card border shadow-sm p-5 text-center opacity-80 hover:opacity-100 transition-opacity">
+                <div className="flex h-12 w-12 items-center justify-center rounded-full bg-orange-500/10 mx-auto mb-3">
+                  <HardHat className="h-6 w-6 text-orange-600" />
                 </div>
+                <h3 className="font-semibold text-foreground text-sm mb-1">
+                  {language === "es" ? "Mitigación Ambiental" : "Environmental Mitigation"}
+                </h3>
+                <p className="text-xs text-muted-foreground">
+                  {language === "es" ? "Asbesto y plomo" : "Asbestos & lead"}
+                </p>
+              </div>
+            </div>
+
+            {/* Mold Mitigation */}
+            <div className="group cursor-default">
+              <div className="relative overflow-hidden rounded-xl bg-card border shadow-sm p-5 text-center opacity-80 hover:opacity-100 transition-opacity">
+                <div className="flex h-12 w-12 items-center justify-center rounded-full bg-teal-500/10 mx-auto mb-3">
+                  <Droplets className="h-6 w-6 text-teal-600" />
+                </div>
+                <h3 className="font-semibold text-foreground text-sm mb-1">
+                  {language === "es" ? "Mitigación de Moho" : "Mold Mitigation"}
+                </h3>
+                <p className="text-xs text-muted-foreground">
+                  {language === "es" ? "Remoción de moho" : "Mold removal"}
+                </p>
               </div>
             </div>
           </div>

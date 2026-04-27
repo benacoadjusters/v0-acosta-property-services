@@ -16,10 +16,10 @@ export default function GalleryPage() {
 
   const galleryCategories = [
     { id: "all", name: t.gallery.filterAll },
+    { id: "pest-control", name: language === "es" ? "Control de Plagas" : "Pest Control" },
+    { id: "landscaping", name: language === "es" ? "Jardinería" : "Landscaping" },
     { id: "residential", name: t.gallery.filterResidential },
     { id: "commercial", name: t.gallery.filterCommercial },
-    { id: "termite", name: language === "es" ? "Termitas" : "Termites" },
-    { id: "mosquito", name: language === "es" ? "Mosquitos" : "Mosquitoes" },
   ]
 
   const filteredItems = activeCategory === "all" 
@@ -96,10 +96,10 @@ export default function GalleryPage() {
                 </div>
 
                 <div className="absolute top-3 left-3 px-3 py-1 bg-card/90 backdrop-blur rounded-full text-xs font-medium capitalize">
+                  {item.category === "pest-control" && (language === "es" ? "Control de Plagas" : "Pest Control")}
+                  {item.category === "landscaping" && (language === "es" ? "Jardinería" : "Landscaping")}
                   {item.category === "residential" && t.gallery.filterResidential}
                   {item.category === "commercial" && t.gallery.filterCommercial}
-                  {item.category === "termite" && (language === "es" ? "Termitas" : "Termites")}
-                  {item.category === "mosquito" && (language === "es" ? "Mosquitos" : "Mosquitoes")}
                 </div>
               </div>
             ))}
