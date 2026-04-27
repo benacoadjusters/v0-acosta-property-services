@@ -202,7 +202,7 @@ export default function EnvironmentalPage() {
                   <h3 className="font-semibold text-foreground mb-2 flex items-center gap-2">
                     {service.title}
 <span className="text-xs bg-orange-200 text-orange-700 px-2 py-0.5 rounded-full">
-                    {language === "es" ? "Próximamente" : "Soon"}
+                    {language === "es" ? "Próximamente" : "Coming Soon"}
                   </span>
                   </h3>
                   <p className="text-sm text-muted-foreground">{service.description}</p>

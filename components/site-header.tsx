@@ -139,7 +139,7 @@ export function SiteHeader() {
                       <div className="flex items-center gap-2">
                         <span className="font-medium">{language === "es" ? "Limpieza y Mantenimiento" : "Cleaning & Maintenance"}</span>
                         <span className="text-[10px] bg-blue-100 text-blue-700 px-1.5 py-0.5 rounded font-medium">
-                          {language === "es" ? "Próximamente" : "Soon"}
+                          {language === "es" ? "Próximamente" : "Coming Soon"}
                         </span>
                       </div>
                       <p className="text-xs text-muted-foreground">{language === "es" ? "Limpieza profesional" : "Professional cleaning"}</p>
@@ -155,7 +155,7 @@ export function SiteHeader() {
                       <div className="flex items-center gap-2">
                         <span className="font-medium">{language === "es" ? "Reparaciones / Pintura" : "Repairs / Painting"}</span>
                         <span className="text-[10px] bg-purple-100 text-purple-700 px-1.5 py-0.5 rounded font-medium">
-                          {language === "es" ? "Próximamente" : "Soon"}
+                          {language === "es" ? "Próximamente" : "Coming Soon"}
                         </span>
                       </div>
                       <p className="text-xs text-muted-foreground">{language === "es" ? "Reparaciones menores" : "Minor repairs"}</p>
@@ -171,7 +171,7 @@ export function SiteHeader() {
                       <div className="flex items-center gap-2">
                         <span className="font-medium">{language === "es" ? "Mitigación Ambiental" : "Environmental"}</span>
                         <span className="text-[10px] bg-orange-100 text-orange-700 px-1.5 py-0.5 rounded font-medium">
-                          {language === "es" ? "Próximamente" : "Soon"}
+                          {language === "es" ? "Próximamente" : "Coming Soon"}
                         </span>
                       </div>
                       <p className="text-xs text-muted-foreground">{language === "es" ? "Asbesto y plomo" : "Asbestos & lead"}</p>
@@ -187,7 +187,7 @@ export function SiteHeader() {
                       <div className="flex items-center gap-2">
                         <span className="font-medium">{language === "es" ? "Mitigación de Moho" : "Mold Mitigation"}</span>
                         <span className="text-[10px] bg-teal-100 text-teal-700 px-1.5 py-0.5 rounded font-medium">
-                          {language === "es" ? "Próximamente" : "Soon"}
+                          {language === "es" ? "Próximamente" : "Coming Soon"}
                         </span>
                       </div>
                       <p className="text-xs text-muted-foreground">{language === "es" ? "Remoción de moho" : "Mold removal"}</p>
@@ -292,7 +292,7 @@ export function SiteHeader() {
                             <SprayCan className="h-4 w-4 text-blue-600" />
                             {language === "es" ? "Limpieza y Mantenimiento" : "Cleaning & Maintenance"}
                             <span className="text-[10px] bg-blue-100 text-blue-700 px-1 py-0.5 rounded">
-                              {language === "es" ? "Próximamente" : "Soon"}
+                              {language === "es" ? "Próximamente" : "Coming Soon"}
                             </span>
                           </Link>
                           <Link 
@@ -303,7 +303,7 @@ export function SiteHeader() {
                             <Paintbrush className="h-4 w-4 text-purple-600" />
                             {language === "es" ? "Reparaciones / Pintura" : "Repairs / Painting"}
                             <span className="text-[10px] bg-purple-100 text-purple-700 px-1 py-0.5 rounded">
-                              {language === "es" ? "Próximamente" : "Soon"}
+                              {language === "es" ? "Próximamente" : "Coming Soon"}
                             </span>
                           </Link>
                           <Link 
@@ -314,7 +314,7 @@ export function SiteHeader() {
                             <HardHat className="h-4 w-4 text-orange-600" />
                             {language === "es" ? "Mitigación Ambiental" : "Environmental"}
                             <span className="text-[10px] bg-orange-100 text-orange-700 px-1 py-0.5 rounded">
-                              {language === "es" ? "Próximamente" : "Soon"}
+                              {language === "es" ? "Próximamente" : "Coming Soon"}
                             </span>
                           </Link>
                           <Link 
@@ -325,7 +325,7 @@ export function SiteHeader() {
                             <Droplets className="h-4 w-4 text-teal-600" />
                             {language === "es" ? "Mitigación de Moho" : "Mold Mitigation"}
                             <span className="text-[10px] bg-teal-100 text-teal-700 px-1 py-0.5 rounded">
-                              {language === "es" ? "Próximamente" : "Soon"}
+                              {language === "es" ? "Próximamente" : "Coming Soon"}
                             </span>
                           </Link>
                         </div>
