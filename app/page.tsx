@@ -31,7 +31,7 @@ export default function HomePage() {
               <div className="flex flex-wrap gap-2">
                 <span className="inline-flex items-center gap-1.5 rounded-full bg-primary/10 px-3 py-1 text-sm font-medium text-primary">
                   <Bug className="h-3.5 w-3.5" />
-                  {language === "es" ? "Control de Plagas" : "Pest Control"}
+                  {language === "es" ? "Plagas" : "Pest Control"}
                 </span>
                 <span className="inline-flex items-center gap-1.5 rounded-full bg-green-500/10 px-3 py-1 text-sm font-medium text-green-700">
                   <TreePine className="h-3.5 w-3.5" />
@@ -44,6 +44,14 @@ export default function HomePage() {
                 <span className="inline-flex items-center gap-1.5 rounded-full bg-purple-500/10 px-3 py-1 text-sm font-medium text-purple-700">
                   <Paintbrush className="h-3.5 w-3.5" />
                   {language === "es" ? "Pintura" : "Painting"}
+                </span>
+                <span className="inline-flex items-center gap-1.5 rounded-full bg-orange-500/10 px-3 py-1 text-sm font-medium text-orange-700">
+                  <HardHat className="h-3.5 w-3.5" />
+                  {language === "es" ? "Ambiental" : "Environmental"}
+                </span>
+                <span className="inline-flex items-center gap-1.5 rounded-full bg-teal-500/10 px-3 py-1 text-sm font-medium text-teal-700">
+                  <Droplets className="h-3.5 w-3.5" />
+                  {language === "es" ? "Moho" : "Mold"}
                 </span>
               </div>
               <div className="flex flex-col sm:flex-row gap-4">
