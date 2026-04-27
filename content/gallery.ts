@@ -7,7 +7,7 @@ export const galleryItems = [
     description: "Tratamiento completo interior y exterior para hogar familiar",
     category: "pest-control",
     location: "San Juan, PR",
-    image: "/images/residential-service.jpg",
+    image: "/images/gallery/pest-residential-1.jpg",
     featured: true
   },
   {
@@ -16,62 +16,62 @@ export const galleryItems = [
     description: "Programa integral de control de plagas para restaurante",
     category: "pest-control",
     location: "Bayamón, PR",
-    image: "/images/commercial-service.jpg",
+    image: "/images/gallery/pest-commercial-1.jpg",
     featured: true
   },
   {
     id: 3,
     title: "Tratamiento de Termitas",
-    description: "Tratamiento completo y prevención de termitas",
+    description: "Inspección y tratamiento completo de termitas",
     category: "pest-control",
     location: "Carolina, PR",
-    image: "/images/hero-pest-control.jpg",
+    image: "/images/gallery/pest-termite-1.jpg",
     featured: true
   },
   {
     id: 4,
-    title: "Control de Cucarachas",
-    description: "Eliminación efectiva de cucarachas en cocina comercial",
-    category: "commercial",
+    title: "Fumigación Exterior",
+    description: "Tratamiento perimetral para prevención de plagas",
+    category: "pest-control",
     location: "Condado, PR",
-    image: "/images/team.jpg",
+    image: "/images/gallery/pest-exterior-1.jpg",
     featured: true
   },
   // Jardinería
   {
     id: 5,
-    title: "Mantenimiento de Jardín",
-    description: "Corte de grama y mantenimiento semanal de jardín residencial",
+    title: "Corte de Grama",
+    description: "Corte y mantenimiento semanal de césped residencial",
     category: "landscaping",
     location: "Guaynabo, PR",
-    image: "/images/hero-landscaping.jpg",
+    image: "/images/gallery/landscaping-lawn-1.jpg",
     featured: true
   },
   {
     id: 6,
     title: "Poda de Árboles",
-    description: "Poda profesional de árboles y arbustos para propiedad comercial",
+    description: "Poda profesional de árboles y arbustos",
     category: "landscaping",
     location: "Caguas, PR",
-    image: "/images/hero-landscaping.jpg",
+    image: "/images/gallery/landscaping-pruning-1.jpg",
     featured: true
   },
   {
     id: 7,
     title: "Diseño Paisajístico",
-    description: "Diseño e instalación completa de jardín para residencia",
+    description: "Diseño e instalación completa de jardín tropical",
     category: "landscaping",
     location: "Isla Verde, PR",
-    image: "/images/hero-landscaping.jpg",
+    image: "/images/gallery/landscaping-design-1.jpg",
     featured: true
   },
   {
     id: 8,
     title: "Mantenimiento Comercial",
     description: "Mantenimiento de áreas verdes para complejo comercial",
-    category: "commercial",
+    category: "landscaping",
     location: "Ponce, PR",
-    image: "/images/commercial-service.jpg",
+    image: "/images/gallery/landscaping-commercial-1.jpg",
     featured: true
   }
 ] as const
