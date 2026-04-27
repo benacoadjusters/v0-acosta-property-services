@@ -2,7 +2,7 @@
 
 import Link from "next/link"
 import Image from "next/image"
-import { CheckCircle2, Shield, Heart, Award, Users, Target, Phone } from "lucide-react"
+import { CheckCircle2, Shield, Heart, Award, Users, Target, Phone, Bug, TreePine, HardHat, Wrench, ArrowRight } from "lucide-react"
 import { Button } from "@/components/ui/button"
 import { Card, CardContent } from "@/components/ui/card"
 import { company } from "@/content/company"
@@ -137,8 +137,128 @@ export default function AboutPage() {
         </div>
       </section>
 
-      {/* Mission */}
+      {/* Our Services */}
       <section className="py-16 md:py-20 bg-background">
+        <div className="container mx-auto px-4">
+          <div className="text-center max-w-2xl mx-auto mb-12">
+            <h2 className="text-3xl md:text-4xl font-bold text-foreground mb-4">
+              {language === "es" ? "Lo Que Hacemos" : "What We Do"}
+            </h2>
+            <p className="text-muted-foreground text-lg">
+              {language === "es" 
+                ? "Soluciones integrales para el cuidado de tu propiedad" 
+                : "Comprehensive solutions for your property care"}
+            </p>
+          </div>
+
+          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
+            {/* Pest Control */}
+            <Link href="/services/pest-control" className="group">
+              <Card className="h-full hover:shadow-lg transition-all hover:border-primary/50">
+                <CardContent className="p-6 text-center">
+                  <div className="flex h-14 w-14 items-center justify-center rounded-full bg-primary/10 mx-auto mb-4 group-hover:bg-primary/20 transition-colors">
+                    <Bug className="h-7 w-7 text-primary" />
+                  </div>
+                  <h3 className="text-lg font-bold mb-2 group-hover:text-primary transition-colors">
+                    {language === "es" ? "Control de Plagas" : "Pest Control"}
+                  </h3>
+                  <p className="text-muted-foreground text-sm mb-3">
+                    {language === "es" 
+                      ? "Fumigación, trampas y control biológico para eliminar plagas de manera efectiva."
+                      : "Fumigation, traps and biological control to effectively eliminate pests."}
+                  </p>
+                  <span className="inline-flex items-center text-primary text-sm font-medium">
+                    {t.ui.learnMore}
+                    <ArrowRight className="ml-1 h-4 w-4 group-hover:translate-x-1 transition-transform" />
+                  </span>
+                </CardContent>
+              </Card>
+            </Link>
+
+            {/* Landscaping */}
+            <Link href="/services/landscaping" className="group">
+              <Card className="h-full hover:shadow-lg transition-all hover:border-green-500/50">
+                <CardContent className="p-6 text-center">
+                  <div className="flex h-14 w-14 items-center justify-center rounded-full bg-green-500/10 mx-auto mb-4 group-hover:bg-green-500/20 transition-colors">
+                    <TreePine className="h-7 w-7 text-green-600" />
+                  </div>
+                  <h3 className="text-lg font-bold mb-2 group-hover:text-green-600 transition-colors">
+                    {language === "es" ? "Jardinería" : "Landscaping"}
+                  </h3>
+                  <p className="text-muted-foreground text-sm mb-3">
+                    {language === "es" 
+                      ? "Corte de grama, poda, diseño paisajístico y mantenimiento de áreas verdes."
+                      : "Lawn mowing, pruning, landscape design and green area maintenance."}
+                  </p>
+                  <span className="inline-flex items-center text-green-600 text-sm font-medium">
+                    {t.ui.learnMore}
+                    <ArrowRight className="ml-1 h-4 w-4 group-hover:translate-x-1 transition-transform" />
+                  </span>
+                </CardContent>
+              </Card>
+            </Link>
+
+            {/* Environmental */}
+            <Link href="/services/environmental" className="group">
+              <Card className="h-full hover:shadow-lg transition-all hover:border-orange-500/50 relative overflow-hidden">
+                <div className="absolute top-3 right-3">
+                  <span className="text-[10px] bg-orange-100 text-orange-700 px-2 py-1 rounded-full font-medium">
+                    {language === "es" ? "Próximamente" : "Coming Soon"}
+                  </span>
+                </div>
+                <CardContent className="p-6 text-center">
+                  <div className="flex h-14 w-14 items-center justify-center rounded-full bg-orange-500/10 mx-auto mb-4 group-hover:bg-orange-500/20 transition-colors">
+                    <HardHat className="h-7 w-7 text-orange-600" />
+                  </div>
+                  <h3 className="text-lg font-bold mb-2 group-hover:text-orange-600 transition-colors">
+                    {language === "es" ? "Mitigación Ambiental" : "Environmental Mitigation"}
+                  </h3>
+                  <p className="text-muted-foreground text-sm mb-3">
+                    {language === "es" 
+                      ? "Remoción segura y certificada de asbesto y plomo en propiedades."
+                      : "Safe and certified asbestos and lead removal in properties."}
+                  </p>
+                  <span className="inline-flex items-center text-orange-600 text-sm font-medium">
+                    {t.ui.learnMore}
+                    <ArrowRight className="ml-1 h-4 w-4 group-hover:translate-x-1 transition-transform" />
+                  </span>
+                </CardContent>
+              </Card>
+            </Link>
+
+            {/* Property Maintenance */}
+            <Link href="/services/property-maintenance" className="group">
+              <Card className="h-full hover:shadow-lg transition-all hover:border-blue-500/50 relative overflow-hidden">
+                <div className="absolute top-3 right-3">
+                  <span className="text-[10px] bg-blue-100 text-blue-700 px-2 py-1 rounded-full font-medium">
+                    {language === "es" ? "Próximamente" : "Coming Soon"}
+                  </span>
+                </div>
+                <CardContent className="p-6 text-center">
+                  <div className="flex h-14 w-14 items-center justify-center rounded-full bg-blue-500/10 mx-auto mb-4 group-hover:bg-blue-500/20 transition-colors">
+                    <Wrench className="h-7 w-7 text-blue-600" />
+                  </div>
+                  <h3 className="text-lg font-bold mb-2 group-hover:text-blue-600 transition-colors">
+                    {language === "es" ? "Mantenimiento" : "Property Maintenance"}
+                  </h3>
+                  <p className="text-muted-foreground text-sm mb-3">
+                    {language === "es" 
+                      ? "Reparaciones, pintura, plomería y mantenimiento general de propiedades."
+                      : "Repairs, painting, plumbing and general property maintenance."}
+                  </p>
+                  <span className="inline-flex items-center text-blue-600 text-sm font-medium">
+                    {t.ui.learnMore}
+                    <ArrowRight className="ml-1 h-4 w-4 group-hover:translate-x-1 transition-transform" />
+                  </span>
+                </CardContent>
+              </Card>
+            </Link>
+          </div>
+        </div>
+      </section>
+
+      {/* Mission */}
+      <section className="py-16 md:py-20 bg-secondary">
         <div className="container mx-auto px-4">
           <div className="max-w-3xl mx-auto text-center">
             <div className="flex h-16 w-16 items-center justify-center rounded-full bg-primary/10 mx-auto mb-6">
@@ -238,8 +358,14 @@ export default function AboutPage() {
       {/* CTA */}
       <section className="py-16 md:py-20 bg-primary text-primary-foreground">
         <div className="container mx-auto px-4 text-center">
-          <h2 className="text-3xl md:text-4xl font-bold mb-4">{t.home.ctaTitle}</h2>
-          <p className="text-lg opacity-80 max-w-2xl mx-auto mb-8">{t.home.ctaDesc}</p>
+          <h2 className="text-3xl md:text-4xl font-bold mb-4">
+            {language === "es" ? "¿Listo Para Cuidar Tu Propiedad?" : "Ready to Care for Your Property?"}
+          </h2>
+          <p className="text-lg opacity-80 max-w-2xl mx-auto mb-8">
+            {language === "es" 
+              ? "Contáctanos hoy para una cotización gratis. Nuestro equipo está listo para ayudarte con control de plagas, jardinería y más."
+              : "Contact us today for a free quote. Our team is ready to help you with pest control, landscaping and more."}
+          </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <Button asChild size="lg" className="bg-accent text-accent-foreground hover:bg-accent/90">
               <Link href="/contact">{t.ui.getQuote}</Link>

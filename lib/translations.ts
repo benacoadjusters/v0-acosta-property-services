@@ -85,19 +85,19 @@ export const translations = {
     // About
     about: {
       title: "Sobre Nosotros",
-      subtitle: "Protegiendo Puerto Rico Desde 2022",
-      story: "Fundada en 2022, Acosta Property Services nació con una misión simple: brindar a Puerto Rico servicios profesionales de control de plagas en los que familias y empresas puedan confiar. En solo 4 años, hemos crecido de una pequeña operación familiar a servir a más de 300 clientes satisfechos en toda la isla.",
+      subtitle: "Cuidando Propiedades en Puerto Rico Desde 2022",
+      story: "Fundada en 2022, Acosta Property Services nació con una misión simple: brindar a Puerto Rico servicios profesionales de mantenimiento de propiedades en los que familias y empresas puedan confiar. Lo que comenzó como un servicio de control de plagas ha crecido para ofrecer soluciones integrales incluyendo jardinería profesional, y próximamente mitigación ambiental y mantenimiento general. En solo 4 años, hemos servido a más de 300 clientes satisfechos en toda la isla.",
       missionTitle: "Nuestra Misión",
-      mission: "Proteger hogares y negocios puertorriqueños con servicios de control de plagas efectivos, seguros y confiables, mientras brindamos un servicio al cliente excepcional.",
+      mission: "Ser el aliado confiable para el cuidado integral de propiedades en Puerto Rico, ofreciendo servicios de control de plagas, jardinería y mantenimiento con los más altos estándares de calidad, seguridad y atención al cliente.",
       valuesTitle: "Nuestros Valores",
       value1: "Integridad",
       value1Desc: "Honestidad y transparencia en todo lo que hacemos.",
       value2: "Excelencia",
-      value2Desc: "Compromiso con la calidad en cada servicio.",
+      value2Desc: "Compromiso con la calidad en cada servicio que ofrecemos.",
       value3: "Responsabilidad",
       value3Desc: "Cuidamos tu propiedad como si fuera nuestra.",
       teamTitle: "Nuestro Equipo",
-      teamDesc: "Un equipo dedicado a brindar el mejor servicio de control de plagas en Puerto Rico.",
+      teamDesc: "Un equipo dedicado y profesional comprometido con el cuidado integral de tu propiedad.",
     },
     // Gallery
     gallery: {
@@ -245,19 +245,19 @@ export const translations = {
     // About
     about: {
       title: "About Us",
-      subtitle: "Protecting Puerto Rico Since 2022",
-      story: "Founded in 2022, Acosta Property Services was born with a simple mission: to provide Puerto Rico with professional pest control services that families and businesses can trust. In just 4 years, we have grown from a small family operation to serving over 300 satisfied customers across the island.",
+      subtitle: "Caring for Properties in Puerto Rico Since 2022",
+      story: "Founded in 2022, Acosta Property Services was born with a simple mission: to provide Puerto Rico with professional property maintenance services that families and businesses can trust. What started as a pest control service has grown to offer comprehensive solutions including professional landscaping, and soon environmental mitigation and general maintenance. In just 4 years, we have served over 300 satisfied customers across the island.",
       missionTitle: "Our Mission",
-      mission: "To protect Puerto Rican homes and businesses with effective, safe, and reliable pest control services while providing exceptional customer service.",
+      mission: "To be the trusted partner for comprehensive property care in Puerto Rico, offering pest control, landscaping and maintenance services with the highest standards of quality, safety and customer service.",
       valuesTitle: "Our Values",
       value1: "Integrity",
       value1Desc: "Honesty and transparency in everything we do.",
       value2: "Excellence",
-      value2Desc: "Commitment to quality in every service.",
+      value2Desc: "Commitment to quality in every service we offer.",
       value3: "Responsibility",
       value3Desc: "We care for your property as if it were our own.",
       teamTitle: "Our Team",
-      teamDesc: "A dedicated team providing the best pest control service in Puerto Rico.",
+      teamDesc: "A dedicated and professional team committed to the comprehensive care of your property.",
     },
     // Gallery
     gallery: {
