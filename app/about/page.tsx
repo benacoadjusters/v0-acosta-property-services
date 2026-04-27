@@ -83,11 +83,13 @@ export default function AboutPage() {
           <div className="grid lg:grid-cols-2 gap-12 items-center">
             <div>
               <span className="text-primary font-semibold text-sm uppercase tracking-wider">{t.about.title}</span>
-              <h1 className="text-4xl md:text-5xl font-bold text-foreground mt-3 mb-6 text-balance">
+              <h1 className="text-4xl md:text-5xl font-bold text-foreground mt-3 mb-4 text-balance">
                 {t.about.subtitle}
               </h1>
-              <p className="text-xl text-muted-foreground mb-8 text-pretty">
-                {t.about.story}
+              <p className="text-lg text-muted-foreground mb-6">
+                {language === "es" 
+                  ? "Desde 2022, ofrecemos servicios profesionales para el cuidado integral de tu propiedad en Puerto Rico."
+                  : "Since 2022, we offer professional services for the comprehensive care of your property in Puerto Rico."}
               </p>
               <div className="flex flex-col sm:flex-row gap-4">
                 <Button asChild size="lg">
@@ -101,13 +103,58 @@ export default function AboutPage() {
                 </Button>
               </div>
             </div>
-            <div className="relative aspect-video rounded-2xl overflow-hidden shadow-xl">
-              <Image
-                src="/images/team.jpg"
-                alt="Equipo de Acosta Property Services"
-                fill
-                className="object-cover"
-              />
+            
+            {/* Two service images grid */}
+            <div className="grid grid-cols-2 gap-4">
+              <Link href="/services/pest-control" className="group relative">
+                <div className="relative aspect-[3/4] rounded-2xl overflow-hidden shadow-xl">
+                  <Image
+                    src="/images/hero-pest-control.jpg"
+                    alt={language === "es" ? "Control de Plagas" : "Pest Control"}
+                    fill
+                    className="object-cover group-hover:scale-105 transition-transform duration-300"
+                  />
+                  <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-black/20 to-transparent" />
+                  <div className="absolute bottom-0 left-0 right-0 p-4">
+                    <div className="flex items-center gap-2 mb-2">
+                      <div className="flex h-8 w-8 items-center justify-center rounded-full bg-white/20 backdrop-blur-sm">
+                        <Bug className="h-4 w-4 text-white" />
+                      </div>
+                    </div>
+                    <h3 className="text-white font-bold text-lg">
+                      {language === "es" ? "Control de Plagas" : "Pest Control"}
+                    </h3>
+                    <p className="text-white/80 text-sm">
+                      {language === "es" ? "Fumigación y trampas" : "Fumigation & traps"}
+                    </p>
+                  </div>
+                </div>
+              </Link>
+              
+              <Link href="/services/landscaping" className="group relative mt-8">
+                <div className="relative aspect-[3/4] rounded-2xl overflow-hidden shadow-xl">
+                  <Image
+                    src="/images/hero-landscaping.jpg"
+                    alt={language === "es" ? "Jardinería" : "Landscaping"}
+                    fill
+                    className="object-cover group-hover:scale-105 transition-transform duration-300"
+                  />
+                  <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-black/20 to-transparent" />
+                  <div className="absolute bottom-0 left-0 right-0 p-4">
+                    <div className="flex items-center gap-2 mb-2">
+                      <div className="flex h-8 w-8 items-center justify-center rounded-full bg-white/20 backdrop-blur-sm">
+                        <TreePine className="h-4 w-4 text-white" />
+                      </div>
+                    </div>
+                    <h3 className="text-white font-bold text-lg">
+                      {language === "es" ? "Jardinería" : "Landscaping"}
+                    </h3>
+                    <p className="text-white/80 text-sm">
+                      {language === "es" ? "Corte y mantenimiento" : "Mowing & maintenance"}
+                    </p>
+                  </div>
+                </div>
+              </Link>
             </div>
           </div>
         </div>
@@ -257,26 +304,25 @@ export default function AboutPage() {
         </div>
       </section>
 
-      {/* Mission */}
+      {/* Mission & Values Combined */}
       <section className="py-16 md:py-20 bg-secondary">
         <div className="container mx-auto px-4">
-          <div className="max-w-3xl mx-auto text-center">
-            <div className="flex h-16 w-16 items-center justify-center rounded-full bg-primary/10 mx-auto mb-6">
-              <Target className="h-8 w-8 text-primary" />
+          {/* Mission - compact */}
+          <div className="max-w-2xl mx-auto text-center mb-12">
+            <div className="flex h-12 w-12 items-center justify-center rounded-full bg-primary/10 mx-auto mb-4">
+              <Target className="h-6 w-6 text-primary" />
             </div>
-            <h2 className="text-3xl md:text-4xl font-bold text-foreground mb-6">{t.about.missionTitle}</h2>
-            <p className="text-xl text-muted-foreground text-pretty">
-              {t.about.mission}
+            <h2 className="text-2xl md:text-3xl font-bold text-foreground mb-3">{t.about.missionTitle}</h2>
+            <p className="text-muted-foreground">
+              {language === "es" 
+                ? "Ser tu aliado confiable para el cuidado integral de propiedades en Puerto Rico."
+                : "To be your trusted partner for comprehensive property care in Puerto Rico."}
             </p>
           </div>
-        </div>
-      </section>
 
-      {/* Values */}
-      <section className="py-16 md:py-20 bg-secondary">
-        <div className="container mx-auto px-4">
-          <div className="text-center max-w-2xl mx-auto mb-12">
-            <h2 className="text-3xl md:text-4xl font-bold text-foreground mb-4">{t.about.valuesTitle}</h2>
+          {/* Values */}
+          <div className="text-center mb-8">
+            <h3 className="text-xl font-bold text-foreground">{t.about.valuesTitle}</h3>
           </div>
 
           <div className="grid md:grid-cols-3 gap-6 max-w-4xl mx-auto">
