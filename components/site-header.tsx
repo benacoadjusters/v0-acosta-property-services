@@ -3,7 +3,7 @@
 import * as React from "react"
 import Link from "next/link"
 import Image from "next/image"
-import { Menu, Phone, Clock, Globe, Bug, TreePine, HardHat, ChevronDown } from "lucide-react"
+import { Menu, Phone, Clock, Globe, Bug, TreePine, HardHat, Wrench } from "lucide-react"
 import { Button } from "@/components/ui/button"
 import { Sheet, SheetContent, SheetTrigger, SheetTitle, SheetDescription } from "@/components/ui/sheet"
 import {
@@ -94,72 +94,109 @@ export function SiteHeader() {
               <NavigationMenuItem>
                 <NavigationMenuTrigger>{t.nav.services}</NavigationMenuTrigger>
                 <NavigationMenuContent>
-                  <div className="w-[400px] p-4">
-                    <Link 
-                      href="/services"
-                      className="block mb-3 p-3 rounded-lg hover:bg-muted transition-colors"
-                    >
-                      <div className="font-medium text-foreground">
-                        {language === "es" ? "Todos los Servicios" : "All Services"}
-                      </div>
-                      <p className="text-sm text-muted-foreground">
-                        {language === "es" ? "Ver todas nuestras categorías de servicio" : "View all our service categories"}
-                      </p>
-                    </Link>
-                    <div className="border-t pt-3 space-y-1">
-                      <Link 
-                        href="/services/pest-control"
-                        className="flex items-center gap-3 p-3 rounded-lg hover:bg-muted transition-colors"
-                      >
-                        <div className="flex h-10 w-10 items-center justify-center rounded-lg bg-primary/10">
-                          <Bug className="h-5 w-5 text-primary" />
-                        </div>
-                        <div>
-                          <div className="font-medium text-foreground">
-                            {language === "es" ? "Control de Plagas" : "Pest Control"}
+                  <ul className="grid w-[500px] gap-2 p-4">
+                    <li>
+                      <NavigationMenuLink asChild>
+                        <Link 
+                          href="/services"
+                          className="block select-none rounded-md p-3 leading-none no-underline outline-none transition-colors hover:bg-accent hover:text-accent-foreground focus:bg-accent focus:text-accent-foreground"
+                        >
+                          <div className="text-sm font-medium leading-none">
+                            {language === "es" ? "Todos los Servicios" : "All Services"}
                           </div>
-                          <p className="text-xs text-muted-foreground">
-                            {language === "es" ? "Fumigación, trampas, control biológico" : "Fumigation, traps, biological control"}
+                          <p className="line-clamp-2 text-sm leading-snug text-muted-foreground mt-1">
+                            {language === "es" ? "Ver todas nuestras categorías de servicio" : "View all our service categories"}
                           </p>
-                        </div>
-                      </Link>
-                      <Link 
-                        href="/services/landscaping"
-                        className="flex items-center gap-3 p-3 rounded-lg hover:bg-muted transition-colors"
-                      >
-                        <div className="flex h-10 w-10 items-center justify-center rounded-lg bg-green-500/10">
-                          <TreePine className="h-5 w-5 text-green-600" />
-                        </div>
-                        <div>
-                          <div className="font-medium text-foreground">
-                            {language === "es" ? "Jardinería" : "Landscaping"}
+                        </Link>
+                      </NavigationMenuLink>
+                    </li>
+                    <li className="border-t pt-2">
+                      <NavigationMenuLink asChild>
+                        <Link 
+                          href="/services/pest-control"
+                          className="flex items-center gap-3 select-none rounded-md p-3 leading-none no-underline outline-none transition-colors hover:bg-accent hover:text-accent-foreground focus:bg-accent focus:text-accent-foreground"
+                        >
+                          <div className="flex h-10 w-10 shrink-0 items-center justify-center rounded-lg bg-primary/10">
+                            <Bug className="h-5 w-5 text-primary" />
                           </div>
-                          <p className="text-xs text-muted-foreground">
-                            {language === "es" ? "Corte, poda, diseño paisajístico" : "Mowing, pruning, landscape design"}
-                          </p>
-                        </div>
-                      </Link>
-                      <Link 
-                        href="/services/environmental"
-                        className="flex items-center gap-3 p-3 rounded-lg hover:bg-muted transition-colors"
-                      >
-                        <div className="flex h-10 w-10 items-center justify-center rounded-lg bg-orange-500/10">
-                          <HardHat className="h-5 w-5 text-orange-600" />
-                        </div>
-                        <div className="flex-1">
-                          <div className="font-medium text-foreground flex items-center gap-2">
-                            {language === "es" ? "Mitigación Ambiental" : "Environmental Mitigation"}
-                            <span className="text-[10px] bg-orange-100 text-orange-700 px-1.5 py-0.5 rounded">
-                              {language === "es" ? "Próximo" : "Soon"}
-                            </span>
+                          <div>
+                            <div className="text-sm font-medium leading-none">
+                              {language === "es" ? "Control de Plagas" : "Pest Control"}
+                            </div>
+                            <p className="text-xs text-muted-foreground mt-1">
+                              {language === "es" ? "Fumigación, trampas, control biológico" : "Fumigation, traps, biological control"}
+                            </p>
                           </div>
-                          <p className="text-xs text-muted-foreground">
-                            {language === "es" ? "Asbesto y plomo - Próximamente" : "Asbestos & lead - Coming soon"}
-                          </p>
-                        </div>
-                      </Link>
-                    </div>
-                  </div>
+                        </Link>
+                      </NavigationMenuLink>
+                    </li>
+                    <li>
+                      <NavigationMenuLink asChild>
+                        <Link 
+                          href="/services/landscaping"
+                          className="flex items-center gap-3 select-none rounded-md p-3 leading-none no-underline outline-none transition-colors hover:bg-accent hover:text-accent-foreground focus:bg-accent focus:text-accent-foreground"
+                        >
+                          <div className="flex h-10 w-10 shrink-0 items-center justify-center rounded-lg bg-green-500/10">
+                            <TreePine className="h-5 w-5 text-green-600" />
+                          </div>
+                          <div>
+                            <div className="text-sm font-medium leading-none">
+                              {language === "es" ? "Jardinería" : "Landscaping"}
+                            </div>
+                            <p className="text-xs text-muted-foreground mt-1">
+                              {language === "es" ? "Corte, poda, diseño paisajístico" : "Mowing, pruning, landscape design"}
+                            </p>
+                          </div>
+                        </Link>
+                      </NavigationMenuLink>
+                    </li>
+                    <li>
+                      <NavigationMenuLink asChild>
+                        <Link 
+                          href="/services/environmental"
+                          className="flex items-center gap-3 select-none rounded-md p-3 leading-none no-underline outline-none transition-colors hover:bg-accent hover:text-accent-foreground focus:bg-accent focus:text-accent-foreground"
+                        >
+                          <div className="flex h-10 w-10 shrink-0 items-center justify-center rounded-lg bg-orange-500/10">
+                            <HardHat className="h-5 w-5 text-orange-600" />
+                          </div>
+                          <div className="flex-1">
+                            <div className="text-sm font-medium leading-none flex items-center gap-2">
+                              {language === "es" ? "Mitigación Ambiental" : "Environmental Mitigation"}
+                              <span className="text-[10px] bg-orange-100 text-orange-700 px-1.5 py-0.5 rounded font-medium">
+                                {language === "es" ? "Próximo" : "Soon"}
+                              </span>
+                            </div>
+                            <p className="text-xs text-muted-foreground mt-1">
+                              {language === "es" ? "Asbesto y plomo" : "Asbestos & lead"}
+                            </p>
+                          </div>
+                        </Link>
+                      </NavigationMenuLink>
+                    </li>
+                    <li>
+                      <NavigationMenuLink asChild>
+                        <Link 
+                          href="/services/property-maintenance"
+                          className="flex items-center gap-3 select-none rounded-md p-3 leading-none no-underline outline-none transition-colors hover:bg-accent hover:text-accent-foreground focus:bg-accent focus:text-accent-foreground"
+                        >
+                          <div className="flex h-10 w-10 shrink-0 items-center justify-center rounded-lg bg-blue-500/10">
+                            <Wrench className="h-5 w-5 text-blue-600" />
+                          </div>
+                          <div className="flex-1">
+                            <div className="text-sm font-medium leading-none flex items-center gap-2">
+                              {language === "es" ? "Mantenimiento de Propiedades" : "Property Maintenance"}
+                              <span className="text-[10px] bg-blue-100 text-blue-700 px-1.5 py-0.5 rounded font-medium">
+                                {language === "es" ? "Próximo" : "Soon"}
+                              </span>
+                            </div>
+                            <p className="text-xs text-muted-foreground mt-1">
+                              {language === "es" ? "Reparaciones y mantenimiento" : "Repairs and maintenance"}
+                            </p>
+                          </div>
+                        </Link>
+                      </NavigationMenuLink>
+                    </li>
+                  </ul>
                 </NavigationMenuContent>
               </NavigationMenuItem>
 
@@ -258,6 +295,17 @@ export function SiteHeader() {
                             <HardHat className="h-4 w-4 text-orange-600" />
                             {language === "es" ? "Mitigación Ambiental" : "Environmental"}
                             <span className="text-[10px] bg-orange-100 text-orange-700 px-1 py-0.5 rounded">
+                              {language === "es" ? "Próximo" : "Soon"}
+                            </span>
+                          </Link>
+                          <Link 
+                            href="/services/property-maintenance" 
+                            className="flex items-center gap-2 py-1.5 text-sm text-muted-foreground hover:text-blue-600 transition-colors"
+                            onClick={() => setIsOpen(false)}
+                          >
+                            <Wrench className="h-4 w-4 text-blue-600" />
+                            {language === "es" ? "Mantenimiento" : "Maintenance"}
+                            <span className="text-[10px] bg-blue-100 text-blue-700 px-1 py-0.5 rounded">
                               {language === "es" ? "Próximo" : "Soon"}
                             </span>
                           </Link>

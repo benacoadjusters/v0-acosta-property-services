@@ -2,7 +2,7 @@
 
 import Link from "next/link"
 import Image from "next/image"
-import { Phone, ArrowRight, Shield, Clock, Award, CheckCircle2, Bug, TreePine, HardHat } from "lucide-react"
+import { Phone, ArrowRight, Shield, Clock, Award, CheckCircle2, Bug, TreePine, HardHat, Wrench } from "lucide-react"
 import { Button } from "@/components/ui/button"
 import { company } from "@/content/company"
 import { useLanguage } from "@/lib/language-context"
@@ -40,6 +40,10 @@ export default function HomePage() {
                 <span className="inline-flex items-center gap-1.5 rounded-full bg-orange-500/10 px-3 py-1 text-sm font-medium text-orange-700">
                   <HardHat className="h-3.5 w-3.5" />
                   {language === "es" ? "Mitigación Ambiental" : "Environmental Mitigation"}
+                </span>
+                <span className="inline-flex items-center gap-1.5 rounded-full bg-blue-500/10 px-3 py-1 text-sm font-medium text-blue-700">
+                  <Wrench className="h-3.5 w-3.5" />
+                  {language === "es" ? "Mantenimiento" : "Maintenance"}
                 </span>
               </div>
               <div className="flex flex-col sm:flex-row gap-4">
@@ -138,7 +142,7 @@ export default function HomePage() {
             </p>
           </div>
 
-          <div className="grid md:grid-cols-3 gap-6">
+          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
             {/* Pest Control */}
             <Link href="/services/pest-control" className="group">
               <div className="relative overflow-hidden rounded-2xl bg-card border shadow-sm hover:shadow-xl transition-all duration-300">
@@ -234,6 +238,38 @@ export default function HomePage() {
                       : "Coming soon: asbestos and lead mitigation services. Safe and certified removal to protect your family's health."}
                   </p>
                   <span className="inline-flex items-center text-orange-500 font-medium text-sm">
+                    {language === "es" ? "En construcción" : "Under development"}
+                    <Clock className="ml-2 h-4 w-4" />
+                  </span>
+                </div>
+              </div>
+            </div>
+
+            {/* Property Maintenance - Coming Soon */}
+            <div className="group cursor-default">
+              <div className="relative overflow-hidden rounded-2xl bg-card border shadow-sm opacity-90">
+                <div className="relative aspect-[4/3] overflow-hidden bg-muted">
+                  <div className="absolute inset-0 flex items-center justify-center bg-gradient-to-br from-blue-100 to-blue-50">
+                    <Wrench className="h-20 w-20 text-blue-300" />
+                  </div>
+                  <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent" />
+                  <div className="absolute bottom-4 left-4 right-4">
+                    <div className="inline-flex items-center gap-2 rounded-full bg-blue-500 px-3 py-1 text-sm font-medium text-white mb-2">
+                      <Wrench className="h-4 w-4" />
+                      {language === "es" ? "Próximamente" : "Coming Soon"}
+                    </div>
+                  </div>
+                </div>
+                <div className="p-6">
+                  <h3 className="text-xl font-bold text-foreground mb-2">
+                    {language === "es" ? "Mantenimiento de Propiedades" : "Property Maintenance"}
+                  </h3>
+                  <p className="text-muted-foreground text-sm mb-4">
+                    {language === "es" 
+                      ? "Próximamente ofreceremos servicios de mantenimiento general, reparaciones menores y cuidado integral de propiedades."
+                      : "Coming soon: general maintenance services, minor repairs and comprehensive property care."}
+                  </p>
+                  <span className="inline-flex items-center text-blue-500 font-medium text-sm">
                     {language === "es" ? "En construcción" : "Under development"}
                     <Clock className="ml-2 h-4 w-4" />
                   </span>

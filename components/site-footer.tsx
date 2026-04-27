@@ -13,6 +13,7 @@ const footerLinks = {
       { name: "Control de Plagas", href: "/services/pest-control" },
       { name: "Jardinería", href: "/services/landscaping" },
       { name: "Mitigación Ambiental", href: "/services/environmental", badge: "Próximo" },
+      { name: "Mantenimiento de Propiedades", href: "/services/property-maintenance", badge: "Próximo" },
     ],
     company: [
       { name: "Nosotros", href: "/about" },
@@ -31,6 +32,7 @@ const footerLinks = {
       { name: "Pest Control", href: "/services/pest-control" },
       { name: "Landscaping", href: "/services/landscaping" },
       { name: "Environmental Mitigation", href: "/services/environmental", badge: "Soon" },
+      { name: "Property Maintenance", href: "/services/property-maintenance", badge: "Soon" },
     ],
     company: [
       { name: "About Us", href: "/about" },
@@ -129,7 +131,11 @@ export function SiteFooter() {
                   >
                     {link.name}
                     {link.badge && (
-                      <span className="text-[10px] bg-orange-500/20 text-orange-300 px-1.5 py-0.5 rounded">
+                      <span className={`text-[10px] px-1.5 py-0.5 rounded ${
+                        link.href.includes('property-maintenance') 
+                          ? 'bg-blue-500/20 text-blue-300' 
+                          : 'bg-orange-500/20 text-orange-300'
+                      }`}>
                         {link.badge}
                       </span>
                     )}

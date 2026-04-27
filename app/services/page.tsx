@@ -2,7 +2,7 @@
 
 import Link from "next/link"
 import Image from "next/image"
-import { ArrowRight, Bug, TreePine, HardHat, CheckCircle2, Clock, Phone } from "lucide-react"
+import { ArrowRight, Bug, TreePine, HardHat, Wrench, CheckCircle2, Clock, Phone } from "lucide-react"
 import { Button } from "@/components/ui/button"
 import { Card, CardContent } from "@/components/ui/card"
 import { useLanguage } from "@/lib/language-context"
@@ -104,6 +104,37 @@ export default function ServicesIndexPage() {
         "Specialized consulting"
       ],
       image: null
+    },
+    {
+      id: "property-maintenance",
+      href: "/services/property-maintenance",
+      icon: Wrench,
+      color: "blue",
+      bgColor: "bg-blue-500/10",
+      textColor: "text-blue-600",
+      badgeColor: "bg-blue-500",
+      status: "coming-soon",
+      nameEs: "Mantenimiento de Propiedades",
+      nameEn: "Property Maintenance",
+      descriptionEs: "Próximamente ofreceremos servicios completos de mantenimiento general de propiedades. Reparaciones, pintura, plomería y más para mantener su propiedad en perfectas condiciones.",
+      descriptionEn: "Coming soon: complete general property maintenance services. Repairs, painting, plumbing and more to keep your property in perfect condition.",
+      featuresEs: [
+        "Pintura interior y exterior",
+        "Plomería general",
+        "Reparaciones eléctricas",
+        "Carpintería",
+        "Mantenimiento preventivo",
+        "Preparación de propiedades"
+      ],
+      featuresEn: [
+        "Interior and exterior painting",
+        "General plumbing",
+        "Electrical repairs",
+        "Carpentry",
+        "Preventive maintenance",
+        "Property preparation"
+      ],
+      image: null
     }
   ]
 
@@ -137,6 +168,10 @@ export default function ServicesIndexPage() {
               <span className="inline-flex items-center gap-1.5 rounded-full bg-orange-500/10 px-3 py-1.5 text-sm font-medium text-orange-700">
                 <HardHat className="h-4 w-4" />
                 {language === "es" ? "Mitigación Ambiental" : "Environmental Mitigation"}
+              </span>
+              <span className="inline-flex items-center gap-1.5 rounded-full bg-blue-500/10 px-3 py-1.5 text-sm font-medium text-blue-700">
+                <Wrench className="h-4 w-4" />
+                {language === "es" ? "Mantenimiento" : "Maintenance"}
               </span>
             </div>
           </div>
@@ -181,9 +216,15 @@ export default function ServicesIndexPage() {
                         </div>
                       </div>
                     ) : (
-                      <div className="relative aspect-[4/3] rounded-2xl overflow-hidden shadow-xl bg-gradient-to-br from-orange-100 to-orange-50 flex items-center justify-center">
+                      <div className={`relative aspect-[4/3] rounded-2xl overflow-hidden shadow-xl flex items-center justify-center ${
+                        service.id === "property-maintenance" 
+                          ? "bg-gradient-to-br from-blue-100 to-blue-50"
+                          : "bg-gradient-to-br from-orange-100 to-orange-50"
+                      }`}>
                         <div className="text-center">
-                          <HardHat className="h-24 w-24 text-orange-300 mx-auto mb-4" />
+                          <Icon className={`h-24 w-24 mx-auto mb-4 ${
+                            service.id === "property-maintenance" ? "text-blue-300" : "text-orange-300"
+                          }`} />
                           <span className={`inline-flex items-center gap-2 rounded-full ${service.badgeColor} px-4 py-2 text-sm font-medium text-white`}>
                             <Clock className="h-4 w-4" />
                             {language === "es" ? "En Construcción" : "Under Development"}
@@ -221,16 +262,22 @@ export default function ServicesIndexPage() {
 
                     {/* CTA */}
                     {isComingSoon ? (
-                      <div className="flex items-center gap-4">
-                        <Button disabled className="bg-muted text-muted-foreground">
-                          <Clock className="mr-2 h-4 w-4" />
-                          {language === "es" ? "Próximamente" : "Coming Soon"}
+                      <div className="flex flex-col sm:flex-row gap-3">
+                        <Button asChild size="lg" className={
+                          service.id === "property-maintenance" 
+                            ? "bg-blue-500 hover:bg-blue-600 text-white" 
+                            : "bg-orange-500 hover:bg-orange-600 text-white"
+                        }>
+                          <Link href={service.href}>
+                            {t.ui.learnMore}
+                            <ArrowRight className="ml-2 h-4 w-4" />
+                          </Link>
                         </Button>
-                        <p className="text-sm text-muted-foreground">
-                          {language === "es" 
-                            ? "Contáctenos para más información"
-                            : "Contact us for more information"}
-                        </p>
+                        <Button asChild size="lg" variant="outline">
+                          <Link href="/contact">
+                            {t.ui.getQuote}
+                          </Link>
+                        </Button>
                       </div>
                     ) : (
                       <div className="flex flex-col sm:flex-row gap-3">
