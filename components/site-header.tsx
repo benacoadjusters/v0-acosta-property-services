@@ -7,14 +7,13 @@ import { Menu, Phone, Clock, Globe, Bug, TreePine, HardHat, Wrench } from "lucid
 import { Button } from "@/components/ui/button"
 import { Sheet, SheetContent, SheetTrigger, SheetTitle, SheetDescription } from "@/components/ui/sheet"
 import {
-  NavigationMenu,
-  NavigationMenuContent,
-  NavigationMenuItem,
-  NavigationMenuLink,
-  NavigationMenuList,
-  NavigationMenuTrigger,
-  navigationMenuTriggerStyle,
-} from "@/components/ui/navigation-menu"
+  DropdownMenu,
+  DropdownMenuContent,
+  DropdownMenuItem,
+  DropdownMenuSeparator,
+  DropdownMenuTrigger,
+} from "@/components/ui/dropdown-menu"
+import { ChevronDown } from "lucide-react"
 
 import { company } from "@/content/company"
 import { useLanguage } from "@/lib/language-context"
@@ -83,142 +82,108 @@ export function SiteHeader() {
           </Link>
 
           {/* Desktop Navigation */}
-          <NavigationMenu className="hidden lg:flex">
-            <NavigationMenuList>
-              <NavigationMenuItem>
-                <NavigationMenuLink asChild className={navigationMenuTriggerStyle()}>
-                  <Link href="/">{t.nav.home}</Link>
-                </NavigationMenuLink>
-              </NavigationMenuItem>
-              
-              <NavigationMenuItem>
-                <NavigationMenuTrigger>{t.nav.services}</NavigationMenuTrigger>
-                <NavigationMenuContent>
-                  <ul className="grid w-[500px] gap-2 p-4">
-                    <li>
-                      <NavigationMenuLink asChild>
-                        <Link 
-                          href="/services"
-                          className="block select-none rounded-md p-3 leading-none no-underline outline-none transition-colors hover:bg-accent hover:text-accent-foreground focus:bg-accent focus:text-accent-foreground"
-                        >
-                          <div className="text-sm font-medium leading-none">
-                            {language === "es" ? "Todos los Servicios" : "All Services"}
-                          </div>
-                          <p className="line-clamp-2 text-sm leading-snug text-muted-foreground mt-1">
-                            {language === "es" ? "Ver todas nuestras categorías de servicio" : "View all our service categories"}
-                          </p>
-                        </Link>
-                      </NavigationMenuLink>
-                    </li>
-                    <li className="border-t pt-2">
-                      <NavigationMenuLink asChild>
-                        <Link 
-                          href="/services/pest-control"
-                          className="flex items-center gap-3 select-none rounded-md p-3 leading-none no-underline outline-none transition-colors hover:bg-accent hover:text-accent-foreground focus:bg-accent focus:text-accent-foreground"
-                        >
-                          <div className="flex h-10 w-10 shrink-0 items-center justify-center rounded-lg bg-primary/10">
-                            <Bug className="h-5 w-5 text-primary" />
-                          </div>
-                          <div>
-                            <div className="text-sm font-medium leading-none">
-                              {language === "es" ? "Control de Plagas" : "Pest Control"}
-                            </div>
-                            <p className="text-xs text-muted-foreground mt-1">
-                              {language === "es" ? "Fumigación, trampas, control biológico" : "Fumigation, traps, biological control"}
-                            </p>
-                          </div>
-                        </Link>
-                      </NavigationMenuLink>
-                    </li>
-                    <li>
-                      <NavigationMenuLink asChild>
-                        <Link 
-                          href="/services/landscaping"
-                          className="flex items-center gap-3 select-none rounded-md p-3 leading-none no-underline outline-none transition-colors hover:bg-accent hover:text-accent-foreground focus:bg-accent focus:text-accent-foreground"
-                        >
-                          <div className="flex h-10 w-10 shrink-0 items-center justify-center rounded-lg bg-green-500/10">
-                            <TreePine className="h-5 w-5 text-green-600" />
-                          </div>
-                          <div>
-                            <div className="text-sm font-medium leading-none">
-                              {language === "es" ? "Jardinería" : "Landscaping"}
-                            </div>
-                            <p className="text-xs text-muted-foreground mt-1">
-                              {language === "es" ? "Corte, poda, diseño paisajístico" : "Mowing, pruning, landscape design"}
-                            </p>
-                          </div>
-                        </Link>
-                      </NavigationMenuLink>
-                    </li>
-                    <li>
-                      <NavigationMenuLink asChild>
-                        <Link 
-                          href="/services/environmental"
-                          className="flex items-center gap-3 select-none rounded-md p-3 leading-none no-underline outline-none transition-colors hover:bg-accent hover:text-accent-foreground focus:bg-accent focus:text-accent-foreground"
-                        >
-                          <div className="flex h-10 w-10 shrink-0 items-center justify-center rounded-lg bg-orange-500/10">
-                            <HardHat className="h-5 w-5 text-orange-600" />
-                          </div>
-                          <div className="flex-1">
-                            <div className="text-sm font-medium leading-none flex items-center gap-2">
-                              {language === "es" ? "Mitigación Ambiental" : "Environmental Mitigation"}
-                              <span className="text-[10px] bg-orange-100 text-orange-700 px-1.5 py-0.5 rounded font-medium">
-                                {language === "es" ? "Próximo" : "Soon"}
-                              </span>
-                            </div>
-                            <p className="text-xs text-muted-foreground mt-1">
-                              {language === "es" ? "Asbesto y plomo" : "Asbestos & lead"}
-                            </p>
-                          </div>
-                        </Link>
-                      </NavigationMenuLink>
-                    </li>
-                    <li>
-                      <NavigationMenuLink asChild>
-                        <Link 
-                          href="/services/property-maintenance"
-                          className="flex items-center gap-3 select-none rounded-md p-3 leading-none no-underline outline-none transition-colors hover:bg-accent hover:text-accent-foreground focus:bg-accent focus:text-accent-foreground"
-                        >
-                          <div className="flex h-10 w-10 shrink-0 items-center justify-center rounded-lg bg-blue-500/10">
-                            <Wrench className="h-5 w-5 text-blue-600" />
-                          </div>
-                          <div className="flex-1">
-                            <div className="text-sm font-medium leading-none flex items-center gap-2">
-                              {language === "es" ? "Mantenimiento de Propiedades" : "Property Maintenance"}
-                              <span className="text-[10px] bg-blue-100 text-blue-700 px-1.5 py-0.5 rounded font-medium">
-                                {language === "es" ? "Próximo" : "Soon"}
-                              </span>
-                            </div>
-                            <p className="text-xs text-muted-foreground mt-1">
-                              {language === "es" ? "Reparaciones y mantenimiento" : "Repairs and maintenance"}
-                            </p>
-                          </div>
-                        </Link>
-                      </NavigationMenuLink>
-                    </li>
-                  </ul>
-                </NavigationMenuContent>
-              </NavigationMenuItem>
+          <nav className="hidden lg:flex items-center gap-1">
+            <Link 
+              href="/" 
+              className="px-4 py-2 text-sm font-medium text-foreground hover:text-primary transition-colors rounded-md hover:bg-muted"
+            >
+              {t.nav.home}
+            </Link>
+            
+            {/* Services Dropdown */}
+            <DropdownMenu>
+              <DropdownMenuTrigger asChild>
+                <button className="flex items-center gap-1 px-4 py-2 text-sm font-medium text-foreground hover:text-primary transition-colors rounded-md hover:bg-muted">
+                  {t.nav.services}
+                  <ChevronDown className="h-4 w-4" />
+                </button>
+              </DropdownMenuTrigger>
+              <DropdownMenuContent align="start" className="w-72">
+                <DropdownMenuItem asChild>
+                  <Link href="/services" className="flex flex-col items-start gap-1 p-3">
+                    <span className="font-medium">{language === "es" ? "Todos los Servicios" : "All Services"}</span>
+                    <span className="text-xs text-muted-foreground">
+                      {language === "es" ? "Ver todas las categorías" : "View all categories"}
+                    </span>
+                  </Link>
+                </DropdownMenuItem>
+                <DropdownMenuSeparator />
+                <DropdownMenuItem asChild>
+                  <Link href="/services/pest-control" className="flex items-center gap-3 p-3">
+                    <div className="flex h-8 w-8 shrink-0 items-center justify-center rounded-md bg-primary/10">
+                      <Bug className="h-4 w-4 text-primary" />
+                    </div>
+                    <div>
+                      <span className="font-medium">{language === "es" ? "Control de Plagas" : "Pest Control"}</span>
+                      <p className="text-xs text-muted-foreground">{language === "es" ? "Fumigación y trampas" : "Fumigation & traps"}</p>
+                    </div>
+                  </Link>
+                </DropdownMenuItem>
+                <DropdownMenuItem asChild>
+                  <Link href="/services/landscaping" className="flex items-center gap-3 p-3">
+                    <div className="flex h-8 w-8 shrink-0 items-center justify-center rounded-md bg-green-500/10">
+                      <TreePine className="h-4 w-4 text-green-600" />
+                    </div>
+                    <div>
+                      <span className="font-medium">{language === "es" ? "Jardinería" : "Landscaping"}</span>
+                      <p className="text-xs text-muted-foreground">{language === "es" ? "Corte y poda" : "Mowing & pruning"}</p>
+                    </div>
+                  </Link>
+                </DropdownMenuItem>
+                <DropdownMenuItem asChild>
+                  <Link href="/services/environmental" className="flex items-center gap-3 p-3">
+                    <div className="flex h-8 w-8 shrink-0 items-center justify-center rounded-md bg-orange-500/10">
+                      <HardHat className="h-4 w-4 text-orange-600" />
+                    </div>
+                    <div className="flex-1">
+                      <div className="flex items-center gap-2">
+                        <span className="font-medium">{language === "es" ? "Mitigación Ambiental" : "Environmental"}</span>
+                        <span className="text-[10px] bg-orange-100 text-orange-700 px-1.5 py-0.5 rounded font-medium">
+                          {language === "es" ? "Próximo" : "Soon"}
+                        </span>
+                      </div>
+                      <p className="text-xs text-muted-foreground">{language === "es" ? "Asbesto y plomo" : "Asbestos & lead"}</p>
+                    </div>
+                  </Link>
+                </DropdownMenuItem>
+                <DropdownMenuItem asChild>
+                  <Link href="/services/property-maintenance" className="flex items-center gap-3 p-3">
+                    <div className="flex h-8 w-8 shrink-0 items-center justify-center rounded-md bg-blue-500/10">
+                      <Wrench className="h-4 w-4 text-blue-600" />
+                    </div>
+                    <div className="flex-1">
+                      <div className="flex items-center gap-2">
+                        <span className="font-medium">{language === "es" ? "Mantenimiento" : "Maintenance"}</span>
+                        <span className="text-[10px] bg-blue-100 text-blue-700 px-1.5 py-0.5 rounded font-medium">
+                          {language === "es" ? "Próximo" : "Soon"}
+                        </span>
+                      </div>
+                      <p className="text-xs text-muted-foreground">{language === "es" ? "Reparaciones" : "Repairs"}</p>
+                    </div>
+                  </Link>
+                </DropdownMenuItem>
+              </DropdownMenuContent>
+            </DropdownMenu>
 
-              <NavigationMenuItem>
-                <NavigationMenuLink asChild className={navigationMenuTriggerStyle()}>
-                  <Link href="/about">{t.nav.about}</Link>
-                </NavigationMenuLink>
-              </NavigationMenuItem>
-
-              <NavigationMenuItem>
-                <NavigationMenuLink asChild className={navigationMenuTriggerStyle()}>
-                  <Link href="/gallery">{t.nav.gallery}</Link>
-                </NavigationMenuLink>
-              </NavigationMenuItem>
-
-              <NavigationMenuItem>
-                <NavigationMenuLink asChild className={navigationMenuTriggerStyle()}>
-                  <Link href="/faq">{t.nav.faq}</Link>
-                </NavigationMenuLink>
-              </NavigationMenuItem>
-            </NavigationMenuList>
-          </NavigationMenu>
+            <Link 
+              href="/about" 
+              className="px-4 py-2 text-sm font-medium text-foreground hover:text-primary transition-colors rounded-md hover:bg-muted"
+            >
+              {t.nav.about}
+            </Link>
+            <Link 
+              href="/gallery" 
+              className="px-4 py-2 text-sm font-medium text-foreground hover:text-primary transition-colors rounded-md hover:bg-muted"
+            >
+              {t.nav.gallery}
+            </Link>
+            <Link 
+              href="/faq" 
+              className="px-4 py-2 text-sm font-medium text-foreground hover:text-primary transition-colors rounded-md hover:bg-muted"
+            >
+              {t.nav.faq}
+            </Link>
+          </nav>
 
           {/* Desktop CTA */}
           <div className="hidden lg:flex items-center gap-4">

@@ -2,7 +2,7 @@
 
 import Link from "next/link"
 import Image from "next/image"
-import { Phone, ArrowRight, Shield, Clock, Award, CheckCircle2, Bug, TreePine, HardHat, Wrench } from "lucide-react"
+import { Phone, ArrowRight, Shield, Clock, Award, CheckCircle2, Bug, TreePine, HardHat, Wrench, Users, Layers } from "lucide-react"
 import { Button } from "@/components/ui/button"
 import { company } from "@/content/company"
 import { useLanguage } from "@/lib/language-context"
@@ -298,16 +298,16 @@ export default function HomePage() {
                   </div>
                   <div>
                     <h3 className="font-semibold text-foreground">{t.home.benefit1Title}</h3>
-                    <p className="text-muted-foreground">{t.home.benefit1Desc}</p>
+                    <p className="text-muted-foreground text-sm">{t.home.benefit1Desc}</p>
                   </div>
                 </div>
                 <div className="flex items-start gap-4">
                   <div className="flex h-10 w-10 shrink-0 items-center justify-center rounded-full bg-primary/10">
-                    <Award className="h-5 w-5 text-primary" />
+                    <Users className="h-5 w-5 text-primary" />
                   </div>
                   <div>
                     <h3 className="font-semibold text-foreground">{t.home.benefit2Title}</h3>
-                    <p className="text-muted-foreground">{t.home.benefit2Desc}</p>
+                    <p className="text-muted-foreground text-sm">{t.home.benefit2Desc}</p>
                   </div>
                 </div>
                 <div className="flex items-start gap-4">
@@ -316,16 +316,16 @@ export default function HomePage() {
                   </div>
                   <div>
                     <h3 className="font-semibold text-foreground">{t.home.benefit3Title}</h3>
-                    <p className="text-muted-foreground">{t.home.benefit3Desc}</p>
+                    <p className="text-muted-foreground text-sm">{t.home.benefit3Desc}</p>
                   </div>
                 </div>
                 <div className="flex items-start gap-4">
                   <div className="flex h-10 w-10 shrink-0 items-center justify-center rounded-full bg-primary/10">
-                    <CheckCircle2 className="h-5 w-5 text-primary" />
+                    <Layers className="h-5 w-5 text-primary" />
                   </div>
                   <div>
                     <h3 className="font-semibold text-foreground">{t.home.benefit4Title}</h3>
-                    <p className="text-muted-foreground">{t.home.benefit4Desc}</p>
+                    <p className="text-muted-foreground text-sm">{t.home.benefit4Desc}</p>
                   </div>
                 </div>
               </div>
@@ -335,16 +335,16 @@ export default function HomePage() {
                 <div className="space-y-4">
                   <div className="relative aspect-square rounded-2xl overflow-hidden shadow-lg">
                     <Image
-                      src="/images/residential-service.jpg"
-                      alt="Servicio residencial"
+                      src="/images/hero-pest-control.jpg"
+                      alt={language === "es" ? "Control de Plagas" : "Pest Control"}
                       fill
                       className="object-cover"
                     />
                   </div>
                   <div className="relative aspect-[4/3] rounded-2xl overflow-hidden shadow-lg">
                     <Image
-                      src="/images/commercial-service.jpg"
-                      alt="Servicio comercial"
+                      src="/images/hero-landscaping.jpg"
+                      alt={language === "es" ? "Jardinería" : "Landscaping"}
                       fill
                       className="object-cover"
                     />
@@ -353,16 +353,16 @@ export default function HomePage() {
                 <div className="space-y-4 pt-8">
                   <div className="relative aspect-[4/3] rounded-2xl overflow-hidden shadow-lg">
                     <Image
-                      src="/images/team.jpg"
-                      alt="Equipo"
+                      src="/images/residential-service.jpg"
+                      alt={language === "es" ? "Servicio Residencial" : "Residential Service"}
                       fill
                       className="object-cover"
                     />
                   </div>
                   <div className="relative aspect-square rounded-2xl overflow-hidden shadow-lg">
                     <Image
-                      src="/images/service-truck.jpg"
-                      alt="Vehículo de servicio"
+                      src="/images/commercial-service.jpg"
+                      alt={language === "es" ? "Servicio Comercial" : "Commercial Service"}
                       fill
                       className="object-cover"
                     />
