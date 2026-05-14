@@ -3,7 +3,7 @@
 import * as React from "react"
 import Link from "next/link"
 import Image from "next/image"
-import { Menu, Phone, Clock, Globe, Bug, TreePine, HardHat, Wrench, SprayCan, Paintbrush, Droplets } from "lucide-react"
+import { Menu, Phone, Clock, Globe, Bug, TreePine, HardHat, Wrench, SprayCan, Paintbrush, Droplets, Zap } from "lucide-react"
 import { Button } from "@/components/ui/button"
 import { Sheet, SheetContent, SheetTrigger, SheetTitle, SheetDescription } from "@/components/ui/sheet"
 import {
@@ -131,18 +131,35 @@ export function SiteHeader() {
                   </Link>
                 </DropdownMenuItem>
                 <DropdownMenuItem asChild>
-                  <Link href="/services/cleaning-maintenance" className="flex items-center gap-3 p-3">
+                  <Link href="/services/cleaning" className="flex items-center gap-3 p-3">
                     <div className="flex h-8 w-8 shrink-0 items-center justify-center rounded-md bg-blue-500/10">
                       <SprayCan className="h-4 w-4 text-blue-600" />
                     </div>
-                    <div className="flex-1">
-                      <div className="flex items-center gap-2">
-                        <span className="font-medium">{language === "es" ? "Limpieza y Mantenimiento" : "Cleaning & Maintenance"}</span>
-                        <span className="text-[10px] bg-blue-100 text-blue-700 px-1.5 py-0.5 rounded font-medium">
-                          {language === "es" ? "Próximamente" : "Coming Soon"}
-                        </span>
-                      </div>
+                    <div>
+                      <span className="font-medium">{language === "es" ? "Limpieza" : "Cleaning"}</span>
                       <p className="text-xs text-muted-foreground">{language === "es" ? "Limpieza profesional" : "Professional cleaning"}</p>
+                    </div>
+                  </Link>
+                </DropdownMenuItem>
+                <DropdownMenuItem asChild>
+                  <Link href="/services/plumbing" className="flex items-center gap-3 p-3">
+                    <div className="flex h-8 w-8 shrink-0 items-center justify-center rounded-md bg-cyan-500/10">
+                      <Wrench className="h-4 w-4 text-cyan-600" />
+                    </div>
+                    <div>
+                      <span className="font-medium">{language === "es" ? "Plomería" : "Plumbing"}</span>
+                      <p className="text-xs text-muted-foreground">{language === "es" ? "Reparaciones y destapes" : "Repairs & unclogging"}</p>
+                    </div>
+                  </Link>
+                </DropdownMenuItem>
+                <DropdownMenuItem asChild>
+                  <Link href="/services/electrical" className="flex items-center gap-3 p-3">
+                    <div className="flex h-8 w-8 shrink-0 items-center justify-center rounded-md bg-yellow-500/10">
+                      <Zap className="h-4 w-4 text-yellow-600" />
+                    </div>
+                    <div>
+                      <span className="font-medium">{language === "es" ? "Electricidad" : "Electrical"}</span>
+                      <p className="text-xs text-muted-foreground">{language === "es" ? "Instalaciones y reparaciones" : "Installations & repairs"}</p>
                     </div>
                   </Link>
                 </DropdownMenuItem>
@@ -285,15 +302,28 @@ export function SiteHeader() {
                             {language === "es" ? "Jardinería" : "Landscaping"}
                           </Link>
                           <Link 
-                            href="/services/cleaning-maintenance" 
+                            href="/services/cleaning" 
                             className="flex items-center gap-2 py-1.5 text-sm text-muted-foreground hover:text-blue-600 transition-colors"
                             onClick={() => setIsOpen(false)}
                           >
                             <SprayCan className="h-4 w-4 text-blue-600" />
-                            {language === "es" ? "Limpieza y Mantenimiento" : "Cleaning & Maintenance"}
-                            <span className="text-[10px] bg-blue-100 text-blue-700 px-1 py-0.5 rounded">
-                              {language === "es" ? "Próximamente" : "Coming Soon"}
-                            </span>
+                            {language === "es" ? "Limpieza" : "Cleaning"}
+                          </Link>
+                          <Link 
+                            href="/services/plumbing" 
+                            className="flex items-center gap-2 py-1.5 text-sm text-muted-foreground hover:text-cyan-600 transition-colors"
+                            onClick={() => setIsOpen(false)}
+                          >
+                            <Wrench className="h-4 w-4 text-cyan-600" />
+                            {language === "es" ? "Plomería" : "Plumbing"}
+                          </Link>
+                          <Link 
+                            href="/services/electrical" 
+                            className="flex items-center gap-2 py-1.5 text-sm text-muted-foreground hover:text-yellow-600 transition-colors"
+                            onClick={() => setIsOpen(false)}
+                          >
+                            <Zap className="h-4 w-4 text-yellow-600" />
+                            {language === "es" ? "Electricidad" : "Electrical"}
                           </Link>
                           <Link 
                             href="/services/repairs-painting" 
@@ -301,7 +331,7 @@ export function SiteHeader() {
                             onClick={() => setIsOpen(false)}
                           >
                             <Paintbrush className="h-4 w-4 text-purple-600" />
-                            {language === "es" ? "Reparaciones / Pintura" : "Repairs / Painting"}
+                            {language === "es" ? "Pintura" : "Painting"}
                             <span className="text-[10px] bg-purple-100 text-purple-700 px-1 py-0.5 rounded">
                               {language === "es" ? "Próximamente" : "Coming Soon"}
                             </span>

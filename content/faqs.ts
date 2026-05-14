@@ -82,6 +82,63 @@ export const faqs = {
         answer: "Utilizamos productos registrados y seguimos prácticas de aplicación segura. Le proporcionamos instrucciones sobre precauciones a seguir después del tratamiento, incluyendo tiempos de espera antes de permitir acceso de niños y mascotas al área tratada."
       }
     ],
+
+    cleaning: [
+      {
+        question: "¿Qué tipos de servicios de limpieza ofrecen?",
+        answer: "Ofrecemos limpieza profunda residencial, limpieza de oficinas y comercios, limpieza post-construcción, y programas de mantenimiento regular. Cada servicio incluye limpieza de pisos, superficies, baños, cocinas y áreas comunes con productos profesionales de alta calidad."
+      },
+      {
+        question: "¿Traen sus propios productos y equipos de limpieza?",
+        answer: "Sí, nuestro equipo trae todos los productos y equipos necesarios para realizar el servicio. Utilizamos productos de grado comercial, seguros y efectivos. Si tiene preferencias por productos específicos o tiene alergias, por favor infórmenos con anticipación."
+      },
+      {
+        question: "¿Puedo programar limpiezas regulares?",
+        answer: "Sí, ofrecemos planes de mantenimiento semanal, quincenal o mensual según sus necesidades. Los clientes con planes regulares reciben precios preferenciales y horarios prioritarios."
+      },
+      {
+        question: "¿Está asegurado su personal de limpieza?",
+        answer: "Todo nuestro personal está verificado y cubierto por nuestro seguro de responsabilidad. Trabajamos con profesionales capacitados en técnicas de limpieza y manejo seguro de productos."
+      }
+    ],
+
+    plumbing: [
+      {
+        question: "¿Qué servicios de plomería ofrecen?",
+        answer: "Ofrecemos reparación de tuberías y fugas, destape de desagües, instalación y reparación de calentadores de agua, instalación de grifería y accesorios, y servicios de emergencia para problemas de plomería urgentes."
+      },
+      {
+        question: "¿Atienden emergencias de plomería?",
+        answer: "Sí, hacemos nuestro mejor esfuerzo para atender emergencias de plomería el mismo día, sujeto a disponibilidad. Los problemas como tuberías rotas, fugas mayores o desagües tapados se tratan con prioridad. Contacte nos inmediatamente para una respuesta rápida."
+      },
+      {
+        question: "¿Pueden reparar cualquier tipo de tubería?",
+        answer: "Trabajamos con todos los tipos comunes de tuberías incluyendo PVC, cobre, hierro galvanizado y PEX. Evaluamos la situación y le recomendamos la mejor solución, ya sea reparación o reemplazo según el estado de las tuberías."
+      },
+      {
+        question: "¿Ofrecen garantía en trabajos de plomería?",
+        answer: "Sí, ofrecemos garantía en nuestros trabajos de plomería. La duración y condiciones de la garantía dependen del tipo de trabajo realizado. Los detalles específicos se incluyen en su cotización por escrito."
+      }
+    ],
+
+    electrical: [
+      {
+        question: "¿Qué servicios eléctricos ofrecen?",
+        answer: "Ofrecemos instalación y reparación de paneles eléctricos, instalación de tomacorrientes y switches, instalación de iluminación, instalación de abanicos de techo, y diagnóstico de problemas eléctricos. Todo trabajo se realiza siguiendo los códigos eléctricos aplicables."
+      },
+      {
+        question: "¿Pueden actualizar mi panel eléctrico?",
+        answer: "Sí, realizamos actualizaciones de paneles eléctricos para aumentar la capacidad de su sistema y mejorar la seguridad. Esto es especialmente importante para casas antiguas o si está agregando equipos de alto consumo como aires acondicionados."
+      },
+      {
+        question: "¿Es seguro el trabajo eléctrico que realizan?",
+        answer: "La seguridad es nuestra prioridad. Todo trabajo eléctrico se realiza siguiendo los códigos y normas de seguridad aplicables. Nuestros electricistas están capacitados para realizar trabajos seguros y de calidad."
+      },
+      {
+        question: "¿Instalan abanicos de techo?",
+        answer: "Sí, realizamos instalación profesional de abanicos de techo, incluyendo abanicos con luces y control remoto. La instalación correcta es importante para la seguridad y el funcionamiento óptimo del abanico."
+      }
+    ],
     
     commercial: [
       {
@@ -192,6 +249,63 @@ export const faqs = {
       {
         question: "Are fertilization and weed control products safe?",
         answer: "We use registered products and follow safe application practices. We provide instructions on precautions to follow after treatment, including waiting times before allowing children and pets access to the treated area."
+      }
+    ],
+
+    cleaning: [
+      {
+        question: "What types of cleaning services do you offer?",
+        answer: "We offer residential deep cleaning, office and commercial cleaning, post-construction cleaning, and regular maintenance programs. Each service includes floor, surface, bathroom, kitchen and common area cleaning with high-quality professional products."
+      },
+      {
+        question: "Do you bring your own cleaning products and equipment?",
+        answer: "Yes, our team brings all necessary products and equipment to perform the service. We use commercial-grade, safe and effective products. If you have preferences for specific products or have allergies, please let us know in advance."
+      },
+      {
+        question: "Can I schedule regular cleanings?",
+        answer: "Yes, we offer weekly, biweekly or monthly maintenance plans according to your needs. Customers with regular plans receive preferential pricing and priority scheduling."
+      },
+      {
+        question: "Is your cleaning staff insured?",
+        answer: "All our staff is verified and covered by our liability insurance. We work with professionals trained in cleaning techniques and safe product handling."
+      }
+    ],
+
+    plumbing: [
+      {
+        question: "What plumbing services do you offer?",
+        answer: "We offer pipe and leak repair, drain unclogging, water heater installation and repair, faucet and fixture installation, and emergency services for urgent plumbing problems."
+      },
+      {
+        question: "Do you handle plumbing emergencies?",
+        answer: "Yes, we make our best effort to handle plumbing emergencies the same day, subject to availability. Problems such as broken pipes, major leaks or clogged drains are treated with priority. Contact us immediately for a quick response."
+      },
+      {
+        question: "Can you repair any type of pipe?",
+        answer: "We work with all common pipe types including PVC, copper, galvanized iron and PEX. We evaluate the situation and recommend the best solution, whether repair or replacement depending on the pipe condition."
+      },
+      {
+        question: "Do you offer warranty on plumbing work?",
+        answer: "Yes, we offer warranty on our plumbing work. The duration and conditions of the warranty depend on the type of work performed. Specific details are included in your written quote."
+      }
+    ],
+
+    electrical: [
+      {
+        question: "What electrical services do you offer?",
+        answer: "We offer electrical panel installation and repair, outlet and switch installation, lighting installation, ceiling fan installation, and electrical problem diagnosis. All work is performed following applicable electrical codes."
+      },
+      {
+        question: "Can you upgrade my electrical panel?",
+        answer: "Yes, we perform electrical panel upgrades to increase your system capacity and improve safety. This is especially important for older homes or if you are adding high-consumption equipment like air conditioners."
+      },
+      {
+        question: "Is the electrical work you perform safe?",
+        answer: "Safety is our priority. All electrical work is performed following applicable codes and safety standards. Our electricians are trained to perform safe and quality work."
+      },
+      {
+        question: "Do you install ceiling fans?",
+        answer: "Yes, we perform professional ceiling fan installation, including fans with lights and remote control. Correct installation is important for safety and optimal fan operation."
       }
     ],
     

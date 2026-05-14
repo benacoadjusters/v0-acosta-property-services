@@ -30,6 +30,18 @@ const serviceOptions = {
     { value: "landscaping-pruning", label: "Jardinería - Poda", group: "jardineria" },
     { value: "landscaping-design", label: "Jardinería - Diseño Paisajístico", group: "jardineria" },
     { value: "landscaping-maintenance", label: "Jardinería - Mantenimiento", group: "jardineria" },
+    { value: "cleaning-deep", label: "Limpieza - Profunda", group: "limpieza" },
+    { value: "cleaning-office", label: "Limpieza - Oficinas", group: "limpieza" },
+    { value: "cleaning-post-construction", label: "Limpieza - Post-Construcción", group: "limpieza" },
+    { value: "cleaning-maintenance", label: "Limpieza - Mantenimiento", group: "limpieza" },
+    { value: "plumbing-repair", label: "Plomería - Reparación", group: "plomeria" },
+    { value: "plumbing-drain", label: "Plomería - Destape", group: "plomeria" },
+    { value: "plumbing-heater", label: "Plomería - Calentador", group: "plomeria" },
+    { value: "plumbing-install", label: "Plomería - Instalación", group: "plomeria" },
+    { value: "electrical-panel", label: "Electricidad - Panel", group: "electricidad" },
+    { value: "electrical-outlets", label: "Electricidad - Tomacorrientes", group: "electricidad" },
+    { value: "electrical-lighting", label: "Electricidad - Iluminación", group: "electricidad" },
+    { value: "electrical-fan", label: "Electricidad - Abanicos", group: "electricidad" },
     { value: "commercial", label: "Servicios Comerciales", group: "otros" },
     { value: "inspection", label: "Inspección Gratis", group: "otros" },
     { value: "other", label: "Otro", group: "otros" },
@@ -44,6 +56,18 @@ const serviceOptions = {
     { value: "landscaping-pruning", label: "Landscaping - Pruning", group: "landscaping" },
     { value: "landscaping-design", label: "Landscaping - Design", group: "landscaping" },
     { value: "landscaping-maintenance", label: "Landscaping - Maintenance", group: "landscaping" },
+    { value: "cleaning-deep", label: "Cleaning - Deep Cleaning", group: "cleaning" },
+    { value: "cleaning-office", label: "Cleaning - Office", group: "cleaning" },
+    { value: "cleaning-post-construction", label: "Cleaning - Post-Construction", group: "cleaning" },
+    { value: "cleaning-maintenance", label: "Cleaning - Maintenance", group: "cleaning" },
+    { value: "plumbing-repair", label: "Plumbing - Repair", group: "plumbing" },
+    { value: "plumbing-drain", label: "Plumbing - Drain Cleaning", group: "plumbing" },
+    { value: "plumbing-heater", label: "Plumbing - Water Heater", group: "plumbing" },
+    { value: "plumbing-install", label: "Plumbing - Installation", group: "plumbing" },
+    { value: "electrical-panel", label: "Electrical - Panel", group: "electrical" },
+    { value: "electrical-outlets", label: "Electrical - Outlets", group: "electrical" },
+    { value: "electrical-lighting", label: "Electrical - Lighting", group: "electrical" },
+    { value: "electrical-fan", label: "Electrical - Ceiling Fans", group: "electrical" },
     { value: "commercial", label: "Commercial Services", group: "other" },
     { value: "inspection", label: "Free Inspection", group: "other" },
     { value: "other", label: "Other", group: "other" },
@@ -194,6 +218,30 @@ export function ContactForm() {
                     {language === "es" ? "-- Jardinería --" : "-- Landscaping --"}
                   </SelectItem>
                   {serviceOptions[language].filter(o => o.group === (language === "es" ? "jardineria" : "landscaping")).map((option) => (
+                    <SelectItem key={option.value} value={option.value}>
+                      {option.label.split(" - ")[1]}
+                    </SelectItem>
+                  ))}
+                  <SelectItem value="header-cleaning" disabled className="font-semibold text-blue-600">
+                    {language === "es" ? "-- Limpieza --" : "-- Cleaning --"}
+                  </SelectItem>
+                  {serviceOptions[language].filter(o => o.group === (language === "es" ? "limpieza" : "cleaning")).map((option) => (
+                    <SelectItem key={option.value} value={option.value}>
+                      {option.label.split(" - ")[1]}
+                    </SelectItem>
+                  ))}
+                  <SelectItem value="header-plumbing" disabled className="font-semibold text-cyan-600">
+                    {language === "es" ? "-- Plomería --" : "-- Plumbing --"}
+                  </SelectItem>
+                  {serviceOptions[language].filter(o => o.group === (language === "es" ? "plomeria" : "plumbing")).map((option) => (
+                    <SelectItem key={option.value} value={option.value}>
+                      {option.label.split(" - ")[1]}
+                    </SelectItem>
+                  ))}
+                  <SelectItem value="header-electrical" disabled className="font-semibold text-yellow-600">
+                    {language === "es" ? "-- Electricidad --" : "-- Electrical --"}
+                  </SelectItem>
+                  {serviceOptions[language].filter(o => o.group === (language === "es" ? "electricidad" : "electrical")).map((option) => (
                     <SelectItem key={option.value} value={option.value}>
                       {option.label.split(" - ")[1]}
                     </SelectItem>

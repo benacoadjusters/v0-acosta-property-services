@@ -2,7 +2,7 @@
 
 import Link from "next/link"
 import Image from "next/image"
-import { Phone, ArrowRight, Shield, Clock, Award, CheckCircle2, Bug, TreePine, HardHat, SprayCan, Paintbrush, Droplets, Users, Layers } from "lucide-react"
+import { Phone, ArrowRight, Shield, Clock, Award, CheckCircle2, Bug, TreePine, HardHat, SprayCan, Paintbrush, Droplets, Users, Layers, Wrench, Zap } from "lucide-react"
 import { Button } from "@/components/ui/button"
 import { company } from "@/content/company"
 import { useLanguage } from "@/lib/language-context"
@@ -41,17 +41,13 @@ export default function HomePage() {
                   <SprayCan className="h-3.5 w-3.5" />
                   {language === "es" ? "Limpieza" : "Cleaning"}
                 </span>
-                <span className="inline-flex items-center gap-1.5 rounded-full bg-purple-500/10 px-3 py-1 text-sm font-medium text-purple-700">
-                  <Paintbrush className="h-3.5 w-3.5" />
-                  {language === "es" ? "Pintura" : "Painting"}
+                <span className="inline-flex items-center gap-1.5 rounded-full bg-cyan-500/10 px-3 py-1 text-sm font-medium text-cyan-700">
+                  <Wrench className="h-3.5 w-3.5" />
+                  {language === "es" ? "Plomería" : "Plumbing"}
                 </span>
-                <span className="inline-flex items-center gap-1.5 rounded-full bg-orange-500/10 px-3 py-1 text-sm font-medium text-orange-700">
-                  <HardHat className="h-3.5 w-3.5" />
-                  {language === "es" ? "Ambiental" : "Environmental"}
-                </span>
-                <span className="inline-flex items-center gap-1.5 rounded-full bg-teal-500/10 px-3 py-1 text-sm font-medium text-teal-700">
-                  <Droplets className="h-3.5 w-3.5" />
-                  {language === "es" ? "Moho" : "Mold"}
+                <span className="inline-flex items-center gap-1.5 rounded-full bg-yellow-500/10 px-3 py-1 text-sm font-medium text-yellow-700">
+                  <Zap className="h-3.5 w-3.5" />
+                  {language === "es" ? "Electricidad" : "Electrical"}
                 </span>
               </div>
               <div className="flex flex-col sm:flex-row gap-4">
@@ -223,29 +219,14 @@ export default function HomePage() {
             </Link>
           </div>
 
-          {/* Coming Soon Services - 4 columns */}
+          {/* Coming Soon Services - 3 columns */}
           <div className="text-center mb-6">
             <span className="inline-flex items-center gap-2 rounded-full bg-muted px-4 py-2 text-sm font-medium text-muted-foreground">
               <Clock className="h-4 w-4" />
               {language === "es" ? "Próximamente" : "Coming Soon"}
             </span>
           </div>
-          <div className="grid grid-cols-2 lg:grid-cols-4 gap-4">
-            {/* Cleaning & Maintenance */}
-            <div className="group cursor-default">
-              <div className="relative overflow-hidden rounded-xl bg-card border shadow-sm p-5 text-center opacity-80 hover:opacity-100 transition-opacity">
-                <div className="flex h-12 w-12 items-center justify-center rounded-full bg-blue-500/10 mx-auto mb-3">
-                  <SprayCan className="h-6 w-6 text-blue-600" />
-                </div>
-                <h3 className="font-semibold text-foreground text-sm mb-1">
-                  {language === "es" ? "Limpieza y Mantenimiento" : "Cleaning & Maintenance"}
-                </h3>
-                <p className="text-xs text-muted-foreground">
-                  {language === "es" ? "Limpieza profesional" : "Professional cleaning"}
-                </p>
-              </div>
-            </div>
-
+          <div className="grid grid-cols-1 sm:grid-cols-3 gap-4">
             {/* Repairs / Painting */}
             <div className="group cursor-default">
               <div className="relative overflow-hidden rounded-xl bg-card border shadow-sm p-5 text-center opacity-80 hover:opacity-100 transition-opacity">
@@ -253,10 +234,10 @@ export default function HomePage() {
                   <Paintbrush className="h-6 w-6 text-purple-600" />
                 </div>
                 <h3 className="font-semibold text-foreground text-sm mb-1">
-                  {language === "es" ? "Reparaciones / Pintura" : "Repairs / Painting"}
+                  {language === "es" ? "Pintura" : "Painting"}
                 </h3>
                 <p className="text-xs text-muted-foreground">
-                  {language === "es" ? "Reparaciones menores" : "Minor repairs"}
+                  {language === "es" ? "Pintura profesional" : "Professional painting"}
                 </p>
               </div>
             </div>
