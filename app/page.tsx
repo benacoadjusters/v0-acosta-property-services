@@ -65,15 +65,15 @@ export default function HomePage() {
                 </Button>
               </div>
             </div>
-            <div className="relative">
+            <div className="relative pb-16">
               {/* Grid de 5 servicios */}
               <div className="grid grid-cols-3 gap-3">
                 {/* Primera columna - 2 imágenes */}
                 <div className="space-y-3">
                   <div className="relative aspect-[4/3] rounded-xl overflow-hidden bg-muted shadow-lg group">
                     <Image
-                      src="/images/hero-pest-control.jpg"
-                      alt={language === "es" ? "Control de Plagas" : "Pest Control"}
+                      src="/images/hero-landscaping.jpg"
+                      alt={language === "es" ? "Jardinería" : "Landscaping"}
                       fill
                       className="object-cover object-center group-hover:scale-105 transition-transform duration-300"
                       priority
@@ -81,8 +81,8 @@ export default function HomePage() {
                     <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-transparent to-transparent" />
                     <div className="absolute bottom-2 left-2 right-2">
                       <div className="flex items-center gap-1.5">
-                        <Bug className="h-3.5 w-3.5 text-white" />
-                        <p className="text-white text-xs font-medium">{language === "es" ? "Plagas" : "Pest Control"}</p>
+                        <TreePine className="h-3.5 w-3.5 text-white" />
+                        <p className="text-white text-xs font-medium">{language === "es" ? "Jardinería" : "Landscaping"}</p>
                       </div>
                     </div>
                   </div>
@@ -104,11 +104,11 @@ export default function HomePage() {
                   </div>
                 </div>
                 
-                {/* Segunda columna - imagen grande */}
+                {/* Segunda columna - imagen grande de PLAGAS */}
                 <div className="relative aspect-[3/4] rounded-xl overflow-hidden bg-muted shadow-xl group">
                   <Image
-                    src="/images/hero-landscaping.jpg"
-                    alt={language === "es" ? "Jardinería" : "Landscaping"}
+                    src="/images/hero-pest-control.jpg"
+                    alt={language === "es" ? "Control de Plagas" : "Pest Control"}
                     fill
                     className="object-cover object-center group-hover:scale-105 transition-transform duration-300"
                     priority
@@ -116,8 +116,8 @@ export default function HomePage() {
                   <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-transparent to-transparent" />
                   <div className="absolute bottom-3 left-3 right-3">
                     <div className="flex items-center gap-1.5">
-                      <TreePine className="h-4 w-4 text-white" />
-                      <p className="text-white text-sm font-medium">{language === "es" ? "Jardinería" : "Landscaping"}</p>
+                      <Bug className="h-4 w-4 text-white" />
+                      <p className="text-white text-sm font-medium">{language === "es" ? "Control de Plagas" : "Pest Control"}</p>
                     </div>
                   </div>
                 </div>
@@ -159,8 +159,8 @@ export default function HomePage() {
                 </div>
               </div>
               
-              {/* Stats badge */}
-              <div className="absolute -bottom-6 -left-6 bg-card rounded-xl shadow-lg p-4 border hidden md:block">
+              {/* Stats badge - posicionado debajo del grid */}
+              <div className="absolute -bottom-4 left-1/2 -translate-x-1/2 bg-card rounded-xl shadow-lg p-4 border hidden md:block">
                 <div className="flex items-center gap-3">
                   <div className="flex h-12 w-12 items-center justify-center rounded-full bg-primary/10">
                     <Award className="h-6 w-6 text-primary" />
