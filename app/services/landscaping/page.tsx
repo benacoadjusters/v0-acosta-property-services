@@ -180,7 +180,7 @@ export default function LandscapingPage() {
                   src="/images/hero-landscaping.jpg"
                   alt={language === "es" ? "Jardinería Profesional" : "Professional Landscaping"}
                   fill
-                  className="object-cover"
+                  className="object-cover object-center"
                   priority
                 />
               </div>
@@ -230,7 +230,7 @@ export default function LandscapingPage() {
                       src={service.image}
                       alt={name}
                       fill
-                      className="object-cover"
+                      className="object-cover object-center"
                     />
                   </div>
                   <CardHeader>

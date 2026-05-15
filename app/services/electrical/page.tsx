@@ -179,7 +179,7 @@ export default function ElectricalPage() {
                   src="/images/hero-electrical.jpg"
                   alt={language === "es" ? "Electricidad Profesional" : "Professional Electrical"}
                   fill
-                  className="object-cover"
+                  className="object-cover object-center"
                   priority
                 />
               </div>
@@ -229,7 +229,7 @@ export default function ElectricalPage() {
                       src={service.image}
                       alt={name}
                       fill
-                      className="object-cover"
+                      className="object-cover object-center"
                     />
                   </div>
                   <CardHeader>

@@ -11,7 +11,7 @@ export const services = {
       descriptionEs: "Nuestro servicio de fumigación utiliza productos de última generación registrados en la EPA. Antes de cada tratamiento, proporcionamos instrucciones detalladas de preparación y precaución para garantizar la protección adecuada de su familia y mascotas. Aplicamos tratamientos en interiores y exteriores para la eliminación completa de plagas.",
       descriptionEn: "Our fumigation service uses state-of-the-art EPA-registered products. Before each treatment, we provide detailed preparation and precautionary instructions to ensure proper protection for your family and pets. We apply treatments indoors and outdoors for complete pest elimination.",
       icon: "spray",
-      image: "/images/mosquito-treatment.jpg",
+      image: "/images/pest-control/fumigation.jpg",
       benefits: {
         es: [
           "Eliminación rápida y efectiva",
@@ -38,7 +38,7 @@ export const services = {
       descriptionEs: "Utilizamos sistemas de trampas profesionales para el control de roedores y otras plagas. Este método es ideal para áreas donde se prefiere evitar productos químicos o como complemento a la fumigación.",
       descriptionEn: "We use professional trap systems for rodent and pest control. This method is ideal for areas where chemical products should be avoided or as a complement to fumigation.",
       icon: "target",
-      image: "/images/rodent-control.jpg",
+      image: "/images/pest-control/trapping.jpg",
       benefits: {
         es: [
           "Sin productos químicos",
@@ -65,7 +65,7 @@ export const services = {
       descriptionEs: "El control biológico es una estrategia sostenible y eficiente que utiliza enemigos naturales como depredadores, parasitoides y microorganismos para combatir plagas, reduciendo la dependencia de productos químicos. Ideal para jardines, invernaderos, césped y áreas verdes donde se busca mantener la calidad estética sin dañar el medio ambiente. Utilizamos agentes como mariquitas, crisopas, avispas parasitoides, ácaros depredadores, nematodos entomopatógenos y bacterias como Bacillus thuringiensis según el tipo de plaga.",
       descriptionEn: "Biological control is a sustainable and efficient strategy that uses natural enemies such as predators, parasitoids and microorganisms to combat pests, reducing dependence on chemicals. Ideal for gardens, greenhouses, lawns and green areas where aesthetic quality is sought without harming the environment. We use agents such as ladybugs, lacewings, parasitoid wasps, predatory mites, entomopathogenic nematodes and bacteria like Bacillus thuringiensis depending on the pest type.",
       icon: "leaf",
-      image: "/images/garden-care.jpg",
+      image: "/images/pest-control/biological.jpg",
       benefits: {
         es: [
           "Ecológico y sostenible",

@@ -74,7 +74,7 @@ export default function ServicesPage() {
                       src={method.image}
                       alt={name}
                       fill
-                      className="object-cover"
+                      className="object-cover object-center"
                     />
                   </div>
                   <CardHeader>
@@ -208,7 +208,7 @@ export default function ServicesPage() {
                     src={selectedPest.images[selectedImageIndex].src}
                     alt={language === "es" ? selectedPest.images[selectedImageIndex].labelEs : selectedPest.images[selectedImageIndex].labelEn}
                     fill
-                    className="object-cover"
+                    className="object-cover object-center"
                   />
                   <div className="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-black/70 to-transparent p-4">
                     <p className="text-white font-medium">
@@ -232,7 +232,7 @@ export default function ServicesPage() {
                           src={img.src}
                           alt={language === "es" ? img.labelEs : img.labelEn}
                           fill
-                          className="object-cover"
+                          className="object-cover object-center"
                         />
                       </button>
                     ))}
@@ -310,7 +310,7 @@ export default function ServicesPage() {
                       src={isResidential ? "/images/residential-service.jpg" : "/images/commercial-service.jpg"}
                       alt={name}
                       fill
-                      className="object-cover"
+                      className="object-cover object-center"
                     />
                   </div>
                   <CardContent className="p-6">

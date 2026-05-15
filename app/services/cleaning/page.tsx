@@ -179,7 +179,7 @@ export default function CleaningPage() {
                   src="/images/hero-cleaning.jpg"
                   alt={language === "es" ? "Limpieza Profesional" : "Professional Cleaning"}
                   fill
-                  className="object-cover"
+                  className="object-cover object-center"
                   priority
                 />
               </div>
@@ -229,7 +229,7 @@ export default function CleaningPage() {
                       src={service.image}
                       alt={name}
                       fill
-                      className="object-cover"
+                      className="object-cover object-center"
                     />
                   </div>
                   <CardHeader>

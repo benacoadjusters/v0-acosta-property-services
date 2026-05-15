@@ -179,7 +179,7 @@ export default function PlumbingPage() {
                   src="/images/hero-plumbing.jpg"
                   alt={language === "es" ? "Plomería Profesional" : "Professional Plumbing"}
                   fill
-                  className="object-cover"
+                  className="object-cover object-center"
                   priority
                 />
               </div>
@@ -229,7 +229,7 @@ export default function PlumbingPage() {
                       src={service.image}
                       alt={name}
                       fill
-                      className="object-cover"
+                      className="object-cover object-center"
                     />
                   </div>
                   <CardHeader>
