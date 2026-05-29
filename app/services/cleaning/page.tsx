@@ -41,7 +41,7 @@ export default function CleaningPage() {
       image: "/images/cleaning/office-cleaning.jpg",
       nameEs: "Limpieza de Oficinas",
       nameEn: "Office Cleaning",
-      descriptionEs: "Mantenemos su espacio de trabajo limpio y profesional. Servicios diarios, semanales o según sus necesidades para oficinas de cualquier tamaño.",
+      descriptionEs: "Mantenemos tu espacio de trabajo limpio y profesional. Servicios diarios, semanales o según tus necesidades para oficinas de cualquier tamaño.",
       descriptionEn: "We keep your workspace clean and professional. Daily, weekly or as-needed services for offices of any size.",
       featuresEs: ["Limpieza de escritorios", "Desinfección de áreas comunes", "Vaciado de papeleras", "Limpieza de pisos"],
       featuresEn: ["Desk cleaning", "Common area disinfection", "Trash removal", "Floor cleaning"]
@@ -52,7 +52,7 @@ export default function CleaningPage() {
       image: "/images/cleaning/post-construction.jpg",
       nameEs: "Limpieza Post-Construcción",
       nameEn: "Post-Construction Cleaning",
-      descriptionEs: "Eliminamos polvo, escombros y residuos de construcción o remodelación. Dejamos su propiedad lista para usar después de cualquier proyecto.",
+      descriptionEs: "Eliminamos polvo, escombros y residuos de construcción o remodelación. Dejamos tu propiedad lista para usar después de cualquier proyecto.",
       descriptionEn: "We remove dust, debris and construction residues. We leave your property ready to use after any project.",
       featuresEs: ["Remoción de escombros", "Limpieza de polvo fino", "Limpieza de ventanas", "Pulido de superficies"],
       featuresEn: ["Debris removal", "Fine dust cleaning", "Window cleaning", "Surface polishing"]
@@ -63,7 +63,7 @@ export default function CleaningPage() {
       image: "/images/cleaning/maintenance-cleaning.jpg",
       nameEs: "Mantenimiento Regular",
       nameEn: "Regular Maintenance",
-      descriptionEs: "Programas de limpieza regular para mantener su propiedad siempre impecable. Planes semanales, quincenales o mensuales adaptados a sus necesidades.",
+      descriptionEs: "Programas de limpieza regular para mantener tu propiedad siempre impecable. Planes semanales, quincenales o mensuales adaptados a tus necesidades.",
       descriptionEn: "Regular cleaning programs to keep your property always spotless. Weekly, biweekly or monthly plans adapted to your needs.",
       featuresEs: ["Planes personalizados", "Horarios flexibles", "Equipo dedicado", "Productos de calidad"],
       featuresEn: ["Customized plans", "Flexible schedules", "Dedicated team", "Quality products"]

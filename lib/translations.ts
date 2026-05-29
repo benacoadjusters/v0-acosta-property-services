@@ -85,9 +85,9 @@ export const translations = {
     about: {
       title: "Sobre Nosotros",
       subtitle: "Cuidando Propiedades en Puerto Rico Desde 2022",
-      story: "Fundada en 2022, Acosta Property Services nació con una misión simple: brindar a Puerto Rico servicios profesionales de mantenimiento de propiedades en los que familias y empresas puedan confiar. Lo que comenzó como un servicio de control de plagas ha crecido para ofrecer soluciones integrales incluyendo jardinería profesional, y próximamente mitigación ambiental y mantenimiento general. En solo 4 años, hemos servido a más de 300 clientes satisfechos en toda la isla.",
+      story: "Fundada en 2022, Acosta Property Services nació con una misión simple: brindar a Puerto Rico servicios profesionales de mantenimiento de propiedades en los que familias y empresas puedan confiar. Lo que comenzó como un servicio de control de plagas ha crecido para ofrecer soluciones integrales incluyendo plomería, electricidad, jardinería y limpieza. En solo 4 años, hemos servido a más de 300 clientes satisfechos en toda la isla.",
       missionTitle: "Nuestra Misión",
-      mission: "Ser el aliado confiable para el cuidado integral de propiedades en Puerto Rico, ofreciendo servicios de control de plagas, jardinería y mantenimiento con los más altos estándares de calidad, seguridad y atención al cliente.",
+      mission: "Ser el equipo confiable para mantener propiedades en Puerto Rico seguras, funcionales y presentables.",
       valuesTitle: "Nuestros Valores",
       value1: "Integridad",
       value1Desc: "Honestidad y transparencia en todo lo que hacemos.",
@@ -244,9 +244,9 @@ export const translations = {
     about: {
       title: "About Us",
       subtitle: "Caring for Properties in Puerto Rico Since 2022",
-      story: "Founded in 2022, Acosta Property Services was born with a simple mission: to provide Puerto Rico with professional property maintenance services that families and businesses can trust. What started as a pest control service has grown to offer comprehensive solutions including professional landscaping, and soon environmental mitigation and general maintenance. In just 4 years, we have served over 300 satisfied customers across the island.",
+      story: "Founded in 2022, Acosta Property Services was born with a simple mission: to provide Puerto Rico with professional property maintenance services that families and businesses can trust. What started as a pest control service has grown to offer comprehensive solutions including plumbing, electrical, landscaping and cleaning. In just 4 years, we have served over 300 satisfied customers across the island.",
       missionTitle: "Our Mission",
-      mission: "To be the trusted partner for comprehensive property care in Puerto Rico, offering pest control, landscaping and maintenance services with the highest standards of quality, safety and customer service.",
+      mission: "To be the trusted team for keeping properties in Puerto Rico safe, functional and presentable.",
       valuesTitle: "Our Values",
       value1: "Integrity",
       value1Desc: "Honesty and transparency in everything we do.",

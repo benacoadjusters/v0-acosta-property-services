@@ -64,7 +64,7 @@ export default function LandscapingPage() {
       image: "/images/landscaping/garden-cleaning.jpg",
       nameEs: "Mantenimiento General",
       nameEn: "General Maintenance",
-      descriptionEs: "Servicio integral de mantenimiento de jardines que incluye limpieza, deshierbe, fertilización y cuidado general de todas las áreas verdes de su propiedad.",
+      descriptionEs: "Servicio integral de mantenimiento de jardines que incluye limpieza, deshierbe, fertilización y cuidado general de todas las áreas verdes de tu propiedad.",
       descriptionEn: "Comprehensive garden maintenance service including cleaning, weeding, fertilization and general care of all green areas on your property.",
       featuresEs: ["Limpieza de áreas verdes", "Control de malezas", "Fertilización programada", "Cuidado de plantas"],
       featuresEn: ["Green area cleaning", "Weed control", "Scheduled fertilization", "Plant care"]
@@ -270,7 +270,7 @@ export default function LandscapingPage() {
             </h2>
             <p className="text-lg text-muted-foreground">
               {language === "es"
-                ? "Más que jardineros, somos expertos en el cuidado de su propiedad."
+                ? "Más que jardineros, somos expertos en el cuidado de tu propiedad."
                 : "More than gardeners, we are experts in caring for your property."}
             </p>
           </div>

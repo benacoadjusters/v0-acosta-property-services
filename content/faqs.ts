@@ -10,15 +10,15 @@ export const faqs = {
       },
       {
         question: "¿Son seguros sus tratamientos para niños y mascotas?",
-        answer: "Utilizamos productos registrados en la EPA y seguimos protocolos de seguridad establecidos. Antes de cada tratamiento, proporcionamos instrucciones detalladas de preparación y precaución que debe seguir para garantizar la protección de su familia y mascotas. Esto incluye: desalojar el área tratada por el tiempo indicado, mantener niños y mascotas alejados hasta que los productos sequen completamente, y seguir las precauciones que le entregaremos por escrito. Su colaboración siguiendo estas instrucciones es esencial para un tratamiento exitoso y seguro."
+        answer: "Utilizamos productos registrados en la EPA y seguimos protocolos de seguridad establecidos. Antes de cada tratamiento, proporcionamos instrucciones detalladas de preparación y precaución que debes seguir para garantizar la protección de tu familia y mascotas. Esto incluye: desalojar el área tratada por el tiempo indicado, mantener niños y mascotas alejados hasta que los productos sequen completamente, y seguir las precauciones que te entregaremos por escrito. Tu colaboración siguiendo estas instrucciones es esencial para un tratamiento exitoso y seguro."
       },
       {
         question: "¿Ofrecen cotizaciones gratis?",
-        answer: "Sí, proporcionamos inspecciones y cotizaciones sin costo para evaluar su situación. La cotización es válida por 30 días y está sujeta a las condiciones observadas durante la inspección. Cambios en las condiciones de la propiedad o en el alcance del trabajo pueden requerir una nueva evaluación."
+        answer: "Sí, proporcionamos inspecciones y cotizaciones sin costo para evaluar tu situación. La cotización es válida por 30 días y está sujeta a las condiciones observadas durante la inspección. Cambios en las condiciones de la propiedad o en el alcance del trabajo pueden requerir una nueva evaluación."
       },
       {
         question: "¿Qué áreas cubren?",
-        answer: "Ofrecemos servicios en Puerto Rico, principalmente en el área metropolitana y municipios accesibles. La disponibilidad de servicio en áreas remotas está sujeta a evaluación. Algunas ubicaciones pueden tener cargos adicionales por distancia. Consulte con nosotros para confirmar cobertura en su área específica."
+        answer: "Ofrecemos servicios en Puerto Rico, principalmente en el área metropolitana y municipios accesibles. La disponibilidad de servicio en áreas remotas está sujeta a evaluación. Algunas ubicaciones pueden tener cargos adicionales por distancia. Consulta con nosotros para confirmar cobertura en tu área específica."
       },
       {
         question: "¿Ofrecen alguna garantía?",
@@ -33,19 +33,19 @@ export const faqs = {
       },
       {
         question: "¿Qué debo hacer para prepararme para el tratamiento?",
-        answer: "Le proporcionaremos instrucciones escritas de preparación antes de su cita. El cumplimiento de estas instrucciones es obligatorio para que el tratamiento sea efectivo. La preparación inadecuada puede reducir significativamente la efectividad del servicio y en ese caso no aplicará la garantía de re-tratamiento. Si al llegar encontramos que la propiedad no está preparada según las instrucciones, nos reservamos el derecho de reprogramar la cita."
+        answer: "Te proporcionaremos instrucciones escritas de preparación antes de tu cita. El cumplimiento de estas instrucciones es obligatorio para que el tratamiento sea efectivo. La preparación inadecuada puede reducir significativamente la efectividad del servicio y en ese caso no aplicará la garantía de re-tratamiento. Si al llegar encontramos que la propiedad no está preparada según las instrucciones, nos reservamos el derecho de reprogramar la cita."
       },
       {
         question: "¿Cuánto tiempo toma un tratamiento típico?",
-        answer: "Los tratamientos residenciales generalmente toman entre 30-90 minutos, dependiendo del tamaño de la propiedad, tipo de tratamiento y condiciones encontradas. Este tiempo es estimado y puede variar. El técnico le informará del tiempo real una vez evalúe las condiciones específicas de su propiedad."
+        answer: "Los tratamientos residenciales generalmente toman entre 30-90 minutos, dependiendo del tamaño de la propiedad, tipo de tratamiento y condiciones encontradas. Este tiempo es estimado y puede variar. El técnico te informará del tiempo real una vez evalúe las condiciones específicas de tu propiedad."
       },
       {
         question: "¿Necesito salir de mi casa durante el tratamiento?",
-        answer: "Depende del tipo de tratamiento. Para fumigaciones y ciertos tratamientos, es obligatorio desalojar la propiedad por el tiempo que indique el técnico. El re-ingreso antes del tiempo indicado es bajo su propia responsabilidad y puede ser peligroso para su salud. Le proporcionaremos instrucciones escritas específicas que debe seguir estrictamente. Personas con condiciones respiratorias, mujeres embarazadas, ancianos y niños deben informarnos antes del tratamiento para tomar precauciones adicionales."
+        answer: "Depende del tipo de tratamiento. Para fumigaciones y ciertos tratamientos, es obligatorio desalojar la propiedad por el tiempo que indique el técnico. El re-ingreso antes del tiempo indicado es bajo tu propia responsabilidad y puede ser peligroso para tu salud. Te proporcionaremos instrucciones escritas específicas que debes seguir estrictamente. Personas con condiciones respiratorias, mujeres embarazadas, ancianos y niños deben informarnos antes del tratamiento para tomar precauciones adicionales."
       },
       {
         question: "¿Qué pasa si veo plagas después del tratamiento?",
-        answer: "Es normal observar actividad de plagas durante los primeros 7-14 días mientras el tratamiento hace efecto. Si la actividad persiste más de 14 días, contáctenos para evaluar la situación. El re-tratamiento gratuito aplica solo si: usted siguió todas las instrucciones de preparación y post-tratamiento, no hay nuevas fuentes de infestación, y las condiciones sanitarias de la propiedad son adecuadas. Nuestro técnico evaluará y determinará si procede el re-tratamiento sin costo o si se requiere un servicio adicional."
+        answer: "Es normal observar actividad de plagas durante los primeros 7-14 días mientras el tratamiento hace efecto. Si la actividad persiste más de 14 días, contáctanos para evaluar la situación. El re-tratamiento gratuito aplica solo si: seguiste todas las instrucciones de preparación y post-tratamiento, no hay nuevas fuentes de infestación, y las condiciones sanitarias de la propiedad son adecuadas. Nuestro técnico evaluará y determinará si procede el re-tratamiento sin costo o si se requiere un servicio adicional."
       }
     ],
     
@@ -60,18 +60,18 @@ export const faqs = {
       },
       {
         question: "¿El seguro del hogar cubre los tratamientos de termitas?",
-        answer: "En la mayoría de los casos, las pólizas de seguro de hogar NO cubren daños por termitas ni tratamientos. Le recomendamos verificar su póliza directamente con su aseguradora. Esta información es general y no constituye asesoría sobre seguros. La prevención es la mejor protección para su inversión."
+        answer: "En la mayoría de los casos, las pólizas de seguro de hogar NO cubren daños por termitas ni tratamientos. Te recomendamos verificar tu póliza directamente con tu aseguradora. Esta información es general y no constituye asesoría sobre seguros. La prevención es la mejor protección para tu inversión."
       }
     ],
     
     landscaping: [
       {
         question: "¿Con qué frecuencia debo programar el corte de grama?",
-        answer: "Recomendamos corte de grama cada 2-4 semanas dependiendo de la época del año, tipo de césped y condiciones climáticas. En temporada de lluvia, la grama crece más rápido y puede requerir cortes más frecuentes. Ofrecemos planes de mantenimiento regular para mantener su jardín en óptimas condiciones."
+        answer: "Recomendamos corte de grama cada 2-4 semanas dependiendo de la época del año, tipo de césped y condiciones climáticas. En temporada de lluvia, la grama crece más rápido y puede requerir cortes más frecuentes. Ofrecemos planes de mantenimiento regular para mantener tu jardín en óptimas condiciones."
       },
       {
         question: "¿Qué servicios de jardinería ofrecen?",
-        answer: "Ofrecemos servicios completos de jardinería que incluyen: corte de grama, poda de árboles y arbustos, diseño paisajístico, siembra de plantas y flores, fertilización, control de maleza, limpieza de áreas verdes y mantenimiento general de jardines. Cada servicio se adapta a las necesidades específicas de su propiedad."
+        answer: "Ofrecemos servicios completos de jardinería que incluyen: corte de grama, poda de árboles y arbustos, diseño paisajístico, siembra de plantas y flores, fertilización, control de maleza, limpieza de áreas verdes y mantenimiento general de jardines. Cada servicio se adapta a las necesidades específicas de tu propiedad."
       },
       {
         question: "¿Puedo solicitar un diseño paisajístico completo?",
@@ -94,7 +94,7 @@ export const faqs = {
       },
       {
         question: "¿Puedo programar limpiezas regulares?",
-        answer: "Sí, ofrecemos planes de mantenimiento semanal, quincenal o mensual según sus necesidades. Los clientes con planes regulares reciben precios preferenciales y horarios prioritarios."
+        answer: "Sí, ofrecemos planes de mantenimiento semanal, quincenal o mensual según tus necesidades. Los clientes con planes regulares reciben precios preferenciales y horarios prioritarios."
       },
       {
         question: "¿Está asegurado su personal de limpieza?",
@@ -166,7 +166,7 @@ export const faqs = {
       },
       {
         question: "¿Hay cargos ocultos?",
-        answer: "Nuestras cotizaciones detallan todos los costos conocidos al momento de la evaluación. Sin embargo, pueden surgir cargos adicionales si: las condiciones reales difieren de lo evaluado inicialmente, se requieren tratamientos adicionales no previstos, o el cliente solicita servicios fuera del alcance original. Cualquier cargo adicional será comunicado y aprobado por usted antes de proceder."
+        answer: "Nuestras cotizaciones detallan todos los costos conocidos al momento de la evaluación. Sin embargo, pueden surgir cargos adicionales si: las condiciones reales difieren de lo evaluado inicialmente, se requieren tratamientos adicionales no previstos, o el cliente solicita servicios fuera del alcance original. Cualquier cargo adicional será comunicado y aprobado por ti antes de proceder."
       }
     ]
   },

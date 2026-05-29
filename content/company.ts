@@ -3,7 +3,7 @@ export const company = {
   name: "Acosta Property Services",
   shortName: "Acosta",
   tagline: "Protecting What Matters Most",
-  description: "Professional pest control and property services for homes and businesses across Puerto Rico. Trusted by over 300 customers.",
+  description: "Professional pest control, plumbing, electrical, landscaping and cleaning services for homes, businesses and properties in Puerto Rico.",
   
   // Contact Information
   phone: "(787) 403-9980",

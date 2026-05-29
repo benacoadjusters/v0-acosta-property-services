@@ -8,7 +8,7 @@ export const services = {
       nameEn: "Fumigation",
       shortDescEs: "Tratamiento químico profesional para eliminar plagas de manera efectiva.",
       shortDescEn: "Professional chemical treatment to effectively eliminate pests.",
-      descriptionEs: "Nuestro servicio de fumigación utiliza productos de última generación registrados en la EPA. Antes de cada tratamiento, proporcionamos instrucciones detalladas de preparación y precaución para garantizar la protección adecuada de su familia y mascotas. Aplicamos tratamientos en interiores y exteriores para la eliminación completa de plagas.",
+      descriptionEs: "Nuestro servicio de fumigación utiliza productos de última generación registrados en la EPA. Antes de cada tratamiento, proporcionamos instrucciones detalladas de preparación y precaución para garantizar la protección adecuada de tu familia y mascotas. Aplicamos tratamientos en interiores y exteriores para la eliminación completa de plagas.",
       descriptionEn: "Our fumigation service uses state-of-the-art EPA-registered products. Before each treatment, we provide detailed preparation and precautionary instructions to ensure proper protection for your family and pets. We apply treatments indoors and outdoors for complete pest elimination.",
       icon: "spray",
       image: "/images/pest-control/fumigation.jpg",
@@ -295,7 +295,7 @@ export const services = {
       id: "residential",
       nameEs: "Residencial",
       nameEn: "Residential",
-      descriptionEs: "Protección completa para su hogar y familia contra todo tipo de plagas.",
+      descriptionEs: "Protección completa para tu hogar y familia contra todo tipo de plagas.",
       descriptionEn: "Complete protection for your home and family against all types of pests.",
       icon: "home",
       features: {
