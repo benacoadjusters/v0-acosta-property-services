@@ -130,7 +130,7 @@ export default function AboutPage() {
             </div>
             
             {/* Service cards grid - 5 active services */}
-            <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-3">
+            <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-5 gap-3">
               <Link href="/services/pest-control" className="group relative">
                 <div className="relative aspect-square rounded-xl overflow-hidden shadow-lg">
                   <Image
@@ -223,8 +223,8 @@ export default function AboutPage() {
                 </div>
               </Link>
               
-              <Link href="/services/cleaning" className="group relative col-span-2 md:col-span-1">
-                <div className="relative aspect-square rounded-xl overflow-hidden shadow-lg">
+              <Link href="/services/cleaning" className="group relative sm:col-span-1 col-span-2">
+                <div className="relative aspect-square sm:aspect-square rounded-xl overflow-hidden shadow-lg max-w-[200px] sm:max-w-none mx-auto sm:mx-0">
                   <Image
                     src="/images/hero-cleaning.jpg"
                     alt={language === "es" ? "Limpieza" : "Cleaning"}

@@ -68,15 +68,15 @@ export function SiteHeader() {
 
       {/* Main navigation */}
       <div className="border-b bg-card/95 backdrop-blur supports-[backdrop-filter]:bg-card/80">
-        <div className="container mx-auto flex h-24 items-center justify-between px-4">
-          {/* Logo - Bigger */}
+        <div className="container mx-auto flex h-16 md:h-24 items-center justify-between px-4">
+          {/* Logo - Responsive sizing */}
           <Link href="/" className="flex items-center">
             <Image
               src="/images/logo.png"
               alt="Acosta Property Services"
               width={280}
               height={100}
-              className="h-20 w-auto"
+              className="h-12 md:h-20 w-auto"
               priority
             />
           </Link>
