@@ -145,7 +145,7 @@ export const translations = {
     },
     // Footer
     footer: {
-      description: "Servicios profesionales de control de plagas, jardinería y mantenimiento de propiedades para hogares y negocios en todo Puerto Rico.",
+      description: "Servicios profesionales de control de plagas, plomería, electricidad, jardinería y limpieza para hogares, negocios y propiedades en Puerto Rico.",
       servicesTitle: "Servicios",
       companyTitle: "Empresa",
       resourcesTitle: "Recursos",
@@ -304,7 +304,7 @@ export const translations = {
     },
     // Footer
     footer: {
-      description: "Professional pest control, landscaping and property maintenance services for homes and businesses across Puerto Rico.",
+      description: "Professional pest control, plumbing, electrical, landscaping and cleaning services for homes, businesses and properties in Puerto Rico.",
       servicesTitle: "Services",
       companyTitle: "Company",
       resourcesTitle: "Resources",
