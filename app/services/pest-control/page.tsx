@@ -25,14 +25,14 @@ export default function ServicesPage() {
       <section className="bg-secondary py-16 md:py-20">
         <div className="container mx-auto px-4">
           <div className="max-w-3xl">
-            <span className="text-primary font-semibold text-sm uppercase tracking-wider">{t.nav.services}</span>
+            <span className="text-primary font-semibold text-sm uppercase tracking-wider">{language === "es" ? "Control de Plagas" : "Pest Control"}</span>
             <h1 className="text-4xl md:text-5xl font-bold text-foreground mt-3 mb-6 text-balance">
-              {language === "es" ? "Servicios de Control de Plagas" : "Pest Control Services"}
+              {language === "es" ? "Protege tu propiedad antes de que la plaga avance" : "Protect your property before pests spread"}
             </h1>
             <p className="text-xl text-muted-foreground text-pretty mb-6">
               {language === "es"
-                ? "Ofrecemos soluciones integrales de control de plagas: fumigación, trampeo, y control biológico. Aplicamos el método más adecuado según el tipo de plaga y las necesidades de su propiedad. Certificados por el Departamento de Agricultura y Comercio de Puerto Rico."
-                : "We offer comprehensive pest control solutions: fumigation, trapping, and biological control. We apply the most appropriate method based on the pest type and your property's needs. Certified by the Puerto Rico Department of Agriculture and Commerce."}
+                ? "Fumigación, trampeo y control preventivo para hogares, negocios y propiedades comerciales en Puerto Rico."
+                : "Fumigation, trapping and preventive control for homes, businesses and commercial properties in Puerto Rico."}
             </p>
             <div className="flex flex-wrap gap-3">
               <span className="inline-flex items-center gap-2 bg-primary/10 border border-primary/20 text-primary px-4 py-2 rounded-full text-sm font-medium">
@@ -52,12 +52,12 @@ export default function ServicesPage() {
       <section className="py-16 md:py-20 bg-background">
         <div className="container mx-auto px-4">
           <h2 className="text-2xl md:text-3xl font-bold text-foreground mb-4">
-            {t.serviceCategories.methods}
+            {language === "es" ? "Soluciones según el tipo de plaga" : "Solutions by pest type"}
           </h2>
           <p className="text-muted-foreground text-lg mb-10 max-w-2xl">
             {language === "es"
-              ? "Utilizamos los métodos más efectivos según el tipo de plaga y las necesidades de su propiedad."
-              : "We use the most effective methods depending on the type of pest and your property's needs."}
+              ? "Evaluamos el problema y aplicamos el método adecuado según la plaga, el espacio y las necesidades de tu propiedad."
+              : "We evaluate the problem and apply the right method based on the pest, space and your property's needs."}
           </p>
           
           <div className="grid md:grid-cols-2 gap-8">
@@ -116,7 +116,7 @@ export default function ServicesPage() {
           </h2>
           <p className="text-muted-foreground text-lg mb-10 max-w-2xl">
             {language === "es"
-              ? "Haga clic en cualquier plaga para ver información detallada, imágenes de identificación y métodos de control."
+              ? "Haz clic en cualquier plaga para ver información detallada, imágenes de identificación y métodos de control."
               : "Click on any pest to see detailed information, identification images and control methods."}
           </p>
           
@@ -343,7 +343,12 @@ export default function ServicesPage() {
         </div>
       </section>
 
-      <CTASection />
+      <CTASection 
+        titleEs="¿Ves señales de plagas?"
+        titleEn="Seeing signs of pests?"
+        descriptionEs="Coordina una cotización y atiende el problema antes de que se convierta en una infestación mayor."
+        descriptionEn="Schedule a quote and address the problem before it becomes a major infestation."
+      />
     </>
   )
 }

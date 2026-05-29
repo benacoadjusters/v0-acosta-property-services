@@ -73,8 +73,8 @@ export default function CleaningPage() {
   const benefits = language === "es" ? [
     {
       icon: ShieldCheck,
-      title: "Personal Verificado",
-      description: "Todo nuestro personal pasa por verificación de antecedentes para su tranquilidad."
+      title: "Personal Orientado al Detalle",
+      description: "Nuestro personal está enfocado en los detalles para tu tranquilidad."
     },
     {
       icon: Sparkles,
@@ -88,14 +88,14 @@ export default function CleaningPage() {
     },
     {
       icon: CheckCircle2,
-      title: "Garantía de Satisfacción",
-      description: "Si no está satisfecho, regresamos y lo corregimos sin costo adicional."
+      title: "Servicio Profesional",
+      description: "Enfoque en resultados claros y comunicación durante el proceso."
     }
   ] : [
     {
       icon: ShieldCheck,
-      title: "Verified Staff",
-      description: "All our staff undergoes background checks for your peace of mind."
+      title: "Detail-Oriented Staff",
+      description: "Our staff is focused on details for your peace of mind."
     },
     {
       icon: Sparkles,
@@ -109,8 +109,8 @@ export default function CleaningPage() {
     },
     {
       icon: CheckCircle2,
-      title: "Satisfaction Guarantee",
-      description: "If you're not satisfied, we come back and fix it at no extra cost."
+      title: "Professional Service",
+      description: "Focus on clear results and communication throughout the process."
     }
   ]
 
@@ -146,17 +146,17 @@ export default function CleaningPage() {
             <div>
               <div className="inline-flex items-center gap-2 rounded-full bg-blue-500/10 px-4 py-1.5 text-sm font-medium text-blue-700 mb-4">
                 <SprayCan className="h-4 w-4" />
-                {language === "es" ? "Servicios de Limpieza" : "Cleaning Services"}
+                {language === "es" ? "Limpieza" : "Cleaning"}
               </div>
               <h1 className="text-4xl md:text-5xl font-bold text-foreground mb-6 text-balance">
                 {language === "es" 
-                  ? "Limpieza Profesional para su Propiedad" 
-                  : "Professional Cleaning for Your Property"}
+                  ? "Espacios limpios, listos y presentables" 
+                  : "Clean, ready and presentable spaces"}
               </h1>
               <p className="text-xl text-muted-foreground text-pretty mb-8">
                 {language === "es"
-                  ? "Ofrecemos servicios de limpieza profesional para hogares y negocios en todo Puerto Rico. Personal capacitado, productos de calidad y resultados garantizados."
-                  : "We offer professional cleaning services for homes and businesses throughout Puerto Rico. Trained staff, quality products and guaranteed results."}
+                  ? "Limpieza residencial, comercial, profunda y post-construcción para hogares, oficinas, negocios y propiedades comerciales."
+                  : "Residential, commercial, deep and post-construction cleaning for homes, offices, businesses and commercial properties."}
               </p>
               <div className="flex flex-col sm:flex-row gap-4">
                 <Button asChild size="lg" className="bg-blue-600 hover:bg-blue-700 text-white">
@@ -189,9 +189,9 @@ export default function CleaningPage() {
                     <SprayCan className="h-6 w-6 text-blue-600" />
                   </div>
                   <div>
-                    <p className="text-2xl font-bold text-foreground">100%</p>
+                    <p className="text-2xl font-bold text-foreground">{language === "es" ? "Servicio" : "Professional"}</p>
                     <p className="text-sm text-muted-foreground">
-                      {language === "es" ? "Garantizado" : "Guaranteed"}
+                      {language === "es" ? "Profesional" : "Service"}
                     </p>
                   </div>
                 </div>
@@ -206,12 +206,12 @@ export default function CleaningPage() {
         <div className="container mx-auto px-4">
           <div className="text-center max-w-3xl mx-auto mb-12">
             <h2 className="text-3xl md:text-4xl font-bold text-foreground mb-4">
-              {language === "es" ? "Nuestros Servicios de Limpieza" : "Our Cleaning Services"}
+              {language === "es" ? "Servicios de limpieza para cada necesidad" : "Cleaning services for every need"}
             </h2>
             <p className="text-lg text-muted-foreground">
               {language === "es"
-                ? "Ofrecemos una gama completa de servicios de limpieza profesional."
-                : "We offer a complete range of professional cleaning services."}
+                ? "Ya sea una limpieza profunda, mantenimiento regular o limpieza después de construcción, te ayudamos a preparar el espacio para su uso."
+                : "Whether it's deep cleaning, regular maintenance or post-construction cleaning, we help you prepare the space for use."}
             </p>
           </div>
 
@@ -346,13 +346,13 @@ export default function CleaningPage() {
           <div className="max-w-3xl mx-auto text-center">
             <h2 className="text-3xl md:text-4xl font-bold mb-4 text-balance">
               {language === "es" 
-                ? "¿Listo para un Espacio Impecable?" 
-                : "Ready for a Spotless Space?"}
+                ? "¿Necesitas limpiar una propiedad?" 
+                : "Need to clean a property?"}
             </h2>
             <p className="text-lg text-white/80 mb-8 text-pretty">
               {language === "es" 
-                ? "Solicite una cotización gratis. Evaluamos su espacio y le presentamos un plan personalizado."
-                : "Request a free quote. We evaluate your space and present you with a personalized plan."}
+                ? "Cuéntanos el tipo de espacio y el nivel de limpieza que necesitas para orientarte con una cotización."
+                : "Tell us the type of space and level of cleaning you need so we can guide you with a quote."}
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Button asChild size="lg" className="bg-white text-blue-700 hover:bg-white/90 font-semibold">

@@ -73,44 +73,44 @@ export default function ElectricalPage() {
   const benefits = language === "es" ? [
     {
       icon: ShieldCheck,
-      title: "Seguridad Primero",
-      description: "Todo trabajo cumple con códigos eléctricos. Su seguridad es nuestra prioridad."
+      title: "Enfoque en Seguridad",
+      description: "Trabajamos con enfoque en seguridad y buenas prácticas eléctricas."
     },
     {
       icon: Clock,
       title: "Respuesta Rápida",
-      description: "Atendemos emergencias eléctricas con prontitud para su tranquilidad."
+      description: "Atendemos problemas eléctricos con prontitud para tu tranquilidad."
     },
     {
       icon: ThumbsUp,
-      title: "Trabajo Garantizado",
-      description: "Garantizamos todos nuestros trabajos eléctricos por su tranquilidad."
+      title: "Orientación Clara",
+      description: "Te orientamos con claridad antes de comenzar el trabajo."
     },
     {
       icon: CheckCircle2,
-      title: "Electricistas Certificados",
-      description: "Personal con licencia y experiencia en trabajo eléctrico profesional."
+      title: "Personal Capacitado",
+      description: "Personal con experiencia en trabajo eléctrico residencial y comercial."
     }
   ] : [
     {
       icon: ShieldCheck,
-      title: "Safety First",
-      description: "All work meets electrical codes. Your safety is our priority."
+      title: "Safety Focus",
+      description: "We work with a focus on safety and good electrical practices."
     },
     {
       icon: Clock,
       title: "Fast Response",
-      description: "We handle electrical emergencies promptly for your peace of mind."
+      description: "We handle electrical problems promptly for your peace of mind."
     },
     {
       icon: ThumbsUp,
-      title: "Guaranteed Work",
-      description: "We guarantee all our electrical work for your peace of mind."
+      title: "Clear Guidance",
+      description: "We guide you clearly before starting the work."
     },
     {
       icon: CheckCircle2,
-      title: "Licensed Electricians",
-      description: "Licensed and experienced professional electrical staff."
+      title: "Trained Staff",
+      description: "Staff with experience in residential and commercial electrical work."
     }
   ]
 
@@ -146,17 +146,17 @@ export default function ElectricalPage() {
             <div>
               <div className="inline-flex items-center gap-2 rounded-full bg-yellow-500/10 px-4 py-1.5 text-sm font-medium text-yellow-700 mb-4">
                 <Zap className="h-4 w-4" />
-                {language === "es" ? "Servicios Eléctricos" : "Electrical Services"}
+                {language === "es" ? "Electricidad" : "Electrical"}
               </div>
               <h1 className="text-4xl md:text-5xl font-bold text-foreground mb-6 text-balance">
                 {language === "es" 
-                  ? "Electricidad Profesional y Segura" 
-                  : "Professional and Safe Electrical"}
+                  ? "Soluciones eléctricas seguras para tu propiedad" 
+                  : "Safe electrical solutions for your property"}
               </h1>
               <p className="text-xl text-muted-foreground text-pretty mb-8">
                 {language === "es"
-                  ? "Servicios eléctricos confiables para hogares y negocios en Puerto Rico. Instalaciones, reparaciones y mantenimiento con los más altos estándares de seguridad."
-                  : "Reliable electrical services for homes and businesses in Puerto Rico. Installations, repairs and maintenance with the highest safety standards."}
+                  ? "Instalaciones y reparaciones eléctricas para paneles, breakers, tomacorrientes, iluminación y abanicos de techo."
+                  : "Electrical installations and repairs for panels, breakers, outlets, lighting and ceiling fans."}
               </p>
               <div className="flex flex-col sm:flex-row gap-4">
                 <Button asChild size="lg" className="bg-yellow-600 hover:bg-yellow-700 text-white">
@@ -189,9 +189,9 @@ export default function ElectricalPage() {
                     <ShieldCheck className="h-6 w-6 text-yellow-600" />
                   </div>
                   <div>
-                    <p className="text-2xl font-bold text-foreground">100%</p>
+                    <p className="text-2xl font-bold text-foreground">{language === "es" ? "Trabajo" : "Safe"}</p>
                     <p className="text-sm text-muted-foreground">
-                      {language === "es" ? "Seguro" : "Safe"}
+                      {language === "es" ? "Seguro" : "Work"}
                     </p>
                   </div>
                 </div>
@@ -206,12 +206,12 @@ export default function ElectricalPage() {
         <div className="container mx-auto px-4">
           <div className="text-center max-w-3xl mx-auto mb-12">
             <h2 className="text-3xl md:text-4xl font-bold text-foreground mb-4">
-              {language === "es" ? "Nuestros Servicios Eléctricos" : "Our Electrical Services"}
+              {language === "es" ? "Servicios eléctricos para mantener todo funcionando" : "Electrical services to keep everything running"}
             </h2>
             <p className="text-lg text-muted-foreground">
               {language === "es"
-                ? "Soluciones eléctricas completas para todas sus necesidades."
-                : "Complete electrical solutions for all your needs."}
+                ? "Trabajamos problemas eléctricos comunes con enfoque en seguridad, orden y funcionamiento confiable."
+                : "We handle common electrical problems with a focus on safety, order and reliable operation."}
             </p>
           </div>
 
@@ -346,13 +346,13 @@ export default function ElectricalPage() {
           <div className="max-w-3xl mx-auto text-center">
             <h2 className="text-3xl md:text-4xl font-bold mb-4 text-balance">
               {language === "es" 
-                ? "¿Necesita un Electricista?" 
-                : "Need an Electrician?"}
+                ? "¿Necesitas revisar algo eléctrico?" 
+                : "Need to check something electrical?"}
             </h2>
             <p className="text-lg text-white/80 mb-8 text-pretty">
               {language === "es" 
-                ? "Contáctenos hoy para una cotización gratis. Trabajo seguro, profesional y garantizado."
-                : "Contact us today for a free quote. Safe, professional and guaranteed work."}
+                ? "Coordina una cotización para instalaciones, reparaciones o mejoras eléctricas en tu propiedad."
+                : "Schedule a quote for electrical installations, repairs or upgrades on your property."}
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Button asChild size="lg" className="bg-white text-yellow-700 hover:bg-white/90 font-semibold">

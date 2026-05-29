@@ -89,8 +89,8 @@ export default function LandscapingPage() {
     },
     {
       icon: CheckCircle2,
-      title: "Garantía de Satisfacción",
-      description: "Si no está satisfecho con nuestro trabajo, lo corregimos sin costo adicional."
+      title: "Seguimiento del Trabajo",
+      description: "Nos enfocamos en dejar claro el alcance del servicio y mantener buena comunicación durante el proceso."
     }
   ] : [
     {
@@ -110,8 +110,8 @@ export default function LandscapingPage() {
     },
     {
       icon: CheckCircle2,
-      title: "Satisfaction Guarantee",
-      description: "If you're not satisfied with our work, we'll fix it at no additional cost."
+      title: "Work Follow-up",
+      description: "We focus on clarifying the scope of service and maintaining good communication throughout the process."
     }
   ]
 
@@ -147,17 +147,17 @@ export default function LandscapingPage() {
             <div>
               <div className="inline-flex items-center gap-2 rounded-full bg-green-500/10 px-4 py-1.5 text-sm font-medium text-green-700 mb-4">
                 <TreePine className="h-4 w-4" />
-                {language === "es" ? "Servicios de Jardinería" : "Landscaping Services"}
+                {language === "es" ? "Jardinería" : "Landscaping"}
               </div>
               <h1 className="text-4xl md:text-5xl font-bold text-foreground mb-6 text-balance">
                 {language === "es" 
-                  ? "Jardinería Profesional para su Propiedad" 
-                  : "Professional Landscaping for Your Property"}
+                  ? "Haz que tu propiedad se vea cuidada desde la entrada" 
+                  : "Make your property look cared for from the entrance"}
               </h1>
               <p className="text-xl text-muted-foreground text-pretty mb-8">
                 {language === "es"
-                  ? "Transformamos y mantenemos las áreas verdes de su hogar o negocio. Desde corte de grama hasta diseño paisajístico completo, cuidamos cada detalle de su jardín."
-                  : "We transform and maintain the green areas of your home or business. From lawn mowing to complete landscape design, we take care of every detail of your garden."}
+                  ? "Corte de grama, poda, mantenimiento de jardines y limpieza de áreas verdes para hogares, negocios y propiedades comerciales."
+                  : "Lawn mowing, pruning, garden maintenance and green area cleaning for homes, businesses and commercial properties."}
               </p>
               <div className="flex flex-col sm:flex-row gap-4">
                 <Button asChild size="lg" className="bg-green-600 hover:bg-green-700 text-white">
@@ -190,9 +190,9 @@ export default function LandscapingPage() {
                     <TreePine className="h-6 w-6 text-green-600" />
                   </div>
                   <div>
-                    <p className="text-2xl font-bold text-foreground">100%</p>
+                    <p className="text-2xl font-bold text-foreground">{language === "es" ? "Servicio" : "Professional"}</p>
                     <p className="text-sm text-muted-foreground">
-                      {language === "es" ? "Satisfacción" : "Satisfaction"}
+                      {language === "es" ? "Profesional" : "Service"}
                     </p>
                   </div>
                 </div>
@@ -207,12 +207,12 @@ export default function LandscapingPage() {
         <div className="container mx-auto px-4">
           <div className="text-center max-w-3xl mx-auto mb-12">
             <h2 className="text-3xl md:text-4xl font-bold text-foreground mb-4">
-              {language === "es" ? "Nuestros Servicios de Jardinería" : "Our Landscaping Services"}
+              {language === "es" ? "Jardinería para mantener tus áreas verdes presentables" : "Landscaping to keep your green areas presentable"}
             </h2>
             <p className="text-lg text-muted-foreground">
               {language === "es"
-                ? "Ofrecemos una gama completa de servicios para mantener su propiedad hermosa."
-                : "We offer a complete range of services to keep your property beautiful."}
+                ? "Un exterior limpio y bien mantenido mejora la apariencia de tu propiedad y crea una mejor primera impresión."
+                : "A clean, well-maintained exterior improves your property's appearance and creates a better first impression."}
             </p>
           </div>
 
@@ -347,13 +347,13 @@ export default function LandscapingPage() {
           <div className="max-w-3xl mx-auto text-center">
             <h2 className="text-3xl md:text-4xl font-bold mb-4 text-balance">
               {language === "es" 
-                ? "¿Listo para Transformar su Jardín?" 
-                : "Ready to Transform Your Garden?"}
+                ? "¿Tu patio o jardín necesita atención?" 
+                : "Does your yard or garden need attention?"}
             </h2>
             <p className="text-lg text-white/80 mb-8 text-pretty">
               {language === "es" 
-                ? "Solicite una cotización gratis y sin compromiso. Visitamos su propiedad y le presentamos un plan personalizado."
-                : "Request a free, no-obligation quote. We visit your property and present you with a personalized plan."}
+                ? "Coordina una cotización para corte de grama, poda o mantenimiento de áreas verdes."
+                : "Schedule a quote for lawn mowing, pruning or green area maintenance."}
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Button asChild size="lg" className="bg-white text-green-700 hover:bg-white/90 font-semibold">

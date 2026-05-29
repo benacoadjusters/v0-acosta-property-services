@@ -74,43 +74,43 @@ export default function PlumbingPage() {
     {
       icon: Clock,
       title: "Respuesta Rápida",
-      description: "Atendemos emergencias de plomería el mismo día. Su tiempo es valioso."
+      description: "Atendemos problemas de plomería con prontitud. Tu tiempo es valioso."
     },
     {
       icon: ShieldCheck,
-      title: "Trabajo Garantizado",
-      description: "Todos nuestros trabajos tienen garantía. Si algo falla, lo arreglamos."
+      title: "Trabajo Profesional",
+      description: "Personal capacitado con experiencia en plomería residencial y comercial."
     },
     {
       icon: ThumbsUp,
-      title: "Precios Justos",
-      description: "Cotizaciones claras sin sorpresas. Sabe exactamente lo que pagará."
+      title: "Precios Claros",
+      description: "Cotizaciones transparentes sin sorpresas. Sabes exactamente lo que pagarás."
     },
     {
       icon: CheckCircle2,
-      title: "Técnicos Capacitados",
-      description: "Personal con experiencia y certificaciones en plomería profesional."
+      title: "Orientación Clara",
+      description: "Te explicamos el problema y las opciones antes de comenzar el trabajo."
     }
   ] : [
     {
       icon: Clock,
       title: "Fast Response",
-      description: "We handle plumbing emergencies the same day. Your time is valuable."
+      description: "We handle plumbing problems promptly. Your time is valuable."
     },
     {
       icon: ShieldCheck,
-      title: "Guaranteed Work",
-      description: "All our work is guaranteed. If something fails, we fix it."
+      title: "Professional Work",
+      description: "Trained staff with experience in residential and commercial plumbing."
     },
     {
       icon: ThumbsUp,
-      title: "Fair Prices",
-      description: "Clear quotes with no surprises. You know exactly what you'll pay."
+      title: "Clear Pricing",
+      description: "Transparent quotes with no surprises. You know exactly what you'll pay."
     },
     {
       icon: CheckCircle2,
-      title: "Trained Technicians",
-      description: "Experienced and certified professional plumbing staff."
+      title: "Clear Guidance",
+      description: "We explain the problem and options before starting the work."
     }
   ]
 
@@ -146,17 +146,17 @@ export default function PlumbingPage() {
             <div>
               <div className="inline-flex items-center gap-2 rounded-full bg-cyan-500/10 px-4 py-1.5 text-sm font-medium text-cyan-700 mb-4">
                 <Wrench className="h-4 w-4" />
-                {language === "es" ? "Servicios de Plomería" : "Plumbing Services"}
+                {language === "es" ? "Plomería" : "Plumbing"}
               </div>
               <h1 className="text-4xl md:text-5xl font-bold text-foreground mb-6 text-balance">
                 {language === "es" 
-                  ? "Plomería Profesional y Confiable" 
-                  : "Professional and Reliable Plumbing"}
+                  ? "Resuelve fugas, destapes y problemas de agua sin complicaciones" 
+                  : "Solve leaks, clogs and water problems without complications"}
               </h1>
               <p className="text-xl text-muted-foreground text-pretty mb-8">
                 {language === "es"
-                  ? "Resolvemos todos sus problemas de plomería en Puerto Rico. Reparaciones, instalaciones, destapes y mantenimiento con respuesta rápida y trabajo garantizado."
-                  : "We solve all your plumbing problems in Puerto Rico. Repairs, installations, unclogging and maintenance with fast response and guaranteed work."}
+                  ? "Reparaciones de plomería para tuberías, desagües, calentadores, grifos e inodoros en hogares, negocios y propiedades comerciales."
+                  : "Plumbing repairs for pipes, drains, water heaters, faucets and toilets in homes, businesses and commercial properties."}
               </p>
               <div className="flex flex-col sm:flex-row gap-4">
                 <Button asChild size="lg" className="bg-cyan-600 hover:bg-cyan-700 text-white">
@@ -206,12 +206,12 @@ export default function PlumbingPage() {
         <div className="container mx-auto px-4">
           <div className="text-center max-w-3xl mx-auto mb-12">
             <h2 className="text-3xl md:text-4xl font-bold text-foreground mb-4">
-              {language === "es" ? "Nuestros Servicios de Plomería" : "Our Plumbing Services"}
+              {language === "es" ? "Servicios de plomería que mantienen tu propiedad funcionando" : "Plumbing services that keep your property running"}
             </h2>
             <p className="text-lg text-muted-foreground">
               {language === "es"
-                ? "Soluciones completas para todas sus necesidades de plomería."
-                : "Complete solutions for all your plumbing needs."}
+                ? "Desde una fuga pequeña hasta un desagüe obstruido, atendemos problemas que pueden afectar tu rutina y causar daños si se dejan pasar."
+                : "From a small leak to a clogged drain, we handle problems that can affect your routine and cause damage if left unattended."}
             </p>
           </div>
 
@@ -346,13 +346,13 @@ export default function PlumbingPage() {
           <div className="max-w-3xl mx-auto text-center">
             <h2 className="text-3xl md:text-4xl font-bold mb-4 text-balance">
               {language === "es" 
-                ? "¿Emergencia de Plomería?" 
-                : "Plumbing Emergency?"}
+                ? "¿Problemas de plomería?" 
+                : "Plumbing problems?"}
             </h2>
             <p className="text-lg text-white/80 mb-8 text-pretty">
               {language === "es" 
-                ? "No espere a que el problema empeore. Llámenos ahora y resolvemos su emergencia hoy mismo."
-                : "Don't wait for the problem to get worse. Call us now and we'll solve your emergency today."}
+                ? "No esperes a que una fuga, un desagüe tapado o un calentador defectuoso se convierta en un problema mayor."
+                : "Don't wait for a leak, clogged drain or faulty water heater to become a bigger problem."}
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Button asChild size="lg" className="bg-white text-cyan-700 hover:bg-white/90 font-semibold">
