@@ -9,7 +9,6 @@ import {
   AccordionItem,
   AccordionTrigger,
 } from "@/components/ui/accordion"
-import { CTASection } from "@/components/sections/cta-section"
 import { company } from "@/content/company"
 import { useLanguage } from "@/lib/language-context"
 
@@ -333,8 +332,6 @@ export default function FAQPage() {
           </div>
         </div>
       </section>
-
-      <CTASection />
     </>
   )
 }
