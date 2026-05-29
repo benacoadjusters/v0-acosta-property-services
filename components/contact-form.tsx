@@ -21,19 +21,12 @@ const municipalities = [
 
 const serviceOptions = {
   es: [
+    // Active services in correct order
     { value: "pest-general", label: "Control de Plagas - General", group: "plagas" },
     { value: "pest-termite", label: "Control de Plagas - Termitas", group: "plagas" },
     { value: "pest-rodent", label: "Control de Plagas - Roedores", group: "plagas" },
     { value: "pest-mosquito", label: "Control de Plagas - Mosquitos", group: "plagas" },
     { value: "pest-bed-bug", label: "Control de Plagas - Chinches", group: "plagas" },
-    { value: "landscaping-lawn", label: "Jardinería - Corte de Grama", group: "jardineria" },
-    { value: "landscaping-pruning", label: "Jardinería - Poda", group: "jardineria" },
-    { value: "landscaping-design", label: "Jardinería - Diseño Paisajístico", group: "jardineria" },
-    { value: "landscaping-maintenance", label: "Jardinería - Mantenimiento", group: "jardineria" },
-    { value: "cleaning-deep", label: "Limpieza - Profunda", group: "limpieza" },
-    { value: "cleaning-office", label: "Limpieza - Oficinas", group: "limpieza" },
-    { value: "cleaning-post-construction", label: "Limpieza - Post-Construcción", group: "limpieza" },
-    { value: "cleaning-maintenance", label: "Limpieza - Mantenimiento", group: "limpieza" },
     { value: "plumbing-repair", label: "Plomería - Reparación", group: "plomeria" },
     { value: "plumbing-drain", label: "Plomería - Destape", group: "plomeria" },
     { value: "plumbing-heater", label: "Plomería - Calentador", group: "plomeria" },
@@ -42,24 +35,31 @@ const serviceOptions = {
     { value: "electrical-outlets", label: "Electricidad - Tomacorrientes", group: "electricidad" },
     { value: "electrical-lighting", label: "Electricidad - Iluminación", group: "electricidad" },
     { value: "electrical-fan", label: "Electricidad - Abanicos", group: "electricidad" },
+    { value: "landscaping-lawn", label: "Jardinería - Corte de Grama", group: "jardineria" },
+    { value: "landscaping-pruning", label: "Jardinería - Poda", group: "jardineria" },
+    { value: "landscaping-design", label: "Jardinería - Diseño Paisajístico", group: "jardineria" },
+    { value: "landscaping-maintenance", label: "Jardinería - Mantenimiento", group: "jardineria" },
+    { value: "cleaning-deep", label: "Limpieza - Profunda", group: "limpieza" },
+    { value: "cleaning-office", label: "Limpieza - Oficinas", group: "limpieza" },
+    { value: "cleaning-post-construction", label: "Limpieza - Post-Construcción", group: "limpieza" },
+    { value: "cleaning-maintenance", label: "Limpieza - Mantenimiento", group: "limpieza" },
+    // Coming soon services
+    { value: "water-damage", label: "Mitigación de daños por agua — Próximamente", group: "proximamente" },
+    { value: "handyman", label: "Reparaciones handyman — Próximamente", group: "proximamente" },
+    { value: "roof-sealing", label: "Sellado de techos — Próximamente", group: "proximamente" },
+    { value: "lead-asbestos", label: "Mitigación de plomo y asbesto — Próximamente", group: "proximamente" },
+    // Other
     { value: "commercial", label: "Servicios Comerciales", group: "otros" },
     { value: "inspection", label: "Inspección Gratis", group: "otros" },
     { value: "other", label: "Otro", group: "otros" },
   ],
   en: [
+    // Active services in correct order
     { value: "pest-general", label: "Pest Control - General", group: "pests" },
     { value: "pest-termite", label: "Pest Control - Termites", group: "pests" },
     { value: "pest-rodent", label: "Pest Control - Rodents", group: "pests" },
     { value: "pest-mosquito", label: "Pest Control - Mosquitoes", group: "pests" },
     { value: "pest-bed-bug", label: "Pest Control - Bed Bugs", group: "pests" },
-    { value: "landscaping-lawn", label: "Landscaping - Lawn Mowing", group: "landscaping" },
-    { value: "landscaping-pruning", label: "Landscaping - Pruning", group: "landscaping" },
-    { value: "landscaping-design", label: "Landscaping - Design", group: "landscaping" },
-    { value: "landscaping-maintenance", label: "Landscaping - Maintenance", group: "landscaping" },
-    { value: "cleaning-deep", label: "Cleaning - Deep Cleaning", group: "cleaning" },
-    { value: "cleaning-office", label: "Cleaning - Office", group: "cleaning" },
-    { value: "cleaning-post-construction", label: "Cleaning - Post-Construction", group: "cleaning" },
-    { value: "cleaning-maintenance", label: "Cleaning - Maintenance", group: "cleaning" },
     { value: "plumbing-repair", label: "Plumbing - Repair", group: "plumbing" },
     { value: "plumbing-drain", label: "Plumbing - Drain Cleaning", group: "plumbing" },
     { value: "plumbing-heater", label: "Plumbing - Water Heater", group: "plumbing" },
@@ -68,6 +68,20 @@ const serviceOptions = {
     { value: "electrical-outlets", label: "Electrical - Outlets", group: "electrical" },
     { value: "electrical-lighting", label: "Electrical - Lighting", group: "electrical" },
     { value: "electrical-fan", label: "Electrical - Ceiling Fans", group: "electrical" },
+    { value: "landscaping-lawn", label: "Landscaping - Lawn Mowing", group: "landscaping" },
+    { value: "landscaping-pruning", label: "Landscaping - Pruning", group: "landscaping" },
+    { value: "landscaping-design", label: "Landscaping - Design", group: "landscaping" },
+    { value: "landscaping-maintenance", label: "Landscaping - Maintenance", group: "landscaping" },
+    { value: "cleaning-deep", label: "Cleaning - Deep Cleaning", group: "cleaning" },
+    { value: "cleaning-office", label: "Cleaning - Office", group: "cleaning" },
+    { value: "cleaning-post-construction", label: "Cleaning - Post-Construction", group: "cleaning" },
+    { value: "cleaning-maintenance", label: "Cleaning - Maintenance", group: "cleaning" },
+    // Coming soon services
+    { value: "water-damage", label: "Water Damage Mitigation — Coming Soon", group: "comingsoon" },
+    { value: "handyman", label: "Handyman Repairs — Coming Soon", group: "comingsoon" },
+    { value: "roof-sealing", label: "Roof Sealing — Coming Soon", group: "comingsoon" },
+    { value: "lead-asbestos", label: "Lead & Asbestos Mitigation — Coming Soon", group: "comingsoon" },
+    // Other
     { value: "commercial", label: "Commercial Services", group: "other" },
     { value: "inspection", label: "Free Inspection", group: "other" },
     { value: "other", label: "Other", group: "other" },
@@ -206,6 +220,7 @@ export function ContactForm() {
                   <SelectValue placeholder={t.contact.servicePlaceholder} />
                 </SelectTrigger>
                 <SelectContent>
+                  {/* 1. Control de Plagas */}
                   <SelectItem value="header-pest" disabled className="font-semibold text-primary">
                     {language === "es" ? "-- Control de Plagas --" : "-- Pest Control --"}
                   </SelectItem>
@@ -214,22 +229,7 @@ export function ContactForm() {
                       {option.label.split(" - ")[1]}
                     </SelectItem>
                   ))}
-                  <SelectItem value="header-landscaping" disabled className="font-semibold text-green-600">
-                    {language === "es" ? "-- Jardinería --" : "-- Landscaping --"}
-                  </SelectItem>
-                  {serviceOptions[language].filter(o => o.group === (language === "es" ? "jardineria" : "landscaping")).map((option) => (
-                    <SelectItem key={option.value} value={option.value}>
-                      {option.label.split(" - ")[1]}
-                    </SelectItem>
-                  ))}
-                  <SelectItem value="header-cleaning" disabled className="font-semibold text-blue-600">
-                    {language === "es" ? "-- Limpieza --" : "-- Cleaning --"}
-                  </SelectItem>
-                  {serviceOptions[language].filter(o => o.group === (language === "es" ? "limpieza" : "cleaning")).map((option) => (
-                    <SelectItem key={option.value} value={option.value}>
-                      {option.label.split(" - ")[1]}
-                    </SelectItem>
-                  ))}
+                  {/* 2. Plomería */}
                   <SelectItem value="header-plumbing" disabled className="font-semibold text-cyan-600">
                     {language === "es" ? "-- Plomería --" : "-- Plumbing --"}
                   </SelectItem>
@@ -238,6 +238,7 @@ export function ContactForm() {
                       {option.label.split(" - ")[1]}
                     </SelectItem>
                   ))}
+                  {/* 3. Electricidad */}
                   <SelectItem value="header-electrical" disabled className="font-semibold text-yellow-600">
                     {language === "es" ? "-- Electricidad --" : "-- Electrical --"}
                   </SelectItem>
@@ -246,6 +247,34 @@ export function ContactForm() {
                       {option.label.split(" - ")[1]}
                     </SelectItem>
                   ))}
+                  {/* 4. Jardinería */}
+                  <SelectItem value="header-landscaping" disabled className="font-semibold text-green-600">
+                    {language === "es" ? "-- Jardinería --" : "-- Landscaping --"}
+                  </SelectItem>
+                  {serviceOptions[language].filter(o => o.group === (language === "es" ? "jardineria" : "landscaping")).map((option) => (
+                    <SelectItem key={option.value} value={option.value}>
+                      {option.label.split(" - ")[1]}
+                    </SelectItem>
+                  ))}
+                  {/* 5. Limpieza */}
+                  <SelectItem value="header-cleaning" disabled className="font-semibold text-blue-600">
+                    {language === "es" ? "-- Limpieza --" : "-- Cleaning --"}
+                  </SelectItem>
+                  {serviceOptions[language].filter(o => o.group === (language === "es" ? "limpieza" : "cleaning")).map((option) => (
+                    <SelectItem key={option.value} value={option.value}>
+                      {option.label.split(" - ")[1]}
+                    </SelectItem>
+                  ))}
+                  {/* Próximamente */}
+                  <SelectItem value="header-comingsoon" disabled className="font-semibold text-muted-foreground">
+                    {language === "es" ? "-- Próximamente --" : "-- Coming Soon --"}
+                  </SelectItem>
+                  {serviceOptions[language].filter(o => o.group === (language === "es" ? "proximamente" : "comingsoon")).map((option) => (
+                    <SelectItem key={option.value} value={option.value}>
+                      {option.label}
+                    </SelectItem>
+                  ))}
+                  {/* Otros */}
                   <SelectItem value="header-other" disabled className="font-semibold text-muted-foreground">
                     {language === "es" ? "-- Otros --" : "-- Other --"}
                   </SelectItem>

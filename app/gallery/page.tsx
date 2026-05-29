@@ -3,8 +3,9 @@
 import { useState } from "react"
 import Image from "next/image"
 import Link from "next/link"
-import { MapPin, Filter } from "lucide-react"
+import { MapPin, Filter, Camera } from "lucide-react"
 import { Button } from "@/components/ui/button"
+import { Card, CardContent } from "@/components/ui/card"
 import { CTASection } from "@/components/sections/cta-section"
 import { galleryItems } from "@/content/gallery"
 import { cn } from "@/lib/utils"
@@ -15,16 +16,25 @@ export default function GalleryPage() {
   const [activeCategory, setActiveCategory] = useState("all")
 
   const galleryCategories = [
-    { id: "all", name: t.gallery.filterAll },
+    { id: "all", name: language === "es" ? "Todos" : "All" },
     { id: "pest-control", name: language === "es" ? "Control de Plagas" : "Pest Control" },
+    { id: "plumbing", name: language === "es" ? "Plomería" : "Plumbing" },
+    { id: "electrical", name: language === "es" ? "Electricidad" : "Electrical" },
     { id: "landscaping", name: language === "es" ? "Jardinería" : "Landscaping" },
-    { id: "residential", name: t.gallery.filterResidential },
-    { id: "commercial", name: t.gallery.filterCommercial },
+    { id: "cleaning", name: language === "es" ? "Limpieza" : "Cleaning" },
+    { id: "residential", name: language === "es" ? "Residencial" : "Residential" },
+    { id: "commercial", name: language === "es" ? "Comercial" : "Commercial" },
   ]
 
   const filteredItems = activeCategory === "all" 
     ? galleryItems 
     : galleryItems.filter(item => item.category === activeCategory)
+
+  // Check if we have images for plumbing, electrical, or cleaning
+  const hasPlumbingImages = galleryItems.some(item => item.category === "plumbing")
+  const hasElectricalImages = galleryItems.some(item => item.category === "electrical")
+  const hasCleaningImages = galleryItems.some(item => item.category === "cleaning")
+  const showComingSoonNotice = !hasPlumbingImages || !hasElectricalImages || !hasCleaningImages
 
   return (
     <>
@@ -33,13 +43,15 @@ export default function GalleryPage() {
         <div className="container mx-auto px-4">
           <div className="max-w-3xl">
             <span className="text-primary font-semibold text-sm uppercase tracking-wider">
-              {language === "es" ? "Nuestro Trabajo" : "Our Work"}
+              {language === "es" ? "Galería" : "Gallery"}
             </span>
             <h1 className="text-4xl md:text-5xl font-bold text-foreground mt-3 mb-6 text-balance">
-              {t.gallery.title}
+              {language === "es" ? "Galería de servicios" : "Services Gallery"}
             </h1>
             <p className="text-xl text-muted-foreground text-pretty">
-              {t.gallery.subtitle}
+              {language === "es" 
+                ? "Mira ejemplos visuales de los servicios que ofrecemos para propiedades en Puerto Rico."
+                : "See visual examples of the services we offer for properties in Puerto Rico."}
             </p>
           </div>
         </div>
@@ -97,9 +109,12 @@ export default function GalleryPage() {
 
                 <div className="absolute top-3 left-3 px-3 py-1 bg-card/90 backdrop-blur rounded-full text-xs font-medium capitalize">
                   {item.category === "pest-control" && (language === "es" ? "Control de Plagas" : "Pest Control")}
+                  {item.category === "plumbing" && (language === "es" ? "Plomería" : "Plumbing")}
+                  {item.category === "electrical" && (language === "es" ? "Electricidad" : "Electrical")}
                   {item.category === "landscaping" && (language === "es" ? "Jardinería" : "Landscaping")}
-                  {item.category === "residential" && t.gallery.filterResidential}
-                  {item.category === "commercial" && t.gallery.filterCommercial}
+                  {item.category === "cleaning" && (language === "es" ? "Limpieza" : "Cleaning")}
+                  {item.category === "residential" && (language === "es" ? "Residencial" : "Residential")}
+                  {item.category === "commercial" && (language === "es" ? "Comercial" : "Commercial")}
                 </div>
               </div>
             ))}
@@ -109,7 +124,7 @@ export default function GalleryPage() {
             <div className="text-center py-12">
               <p className="text-muted-foreground">
                 {language === "es" 
-                  ? "No se encontraron proyectos en esta categoria." 
+                  ? "No se encontraron proyectos en esta categoría." 
                   : "No projects found in this category."}
               </p>
             </div>
@@ -117,17 +132,40 @@ export default function GalleryPage() {
         </div>
       </section>
 
-      {/* Info Section */}
+      {/* Coming Soon Notice - only show if missing images for plumbing/electrical/cleaning */}
+      {showComingSoonNotice && (
+        <section className="py-12 bg-secondary/50">
+          <div className="container mx-auto px-4">
+            <Card className="max-w-xl mx-auto">
+              <CardContent className="p-6 text-center">
+                <div className="flex h-12 w-12 items-center justify-center rounded-full bg-primary/10 mx-auto mb-4">
+                  <Camera className="h-6 w-6 text-primary" />
+                </div>
+                <h3 className="text-lg font-bold text-foreground mb-2">
+                  {language === "es" ? "Más fotos próximamente" : "More photos coming soon"}
+                </h3>
+                <p className="text-muted-foreground text-sm">
+                  {language === "es"
+                    ? "Estamos actualizando la galería para incluir trabajos de plomería, electricidad y limpieza."
+                    : "We are updating the gallery to include plumbing, electrical and cleaning work."}
+                </p>
+              </CardContent>
+            </Card>
+          </div>
+        </section>
+      )}
+
+      {/* Info Section - Updated CTA */}
       <section className="py-12 bg-secondary">
         <div className="container mx-auto px-4">
           <div className="max-w-3xl mx-auto text-center">
             <h2 className="text-2xl font-bold text-foreground mb-4">
-              {language === "es" ? "Vea los Resultados por Si Mismo" : "See the Results for Yourself"}
+              {language === "es" ? "¿Quieres ver tu propiedad lista y funcionando?" : "Want to see your property ready and working?"}
             </h2>
             <p className="text-muted-foreground mb-6">
               {language === "es"
-                ? "Estos proyectos representan solo una muestra de las propiedades que hemos protegido en Puerto Rico."
-                : "These projects represent just a sample of the properties we've protected in Puerto Rico."}
+                ? "Cotiza el servicio que necesitas y coordinamos la atención según tu propiedad."
+                : "Quote the service you need and we'll coordinate attention according to your property."}
             </p>
             <Button asChild>
               <Link href="/contact">{t.ui.getQuote}</Link>

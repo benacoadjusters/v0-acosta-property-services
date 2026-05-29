@@ -33,7 +33,7 @@ function ContactFormFallback() {
 }
 
 export default function ContactPage() {
-  const { t } = useLanguage()
+  const { language, t } = useLanguage()
 
   return (
     <>
@@ -46,7 +46,9 @@ export default function ContactPage() {
               {t.contact.title}
             </h1>
             <p className="text-xl text-muted-foreground text-pretty">
-              {t.contact.subtitle}
+              {language === "es" 
+                ? "Cuéntanos qué servicio necesitas y te orientamos con una cotización para tu propiedad en Puerto Rico."
+                : "Tell us what service you need and we'll guide you with a quote for your property in Puerto Rico."}
             </p>
           </div>
         </div>
@@ -142,9 +144,13 @@ export default function ContactPage() {
 
               <Card className="bg-primary text-primary-foreground">
                 <CardContent className="p-5 text-center">
-                  <h3 className="font-bold text-lg mb-2">{t.contact.emergencyTitle}</h3>
+                  <h3 className="font-bold text-lg mb-2">
+                    {language === "es" ? "¿Necesitas servicio rápido?" : "Need fast service?"}
+                  </h3>
                   <p className="opacity-90 text-sm mb-4">
-                    {t.contact.emergencyDesc}
+                    {language === "es" 
+                      ? "Llámanos directamente para coordinar disponibilidad según el servicio que necesitas."
+                      : "Call us directly to coordinate availability based on the service you need."}
                   </p>
                   <Button asChild variant="secondary" className="w-full">
                     <a href={`tel:${company.phoneClean}`}>
