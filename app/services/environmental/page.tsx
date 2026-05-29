@@ -16,110 +16,110 @@ import {
   Microscope
 } from "lucide-react"
 import { Button } from "@/components/ui/button"
-import { Card, CardContent } from "@/components/ui/card"
+import { Card } from "@/components/ui/card"
 import { useLanguage } from "@/lib/language-context"
 import { company } from "@/content/company"
 
-export default function EnvironmentalPage() {
+export default function LeadAsbestosMitigationPage() {
   const { language, t } = useLanguage()
 
   const plannedServices = language === "es" ? [
     {
       icon: Microscope,
-      title: "Inspección de Asbesto",
-      description: "Evaluación profesional para identificar materiales que contienen asbesto en su propiedad. Análisis de laboratorio certificado."
+      title: "Evaluación de asbesto",
+      description: "Evaluación profesional para identificar materiales que puedan contener asbesto en tu propiedad."
     },
     {
       icon: Shield,
-      title: "Remoción de Asbesto",
-      description: "Remoción segura y certificada de materiales con asbesto siguiendo todos los protocolos de seguridad federales y estatales."
+      title: "Manejo profesional de asbesto",
+      description: "Manejo seguro y especializado de materiales con asbesto siguiendo protocolos de seguridad aplicables."
     },
     {
       icon: AlertTriangle,
-      title: "Inspección de Plomo",
-      description: "Detección de pintura con plomo y otras fuentes de contaminación por plomo en propiedades residenciales y comerciales."
+      title: "Evaluación de plomo",
+      description: "Detección de pintura con plomo y otras fuentes de contaminación por plomo en propiedades."
     },
     {
       icon: HardHat,
-      title: "Mitigación de Plomo",
-      description: "Remoción o encapsulación segura de pintura con plomo para proteger a su familia, especialmente a niños pequeños."
+      title: "Mitigación de plomo",
+      description: "Manejo seguro o encapsulación de pintura con plomo para proteger a tu familia."
     },
     {
       icon: FileText,
-      title: "Certificación Ambiental",
-      description: "Documentación y certificación de que su propiedad cumple con todas las regulaciones ambientales aplicables."
+      title: "Orientación y documentación",
+      description: "Orientación sobre cumplimiento aplicable y documentación del proceso realizado."
     },
     {
       icon: Building2,
-      title: "Consultoría Especializada",
-      description: "Asesoría experta para propietarios, administradores de propiedades y contratistas sobre cumplimiento ambiental."
+      title: "Consultoría especializada",
+      description: "Asesoría para propietarios y administradores sobre manejo de materiales sensibles."
     }
   ] : [
     {
       icon: Microscope,
-      title: "Asbestos Inspection",
-      description: "Professional assessment to identify asbestos-containing materials in your property. Certified laboratory analysis."
+      title: "Asbestos evaluation",
+      description: "Professional evaluation to identify materials that may contain asbestos in your property."
     },
     {
       icon: Shield,
-      title: "Asbestos Removal",
-      description: "Safe and certified removal of asbestos materials following all federal and state safety protocols."
+      title: "Professional asbestos handling",
+      description: "Safe and specialized handling of asbestos materials following applicable safety protocols."
     },
     {
       icon: AlertTriangle,
-      title: "Lead Inspection",
-      description: "Detection of lead paint and other sources of lead contamination in residential and commercial properties."
+      title: "Lead evaluation",
+      description: "Detection of lead paint and other sources of lead contamination in properties."
     },
     {
       icon: HardHat,
-      title: "Lead Mitigation",
-      description: "Safe removal or encapsulation of lead paint to protect your family, especially young children."
+      title: "Lead mitigation",
+      description: "Safe handling or encapsulation of lead paint to protect your family."
     },
     {
       icon: FileText,
-      title: "Environmental Certification",
-      description: "Documentation and certification that your property complies with all applicable environmental regulations."
+      title: "Guidance and documentation",
+      description: "Guidance on applicable compliance and documentation of the process performed."
     },
     {
       icon: Building2,
-      title: "Specialized Consulting",
-      description: "Expert advice for property owners, property managers and contractors on environmental compliance."
+      title: "Specialized consulting",
+      description: "Advice for owners and managers on handling sensitive materials."
     }
   ]
 
   const whyImportant = language === "es" ? [
     {
-      title: "Protección de la Salud",
-      description: "El asbesto y el plomo son materiales peligrosos que pueden causar enfermedades graves, incluyendo cáncer y daño neurológico."
+      title: "Protección de la salud",
+      description: "El asbesto y el plomo son materiales que pueden representar riesgos para la salud si no se manejan adecuadamente."
     },
     {
-      title: "Cumplimiento Legal",
-      description: "Las regulaciones federales y estatales requieren la identificación y manejo adecuado de estos materiales peligrosos."
+      title: "Cumplimiento aplicable",
+      description: "Existen regulaciones que pueden requerir la identificación y manejo adecuado de estos materiales."
     },
     {
-      title: "Valor de la Propiedad",
-      description: "Una propiedad certificada libre de contaminantes tiene mayor valor en el mercado inmobiliario."
+      title: "Seguridad",
+      description: "El manejo profesional de estos materiales protege a tu familia, empleados o inquilinos."
     },
     {
       title: "Tranquilidad",
-      description: "Sepa que su familia, empleados o inquilinos están protegidos de exposición a materiales peligrosos."
+      description: "Saber que tu propiedad ha sido evaluada y atendida por profesionales brinda mayor tranquilidad."
     }
   ] : [
     {
-      title: "Health Protection",
-      description: "Asbestos and lead are hazardous materials that can cause serious illnesses, including cancer and neurological damage."
+      title: "Health protection",
+      description: "Asbestos and lead are materials that can pose health risks if not handled properly."
     },
     {
-      title: "Legal Compliance",
-      description: "Federal and state regulations require proper identification and handling of these hazardous materials."
+      title: "Applicable compliance",
+      description: "There are regulations that may require proper identification and handling of these materials."
     },
     {
-      title: "Property Value",
-      description: "A property certified free of contaminants has higher value in the real estate market."
+      title: "Safety",
+      description: "Professional handling of these materials protects your family, employees or tenants."
     },
     {
-      title: "Peace of Mind",
-      description: "Know that your family, employees or tenants are protected from exposure to hazardous materials."
+      title: "Peace of mind",
+      description: "Knowing that your property has been evaluated and attended by professionals provides greater peace of mind."
     }
   ]
 
@@ -135,13 +135,13 @@ export default function EnvironmentalPage() {
             </div>
             <h1 className="text-4xl md:text-5xl font-bold text-foreground mb-6 text-balance">
               {language === "es" 
-                ? "Mitigación de Asbesto y Plomo" 
-                : "Asbestos and Lead Mitigation"}
+                ? "Mitigación de plomo y asbesto" 
+                : "Lead and Asbestos Mitigation"}
             </h1>
             <p className="text-xl text-muted-foreground text-pretty max-w-2xl mx-auto mb-8">
               {language === "es"
-                ? "Estamos preparando servicios profesionales de mitigación ambiental para Puerto Rico. Remoción segura y certificada de materiales peligrosos para proteger su salud y la de su familia."
-                : "We are preparing professional environmental mitigation services for Puerto Rico. Safe and certified removal of hazardous materials to protect your health and that of your family."}
+                ? "Servicio próximamente disponible para propiedades que requieren evaluación y manejo profesional de materiales sensibles como plomo o asbesto."
+                : "Service coming soon for properties that require professional evaluation and handling of sensitive materials like lead or asbestos."}
             </p>
             
             {/* Coming Soon Badge */}
@@ -154,7 +154,7 @@ export default function EnvironmentalPage() {
                   {language === "es" ? "En Desarrollo" : "Under Development"}
                 </p>
                 <p className="text-sm text-orange-600">
-                  {language === "es" ? "Contáctenos para más información" : "Contact us for more information"}
+                  {language === "es" ? "Contáctanos para más información" : "Contact us for more information"}
                 </p>
               </div>
             </div>
@@ -182,12 +182,12 @@ export default function EnvironmentalPage() {
         <div className="container mx-auto px-4">
           <div className="text-center max-w-3xl mx-auto mb-12">
             <h2 className="text-3xl md:text-4xl font-bold text-foreground mb-4">
-              {language === "es" ? "Servicios Planificados" : "Planned Services"}
+              {language === "es" ? "Servicios que estamos preparando" : "Services we are preparing"}
             </h2>
             <p className="text-lg text-muted-foreground">
               {language === "es"
-                ? "Estos son los servicios de mitigación ambiental que estaremos ofreciendo próximamente."
-                : "These are the environmental mitigation services we will be offering soon."}
+                ? "Estos son los servicios de mitigación de plomo y asbesto que estaremos ofreciendo próximamente."
+                : "These are the lead and asbestos mitigation services we will be offering soon."}
             </p>
           </div>
 
@@ -201,9 +201,9 @@ export default function EnvironmentalPage() {
                   </div>
                   <h3 className="font-semibold text-foreground mb-2 flex items-center gap-2">
                     {service.title}
-<span className="text-xs bg-orange-200 text-orange-700 px-2 py-0.5 rounded-full">
-                    {language === "es" ? "Próximamente" : "Coming Soon"}
-                  </span>
+                    <span className="text-xs bg-orange-200 text-orange-700 px-2 py-0.5 rounded-full">
+                      {language === "es" ? "Próximamente" : "Coming Soon"}
+                    </span>
                   </h3>
                   <p className="text-sm text-muted-foreground">{service.description}</p>
                 </Card>
@@ -220,8 +220,8 @@ export default function EnvironmentalPage() {
             <div>
               <h2 className="text-3xl md:text-4xl font-bold text-foreground mb-6">
                 {language === "es" 
-                  ? "¿Por Qué es Importante la Mitigación Ambiental?" 
-                  : "Why is Environmental Mitigation Important?"}
+                  ? "¿Por qué es importante la mitigación de plomo y asbesto?" 
+                  : "Why is lead and asbestos mitigation important?"}
               </h2>
               <div className="space-y-6">
                 {whyImportant.map((item, index) => (
@@ -245,8 +245,8 @@ export default function EnvironmentalPage() {
                 </h3>
                 <p className="text-orange-600 mb-6">
                   {language === "es" 
-                    ? "Estamos obteniendo las certificaciones necesarias para ofrecer estos servicios especializados en Puerto Rico."
-                    : "We are obtaining the necessary certifications to offer these specialized services in Puerto Rico."}
+                    ? "Estamos preparando este servicio especializado para ofrecerlo próximamente en Puerto Rico."
+                    : "We are preparing this specialized service to offer it soon in Puerto Rico."}
                 </p>
                 <div className="flex items-center justify-center gap-2 text-sm text-orange-700">
                   <Clock className="h-4 w-4" />
@@ -263,7 +263,7 @@ export default function EnvironmentalPage() {
         <div className="container mx-auto px-4">
           <div className="text-center max-w-3xl mx-auto mb-12">
             <h2 className="text-3xl md:text-4xl font-bold text-foreground mb-4">
-              {language === "es" ? "¿Quién Necesita Este Servicio?" : "Who Needs This Service?"}
+              {language === "es" ? "¿Quién necesita este servicio?" : "Who needs this service?"}
             </h2>
           </div>
 
@@ -274,13 +274,13 @@ export default function EnvironmentalPage() {
                   <Home className="h-7 w-7" />
                 </div>
                 <h3 className="text-xl font-bold text-foreground">
-                  {language === "es" ? "Propietarios Residenciales" : "Residential Owners"}
+                  {language === "es" ? "Propietarios residenciales" : "Residential Owners"}
                 </h3>
               </div>
               <p className="text-muted-foreground mb-4">
                 {language === "es"
-                  ? "Especialmente si su hogar fue construido antes de 1978, podría contener pintura con plomo o materiales con asbesto que representan un riesgo para su familia."
-                  : "Especially if your home was built before 1978, it may contain lead paint or asbestos materials that pose a risk to your family."}
+                  ? "Especialmente si tu hogar fue construido antes de 1978, podría contener pintura con plomo o materiales con asbesto."
+                  : "Especially if your home was built before 1978, it may contain lead paint or asbestos materials."}
               </p>
               <ul className="space-y-2">
                 {(language === "es" 
@@ -301,13 +301,13 @@ export default function EnvironmentalPage() {
                   <Building2 className="h-7 w-7" />
                 </div>
                 <h3 className="text-xl font-bold text-foreground">
-                  {language === "es" ? "Propietarios Comerciales" : "Commercial Owners"}
+                  {language === "es" ? "Propietarios comerciales" : "Commercial Owners"}
                 </h3>
               </div>
               <p className="text-muted-foreground mb-4">
                 {language === "es"
-                  ? "Los edificios comerciales e industriales antiguos frecuentemente contienen materiales peligrosos que deben ser manejados apropiadamente."
-                  : "Older commercial and industrial buildings frequently contain hazardous materials that must be properly handled."}
+                  ? "Los edificios comerciales e industriales antiguos pueden contener materiales que deben ser evaluados y manejados apropiadamente."
+                  : "Older commercial and industrial buildings may contain materials that should be evaluated and properly handled."}
               </p>
               <ul className="space-y-2">
                 {(language === "es" 
@@ -332,13 +332,13 @@ export default function EnvironmentalPage() {
             <Clock className="h-12 w-12 mx-auto mb-4 opacity-80" />
             <h2 className="text-3xl md:text-4xl font-bold mb-4 text-balance">
               {language === "es" 
-                ? "¿Interesado en Nuestros Servicios de Mitigación?" 
-                : "Interested in Our Mitigation Services?"}
+                ? "¿Tu propiedad requiere evaluación de plomo o asbesto?" 
+                : "Does your property require lead or asbestos evaluation?"}
             </h2>
             <p className="text-lg text-white/80 mb-8 text-pretty">
               {language === "es" 
-                ? "Déjenos sus datos y le contactaremos tan pronto como estos servicios estén disponibles. También puede contactarnos para consultas generales."
-                : "Leave us your information and we will contact you as soon as these services are available. You can also contact us for general inquiries."}
+                ? "Déjanos tus datos y te orientamos cuando este servicio especializado esté disponible."
+                : "Leave us your information and we'll guide you when this specialized service is available."}
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Button asChild size="lg" className="bg-white text-orange-600 hover:bg-white/90 font-semibold">

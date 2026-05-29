@@ -10,118 +10,107 @@ import {
   CheckCircle2,
   Phone,
   Mail,
-  FileText,
   Building2,
   Home,
   Thermometer,
-  Wind,
-  Microscope
+  Search,
+  FileText
 } from "lucide-react"
 import { Button } from "@/components/ui/button"
 import { Card } from "@/components/ui/card"
 import { useLanguage } from "@/lib/language-context"
 import { company } from "@/content/company"
 
-export default function MoldMitigationPage() {
+export default function WaterDamageMitigationPage() {
   const { language, t } = useLanguage()
 
   const plannedServices = language === "es" ? [
     {
-      icon: Microscope,
-      title: "Inspección de Moho",
-      description: "Evaluación profesional para identificar la presencia, tipo y extensión de moho en su propiedad."
-    },
-    {
-      icon: Shield,
-      title: "Remoción de Moho",
-      description: "Eliminación segura y completa de moho utilizando técnicas especializadas y equipo profesional."
+      icon: Search,
+      title: "Evaluación de áreas afectadas por agua",
+      description: "Identificación de áreas con daños visibles por agua o humedad en tu propiedad."
     },
     {
       icon: Thermometer,
-      title: "Control de Humedad",
-      description: "Identificación y corrección de fuentes de humedad para prevenir el regreso del moho."
+      title: "Atención a humedad visible",
+      description: "Atención a problemas de humedad que pueden afectar paredes, techos y otras superficies."
     },
     {
-      icon: Wind,
-      title: "Purificación de Aire",
-      description: "Limpieza del aire y eliminación de esporas de moho para mejorar la calidad del aire interior."
+      icon: Shield,
+      title: "Prevención de daños mayores",
+      description: "Orientación para ayudar a prevenir que los daños por agua se conviertan en problemas más grandes."
     },
     {
       icon: FileText,
-      title: "Certificación",
-      description: "Documentación y certificación de que su propiedad está libre de moho después del tratamiento."
+      title: "Orientación para propietarios",
+      description: "Información y recomendaciones para propietarios sobre cómo manejar daños por agua."
     },
     {
       icon: AlertTriangle,
-      title: "Prevención",
-      description: "Tratamientos preventivos y recomendaciones para evitar futuros problemas de moho."
+      title: "Servicio en desarrollo",
+      description: "Estamos preparando este servicio para ofrecer atención profesional a daños por agua en Puerto Rico."
     }
   ] : [
     {
-      icon: Microscope,
-      title: "Mold Inspection",
-      description: "Professional assessment to identify the presence, type and extent of mold in your property."
-    },
-    {
-      icon: Shield,
-      title: "Mold Removal",
-      description: "Safe and complete mold removal using specialized techniques and professional equipment."
+      icon: Search,
+      title: "Evaluation of water-affected areas",
+      description: "Identification of areas with visible water or moisture damage on your property."
     },
     {
       icon: Thermometer,
-      title: "Humidity Control",
-      description: "Identification and correction of moisture sources to prevent mold from returning."
+      title: "Visible humidity attention",
+      description: "Attention to humidity problems that can affect walls, ceilings and other surfaces."
     },
     {
-      icon: Wind,
-      title: "Air Purification",
-      description: "Air cleaning and mold spore removal to improve indoor air quality."
+      icon: Shield,
+      title: "Prevention of major damage",
+      description: "Guidance to help prevent water damage from becoming bigger problems."
     },
     {
       icon: FileText,
-      title: "Certification",
-      description: "Documentation and certification that your property is mold-free after treatment."
+      title: "Guidance for owners",
+      description: "Information and recommendations for property owners on how to handle water damage."
     },
     {
       icon: AlertTriangle,
-      title: "Prevention",
-      description: "Preventive treatments and recommendations to avoid future mold problems."
+      title: "Service in development",
+      description: "We are preparing this service to offer professional attention to water damage in Puerto Rico."
     }
   ]
 
   const whyImportant = language === "es" ? [
     {
-      title: "Problemas de Salud",
-      description: "El moho puede causar alergias, problemas respiratorios y otros problemas de salud, especialmente en personas sensibles."
+      title: "Daño estructural",
+      description: "El agua y la humedad pueden deteriorar materiales de construcción si no se atienden a tiempo."
     },
     {
-      title: "Daño Estructural",
-      description: "El moho puede deteriorar materiales de construcción, causando daños costosos a su propiedad."
+      title: "Problemas relacionados",
+      description: "La humedad prolongada puede generar moho y otros problemas que afectan la propiedad."
     },
     {
-      title: "Clima Tropical",
-      description: "Puerto Rico tiene un clima húmedo ideal para el crecimiento de moho, haciendo la prevención esencial."
+      title: "Clima tropical",
+      description: "Puerto Rico tiene un clima húmedo y lluvioso que puede aumentar los riesgos de daños por agua."
     },
     {
-      title: "Valor de Propiedad",
-      description: "Una propiedad con problemas de moho pierde valor significativo en el mercado inmobiliario."
+      title: "Protección de la propiedad",
+      description: "Atender los daños por agua a tiempo ayuda a proteger el valor de tu propiedad."
     }
   ] : [
     {
-      title: "Health Problems",
-      description: "Mold can cause allergies, respiratory problems and other health issues, especially in sensitive individuals."
+      title: "Structural damage",
+      description: "Water and moisture can deteriorate building materials if not addressed in time."
     },
     {
-      title: "Structural Damage",
-      description: "Mold can deteriorate building materials, causing costly damage to your property."
+      title: "Related problems",
+      description: "Prolonged humidity can generate mold and other problems that affect the property."
     },
     {
-      title: "Tropical Climate",
-      description: "Puerto Rico has a humid climate ideal for mold growth, making prevention essential."
+      title: "Tropical climate",
+      description: "Puerto Rico has a humid and rainy climate that can increase the risks of water damage."
     },
     {
-      title: "Property Value",
-      description: "A property with mold problems loses significant value in the real estate market."
+      title: "Property protection",
+      description: "Addressing water damage in time helps protect your property's value."
     }
   ]
 
@@ -137,13 +126,13 @@ export default function MoldMitigationPage() {
             </div>
             <h1 className="text-4xl md:text-5xl font-bold text-foreground mb-6 text-balance">
               {language === "es" 
-                ? "Mitigación de Moho" 
-                : "Mold Mitigation"}
+                ? "Mitigación de daños por agua" 
+                : "Water Damage Mitigation"}
             </h1>
             <p className="text-xl text-muted-foreground text-pretty max-w-2xl mx-auto mb-8">
               {language === "es"
-                ? "Estamos preparando servicios profesionales de mitigación de moho para Puerto Rico. Inspección, remoción segura y prevención para proteger su propiedad y salud."
-                : "We are preparing professional mold mitigation services for Puerto Rico. Inspection, safe removal and prevention to protect your property and health."}
+                ? "Servicio próximamente disponible para atender daños por agua, humedad y problemas relacionados en propiedades residenciales y comerciales."
+                : "Service coming soon to address water damage, moisture and related problems in residential and commercial properties."}
             </p>
             
             {/* Coming Soon Badge */}
@@ -156,7 +145,7 @@ export default function MoldMitigationPage() {
                   {language === "es" ? "En Desarrollo" : "Under Development"}
                 </p>
                 <p className="text-sm text-teal-600">
-                  {language === "es" ? "Contáctenos para más información" : "Contact us for more information"}
+                  {language === "es" ? "Contáctanos para más información" : "Contact us for more information"}
                 </p>
               </div>
             </div>
@@ -184,16 +173,16 @@ export default function MoldMitigationPage() {
         <div className="container mx-auto px-4">
           <div className="text-center max-w-3xl mx-auto mb-12">
             <h2 className="text-3xl md:text-4xl font-bold text-foreground mb-4">
-              {language === "es" ? "Servicios Planificados" : "Planned Services"}
+              {language === "es" ? "Servicios que estamos preparando" : "Services we are preparing"}
             </h2>
             <p className="text-lg text-muted-foreground">
               {language === "es"
-                ? "Estos son los servicios de mitigación de moho que estaremos ofreciendo próximamente."
-                : "These are the mold mitigation services we will be offering soon."}
+                ? "Estos son los servicios de mitigación de daños por agua que estaremos ofreciendo próximamente."
+                : "These are the water damage mitigation services we will be offering soon."}
             </p>
           </div>
 
-          <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
+          <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6 max-w-5xl mx-auto">
             {plannedServices.map((service, index) => {
               const Icon = service.icon
               return (
@@ -222,8 +211,8 @@ export default function MoldMitigationPage() {
             <div>
               <h2 className="text-3xl md:text-4xl font-bold text-foreground mb-6">
                 {language === "es" 
-                  ? "¿Por Qué es Importante la Mitigación de Moho?" 
-                  : "Why is Mold Mitigation Important?"}
+                  ? "¿Por qué es importante atender los daños por agua?" 
+                  : "Why is it important to address water damage?"}
               </h2>
               <div className="space-y-6">
                 {whyImportant.map((item, index) => (
@@ -247,8 +236,8 @@ export default function MoldMitigationPage() {
                 </h3>
                 <p className="text-teal-600 mb-6">
                   {language === "es" 
-                    ? "Estamos preparando el equipo y certificaciones necesarias para ofrecer estos servicios especializados."
-                    : "We are preparing the equipment and certifications needed to offer these specialized services."}
+                    ? "Estamos preparando este servicio para ofrecerlo próximamente en Puerto Rico."
+                    : "We are preparing this service to offer it soon in Puerto Rico."}
                 </p>
                 <div className="flex items-center justify-center gap-2 text-sm text-teal-700">
                   <Clock className="h-4 w-4" />
@@ -265,7 +254,7 @@ export default function MoldMitigationPage() {
         <div className="container mx-auto px-4">
           <div className="text-center max-w-3xl mx-auto mb-12">
             <h2 className="text-3xl md:text-4xl font-bold text-foreground mb-4">
-              {language === "es" ? "¿Quién Necesita Este Servicio?" : "Who Needs This Service?"}
+              {language === "es" ? "¿Quién necesita este servicio?" : "Who needs this service?"}
             </h2>
           </div>
 
@@ -276,18 +265,18 @@ export default function MoldMitigationPage() {
                   <Home className="h-7 w-7" />
                 </div>
                 <h3 className="text-xl font-bold text-foreground">
-                  {language === "es" ? "Propietarios Residenciales" : "Residential Owners"}
+                  {language === "es" ? "Propietarios residenciales" : "Residential Owners"}
                 </h3>
               </div>
               <p className="text-muted-foreground mb-4">
                 {language === "es"
-                  ? "El moho puede aparecer en cualquier hogar, especialmente en áreas con alta humedad como baños, cocinas y sótanos."
-                  : "Mold can appear in any home, especially in high humidity areas like bathrooms, kitchens and basements."}
+                  ? "Los daños por agua pueden aparecer en cualquier hogar, especialmente en áreas con alta humedad o filtraciones."
+                  : "Water damage can appear in any home, especially in areas with high humidity or leaks."}
               </p>
               <ul className="space-y-2">
                 {(language === "es" 
-                  ? ["Manchas de humedad visibles", "Olor a humedad persistente", "Problemas de filtración", "Áreas mal ventiladas"]
-                  : ["Visible moisture stains", "Persistent musty smell", "Leak problems", "Poorly ventilated areas"]
+                  ? ["Manchas de humedad visibles", "Filtraciones en techos o paredes", "Áreas con olor a humedad", "Daños después de lluvias fuertes"]
+                  : ["Visible moisture stains", "Roof or wall leaks", "Areas with musty smell", "Damage after heavy rain"]
                 ).map((item, i) => (
                   <li key={i} className="flex items-center gap-2 text-sm">
                     <CheckCircle2 className="h-4 w-4 text-teal-500 shrink-0" />
@@ -303,18 +292,18 @@ export default function MoldMitigationPage() {
                   <Building2 className="h-7 w-7" />
                 </div>
                 <h3 className="text-xl font-bold text-foreground">
-                  {language === "es" ? "Propietarios Comerciales" : "Commercial Owners"}
+                  {language === "es" ? "Propietarios comerciales" : "Commercial Owners"}
                 </h3>
               </div>
               <p className="text-muted-foreground mb-4">
                 {language === "es"
-                  ? "Los negocios deben mantener ambientes saludables para empleados y clientes, libres de moho y contaminantes."
-                  : "Businesses must maintain healthy environments for employees and customers, free of mold and contaminants."}
+                  ? "Los negocios necesitan mantener ambientes secos y saludables para empleados y clientes."
+                  : "Businesses need to maintain dry and healthy environments for employees and customers."}
               </p>
               <ul className="space-y-2">
                 {(language === "es" 
-                  ? ["Oficinas y comercios", "Restaurantes y hoteles", "Escuelas y guarderías", "Edificios de apartamentos"]
-                  : ["Offices and retail", "Restaurants and hotels", "Schools and daycares", "Apartment buildings"]
+                  ? ["Oficinas y comercios", "Almacenes y bodegas", "Edificios de apartamentos", "Locales comerciales"]
+                  : ["Offices and retail", "Warehouses and storage", "Apartment buildings", "Commercial spaces"]
                 ).map((item, i) => (
                   <li key={i} className="flex items-center gap-2 text-sm">
                     <CheckCircle2 className="h-4 w-4 text-teal-500 shrink-0" />
@@ -334,13 +323,13 @@ export default function MoldMitigationPage() {
             <Clock className="h-12 w-12 mx-auto mb-4 opacity-80" />
             <h2 className="text-3xl md:text-4xl font-bold mb-4 text-balance">
               {language === "es" 
-                ? "¿Interesado en Nuestros Servicios de Mitigación de Moho?" 
-                : "Interested in Our Mold Mitigation Services?"}
+                ? "¿Tu propiedad tiene señales de humedad o filtraciones?" 
+                : "Does your property show signs of moisture or leaks?"}
             </h2>
             <p className="text-lg text-white/80 mb-8 text-pretty">
               {language === "es" 
-                ? "Déjenos sus datos y le contactaremos tan pronto como estos servicios estén disponibles. También puede contactarnos para consultas generales."
-                : "Leave us your information and we will contact you as soon as these services are available. You can also contact us for general inquiries."}
+                ? "Déjanos tus datos y te orientamos cuando este servicio esté disponible."
+                : "Leave us your information and we'll guide you when this service is available."}
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Button asChild size="lg" className="bg-white text-teal-600 hover:bg-white/90 font-semibold">
