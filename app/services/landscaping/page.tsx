@@ -31,7 +31,7 @@ export default function LandscapingPage() {
       image: "/images/landscaping/lawn-mowing.jpg",
       nameEs: "Corte de Grama",
       nameEn: "Lawn Mowing",
-      descriptionEs: "Servicio profesional de corte de grama para mantener su césped saludable y con apariencia impecable. Utilizamos equipos comerciales de alta calidad para un corte uniforme y preciso.",
+      descriptionEs: "Servicio profesional de corte de grama para mantener tu césped saludable y con apariencia impecable. Utilizamos equipos comerciales de alta calidad para un corte uniforme y preciso.",
       descriptionEn: "Professional lawn mowing service to keep your lawn healthy and looking impeccable. We use high-quality commercial equipment for a uniform and precise cut.",
       featuresEs: ["Corte uniforme y profesional", "Equipos comerciales de alta calidad", "Frecuencia semanal o quincenal", "Bordes y orillas definidos"],
       featuresEn: ["Uniform professional cut", "High-quality commercial equipment", "Weekly or biweekly frequency", "Defined edges and borders"]
@@ -42,7 +42,7 @@ export default function LandscapingPage() {
       image: "/images/landscaping/pruning.jpg",
       nameEs: "Poda de Árboles y Arbustos",
       nameEn: "Tree and Shrub Pruning",
-      descriptionEs: "Poda profesional para mantener sus árboles y arbustos saludables, con forma estética y seguros. Eliminamos ramas muertas, damos forma y controlamos el crecimiento.",
+      descriptionEs: "Poda profesional para mantener tus árboles y arbustos saludables, con forma estética y seguros. Eliminamos ramas muertas, damos forma y controlamos el crecimiento.",
       descriptionEn: "Professional pruning to keep your trees and shrubs healthy, aesthetically shaped and safe. We remove dead branches, shape and control growth.",
       featuresEs: ["Poda de formación y mantenimiento", "Remoción de ramas secas", "Control de crecimiento", "Árboles frutales y ornamentales"],
       featuresEn: ["Formation and maintenance pruning", "Dead branch removal", "Growth control", "Fruit and ornamental trees"]
@@ -121,7 +121,7 @@ export default function LandscapingPage() {
       icon: Home,
       nameEs: "Residencial",
       nameEn: "Residential",
-      descriptionEs: "Mantenemos el jardín de su hogar hermoso y saludable durante todo el año. Servicio personalizado para propiedades residenciales.",
+      descriptionEs: "Mantenemos el jardín de tu hogar hermoso y saludable durante todo el año. Servicio personalizado para propiedades residenciales.",
       descriptionEn: "We keep your home's garden beautiful and healthy all year round. Personalized service for residential properties.",
       featuresEs: ["Patios y jardines", "Áreas de piscina", "Entradas y caminos", "Terrazas y balcones"],
       featuresEn: ["Patios and gardens", "Pool areas", "Driveways and paths", "Terraces and balconies"]
@@ -131,7 +131,7 @@ export default function LandscapingPage() {
       icon: Building2,
       nameEs: "Comercial",
       nameEn: "Commercial",
-      descriptionEs: "Servicios de jardinería para negocios, edificios comerciales y propiedades de alquiler. Mantenga una imagen profesional.",
+      descriptionEs: "Servicios de jardinería para negocios, edificios comerciales y propiedades de alquiler. Mantén una imagen profesional.",
       descriptionEn: "Landscaping services for businesses, commercial buildings and rental properties. Maintain a professional image.",
       featuresEs: ["Edificios de oficinas", "Centros comerciales", "Condominios", "Propiedades de alquiler"],
       featuresEn: ["Office buildings", "Shopping centers", "Condominiums", "Rental properties"]
@@ -266,12 +266,12 @@ export default function LandscapingPage() {
         <div className="container mx-auto px-4">
           <div className="text-center max-w-3xl mx-auto mb-12">
             <h2 className="text-3xl md:text-4xl font-bold text-foreground mb-4">
-              {language === "es" ? "¿Por Qué Elegirnos?" : "Why Choose Us?"}
+              {language === "es" ? "Una propiedad que se ve cuidada desde la entrada" : "A property that looks cared for from the entrance"}
             </h2>
             <p className="text-lg text-muted-foreground">
               {language === "es"
-                ? "Más que jardineros, somos expertos en el cuidado de tu propiedad."
-                : "More than gardeners, we are experts in caring for your property."}
+                ? "El exterior de tu propiedad comunica orden, limpieza y atención. Te ayudamos a mantenerlo presentable."
+                : "Your property's exterior communicates order, cleanliness and care. We help you keep it presentable."}
             </p>
           </div>
 

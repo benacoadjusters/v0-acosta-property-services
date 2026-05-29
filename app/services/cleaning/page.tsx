@@ -30,7 +30,7 @@ export default function CleaningPage() {
       image: "/images/cleaning/deep-cleaning.jpg",
       nameEs: "Limpieza Profunda",
       nameEn: "Deep Cleaning",
-      descriptionEs: "Limpieza exhaustiva de su hogar o negocio. Llegamos a cada rincón, eliminamos suciedad acumulada, desengrasamos superficies y dejamos su espacio impecable.",
+      descriptionEs: "Limpieza exhaustiva de tu hogar o negocio. Llegamos a cada rincón, eliminamos suciedad acumulada, desengrasamos superficies y dejamos tu espacio impecable.",
       descriptionEn: "Thorough cleaning of your home or business. We reach every corner, remove accumulated dirt, degrease surfaces and leave your space spotless.",
       featuresEs: ["Limpieza de techos y paredes", "Desengrase de cocina", "Limpieza de baños", "Ventanas y cristales"],
       featuresEn: ["Ceiling and wall cleaning", "Kitchen degreasing", "Bathroom cleaning", "Windows and glass"]
@@ -120,7 +120,7 @@ export default function CleaningPage() {
       icon: Home,
       nameEs: "Residencial",
       nameEn: "Residential",
-      descriptionEs: "Limpieza profesional para su hogar. Desde limpiezas profundas hasta mantenimiento regular.",
+      descriptionEs: "Limpieza profesional para tu hogar. Desde limpiezas profundas hasta mantenimiento regular.",
       descriptionEn: "Professional cleaning for your home. From deep cleaning to regular maintenance.",
       featuresEs: ["Casas y apartamentos", "Mudanzas", "Limpieza de emergencia", "Eventos especiales"],
       featuresEn: ["Houses and apartments", "Move-in/out", "Emergency cleaning", "Special events"]
@@ -130,7 +130,7 @@ export default function CleaningPage() {
       icon: Building2,
       nameEs: "Comercial",
       nameEn: "Commercial",
-      descriptionEs: "Servicios de limpieza para negocios de todos los tamaños. Mantenga una imagen profesional.",
+      descriptionEs: "Servicios de limpieza para negocios de todos los tamaños. Mantén una imagen profesional.",
       descriptionEn: "Cleaning services for businesses of all sizes. Maintain a professional image.",
       featuresEs: ["Oficinas", "Restaurantes", "Tiendas", "Edificios comerciales"],
       featuresEn: ["Offices", "Restaurants", "Stores", "Commercial buildings"]
@@ -265,12 +265,12 @@ export default function CleaningPage() {
         <div className="container mx-auto px-4">
           <div className="text-center max-w-3xl mx-auto mb-12">
             <h2 className="text-3xl md:text-4xl font-bold text-foreground mb-4">
-              {language === "es" ? "¿Por Qué Elegirnos?" : "Why Choose Us?"}
+              {language === "es" ? "Limpieza que se nota desde el primer vistazo" : "Cleaning that shows from the first glance"}
             </h2>
             <p className="text-lg text-muted-foreground">
               {language === "es"
-                ? "Nos distinguimos por la calidad y profesionalismo de nuestro servicio."
-                : "We stand out for the quality and professionalism of our service."}
+                ? "Trabajamos para que tus espacios se vean limpios, listos y cómodos para usarse."
+                : "We work to make your spaces look clean, ready and comfortable to use."}
             </p>
           </div>
 

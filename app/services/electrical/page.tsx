@@ -30,7 +30,7 @@ export default function ElectricalPage() {
       image: "/images/electrical/panel-upgrade.jpg",
       nameEs: "Paneles Eléctricos",
       nameEn: "Electrical Panels",
-      descriptionEs: "Instalación, reparación y actualización de paneles eléctricos. Aumentamos la capacidad de su sistema para soportar las demandas modernas de energía.",
+      descriptionEs: "Instalación, reparación y actualización de paneles eléctricos. Aumentamos la capacidad de tu sistema para soportar las demandas modernas de energía.",
       descriptionEn: "Installation, repair and upgrade of electrical panels. We increase your system's capacity to support modern energy demands.",
       featuresEs: ["Actualización de paneles", "Instalación de breakers", "Reparación de cortocircuitos", "Aumento de capacidad"],
       featuresEn: ["Panel upgrades", "Breaker installation", "Short circuit repair", "Capacity increase"]
@@ -63,7 +63,7 @@ export default function ElectricalPage() {
       image: "/images/electrical/fan-install.jpg",
       nameEs: "Abanicos de Techo",
       nameEn: "Ceiling Fans",
-      descriptionEs: "Instalación profesional de abanicos de techo. Mejoramos la circulación de aire y el confort de su hogar o negocio en el clima tropical de Puerto Rico.",
+      descriptionEs: "Instalación profesional de abanicos de techo. Mejoramos la circulación de aire y el confort de tu hogar o negocio en el clima tropical de Puerto Rico.",
       descriptionEn: "Professional ceiling fan installation. We improve air circulation and comfort in your home or business in Puerto Rico's tropical climate.",
       featuresEs: ["Instalación segura", "Abanicos con luz", "Balanceo y ajuste", "Control remoto"],
       featuresEn: ["Safe installation", "Fans with lights", "Balancing and adjustment", "Remote control"]
@@ -120,7 +120,7 @@ export default function ElectricalPage() {
       icon: Home,
       nameEs: "Residencial",
       nameEn: "Residential",
-      descriptionEs: "Servicios eléctricos para su hogar. Desde reparaciones hasta instalaciones completas.",
+      descriptionEs: "Servicios eléctricos para tu hogar. Desde reparaciones hasta instalaciones completas.",
       descriptionEn: "Electrical services for your home. From repairs to complete installations.",
       featuresEs: ["Instalación de abanicos", "Iluminación", "Paneles eléctricos", "Tomacorrientes"],
       featuresEn: ["Fan installation", "Lighting", "Electrical panels", "Outlets"]
@@ -265,12 +265,12 @@ export default function ElectricalPage() {
         <div className="container mx-auto px-4">
           <div className="text-center max-w-3xl mx-auto mb-12">
             <h2 className="text-3xl md:text-4xl font-bold text-foreground mb-4">
-              {language === "es" ? "¿Por Qué Elegirnos?" : "Why Choose Us?"}
+              {language === "es" ? "Seguridad y claridad en cada trabajo eléctrico" : "Safety and clarity in every electrical job"}
             </h2>
             <p className="text-lg text-muted-foreground">
               {language === "es"
-                ? "Experiencia y seguridad en cada trabajo eléctrico."
-                : "Experience and safety in every electrical job."}
+                ? "Antes de comenzar, te orientamos sobre el trabajo necesario para mantener tu sistema eléctrico seguro y funcionando."
+                : "Before starting, we guide you on the work needed to keep your electrical system safe and running."}
             </p>
           </div>
 

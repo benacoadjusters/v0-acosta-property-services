@@ -129,10 +129,10 @@ export default function AboutPage() {
               </div>
             </div>
             
-            {/* Two service images grid */}
-            <div className="grid grid-cols-2 gap-4">
+            {/* Service cards grid - 5 active services */}
+            <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-3">
               <Link href="/services/pest-control" className="group relative">
-                <div className="relative aspect-[3/4] rounded-2xl overflow-hidden shadow-xl">
+                <div className="relative aspect-square rounded-xl overflow-hidden shadow-lg">
                   <Image
                     src="/images/hero-pest-control.jpg"
                     alt={language === "es" ? "Control de Plagas" : "Pest Control"}
@@ -140,24 +140,22 @@ export default function AboutPage() {
                     className="object-cover group-hover:scale-105 transition-transform duration-300"
                   />
                   <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-black/20 to-transparent" />
-                  <div className="absolute bottom-0 left-0 right-0 p-4">
-                    <div className="flex items-center gap-2 mb-2">
-                      <div className="flex h-8 w-8 items-center justify-center rounded-full bg-white/20 backdrop-blur-sm">
-                        <Bug className="h-4 w-4 text-white" />
-                      </div>
+                  <div className="absolute bottom-0 left-0 right-0 p-3">
+                    <div className="flex items-center gap-1.5 mb-1">
+                      <Bug className="h-3.5 w-3.5 text-white" />
                     </div>
-                    <h3 className="text-white font-bold text-lg">
+                    <h3 className="text-white font-bold text-sm">
                       {language === "es" ? "Control de Plagas" : "Pest Control"}
                     </h3>
-                    <p className="text-white/80 text-sm">
+                    <p className="text-white/80 text-xs">
                       {language === "es" ? "Fumigación y trampeo" : "Fumigation & trapping"}
                     </p>
                   </div>
                 </div>
               </Link>
               
-              <Link href="/services/plumbing" className="group relative mt-8">
-                <div className="relative aspect-[3/4] rounded-2xl overflow-hidden shadow-xl">
+              <Link href="/services/plumbing" className="group relative">
+                <div className="relative aspect-square rounded-xl overflow-hidden shadow-lg">
                   <Image
                     src="/images/hero-plumbing.jpg"
                     alt={language === "es" ? "Plomería" : "Plumbing"}
@@ -165,17 +163,84 @@ export default function AboutPage() {
                     className="object-cover group-hover:scale-105 transition-transform duration-300"
                   />
                   <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-black/20 to-transparent" />
-                  <div className="absolute bottom-0 left-0 right-0 p-4">
-                    <div className="flex items-center gap-2 mb-2">
-                      <div className="flex h-8 w-8 items-center justify-center rounded-full bg-white/20 backdrop-blur-sm">
-                        <Wrench className="h-4 w-4 text-white" />
-                      </div>
+                  <div className="absolute bottom-0 left-0 right-0 p-3">
+                    <div className="flex items-center gap-1.5 mb-1">
+                      <Wrench className="h-3.5 w-3.5 text-white" />
                     </div>
-                    <h3 className="text-white font-bold text-lg">
+                    <h3 className="text-white font-bold text-sm">
                       {language === "es" ? "Plomería" : "Plumbing"}
                     </h3>
-                    <p className="text-white/80 text-sm">
+                    <p className="text-white/80 text-xs">
                       {language === "es" ? "Reparaciones y destapes" : "Repairs & unclogging"}
+                    </p>
+                  </div>
+                </div>
+              </Link>
+              
+              <Link href="/services/electrical" className="group relative">
+                <div className="relative aspect-square rounded-xl overflow-hidden shadow-lg">
+                  <Image
+                    src="/images/hero-electrical.jpg"
+                    alt={language === "es" ? "Electricidad" : "Electrical"}
+                    fill
+                    className="object-cover group-hover:scale-105 transition-transform duration-300"
+                  />
+                  <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-black/20 to-transparent" />
+                  <div className="absolute bottom-0 left-0 right-0 p-3">
+                    <div className="flex items-center gap-1.5 mb-1">
+                      <Zap className="h-3.5 w-3.5 text-white" />
+                    </div>
+                    <h3 className="text-white font-bold text-sm">
+                      {language === "es" ? "Electricidad" : "Electrical"}
+                    </h3>
+                    <p className="text-white/80 text-xs">
+                      {language === "es" ? "Paneles e iluminación" : "Panels & lighting"}
+                    </p>
+                  </div>
+                </div>
+              </Link>
+              
+              <Link href="/services/landscaping" className="group relative">
+                <div className="relative aspect-square rounded-xl overflow-hidden shadow-lg">
+                  <Image
+                    src="/images/hero-landscaping.jpg"
+                    alt={language === "es" ? "Jardinería" : "Landscaping"}
+                    fill
+                    className="object-cover group-hover:scale-105 transition-transform duration-300"
+                  />
+                  <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-black/20 to-transparent" />
+                  <div className="absolute bottom-0 left-0 right-0 p-3">
+                    <div className="flex items-center gap-1.5 mb-1">
+                      <TreePine className="h-3.5 w-3.5 text-white" />
+                    </div>
+                    <h3 className="text-white font-bold text-sm">
+                      {language === "es" ? "Jardinería" : "Landscaping"}
+                    </h3>
+                    <p className="text-white/80 text-xs">
+                      {language === "es" ? "Corte y mantenimiento" : "Mowing & maintenance"}
+                    </p>
+                  </div>
+                </div>
+              </Link>
+              
+              <Link href="/services/cleaning" className="group relative col-span-2 md:col-span-1">
+                <div className="relative aspect-square rounded-xl overflow-hidden shadow-lg">
+                  <Image
+                    src="/images/hero-cleaning.jpg"
+                    alt={language === "es" ? "Limpieza" : "Cleaning"}
+                    fill
+                    className="object-cover group-hover:scale-105 transition-transform duration-300"
+                  />
+                  <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-black/20 to-transparent" />
+                  <div className="absolute bottom-0 left-0 right-0 p-3">
+                    <div className="flex items-center gap-1.5 mb-1">
+                      <SprayCan className="h-3.5 w-3.5 text-white" />
+                    </div>
+                    <h3 className="text-white font-bold text-sm">
+                      {language === "es" ? "Limpieza" : "Cleaning"}
+                    </h3>
+                    <p className="text-white/80 text-xs">
+                      {language === "es" ? "Residencial y comercial" : "Residential & commercial"}
                     </p>
                   </div>
                 </div>

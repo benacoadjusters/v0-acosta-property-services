@@ -9,10 +9,13 @@ import { ContactForm } from "@/components/contact-form"
 import { useLanguage } from "@/lib/language-context"
 
 function ContactFormFallback() {
+  const { language } = useLanguage()
   return (
     <Card>
       <CardHeader>
-        <CardTitle className="text-2xl">...</CardTitle>
+        <CardTitle className="text-2xl">
+          {language === "es" ? "Cargando formulario..." : "Loading form..."}
+        </CardTitle>
       </CardHeader>
       <CardContent>
         <div className="space-y-6 animate-pulse">

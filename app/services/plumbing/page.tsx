@@ -52,7 +52,7 @@ export default function PlumbingPage() {
       image: "/images/plumbing/water-heater.jpg",
       nameEs: "Calentadores de Agua",
       nameEn: "Water Heaters",
-      descriptionEs: "Instalación, reparación y mantenimiento de calentadores de agua eléctricos y solares. Mejoramos la eficiencia y extendemos la vida útil de su equipo.",
+      descriptionEs: "Instalación, reparación y mantenimiento de calentadores de agua eléctricos y solares. Mejoramos la eficiencia y extendemos la vida útil de tu equipo.",
       descriptionEn: "Installation, repair and maintenance of electric and solar water heaters. We improve efficiency and extend the life of your equipment.",
       featuresEs: ["Instalación nueva", "Reparaciones", "Calentadores solares", "Mantenimiento anual"],
       featuresEn: ["New installation", "Repairs", "Solar heaters", "Annual maintenance"]
@@ -63,7 +63,7 @@ export default function PlumbingPage() {
       image: "/images/plumbing/fixture-install.jpg",
       nameEs: "Instalación de Accesorios",
       nameEn: "Fixture Installation",
-      descriptionEs: "Instalamos grifos, inodoros, lavabos, duchas y todos los accesorios de plomería. Actualizamos sus baños y cocinas con productos de calidad.",
+      descriptionEs: "Instalamos grifos, inodoros, lavabos, duchas y todos los accesorios de plomería. Actualizamos tus baños y cocinas con productos de calidad.",
       descriptionEn: "We install faucets, toilets, sinks, showers and all plumbing fixtures. We upgrade your bathrooms and kitchens with quality products.",
       featuresEs: ["Grifos y llaves", "Inodoros y lavabos", "Duchas y bañeras", "Conexiones de electrodomésticos"],
       featuresEn: ["Faucets and valves", "Toilets and sinks", "Showers and bathtubs", "Appliance connections"]
@@ -120,7 +120,7 @@ export default function PlumbingPage() {
       icon: Home,
       nameEs: "Residencial",
       nameEn: "Residential",
-      descriptionEs: "Servicios de plomería para su hogar. Desde reparaciones pequeñas hasta instalaciones completas.",
+      descriptionEs: "Servicios de plomería para tu hogar. Desde reparaciones pequeñas hasta instalaciones completas.",
       descriptionEn: "Plumbing services for your home. From small repairs to complete installations.",
       featuresEs: ["Baños y cocinas", "Calentadores de agua", "Destapes de emergencia", "Remodelaciones"],
       featuresEn: ["Bathrooms and kitchens", "Water heaters", "Emergency unclogging", "Remodeling"]
@@ -189,9 +189,9 @@ export default function PlumbingPage() {
                     <Clock className="h-6 w-6 text-cyan-600" />
                   </div>
                   <div>
-                    <p className="text-2xl font-bold text-foreground">{language === "es" ? "Mismo" : "Same"}</p>
+                    <p className="text-2xl font-bold text-foreground">{language === "es" ? "Respuesta" : "Fast"}</p>
                     <p className="text-sm text-muted-foreground">
-                      {language === "es" ? "Día" : "Day"}
+                      {language === "es" ? "Ágil" : "Response"}
                     </p>
                   </div>
                 </div>
@@ -265,12 +265,12 @@ export default function PlumbingPage() {
         <div className="container mx-auto px-4">
           <div className="text-center max-w-3xl mx-auto mb-12">
             <h2 className="text-3xl md:text-4xl font-bold text-foreground mb-4">
-              {language === "es" ? "¿Por Qué Elegirnos?" : "Why Choose Us?"}
+              {language === "es" ? "Plomería clara, rápida y sin vueltas" : "Clear, fast plumbing without hassle"}
             </h2>
             <p className="text-lg text-muted-foreground">
               {language === "es"
-                ? "Somos su mejor opción para plomería en Puerto Rico."
-                : "We are your best choice for plumbing in Puerto Rico."}
+                ? "Te explicamos el problema, coordinamos el servicio y trabajamos para que tu propiedad vuelva a funcionar correctamente."
+                : "We explain the problem, coordinate the service and work to get your property functioning properly again."}
             </p>
           </div>
 

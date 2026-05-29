@@ -6,7 +6,6 @@ import Link from "next/link"
 import { MapPin, Filter, Camera } from "lucide-react"
 import { Button } from "@/components/ui/button"
 import { Card, CardContent } from "@/components/ui/card"
-import { CTASection } from "@/components/sections/cta-section"
 import { galleryItems } from "@/content/gallery"
 import { cn } from "@/lib/utils"
 import { useLanguage } from "@/lib/language-context"
@@ -173,8 +172,6 @@ export default function GalleryPage() {
           </div>
         </div>
       </section>
-
-      <CTASection />
     </>
   )
 }
