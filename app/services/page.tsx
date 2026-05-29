@@ -161,6 +161,7 @@ export default function ServicesIndexPage() {
   const comingSoonServices = [
     {
       id: "water-damage",
+      href: "/services/water-damage-mitigation",
       icon: Droplets,
       bgColor: "bg-teal-500/10",
       textColor: "text-teal-600",
@@ -186,6 +187,7 @@ export default function ServicesIndexPage() {
     },
     {
       id: "handyman",
+      href: "/services/handyman-repairs",
       icon: HardHat,
       bgColor: "bg-purple-500/10",
       textColor: "text-purple-600",
@@ -211,6 +213,7 @@ export default function ServicesIndexPage() {
     },
     {
       id: "roof-sealing",
+      href: "/services/roof-sealing",
       icon: Layers,
       bgColor: "bg-amber-500/10",
       textColor: "text-amber-600",
@@ -236,6 +239,7 @@ export default function ServicesIndexPage() {
     },
     {
       id: "lead-asbestos",
+      href: "/services/lead-asbestos-mitigation",
       icon: Shield,
       bgColor: "bg-orange-500/10",
       textColor: "text-orange-600",
@@ -421,9 +425,10 @@ export default function ServicesIndexPage() {
               const features = language === "es" ? service.featuresEs : service.featuresEn
 
               return (
-                <div 
+                <Link 
                   key={service.id}
-                  className="bg-card border rounded-2xl p-6 shadow-sm"
+                  href={service.href}
+                  className="bg-card border rounded-2xl p-6 shadow-sm hover:shadow-md transition-shadow"
                 >
                   <div className="flex items-start gap-4 mb-4">
                     <div className={`flex h-12 w-12 items-center justify-center rounded-full ${service.bgColor} shrink-0`}>
@@ -449,7 +454,7 @@ export default function ServicesIndexPage() {
                       </div>
                     ))}
                   </div>
-                </div>
+                </Link>
               )
             })}
           </div>
