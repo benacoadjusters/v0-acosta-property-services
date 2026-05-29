@@ -41,7 +41,7 @@ export default function ElectricalPage() {
       image: "/images/electrical/outlet-install.jpg",
       nameEs: "Tomacorrientes y Switches",
       nameEn: "Outlets and Switches",
-      descriptionEs: "Instalación y reparación de tomacorrientes regulares, GFCI y USB. Actualizamos switches y agregamos puntos de energía donde los necesite.",
+      descriptionEs: "Instalación y reparación de tomacorrientes regulares, GFCI y USB. Actualizamos switches y agregamos puntos de energía donde los necesites.",
       descriptionEn: "Installation and repair of regular, GFCI and USB outlets. We upgrade switches and add power points where you need them.",
       featuresEs: ["Tomacorrientes GFCI", "Tomacorrientes USB", "Switches dimmer", "Reubicación de puntos"],
       featuresEn: ["GFCI outlets", "USB outlets", "Dimmer switches", "Point relocation"]

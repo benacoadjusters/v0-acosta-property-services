@@ -66,10 +66,26 @@ export default function HomePage() {
               </div>
             </div>
             <div className="relative pb-16">
-              {/* Grid de 5 servicios - Orden: Plagas, Plomería, Electricidad, Jardinería, Limpieza */}
+              {/* Grid de 5 servicios - Orden: Control de Plagas, Plomería, Electricidad, Jardinería, Limpieza */}
               <div className="grid grid-cols-3 gap-3">
-                {/* Primera columna - Plomería y Electricidad */}
+                {/* Primera columna - Control de Plagas (arriba) y Plomería (abajo) */}
                 <div className="space-y-3">
+                  <div className="relative aspect-[4/3] rounded-xl overflow-hidden bg-muted shadow-lg group">
+                    <Image
+                      src="/images/hero-pest-control.jpg"
+                      alt={language === "es" ? "Control de Plagas" : "Pest Control"}
+                      fill
+                      className="object-cover object-center group-hover:scale-105 transition-transform duration-300"
+                      priority
+                    />
+                    <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-transparent to-transparent" />
+                    <div className="absolute bottom-2 left-2 right-2">
+                      <div className="flex items-center gap-1.5">
+                        <Bug className="h-3.5 w-3.5 text-white" />
+                        <p className="text-white text-xs font-medium">{language === "es" ? "Control de Plagas" : "Pest Control"}</p>
+                      </div>
+                    </div>
+                  </div>
                   <div className="relative aspect-[4/3] rounded-xl overflow-hidden bg-muted shadow-lg group">
                     <Image
                       src="/images/hero-plumbing.jpg"
@@ -86,29 +102,13 @@ export default function HomePage() {
                       </div>
                     </div>
                   </div>
-                  <div className="relative aspect-[4/3] rounded-xl overflow-hidden bg-muted shadow-lg group">
-                    <Image
-                      src="/images/hero-electrical.jpg"
-                      alt={language === "es" ? "Electricidad" : "Electrical"}
-                      fill
-                      className="object-cover object-center group-hover:scale-105 transition-transform duration-300"
-                      priority
-                    />
-                    <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-transparent to-transparent" />
-                    <div className="absolute bottom-2 left-2 right-2">
-                      <div className="flex items-center gap-1.5">
-                        <Zap className="h-3.5 w-3.5 text-white" />
-                        <p className="text-white text-xs font-medium">{language === "es" ? "Electricidad" : "Electrical"}</p>
-                      </div>
-                    </div>
-                  </div>
                 </div>
                 
-                {/* Segunda columna - imagen grande de CONTROL DE PLAGAS */}
+                {/* Segunda columna - imagen grande de ELECTRICIDAD */}
                 <div className="relative aspect-[3/4] rounded-xl overflow-hidden bg-muted shadow-xl group">
                   <Image
-                    src="/images/hero-pest-control.jpg"
-                    alt={language === "es" ? "Control de Plagas" : "Pest Control"}
+                    src="/images/hero-electrical.jpg"
+                    alt={language === "es" ? "Electricidad" : "Electrical"}
                     fill
                     className="object-cover object-center group-hover:scale-105 transition-transform duration-300"
                     priority
@@ -116,8 +116,8 @@ export default function HomePage() {
                   <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-transparent to-transparent" />
                   <div className="absolute bottom-3 left-3 right-3">
                     <div className="flex items-center gap-1.5">
-                      <Bug className="h-4 w-4 text-white" />
-                      <p className="text-white text-sm font-medium">{language === "es" ? "Control de Plagas" : "Pest Control"}</p>
+                      <Zap className="h-4 w-4 text-white" />
+                      <p className="text-white text-sm font-medium">{language === "es" ? "Electricidad" : "Electrical"}</p>
                     </div>
                   </div>
                 </div>
