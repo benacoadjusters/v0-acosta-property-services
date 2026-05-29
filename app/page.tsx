@@ -158,19 +158,6 @@ export default function HomePage() {
                   </div>
                 </div>
               </div>
-              
-              {/* Stats badge - posicionado debajo del grid */}
-              <div className="absolute -bottom-4 left-1/2 -translate-x-1/2 bg-card rounded-xl shadow-lg p-4 border hidden md:block">
-                <div className="flex items-center gap-3">
-                  <div className="flex h-12 w-12 items-center justify-center rounded-full bg-primary/10">
-                    <Award className="h-6 w-6 text-primary" />
-                  </div>
-                  <div>
-                    <p className="text-2xl font-bold text-foreground">300+</p>
-                    <p className="text-sm text-muted-foreground">{t.home.statsClients}</p>
-                  </div>
-                </div>
-              </div>
             </div>
           </div>
         </div>
