@@ -520,6 +520,14 @@ export default function HomePage() {
                       className="object-cover object-center"
                     />
                   </div>
+                  <div className="relative aspect-[4/3] rounded-2xl overflow-hidden shadow-lg">
+                    <Image
+                      src="/images/hero-electrical.jpg"
+                      alt={language === "es" ? "Electricidad" : "Electrical"}
+                      fill
+                      className="object-cover object-center"
+                    />
+                  </div>
                 </div>
                 <div className="space-y-4 pt-8">
                   <div className="relative aspect-[4/3] rounded-2xl overflow-hidden shadow-lg">
@@ -591,22 +599,7 @@ export default function HomePage() {
           </div>
           <div className="flex animate-marquee-reverse whitespace-nowrap mt-3">
             {[
-              'Juncos', 'Lajas', 'Lares', 'Las Marías', 'Las Piedras', 'Lo��za', 'Luquillo', 'Manatí',
-              'Maricao', 'Maunabo', 'Mayagüez', 'Moca', 'Morovis', 'Naguabo', 'Naranjito', 'Orocovis',
-              'Patillas', 'Peñuelas', 'Ponce', 'Quebradillas', 'Rincón', 'Río Grande', 'Sabana Grande',
-              'Salinas', 'San Germán', 'San Juan', 'San Lorenzo', 'San Sebastián', 'Santa Isabel',
-              'Toa Alta', 'Toa Baja', 'Trujillo Alto', 'Utuado', 'Vega Alta', 'Vega Baja', 'Vieques',
-              'Villalba', 'Yabucoa', 'Yauco'
-            ].map((city) => (
-              <span 
-                key={city}
-                className="inline-flex items-center rounded-full bg-primary/10 px-4 py-2 text-sm font-medium text-primary mx-1.5 shrink-0"
-              >
-                {city}
-              </span>
-            ))}
-            {[
-              'Juncos', 'Lajas', 'Lares', 'Las Marías', 'Las Piedras', 'Loíza', 'Luquillo', 'Manatí',
+              'Juncos', 'Lajas', 'Lares', 'Las Marías', 'Las Piedras', 'Loiza', 'Luquillo', 'Manati',
               'Maricao', 'Maunabo', 'Mayagüez', 'Moca', 'Morovis', 'Naguabo', 'Naranjito', 'Orocovis',
               'Patillas', 'Peñuelas', 'Ponce', 'Quebradillas', 'Rincón', 'Río Grande', 'Sabana Grande',
               'Salinas', 'San Germán', 'San Juan', 'San Lorenzo', 'San Sebastián', 'Santa Isabel',
