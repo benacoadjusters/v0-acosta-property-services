@@ -1,6 +1,6 @@
-""use client"
+"use client"
 
-// Soft Wash Service Page"
+// Soft Wash Service Page
 
 import Link from "next/link"
 import Image from "next/image"

@@ -1,6 +1,6 @@
-""use client"
+"use client"
 
-// Window Cleaning Service Page"
+// Window Cleaning Service Page
 
 import Link from "next/link"
 import Image from "next/image"
