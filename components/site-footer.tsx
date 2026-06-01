@@ -8,24 +8,6 @@ import { useLanguage } from "@/lib/language-context"
 
 const footerLinks = {
   es: {
-    services: [
-      { name: "Todos los Servicios", href: "/services" },
-      { name: "Control de Plagas", href: "/services/pest-control" },
-      { name: "Jardinería", href: "/services/landscaping" },
-      { name: "Limpieza", href: "/services/cleaning" },
-      { name: "Limpieza de ventanas (Window Cleaning)", href: "/services/window-cleaning" },
-      { name: "Limpieza de mallas (Screen Cleaning)", href: "/services/screen-cleaning" },
-      { name: "Luces navideñas (Christmas Lights)", href: "/services/christmas-lights" },
-      { name: "Lavado a presión (Pressure Wash)", href: "/services/pressure-wash" },
-      { name: "Lavado suave (Soft Wash)", href: "/services/soft-wash" },
-      { name: "Paneles solares (Solar Panel Cleaning)", href: "/services/solar-panel-cleaning" },
-      { name: "Plomería", href: "/services/plumbing", badge: "Próximamente" },
-      { name: "Electricidad", href: "/services/electrical", badge: "Próximamente" },
-      { name: "Mitigación de daños por agua", href: "/services/water-damage-mitigation", badge: "Próximamente" },
-      { name: "Reparaciones handyman", href: "/services/handyman-repairs", badge: "Próximamente" },
-      { name: "Sellado de techos", href: "/services/roof-sealing", badge: "Próximamente" },
-      { name: "Mitigación de plomo y asbesto", href: "/services/lead-asbestos-mitigation", badge: "Próximamente" },
-    ],
     company: [
       { name: "Nosotros", href: "/about" },
       { name: "Galería", href: "/gallery" },
@@ -38,24 +20,6 @@ const footerLinks = {
     ],
   },
   en: {
-    services: [
-      { name: "All Services", href: "/services" },
-      { name: "Pest Control", href: "/services/pest-control" },
-      { name: "Landscaping", href: "/services/landscaping" },
-      { name: "Cleaning", href: "/services/cleaning" },
-      { name: "Window Cleaning", href: "/services/window-cleaning" },
-      { name: "Screen Cleaning", href: "/services/screen-cleaning" },
-      { name: "Christmas Lights", href: "/services/christmas-lights" },
-      { name: "Pressure Wash", href: "/services/pressure-wash" },
-      { name: "Soft Wash", href: "/services/soft-wash" },
-      { name: "Solar Panel Cleaning", href: "/services/solar-panel-cleaning" },
-      { name: "Plumbing", href: "/services/plumbing", badge: "Coming Soon" },
-      { name: "Electrical", href: "/services/electrical", badge: "Coming Soon" },
-      { name: "Water Damage Mitigation", href: "/services/water-damage-mitigation", badge: "Coming Soon" },
-      { name: "Handyman Repairs", href: "/services/handyman-repairs", badge: "Coming Soon" },
-      { name: "Roof Sealing", href: "/services/roof-sealing", badge: "Coming Soon" },
-      { name: "Lead & Asbestos Mitigation", href: "/services/lead-asbestos-mitigation", badge: "Coming Soon" },
-    ],
     company: [
       { name: "About Us", href: "/about" },
       { name: "Gallery", href: "/gallery" },
@@ -77,7 +41,7 @@ export function SiteFooter() {
     <footer className="bg-foreground text-background">
       {/* Main Footer */}
       <div className="container mx-auto px-4 py-12 md:py-16">
-        <div className="grid gap-8 md:grid-cols-2 lg:grid-cols-4">
+        <div className="grid gap-8 md:grid-cols-2 lg:grid-cols-3">
           {/* Company Info */}
           <div className="lg:col-span-1">
             <Link href="/" className="inline-block mb-4 bg-background/95 rounded-lg p-2">
@@ -139,28 +103,6 @@ export function SiteFooter() {
                 <span>{company.address.full}</span>
               </div>
             </div>
-          </div>
-
-          {/* Services */}
-          <div>
-            <h3 className="font-semibold text-lg mb-4">{t.footer.servicesTitle}</h3>
-            <ul className="space-y-2 text-sm">
-              {links.services.map((link) => (
-                <li key={link.href}>
-                  <Link 
-                    href={link.href} 
-                    className="text-background/70 hover:text-background transition-colors inline-flex items-center gap-2"
-                  >
-                    {link.name}
-                    {link.badge && (
-                      <span className="text-[10px] px-1.5 py-0.5 rounded bg-orange-500/20 text-orange-300">
-                        {link.badge}
-                      </span>
-                    )}
-                  </Link>
-                </li>
-              ))}
-            </ul>
           </div>
 
           {/* Company & Resources */}
