@@ -393,42 +393,79 @@ export default function AboutPage() {
               </div>
             </div>
             <div className="relative">
-              <div className="grid grid-cols-2 gap-4">
-                <div className="space-y-4">
-                  <div className="relative aspect-[4/3] rounded-xl overflow-hidden shadow-lg">
-                    <Image
-                      src="/images/hero-pest-control.jpg"
-                      alt="Pest Control"
-                      fill
-                      className="object-cover"
-                    />
-                  </div>
-                  <div className="relative aspect-square rounded-xl overflow-hidden shadow-lg">
-                    <Image
-                      src="/images/hero-cleaning.jpg"
-                      alt="Cleaning"
-                      fill
-                      className="object-cover"
-                    />
-                  </div>
+              <div className="grid grid-cols-3 gap-3">
+                {/* 9 servicios activos en grid 3x3 */}
+                <div className="relative aspect-square rounded-xl overflow-hidden shadow-lg">
+                  <Image
+                    src="/images/hero-pest-control.jpg"
+                    alt="Pest Control"
+                    fill
+                    className="object-cover"
+                  />
                 </div>
-                <div className="space-y-4 pt-8">
-                  <div className="relative aspect-square rounded-xl overflow-hidden shadow-lg">
-                    <Image
-                      src="/images/hero-landscaping.jpg"
-                      alt="Landscaping"
-                      fill
-                      className="object-cover"
-                    />
-                  </div>
-                  <div className="relative aspect-[4/3] rounded-xl overflow-hidden shadow-lg">
-                    <Image
-                      src="/images/pressure-wash.png"
-                      alt="Pressure Wash"
-                      fill
-                      className="object-cover"
-                    />
-                  </div>
+                <div className="relative aspect-square rounded-xl overflow-hidden shadow-lg">
+                  <Image
+                    src="/images/hero-landscaping.jpg"
+                    alt="Landscaping"
+                    fill
+                    className="object-cover"
+                  />
+                </div>
+                <div className="relative aspect-square rounded-xl overflow-hidden shadow-lg">
+                  <Image
+                    src="/images/hero-cleaning.jpg"
+                    alt="Cleaning"
+                    fill
+                    className="object-cover"
+                  />
+                </div>
+                <div className="relative aspect-square rounded-xl overflow-hidden shadow-lg">
+                  <Image
+                    src="/images/window-cleaning.png"
+                    alt="Window Cleaning"
+                    fill
+                    className="object-cover"
+                  />
+                </div>
+                <div className="relative aspect-square rounded-xl overflow-hidden shadow-lg">
+                  <Image
+                    src="/images/hero-screen-cleaning.png"
+                    alt="Screen Cleaning"
+                    fill
+                    className="object-cover"
+                  />
+                </div>
+                <div className="relative aspect-square rounded-xl overflow-hidden shadow-lg">
+                  <Image
+                    src="/images/hero-christmas-lights.png"
+                    alt="Christmas Lights"
+                    fill
+                    className="object-cover"
+                  />
+                </div>
+                <div className="relative aspect-square rounded-xl overflow-hidden shadow-lg">
+                  <Image
+                    src="/images/pressure-wash.png"
+                    alt="Pressure Wash"
+                    fill
+                    className="object-cover"
+                  />
+                </div>
+                <div className="relative aspect-square rounded-xl overflow-hidden shadow-lg">
+                  <Image
+                    src="/images/hero-soft-wash.png"
+                    alt="Soft Wash"
+                    fill
+                    className="object-cover"
+                  />
+                </div>
+                <div className="relative aspect-square rounded-xl overflow-hidden shadow-lg">
+                  <Image
+                    src="/images/hero-solar-panel.png"
+                    alt="Solar Panel Cleaning"
+                    fill
+                    className="object-cover"
+                  />
                 </div>
               </div>
             </div>

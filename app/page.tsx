@@ -85,47 +85,43 @@ export default function HomePage() {
                 </Button>
               </div>
             </div>
-            <div className="relative pb-16">
-              {/* Grid de 5 servicios activos - Control de Plagas, Jardinería, Limpieza, Window Cleaning, Pressure Wash */}
-              <div className="grid grid-cols-3 gap-3">
-                {/* Primera columna - Control de Plagas y Jardinería */}
-                <div className="space-y-3">
-                  <div className="relative aspect-[4/3] rounded-xl overflow-hidden bg-muted shadow-lg group">
-                    <Image
-                      src="/images/hero-pest-control.jpg"
-                      alt={language === "es" ? "Control de Plagas" : "Pest Control"}
-                      fill
-                      className="object-cover object-center group-hover:scale-105 transition-transform duration-300"
-                      priority
-                    />
-                    <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-transparent to-transparent" />
-                    <div className="absolute bottom-2 left-2 right-2">
-                      <div className="flex items-center gap-1.5">
-                        <Bug className="h-3.5 w-3.5 text-white" />
-                        <p className="text-white text-xs font-medium">{language === "es" ? "Control de Plagas" : "Pest Control"}</p>
-                      </div>
-                    </div>
-                  </div>
-                  <div className="relative aspect-[4/3] rounded-xl overflow-hidden bg-muted shadow-lg group">
-                    <Image
-                      src="/images/hero-landscaping.jpg"
-                      alt={language === "es" ? "Jardinería" : "Landscaping"}
-                      fill
-                      className="object-cover object-center group-hover:scale-105 transition-transform duration-300"
-                      priority
-                    />
-                    <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-transparent to-transparent" />
-                    <div className="absolute bottom-2 left-2 right-2">
-                      <div className="flex items-center gap-1.5">
-                        <TreePine className="h-3.5 w-3.5 text-white" />
-                        <p className="text-white text-xs font-medium">{language === "es" ? "Jardinería" : "Landscaping"}</p>
-                      </div>
+            <div className="relative pb-8">
+              {/* Grid de 9 servicios activos */}
+              <div className="grid grid-cols-3 gap-2">
+                {/* Fila 1: Control de Plagas, Jardinería, Limpieza */}
+                <div className="relative aspect-square rounded-xl overflow-hidden bg-muted shadow-lg group">
+                  <Image
+                    src="/images/hero-pest-control.jpg"
+                    alt={language === "es" ? "Control de Plagas" : "Pest Control"}
+                    fill
+                    className="object-cover object-center group-hover:scale-105 transition-transform duration-300"
+                    priority
+                  />
+                  <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-transparent to-transparent" />
+                  <div className="absolute bottom-2 left-2 right-2">
+                    <div className="flex items-center gap-1.5">
+                      <Bug className="h-3 w-3 text-white" />
+                      <p className="text-white text-[10px] sm:text-xs font-medium">{language === "es" ? "Control de Plagas" : "Pest Control"}</p>
                     </div>
                   </div>
                 </div>
-                
-                {/* Segunda columna - imagen grande de LIMPIEZA */}
-                <div className="relative aspect-[3/4] rounded-xl overflow-hidden bg-muted shadow-xl group">
+                <div className="relative aspect-square rounded-xl overflow-hidden bg-muted shadow-lg group">
+                  <Image
+                    src="/images/hero-landscaping.jpg"
+                    alt={language === "es" ? "Jardinería" : "Landscaping"}
+                    fill
+                    className="object-cover object-center group-hover:scale-105 transition-transform duration-300"
+                    priority
+                  />
+                  <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-transparent to-transparent" />
+                  <div className="absolute bottom-2 left-2 right-2">
+                    <div className="flex items-center gap-1.5">
+                      <TreePine className="h-3 w-3 text-white" />
+                      <p className="text-white text-[10px] sm:text-xs font-medium">{language === "es" ? "Jardinería" : "Landscaping"}</p>
+                    </div>
+                  </div>
+                </div>
+                <div className="relative aspect-square rounded-xl overflow-hidden bg-muted shadow-lg group">
                   <Image
                     src="/images/hero-cleaning.jpg"
                     alt={language === "es" ? "Limpieza" : "Cleaning"}
@@ -134,46 +130,110 @@ export default function HomePage() {
                     priority
                   />
                   <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-transparent to-transparent" />
-                  <div className="absolute bottom-3 left-3 right-3">
+                  <div className="absolute bottom-2 left-2 right-2">
                     <div className="flex items-center gap-1.5">
-                      <SprayCan className="h-4 w-4 text-white" />
-                      <p className="text-white text-sm font-medium">{language === "es" ? "Limpieza" : "Cleaning"}</p>
+                      <SprayCan className="h-3 w-3 text-white" />
+                      <p className="text-white text-[10px] sm:text-xs font-medium">{language === "es" ? "Limpieza" : "Cleaning"}</p>
                     </div>
                   </div>
                 </div>
                 
-                {/* Tercera columna - Window Cleaning y Pressure Wash */}
-                <div className="space-y-3">
-                  <div className="relative aspect-[4/3] rounded-xl overflow-hidden bg-muted shadow-lg group">
-                    <Image
-                      src="/images/window-cleaning.png"
-                      alt="Window Cleaning"
-                      fill
-                      className="object-cover object-center group-hover:scale-105 transition-transform duration-300"
-                      priority
-                    />
-                    <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-transparent to-transparent" />
-                    <div className="absolute bottom-2 left-2 right-2">
-                      <div className="flex items-center gap-1.5">
-                        <Droplets className="h-3.5 w-3.5 text-white" />
-                        <p className="text-white text-xs font-medium">Window Cleaning</p>
-                      </div>
+                {/* Fila 2: Window Cleaning, Screen Cleaning, Christmas Lights */}
+                <div className="relative aspect-square rounded-xl overflow-hidden bg-muted shadow-lg group">
+                  <Image
+                    src="/images/window-cleaning.png"
+                    alt="Window Cleaning"
+                    fill
+                    className="object-cover object-center group-hover:scale-105 transition-transform duration-300"
+                    priority
+                  />
+                  <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-transparent to-transparent" />
+                  <div className="absolute bottom-2 left-2 right-2">
+                    <div className="flex items-center gap-1.5">
+                      <Droplets className="h-3 w-3 text-white" />
+                      <p className="text-white text-[10px] sm:text-xs font-medium">Window Cleaning</p>
                     </div>
                   </div>
-                  <div className="relative aspect-[4/3] rounded-xl overflow-hidden bg-muted shadow-lg group">
-                    <Image
-                      src="/images/pressure-wash.png"
-                      alt="Pressure Wash"
-                      fill
-                      className="object-cover object-center group-hover:scale-105 transition-transform duration-300"
-                      priority
-                    />
-                    <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-transparent to-transparent" />
-                    <div className="absolute bottom-2 left-2 right-2">
-                      <div className="flex items-center gap-1.5">
-                        <Waves className="h-3.5 w-3.5 text-white" />
-                        <p className="text-white text-xs font-medium">Pressure Wash</p>
-                      </div>
+                </div>
+                <div className="relative aspect-square rounded-xl overflow-hidden bg-muted shadow-lg group">
+                  <Image
+                    src="/images/hero-screen-cleaning.png"
+                    alt="Screen Cleaning"
+                    fill
+                    className="object-cover object-center group-hover:scale-105 transition-transform duration-300"
+                    priority
+                  />
+                  <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-transparent to-transparent" />
+                  <div className="absolute bottom-2 left-2 right-2">
+                    <div className="flex items-center gap-1.5">
+                      <Grid3X3 className="h-3 w-3 text-white" />
+                      <p className="text-white text-[10px] sm:text-xs font-medium">Screen Cleaning</p>
+                    </div>
+                  </div>
+                </div>
+                <div className="relative aspect-square rounded-xl overflow-hidden bg-muted shadow-lg group">
+                  <Image
+                    src="/images/hero-christmas-lights.png"
+                    alt="Christmas Lights"
+                    fill
+                    className="object-cover object-center group-hover:scale-105 transition-transform duration-300"
+                    priority
+                  />
+                  <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-transparent to-transparent" />
+                  <div className="absolute bottom-2 left-2 right-2">
+                    <div className="flex items-center gap-1.5">
+                      <Sparkles className="h-3 w-3 text-white" />
+                      <p className="text-white text-[10px] sm:text-xs font-medium">Christmas Lights</p>
+                    </div>
+                  </div>
+                </div>
+                
+                {/* Fila 3: Pressure Wash, Soft Wash, Solar Panel Cleaning */}
+                <div className="relative aspect-square rounded-xl overflow-hidden bg-muted shadow-lg group">
+                  <Image
+                    src="/images/pressure-wash.png"
+                    alt="Pressure Wash"
+                    fill
+                    className="object-cover object-center group-hover:scale-105 transition-transform duration-300"
+                    priority
+                  />
+                  <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-transparent to-transparent" />
+                  <div className="absolute bottom-2 left-2 right-2">
+                    <div className="flex items-center gap-1.5">
+                      <Waves className="h-3 w-3 text-white" />
+                      <p className="text-white text-[10px] sm:text-xs font-medium">Pressure Wash</p>
+                    </div>
+                  </div>
+                </div>
+                <div className="relative aspect-square rounded-xl overflow-hidden bg-muted shadow-lg group">
+                  <Image
+                    src="/images/hero-soft-wash.png"
+                    alt="Soft Wash"
+                    fill
+                    className="object-cover object-center group-hover:scale-105 transition-transform duration-300"
+                    priority
+                  />
+                  <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-transparent to-transparent" />
+                  <div className="absolute bottom-2 left-2 right-2">
+                    <div className="flex items-center gap-1.5">
+                      <Droplet className="h-3 w-3 text-white" />
+                      <p className="text-white text-[10px] sm:text-xs font-medium">Soft Wash</p>
+                    </div>
+                  </div>
+                </div>
+                <div className="relative aspect-square rounded-xl overflow-hidden bg-muted shadow-lg group">
+                  <Image
+                    src="/images/hero-solar-panel.png"
+                    alt="Solar Panel Cleaning"
+                    fill
+                    className="object-cover object-center group-hover:scale-105 transition-transform duration-300"
+                    priority
+                  />
+                  <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-transparent to-transparent" />
+                  <div className="absolute bottom-2 left-2 right-2">
+                    <div className="flex items-center gap-1.5">
+                      <Sun className="h-3 w-3 text-white" />
+                      <p className="text-white text-[10px] sm:text-xs font-medium">Solar Panel</p>
                     </div>
                   </div>
                 </div>
@@ -728,58 +788,79 @@ export default function HomePage() {
               </div>
             </div>
             <div className="relative">
-              <div className="grid grid-cols-2 gap-4">
-                <div className="space-y-4">
-                  <div className="relative aspect-square rounded-2xl overflow-hidden shadow-lg">
-                    <Image
-                      src="/images/hero-pest-control.jpg"
-                      alt={language === "es" ? "Control de Plagas" : "Pest Control"}
-                      fill
-                      className="object-cover object-center"
-                    />
-                  </div>
-                  <div className="relative aspect-[4/3] rounded-2xl overflow-hidden shadow-lg">
-                    <Image
-                      src="/images/hero-cleaning.jpg"
-                      alt={language === "es" ? "Limpieza" : "Cleaning"}
-                      fill
-                      className="object-cover object-center"
-                    />
-                  </div>
-                  <div className="relative aspect-[4/3] rounded-2xl overflow-hidden shadow-lg">
-                    <Image
-                      src="/images/window-cleaning.png"
-                      alt="Window Cleaning"
-                      fill
-                      className="object-cover object-center"
-                    />
-                  </div>
+              <div className="grid grid-cols-3 gap-3">
+                {/* 9 servicios activos en grid 3x3 */}
+                <div className="relative aspect-square rounded-2xl overflow-hidden shadow-lg">
+                  <Image
+                    src="/images/hero-pest-control.jpg"
+                    alt={language === "es" ? "Control de Plagas" : "Pest Control"}
+                    fill
+                    className="object-cover object-center"
+                  />
                 </div>
-                <div className="space-y-4 pt-8">
-                  <div className="relative aspect-[4/3] rounded-2xl overflow-hidden shadow-lg">
-                    <Image
-                      src="/images/hero-landscaping.jpg"
-                      alt={language === "es" ? "Jardinería" : "Landscaping"}
-                      fill
-                      className="object-cover object-center"
-                    />
-                  </div>
-                  <div className="relative aspect-square rounded-2xl overflow-hidden shadow-lg">
-                    <Image
-                      src="/images/pressure-wash.png"
-                      alt="Pressure Wash"
-                      fill
-                      className="object-cover object-center"
-                    />
-                  </div>
-                  <div className="relative aspect-[4/3] rounded-2xl overflow-hidden shadow-lg">
-                    <Image
-                      src="/images/solar-panel-cleaning.png"
-                      alt="Solar Panel Cleaning"
-                      fill
-                      className="object-cover object-center"
-                    />
-                  </div>
+                <div className="relative aspect-square rounded-2xl overflow-hidden shadow-lg">
+                  <Image
+                    src="/images/hero-landscaping.jpg"
+                    alt={language === "es" ? "Jardinería" : "Landscaping"}
+                    fill
+                    className="object-cover object-center"
+                  />
+                </div>
+                <div className="relative aspect-square rounded-2xl overflow-hidden shadow-lg">
+                  <Image
+                    src="/images/hero-cleaning.jpg"
+                    alt={language === "es" ? "Limpieza" : "Cleaning"}
+                    fill
+                    className="object-cover object-center"
+                  />
+                </div>
+                <div className="relative aspect-square rounded-2xl overflow-hidden shadow-lg">
+                  <Image
+                    src="/images/window-cleaning.png"
+                    alt="Window Cleaning"
+                    fill
+                    className="object-cover object-center"
+                  />
+                </div>
+                <div className="relative aspect-square rounded-2xl overflow-hidden shadow-lg">
+                  <Image
+                    src="/images/hero-screen-cleaning.png"
+                    alt="Screen Cleaning"
+                    fill
+                    className="object-cover object-center"
+                  />
+                </div>
+                <div className="relative aspect-square rounded-2xl overflow-hidden shadow-lg">
+                  <Image
+                    src="/images/hero-christmas-lights.png"
+                    alt="Christmas Lights"
+                    fill
+                    className="object-cover object-center"
+                  />
+                </div>
+                <div className="relative aspect-square rounded-2xl overflow-hidden shadow-lg">
+                  <Image
+                    src="/images/pressure-wash.png"
+                    alt="Pressure Wash"
+                    fill
+                    className="object-cover object-center"
+                  />
+                </div>
+                <div className="relative aspect-square rounded-2xl overflow-hidden shadow-lg">
+                  <Image
+                    src="/images/hero-soft-wash.png"
+                    alt="Soft Wash"
+                    fill
+                    className="object-cover object-center"
+                  />
+                </div>
+                <div className="relative aspect-square rounded-2xl overflow-hidden shadow-lg">
+                  <Image
+                    src="/images/hero-solar-panel.png"
+                    alt="Solar Panel Cleaning"
+                    fill
+                    className="object-cover object-center"
+                  />
                 </div>
               </div>
             </div>
