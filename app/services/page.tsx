@@ -100,7 +100,7 @@ export default function ServicesIndexPage() {
     },
     {
       id: "window-cleaning",
-      href: "/services/window-cleaning",
+      href: "/services/windows",
       icon: Droplets,
       bgColor: "bg-cyan-500/10",
       textColor: "text-cyan-600",
@@ -129,7 +129,7 @@ export default function ServicesIndexPage() {
     },
     {
       id: "screen-cleaning",
-      href: "/services/screen-cleaning",
+      href: "/services/screens",
       icon: Grid3X3,
       bgColor: "bg-teal-500/10",
       textColor: "text-teal-600",
@@ -216,7 +216,7 @@ export default function ServicesIndexPage() {
     },
     {
       id: "soft-wash",
-      href: "/services/soft-wash",
+      href: "/services/softwash",
       icon: Droplet,
       bgColor: "bg-sky-500/10",
       textColor: "text-sky-600",
@@ -245,7 +245,7 @@ export default function ServicesIndexPage() {
     },
     {
       id: "solar-panel-cleaning",
-      href: "/services/solar-panel-cleaning",
+      href: "/services/solarpanel",
       icon: Sun,
       bgColor: "bg-amber-500/10",
       textColor: "text-amber-600",

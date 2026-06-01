@@ -79,12 +79,12 @@ export default function AboutPage() {
     { href: "/services/pest-control", icon: Bug, color: "text-primary", bgColor: "bg-primary/10", nameEs: "Control de Plagas", nameEn: "Pest Control" },
     { href: "/services/landscaping", icon: TreePine, color: "text-green-600", bgColor: "bg-green-500/10", nameEs: "Jardinería", nameEn: "Landscaping" },
     { href: "/services/cleaning", icon: SprayCan, color: "text-blue-600", bgColor: "bg-blue-500/10", nameEs: "Limpieza", nameEn: "Cleaning" },
-    { href: "/services/window-cleaning", icon: Droplets, color: "text-sky-600", bgColor: "bg-sky-500/10", nameEs: "Window Cleaning", nameEn: "Window Cleaning" },
-    { href: "/services/screen-cleaning", icon: Grid3X3, color: "text-slate-600", bgColor: "bg-slate-500/10", nameEs: "Screen Cleaning", nameEn: "Screen Cleaning" },
+    { href: "/services/windows", icon: Droplets, color: "text-sky-600", bgColor: "bg-sky-500/10", nameEs: "Window Cleaning", nameEn: "Window Cleaning" },
+    { href: "/services/screens", icon: Grid3X3, color: "text-slate-600", bgColor: "bg-slate-500/10", nameEs: "Screen Cleaning", nameEn: "Screen Cleaning" },
     { href: "/services/christmas-lights", icon: Sparkles, color: "text-red-600", bgColor: "bg-red-500/10", nameEs: "Christmas Lights", nameEn: "Christmas Lights" },
     { href: "/services/pressure-wash", icon: Zap, color: "text-orange-600", bgColor: "bg-orange-500/10", nameEs: "Pressure Wash", nameEn: "Pressure Wash" },
-    { href: "/services/soft-wash", icon: Waves, color: "text-teal-600", bgColor: "bg-teal-500/10", nameEs: "Soft Wash", nameEn: "Soft Wash" },
-    { href: "/services/solar-panel-cleaning", icon: Sun, color: "text-yellow-600", bgColor: "bg-yellow-500/10", nameEs: "Solar Panel Cleaning", nameEn: "Solar Panel Cleaning" },
+    { href: "/services/softwash", icon: Waves, color: "text-teal-600", bgColor: "bg-teal-500/10", nameEs: "Soft Wash", nameEn: "Soft Wash" },
+    { href: "/services/solarpanel", icon: Sun, color: "text-yellow-600", bgColor: "bg-yellow-500/10", nameEs: "Solar Panel Cleaning", nameEn: "Solar Panel Cleaning" },
   ]
 
   return (
