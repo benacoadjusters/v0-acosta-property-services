@@ -141,19 +141,37 @@ export default function AboutPage() {
               </div>
             </div>
             
-            {/* Service cards grid - 9 active services in 3x3 */}
+            {/* Service cards grid - 9 active services with real images */}
             <div className="grid grid-cols-3 gap-3">
-              {services.map((service) => {
+              {[
+                { href: "/services/pest-control", image: "/images/hero-pest-control.jpg", nameEs: "Control de Plagas", nameEn: "Pest Control", icon: Bug, color: "text-white" },
+                { href: "/services/landscaping", image: "/images/hero-landscaping.jpg", nameEs: "Jardinería", nameEn: "Landscaping", icon: TreePine, color: "text-white" },
+                { href: "/services/cleaning", image: "/images/hero-cleaning.jpg", nameEs: "Limpieza", nameEn: "Cleaning", icon: SprayCan, color: "text-white" },
+                { href: "/services/window-cleaning", image: "/images/window-cleaning.png", nameEs: "Window Cleaning", nameEn: "Window Cleaning", icon: Droplets, color: "text-white" },
+                { href: "/services/screen-cleaning", image: "/images/hero-screen-cleaning.png", nameEs: "Screen Cleaning", nameEn: "Screen Cleaning", icon: Grid3X3, color: "text-white" },
+                { href: "/services/christmas-lights", image: "/images/hero-christmas-lights.png", nameEs: "Christmas Lights", nameEn: "Christmas Lights", icon: Sparkles, color: "text-white" },
+                { href: "/services/pressure-wash", image: "/images/pressure-wash.png", nameEs: "Pressure Wash", nameEn: "Pressure Wash", icon: Zap, color: "text-white" },
+                { href: "/services/soft-wash", image: "/images/hero-soft-wash.png", nameEs: "Soft Wash", nameEn: "Soft Wash", icon: Waves, color: "text-white" },
+                { href: "/services/solar-panel-cleaning", image: "/images/hero-solar-panel.png", nameEs: "Solar Panel", nameEn: "Solar Panel", icon: Sun, color: "text-white" },
+              ].map((service) => {
                 const Icon = service.icon
                 return (
                   <Link key={service.href} href={service.href} className="group relative">
-                    <div className="relative aspect-square rounded-xl overflow-hidden shadow-lg bg-muted">
-                      <div className={`absolute inset-0 ${service.bgColor} group-hover:opacity-80 transition-opacity`} />
-                      <div className="absolute inset-0 flex flex-col items-center justify-center p-2">
-                        <Icon className={`h-8 w-8 ${service.color} mb-2`} />
-                        <h3 className="text-foreground font-bold text-xs text-center leading-tight">
-                          {language === "es" ? service.nameEs : service.nameEn}
-                        </h3>
+                    <div className="relative aspect-square rounded-xl overflow-hidden shadow-lg">
+                      <Image
+                        src={service.image}
+                        alt={language === "es" ? service.nameEs : service.nameEn}
+                        fill
+                        className="object-cover group-hover:scale-105 transition-transform duration-300"
+                      />
+                      <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-black/20 to-transparent" />
+                      <div className="absolute bottom-2 left-2 right-2">
+                        <div className="flex items-center gap-1.5">
+                          <Icon className="h-3 w-3 text-white" />
+                          <h3 className="text-white font-semibold text-[10px] sm:text-xs leading-tight">
+                            {language === "es" ? service.nameEs : service.nameEn}
+                          </h3>
+                        </div>
                       </div>
                     </div>
                   </Link>
