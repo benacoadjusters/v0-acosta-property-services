@@ -54,7 +54,7 @@ export function SiteHeader() {
       descEn: "Professional cleaning"
     },
     { 
-      href: "/services/windows", 
+      href: "/services/window-cleaning", 
       icon: Droplets, 
       color: "text-sky-600", 
       bgColor: "bg-sky-500/10",
@@ -64,7 +64,7 @@ export function SiteHeader() {
       descEn: "Window cleaning"
     },
     { 
-      href: "/services/screens", 
+      href: "/services/screen-cleaning", 
       icon: Grid3X3, 
       color: "text-slate-600", 
       bgColor: "bg-slate-500/10",
@@ -94,7 +94,7 @@ export function SiteHeader() {
       descEn: "Pressure washing"
     },
     { 
-      href: "/services/softwash", 
+      href: "/services/soft-wash", 
       icon: Waves, 
       color: "text-teal-600", 
       bgColor: "bg-teal-500/10",
@@ -104,7 +104,7 @@ export function SiteHeader() {
       descEn: "Soft washing"
     },
     { 
-      href: "/services/solarpanel", 
+      href: "/services/solar-panel-cleaning", 
       icon: Sun, 
       color: "text-yellow-600", 
       bgColor: "bg-yellow-500/10",

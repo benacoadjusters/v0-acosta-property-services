@@ -395,7 +395,7 @@ export default function HomePage() {
           {/* Second Row: Window Cleaning, Screen Cleaning, Christmas Lights */}
           <div className="grid md:grid-cols-3 gap-6 mb-6">
             {/* Window Cleaning */}
-            <Link href="/services/windows" className="group">
+            <Link href="/services/window-cleaning" className="group">
               <div className="relative overflow-hidden rounded-2xl bg-card border shadow-sm hover:shadow-xl transition-all duration-300">
                 <div className="relative aspect-[4/3] overflow-hidden">
                   <Image
@@ -430,7 +430,7 @@ export default function HomePage() {
             </Link>
 
             {/* Screen Cleaning */}
-            <Link href="/services/screens" className="group">
+            <Link href="/services/screen-cleaning" className="group">
               <div className="relative overflow-hidden rounded-2xl bg-card border shadow-sm hover:shadow-xl transition-all duration-300">
                 <div className="relative aspect-[4/3] overflow-hidden">
                   <Image
@@ -538,7 +538,7 @@ export default function HomePage() {
             </Link>
 
             {/* Soft Wash */}
-            <Link href="/services/softwash" className="group">
+            <Link href="/services/soft-wash" className="group">
               <div className="relative overflow-hidden rounded-2xl bg-card border shadow-sm hover:shadow-xl transition-all duration-300">
                 <div className="relative aspect-[4/3] overflow-hidden">
                   <Image
@@ -573,7 +573,7 @@ export default function HomePage() {
             </Link>
 
             {/* Solar Panel Cleaning */}
-            <Link href="/services/solarpanel" className="group">
+            <Link href="/services/solar-panel-cleaning" className="group">
               <div className="relative overflow-hidden rounded-2xl bg-card border shadow-sm hover:shadow-xl transition-all duration-300">
                 <div className="relative aspect-[4/3] overflow-hidden">
                   <Image
