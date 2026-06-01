@@ -1,4 +1,3 @@
 {
-  "buildCommand": "node .v0/inject-built-with-v0.mjs && next build",
-  "cacheVersion": "force-rebuild-20260601-v3"
+  "buildCommand": "node .v0/inject-built-with-v0.mjs && next build"
 }
