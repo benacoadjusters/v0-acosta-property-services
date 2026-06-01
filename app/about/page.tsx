@@ -147,12 +147,12 @@ export default function AboutPage() {
                 { href: "/services/pest-control", image: "/images/hero-pest-control.jpg", nameEs: "Control de Plagas", nameEn: "Pest Control", icon: Bug, color: "text-white" },
                 { href: "/services/landscaping", image: "/images/hero-landscaping.jpg", nameEs: "Jardinería", nameEn: "Landscaping", icon: TreePine, color: "text-white" },
                 { href: "/services/cleaning", image: "/images/hero-cleaning.jpg", nameEs: "Limpieza", nameEn: "Cleaning", icon: SprayCan, color: "text-white" },
-                { href: "/services/window-cleaning", image: "/images/window-cleaning.png", nameEs: "Window Cleaning", nameEn: "Window Cleaning", icon: Droplets, color: "text-white" },
-                { href: "/services/screen-cleaning", image: "/images/hero-screen-cleaning.png", nameEs: "Screen Cleaning", nameEn: "Screen Cleaning", icon: Grid3X3, color: "text-white" },
-                { href: "/services/christmas-lights", image: "/images/hero-christmas-lights.png", nameEs: "Christmas Lights", nameEn: "Christmas Lights", icon: Sparkles, color: "text-white" },
-                { href: "/services/pressure-wash", image: "/images/pressure-wash.png", nameEs: "Pressure Wash", nameEn: "Pressure Wash", icon: Zap, color: "text-white" },
-                { href: "/services/soft-wash", image: "/images/hero-soft-wash.png", nameEs: "Soft Wash", nameEn: "Soft Wash", icon: Waves, color: "text-white" },
-                { href: "/services/solar-panel-cleaning", image: "/images/hero-solar-panel.png", nameEs: "Solar Panel", nameEn: "Solar Panel", icon: Sun, color: "text-white" },
+                { href: "/services/window-cleaning", image: "/images/window-cleaning.png", nameEs: "Limpieza de ventanas", nameEn: "Window Cleaning", icon: Droplets, color: "text-white" },
+                { href: "/services/screen-cleaning", image: "/images/hero-screen-cleaning.png", nameEs: "Limpieza de mallas", nameEn: "Screen Cleaning", icon: Grid3X3, color: "text-white" },
+                { href: "/services/christmas-lights", image: "/images/hero-christmas-lights.png", nameEs: "Luces navideñas", nameEn: "Christmas Lights", icon: Sparkles, color: "text-white" },
+                { href: "/services/pressure-wash", image: "/images/pressure-wash.png", nameEs: "Lavado a presión", nameEn: "Pressure Wash", icon: Zap, color: "text-white" },
+                { href: "/services/soft-wash", image: "/images/hero-soft-wash.png", nameEs: "Lavado suave", nameEn: "Soft Wash", icon: Waves, color: "text-white" },
+                { href: "/services/solar-panel-cleaning", image: "/images/hero-solar-panel.png", nameEs: "Paneles solares", nameEn: "Solar Panel", icon: Sun, color: "text-white" },
               ].map((service) => {
                 const Icon = service.icon
                 return (

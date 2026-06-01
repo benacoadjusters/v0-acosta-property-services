@@ -78,7 +78,7 @@ export default function ChristmasLightsPage() {
               </div>
               <h1 className="text-4xl md:text-5xl font-bold text-foreground mb-6 text-balance">
                 {language === "es" 
-                  ? "Christmas Lights para propiedades que quieren destacar" 
+                  ? "Instalación de luces navideñas (Christmas Lights)" 
                   : "Christmas Lights for properties that want to stand out"}
               </h1>
               <p className="text-xl text-muted-foreground text-pretty mb-8">

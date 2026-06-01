@@ -65,10 +65,10 @@ export default function SolarPanelCleaningPage() {
             <div>
               <div className="inline-flex items-center gap-2 rounded-full bg-amber-500/10 px-4 py-1.5 text-sm font-medium text-amber-700 mb-4">
                 <Sun className="h-4 w-4" />
-                Solar Panel Cleaning
+                {language === "es" ? "Paneles solares (Solar Panel Cleaning)" : "Solar Panel Cleaning"}
               </div>
               <h1 className="text-4xl md:text-5xl font-bold text-foreground mb-6 text-balance">
-                {language === "es" ? "Paneles solares limpios, máxima eficiencia" : "Clean solar panels, maximum efficiency"}
+                {language === "es" ? "Limpieza de paneles solares (Solar Panel Cleaning)" : "Clean solar panels, maximum efficiency"}
               </h1>
               <p className="text-xl text-muted-foreground text-pretty mb-8">
                 {language === "es"

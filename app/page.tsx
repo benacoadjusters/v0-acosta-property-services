@@ -47,27 +47,27 @@ export default function HomePage() {
                 </span>
                 <span className="inline-flex items-center gap-1.5 rounded-full bg-cyan-500/10 px-3 py-1 text-sm font-medium text-cyan-700">
                   <Droplets className="h-3.5 w-3.5" />
-                  Window Cleaning
+                  {language === "es" ? "Limpieza de ventanas (Window Cleaning)" : "Window Cleaning"}
                 </span>
                 <span className="inline-flex items-center gap-1.5 rounded-full bg-teal-500/10 px-3 py-1 text-sm font-medium text-teal-700">
                   <Grid3X3 className="h-3.5 w-3.5" />
-                  Screen Cleaning
+                  {language === "es" ? "Limpieza de mallas (Screen Cleaning)" : "Screen Cleaning"}
                 </span>
                 <span className="inline-flex items-center gap-1.5 rounded-full bg-red-500/10 px-3 py-1 text-sm font-medium text-red-700">
                   <Sparkles className="h-3.5 w-3.5" />
-                  Christmas Lights
+                  {language === "es" ? "Luces navideñas (Christmas Lights)" : "Christmas Lights"}
                 </span>
                 <span className="inline-flex items-center gap-1.5 rounded-full bg-slate-500/10 px-3 py-1 text-sm font-medium text-slate-700">
                   <Waves className="h-3.5 w-3.5" />
-                  Pressure Wash
+                  {language === "es" ? "Lavado a presión (Pressure Wash)" : "Pressure Wash"}
                 </span>
                 <span className="inline-flex items-center gap-1.5 rounded-full bg-sky-500/10 px-3 py-1 text-sm font-medium text-sky-700">
                   <Droplet className="h-3.5 w-3.5" />
-                  Soft Wash
+                  {language === "es" ? "Lavado suave (Soft Wash)" : "Soft Wash"}
                 </span>
                 <span className="inline-flex items-center gap-1.5 rounded-full bg-amber-500/10 px-3 py-1 text-sm font-medium text-amber-700">
                   <Sun className="h-3.5 w-3.5" />
-                  Solar Panel Cleaning
+                  {language === "es" ? "Paneles solares (Solar Panel Cleaning)" : "Solar Panel Cleaning"}
                 </span>
               </div>
               <div className="flex flex-col sm:flex-row gap-4">
@@ -142,7 +142,7 @@ export default function HomePage() {
                 <div className="relative aspect-square rounded-xl overflow-hidden bg-muted shadow-lg group">
                   <Image
                     src="/images/window-cleaning.png"
-                    alt="Window Cleaning"
+                    alt={language === "es" ? "Limpieza de ventanas" : "Window Cleaning"}
                     fill
                     className="object-cover object-center group-hover:scale-105 transition-transform duration-300"
                     priority
@@ -151,14 +151,14 @@ export default function HomePage() {
                   <div className="absolute bottom-2 left-2 right-2">
                     <div className="flex items-center gap-1.5">
                       <Droplets className="h-3 w-3 text-white" />
-                      <p className="text-white text-[10px] sm:text-xs font-medium">Window Cleaning</p>
+                      <p className="text-white text-[10px] sm:text-xs font-medium">{language === "es" ? "Limpieza de ventanas" : "Window Cleaning"}</p>
                     </div>
                   </div>
                 </div>
                 <div className="relative aspect-square rounded-xl overflow-hidden bg-muted shadow-lg group">
                   <Image
                     src="/images/hero-screen-cleaning.png"
-                    alt="Screen Cleaning"
+                    alt={language === "es" ? "Limpieza de mallas" : "Screen Cleaning"}
                     fill
                     className="object-cover object-center group-hover:scale-105 transition-transform duration-300"
                     priority
@@ -167,14 +167,14 @@ export default function HomePage() {
                   <div className="absolute bottom-2 left-2 right-2">
                     <div className="flex items-center gap-1.5">
                       <Grid3X3 className="h-3 w-3 text-white" />
-                      <p className="text-white text-[10px] sm:text-xs font-medium">Screen Cleaning</p>
+                      <p className="text-white text-[10px] sm:text-xs font-medium">{language === "es" ? "Limpieza de mallas" : "Screen Cleaning"}</p>
                     </div>
                   </div>
                 </div>
                 <div className="relative aspect-square rounded-xl overflow-hidden bg-muted shadow-lg group">
                   <Image
                     src="/images/hero-christmas-lights.png"
-                    alt="Christmas Lights"
+                    alt={language === "es" ? "Luces navideñas" : "Christmas Lights"}
                     fill
                     className="object-cover object-center group-hover:scale-105 transition-transform duration-300"
                     priority
@@ -183,7 +183,7 @@ export default function HomePage() {
                   <div className="absolute bottom-2 left-2 right-2">
                     <div className="flex items-center gap-1.5">
                       <Sparkles className="h-3 w-3 text-white" />
-                      <p className="text-white text-[10px] sm:text-xs font-medium">Christmas Lights</p>
+                      <p className="text-white text-[10px] sm:text-xs font-medium">{language === "es" ? "Luces navideñas" : "Christmas Lights"}</p>
                     </div>
                   </div>
                 </div>
@@ -192,7 +192,7 @@ export default function HomePage() {
                 <div className="relative aspect-square rounded-xl overflow-hidden bg-muted shadow-lg group">
                   <Image
                     src="/images/pressure-wash.png"
-                    alt="Pressure Wash"
+                    alt={language === "es" ? "Lavado a presión" : "Pressure Wash"}
                     fill
                     className="object-cover object-center group-hover:scale-105 transition-transform duration-300"
                     priority
@@ -201,14 +201,14 @@ export default function HomePage() {
                   <div className="absolute bottom-2 left-2 right-2">
                     <div className="flex items-center gap-1.5">
                       <Waves className="h-3 w-3 text-white" />
-                      <p className="text-white text-[10px] sm:text-xs font-medium">Pressure Wash</p>
+                      <p className="text-white text-[10px] sm:text-xs font-medium">{language === "es" ? "Lavado a presión" : "Pressure Wash"}</p>
                     </div>
                   </div>
                 </div>
                 <div className="relative aspect-square rounded-xl overflow-hidden bg-muted shadow-lg group">
                   <Image
                     src="/images/hero-soft-wash.png"
-                    alt="Soft Wash"
+                    alt={language === "es" ? "Lavado suave" : "Soft Wash"}
                     fill
                     className="object-cover object-center group-hover:scale-105 transition-transform duration-300"
                     priority
@@ -217,14 +217,14 @@ export default function HomePage() {
                   <div className="absolute bottom-2 left-2 right-2">
                     <div className="flex items-center gap-1.5">
                       <Droplet className="h-3 w-3 text-white" />
-                      <p className="text-white text-[10px] sm:text-xs font-medium">Soft Wash</p>
+                      <p className="text-white text-[10px] sm:text-xs font-medium">{language === "es" ? "Lavado suave" : "Soft Wash"}</p>
                     </div>
                   </div>
                 </div>
                 <div className="relative aspect-square rounded-xl overflow-hidden bg-muted shadow-lg group">
                   <Image
                     src="/images/hero-solar-panel.png"
-                    alt="Solar Panel Cleaning"
+                    alt={language === "es" ? "Paneles solares" : "Solar Panel Cleaning"}
                     fill
                     className="object-cover object-center group-hover:scale-105 transition-transform duration-300"
                     priority
@@ -233,7 +233,7 @@ export default function HomePage() {
                   <div className="absolute bottom-2 left-2 right-2">
                     <div className="flex items-center gap-1.5">
                       <Sun className="h-3 w-3 text-white" />
-                      <p className="text-white text-[10px] sm:text-xs font-medium">Solar Panel</p>
+                      <p className="text-white text-[10px] sm:text-xs font-medium">{language === "es" ? "Paneles solares" : "Solar Panel"}</p>
                     </div>
                   </div>
                 </div>
@@ -400,7 +400,7 @@ export default function HomePage() {
                 <div className="relative aspect-[4/3] overflow-hidden">
                   <Image
                     src="/images/window-cleaning.png"
-                    alt="Window Cleaning"
+                    alt={language === "es" ? "Limpieza de ventanas y cristales" : "Window Cleaning"}
                     fill
                     className="object-cover object-center group-hover:scale-105 transition-transform duration-300"
                   />
@@ -414,11 +414,11 @@ export default function HomePage() {
                 </div>
                 <div className="p-5">
                   <h3 className="text-lg font-bold text-foreground mb-2 group-hover:text-cyan-600 transition-colors">
-                    Window Cleaning
+                    {language === "es" ? "Limpieza de ventanas y cristales (Window Cleaning)" : "Window Cleaning"}
                   </h3>
                   <p className="text-muted-foreground text-sm mb-3">
                     {language === "es" 
-                      ? "Limpieza de ventanas y cristales para mejorar la apariencia, entrada de luz y presentación de tu propiedad."
+                      ? "Limpieza de ventanas, cristales y puertas de vidrio para hogares, negocios y propiedades comerciales."
                       : "Window and glass cleaning to improve the appearance, light entry and presentation of your property."}
                   </p>
                   <span className="inline-flex items-center text-cyan-600 font-medium text-sm">
@@ -435,7 +435,7 @@ export default function HomePage() {
                 <div className="relative aspect-[4/3] overflow-hidden">
                   <Image
                     src="/images/screen-cleaning.png"
-                    alt="Screen Cleaning"
+                    alt={language === "es" ? "Limpieza de mallas para ventanas" : "Screen Cleaning"}
                     fill
                     className="object-cover object-center group-hover:scale-105 transition-transform duration-300"
                   />
@@ -449,11 +449,11 @@ export default function HomePage() {
                 </div>
                 <div className="p-5">
                   <h3 className="text-lg font-bold text-foreground mb-2 group-hover:text-teal-600 transition-colors">
-                    Screen Cleaning
+                    {language === "es" ? "Limpieza de mallas para ventanas (Screen Cleaning)" : "Screen Cleaning"}
                   </h3>
                   <p className="text-muted-foreground text-sm mb-3">
                     {language === "es" 
-                      ? "Limpieza de screens y mallas para remover polvo, salitre y suciedad acumulada."
+                      ? "Remoción de polvo, salitre y suciedad acumulada en mallas de ventanas y puertas."
                       : "Cleaning of screens and meshes to remove dust, salt and accumulated dirt."}
                   </p>
                   <span className="inline-flex items-center text-teal-600 font-medium text-sm">
@@ -470,7 +470,7 @@ export default function HomePage() {
                 <div className="relative aspect-[4/3] overflow-hidden">
                   <Image
                     src="/images/christmas-lights.png"
-                    alt="Christmas Lights"
+                    alt={language === "es" ? "Instalación de luces navideñas" : "Christmas Lights"}
                     fill
                     className="object-cover object-center group-hover:scale-105 transition-transform duration-300"
                   />
@@ -484,11 +484,11 @@ export default function HomePage() {
                 </div>
                 <div className="p-5">
                   <h3 className="text-lg font-bold text-foreground mb-2 group-hover:text-red-600 transition-colors">
-                    Christmas Lights
+                    {language === "es" ? "Instalación de luces navideñas (Christmas Lights)" : "Christmas Lights"}
                   </h3>
                   <p className="text-muted-foreground text-sm mb-3">
                     {language === "es" 
-                      ? "Instalación y montaje de luces navideñas para hogares, negocios y propiedades comerciales, según temporada y coordinación."
+                      ? "Instalación y montaje de luces navideñas para hogares, negocios y propiedades comerciales, según temporada."
                       : "Installation and setup of Christmas lights for homes, businesses and commercial properties, by season and coordination."}
                   </p>
                   <span className="inline-flex items-center text-red-600 font-medium text-sm">
@@ -508,7 +508,7 @@ export default function HomePage() {
                 <div className="relative aspect-[4/3] overflow-hidden">
                   <Image
                     src="/images/pressure-wash.png"
-                    alt="Pressure Wash"
+                    alt={language === "es" ? "Lavado a presión" : "Pressure Wash"}
                     fill
                     className="object-cover object-center group-hover:scale-105 transition-transform duration-300"
                   />
@@ -522,11 +522,11 @@ export default function HomePage() {
                 </div>
                 <div className="p-5">
                   <h3 className="text-lg font-bold text-foreground mb-2 group-hover:text-slate-700 transition-colors">
-                    Pressure Wash
+                    {language === "es" ? "Lavado a presión (Pressure Wash)" : "Pressure Wash"}
                   </h3>
                   <p className="text-muted-foreground text-sm mb-3">
                     {language === "es" 
-                      ? "Limpieza con presión para superficies resistentes como aceras, marquesinas, entradas, paredes y áreas exteriores."
+                      ? "Limpieza con presión para aceras, marquesinas, entradas, paredes, pisos exteriores y superficies resistentes."
                       : "Pressure cleaning for resistant surfaces like sidewalks, carports, driveways, walls and exterior areas."}
                   </p>
                   <span className="inline-flex items-center text-slate-700 font-medium text-sm">
@@ -543,7 +543,7 @@ export default function HomePage() {
                 <div className="relative aspect-[4/3] overflow-hidden">
                   <Image
                     src="/images/soft-wash.png"
-                    alt="Soft Wash"
+                    alt={language === "es" ? "Lavado suave" : "Soft Wash"}
                     fill
                     className="object-cover object-center group-hover:scale-105 transition-transform duration-300"
                   />
@@ -557,11 +557,11 @@ export default function HomePage() {
                 </div>
                 <div className="p-5">
                   <h3 className="text-lg font-bold text-foreground mb-2 group-hover:text-sky-600 transition-colors">
-                    Soft Wash
+                    {language === "es" ? "Lavado suave (Soft Wash)" : "Soft Wash"}
                   </h3>
                   <p className="text-muted-foreground text-sm mb-3">
                     {language === "es" 
-                      ? "Lavado suave para superficies delicadas que necesitan limpieza exterior con menor presión."
+                      ? "Lavado exterior con menor presión para superficies delicadas que requieren más cuidado."
                       : "Soft washing for delicate surfaces that need exterior cleaning with lower pressure."}
                   </p>
                   <span className="inline-flex items-center text-sky-600 font-medium text-sm">
@@ -578,7 +578,7 @@ export default function HomePage() {
                 <div className="relative aspect-[4/3] overflow-hidden">
                   <Image
                     src="/images/solar-panel-cleaning.png"
-                    alt="Solar Panel Cleaning"
+                    alt={language === "es" ? "Limpieza de paneles solares" : "Solar Panel Cleaning"}
                     fill
                     className="object-cover object-center group-hover:scale-105 transition-transform duration-300"
                   />
@@ -592,11 +592,11 @@ export default function HomePage() {
                 </div>
                 <div className="p-5">
                   <h3 className="text-lg font-bold text-foreground mb-2 group-hover:text-amber-600 transition-colors">
-                    Solar Panel Cleaning
+                    {language === "es" ? "Limpieza de paneles solares (Solar Panel Cleaning)" : "Solar Panel Cleaning"}
                   </h3>
                   <p className="text-muted-foreground text-sm mb-3">
                     {language === "es" 
-                      ? "Limpieza de paneles solares para remover polvo, salitre y suciedad sin prometer resultados energéticos específicos."
+                      ? "Limpieza de paneles solares para remover polvo, salitre y suciedad acumulada."
                       : "Solar panel cleaning to remove dust, salt and dirt without promising specific energy results."}
                   </p>
                   <span className="inline-flex items-center text-amber-600 font-medium text-sm">

@@ -78,7 +78,7 @@ export default function PressureWashPage() {
               </div>
               <h1 className="text-4xl md:text-5xl font-bold text-foreground mb-6 text-balance">
                 {language === "es" 
-                  ? "Pressure Wash para superficies exteriores" 
+                  ? "Lavado a presión (Pressure Wash)" 
                   : "Pressure Wash for outdoor surfaces"}
               </h1>
               <p className="text-xl text-muted-foreground text-pretty mb-8">

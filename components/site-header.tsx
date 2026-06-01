@@ -58,9 +58,9 @@ export function SiteHeader() {
       icon: Droplets, 
       color: "text-sky-600", 
       bgColor: "bg-sky-500/10",
-      nameEs: "Window Cleaning", 
+      nameEs: "Limpieza de ventanas y cristales (Window Cleaning)", 
       nameEn: "Window Cleaning",
-      descEs: "Limpieza de ventanas",
+      descEs: "Ventanas y cristales",
       descEn: "Window cleaning"
     },
     { 
@@ -68,9 +68,9 @@ export function SiteHeader() {
       icon: Grid3X3, 
       color: "text-slate-600", 
       bgColor: "bg-slate-500/10",
-      nameEs: "Screen Cleaning", 
+      nameEs: "Limpieza de mallas (Screen Cleaning)", 
       nameEn: "Screen Cleaning",
-      descEs: "Limpieza de screens",
+      descEs: "Mallas para ventanas",
       descEn: "Screen cleaning"
     },
     { 
@@ -78,7 +78,7 @@ export function SiteHeader() {
       icon: Sparkles, 
       color: "text-red-600", 
       bgColor: "bg-red-500/10",
-      nameEs: "Christmas Lights", 
+      nameEs: "Luces navideñas (Christmas Lights)", 
       nameEn: "Christmas Lights",
       descEs: "Instalación navideña",
       descEn: "Holiday installation"
@@ -88,7 +88,7 @@ export function SiteHeader() {
       icon: Lightning, 
       color: "text-orange-600", 
       bgColor: "bg-orange-500/10",
-      nameEs: "Pressure Wash", 
+      nameEs: "Lavado a presión (Pressure Wash)", 
       nameEn: "Pressure Wash",
       descEs: "Lavado a presión",
       descEn: "Pressure washing"
@@ -98,9 +98,9 @@ export function SiteHeader() {
       icon: Waves, 
       color: "text-teal-600", 
       bgColor: "bg-teal-500/10",
-      nameEs: "Soft Wash", 
+      nameEs: "Lavado suave (Soft Wash)", 
       nameEn: "Soft Wash",
-      descEs: "Lavado suave",
+      descEs: "Lavado suave exterior",
       descEn: "Soft washing"
     },
     { 
@@ -108,7 +108,7 @@ export function SiteHeader() {
       icon: Sun, 
       color: "text-yellow-600", 
       bgColor: "bg-yellow-500/10",
-      nameEs: "Solar Panel Cleaning", 
+      nameEs: "Paneles solares (Solar Panel Cleaning)", 
       nameEn: "Solar Panel Cleaning",
       descEs: "Limpieza de paneles",
       descEn: "Panel cleaning"

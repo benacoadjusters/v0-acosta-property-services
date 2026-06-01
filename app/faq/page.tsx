@@ -18,7 +18,7 @@ const faqData = {
     general: [
       {
         question: "¿Qué servicios ofrecen actualmente?",
-        answer: "Actualmente ofrecemos 9 servicios activos: control de plagas, jardinería, limpieza, window cleaning, screen cleaning, Christmas lights, pressure wash, soft wash y solar panel cleaning para hogares, negocios y propiedades comerciales en Puerto Rico."
+        answer: "Actualmente ofrecemos 9 servicios activos: control de plagas, jardinería, limpieza, limpieza de ventanas y cristales (window cleaning), limpieza de mallas para ventanas (screen cleaning), instalación de luces navideñas (Christmas lights), lavado a presión (pressure wash), lavado suave (soft wash) y limpieza de paneles solares (solar panel cleaning) para hogares, negocios y propiedades comerciales en Puerto Rico."
       },
       {
         question: "¿Ofrecen cotizaciones gratis?",
@@ -85,7 +85,7 @@ const faqData = {
     ],
     windowCleaning: [
       {
-        question: "¿Qué incluye el servicio de window cleaning?",
+        question: "¿Qué incluye el servicio de limpieza de ventanas y cristales (window cleaning)?",
         answer: "Incluye limpieza profesional de ventanas interiores y exteriores, marcos, tracks y cristales de diferentes tipos."
       },
       {
@@ -95,6 +95,72 @@ const faqData = {
       {
         question: "¿Con qué frecuencia debo limpiar las ventanas?",
         answer: "Recomendamos limpieza cada 3-6 meses dependiendo de la ubicación y exposición de tu propiedad."
+      }
+    ],
+    screenCleaning: [
+      {
+        question: "¿Qué incluye el servicio de limpieza de mallas para ventanas (screen cleaning)?",
+        answer: "Incluye limpieza de mallas de ventanas y puertas para remover polvo, suciedad y residuos acumulados."
+      },
+      {
+        question: "¿Pueden reparar mallas dañadas?",
+        answer: "El servicio se enfoca en limpieza. Para reparaciones podemos orientarte según la condición de la malla."
+      }
+    ],
+    christmasLights: [
+      {
+        question: "¿Qué incluye el servicio de instalación de luces navideñas (Christmas lights)?",
+        answer: "Incluye instalación profesional de luces navideñas, diseño de iluminación, retiro después de temporada y almacenamiento si lo necesitas."
+      },
+      {
+        question: "¿Cuándo debo coordinar la instalación?",
+        answer: "Recomendamos coordinar en octubre o noviembre para asegurar disponibilidad antes de la temporada."
+      },
+      {
+        question: "¿Proveen las luces o uso las mías?",
+        answer: "Podemos trabajar con tus luces existentes o ayudarte a seleccionar opciones según el diseño que desees."
+      }
+    ],
+    pressureWash: [
+      {
+        question: "¿Qué superficies pueden limpiar con lavado a presión (pressure wash)?",
+        answer: "Limpiamos concreto, aceras, entradas de auto, patios, paredes exteriores, cercas y otras superficies resistentes."
+      },
+      {
+        question: "¿Puede dañar mi propiedad el lavado a presión?",
+        answer: "Usamos la presión adecuada para cada superficie. Para materiales delicados recomendamos lavado suave (soft wash)."
+      },
+      {
+        question: "¿Cada cuánto debo hacer lavado a presión?",
+        answer: "Depende de la exposición y condiciones de tu propiedad. Generalmente 1-2 veces al año mantiene las superficies limpias."
+      }
+    ],
+    softWash: [
+      {
+        question: "¿Qué es el lavado suave (soft wash) y cuándo se usa?",
+        answer: "Lavado suave es una técnica de limpieza a baja presión con soluciones especializadas, ideal para techos, siding, estuco y superficies delicadas."
+      },
+      {
+        question: "¿Por qué lavado suave en lugar de lavado a presión?",
+        answer: "Lavado suave es más seguro para materiales que pueden dañarse con alta presión, como tejas, madera y pintura."
+      },
+      {
+        question: "¿El lavado suave remueve moho y hongos?",
+        answer: "Sí. Las soluciones especializadas eliminan moho, hongos, algas y otros contaminantes orgánicos."
+      }
+    ],
+    solarPanelCleaning: [
+      {
+        question: "¿Por qué debo limpiar mis paneles solares?",
+        answer: "La suciedad, polvo y residuos reducen la eficiencia de los paneles. Limpieza regular mantiene su producción óptima."
+      },
+      {
+        question: "¿Cada cuánto debo limpiar los paneles solares?",
+        answer: "Recomendamos limpieza cada 6-12 meses dependiendo de la exposición a polvo, hojas y otros residuos."
+      },
+      {
+        question: "¿Es seguro limpiar paneles solares?",
+        answer: "Sí. Usamos técnicas y equipos seguros que no dañan los paneles ni afectan su garantía."
       }
     ],
     screenCleaning: [
