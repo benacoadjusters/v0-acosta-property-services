@@ -467,27 +467,27 @@ export default function ServicesIndexPage() {
               </span>
               <span className="inline-flex items-center gap-1.5 rounded-full bg-cyan-500/10 px-3 py-1 text-sm font-medium text-cyan-700">
                 <Droplets className="h-3.5 w-3.5" />
-                Window Cleaning
+                {language === "es" ? "Limpieza de ventanas" : "Window Cleaning"}
               </span>
               <span className="inline-flex items-center gap-1.5 rounded-full bg-teal-500/10 px-3 py-1 text-sm font-medium text-teal-700">
                 <Grid3X3 className="h-3.5 w-3.5" />
-                Screen Cleaning
+                {language === "es" ? "Limpieza de mallas" : "Screen Cleaning"}
               </span>
               <span className="inline-flex items-center gap-1.5 rounded-full bg-red-500/10 px-3 py-1 text-sm font-medium text-red-700">
                 <Sparkles className="h-3.5 w-3.5" />
-                Christmas Lights
+                {language === "es" ? "Luces navideñas" : "Christmas Lights"}
               </span>
               <span className="inline-flex items-center gap-1.5 rounded-full bg-slate-500/10 px-3 py-1 text-sm font-medium text-slate-700">
                 <Waves className="h-3.5 w-3.5" />
-                Pressure Wash
+                {language === "es" ? "Lavado a presión" : "Pressure Wash"}
               </span>
               <span className="inline-flex items-center gap-1.5 rounded-full bg-sky-500/10 px-3 py-1 text-sm font-medium text-sky-700">
                 <Droplet className="h-3.5 w-3.5" />
-                Soft Wash
+                {language === "es" ? "Lavado suave" : "Soft Wash"}
               </span>
               <span className="inline-flex items-center gap-1.5 rounded-full bg-amber-500/10 px-3 py-1 text-sm font-medium text-amber-700">
                 <Sun className="h-3.5 w-3.5" />
-                Solar Panel Cleaning
+                {language === "es" ? "Paneles solares" : "Solar Panel Cleaning"}
               </span>
             </div>
             {/* Coming Soon Chips */}
