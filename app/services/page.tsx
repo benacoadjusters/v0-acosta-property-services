@@ -2,7 +2,7 @@
 
 import Link from "next/link"
 import Image from "next/image"
-import { ArrowRight, Bug, TreePine, HardHat, SprayCan, Droplets, CheckCircle2, Clock, Phone, Wrench, Zap, Layers, Shield } from "lucide-react"
+import { ArrowRight, Bug, TreePine, HardHat, SprayCan, Droplets, CheckCircle2, Clock, Phone, Wrench, Zap, Layers, Shield, Grid3X3, Sparkles, Waves, Droplet, Sun } from "lucide-react"
 import { Button } from "@/components/ui/button"
 import { useLanguage } from "@/lib/language-context"
 import { company } from "@/content/company"
@@ -22,8 +22,8 @@ export default function ServicesIndexPage() {
       buttonColor: "",
       nameEs: "Control de Plagas",
       nameEn: "Pest Control",
-      descriptionEs: "Fumigación, trampeo y control preventivo para proteger hogares, negocios y propiedades comerciales contra plagas comunes en Puerto Rico.",
-      descriptionEn: "Fumigation, trapping and preventive control to protect homes, businesses and commercial properties against common pests in Puerto Rico.",
+      descriptionEs: "Fumigación, trampeo y control preventivo para proteger hogares y negocios contra plagas comunes en Puerto Rico.",
+      descriptionEn: "Fumigation, trapping and preventive control to protect homes and businesses against common pests in Puerto Rico.",
       featuresEs: [
         "Fumigación profesional",
         "Trampeo para roedores",
@@ -41,64 +41,6 @@ export default function ServicesIndexPage() {
       image: "/images/hero-pest-control.jpg"
     },
     {
-      id: "plumbing",
-      href: "/services/plumbing",
-      icon: Wrench,
-      bgColor: "bg-cyan-500/10",
-      textColor: "text-cyan-600",
-      badgeColor: "bg-cyan-600",
-      hoverColor: "hover:text-cyan-600",
-      buttonColor: "bg-cyan-600 hover:bg-cyan-700 text-white",
-      nameEs: "Plomería",
-      nameEn: "Plumbing",
-      descriptionEs: "Reparación de fugas, destapes, tuberías, calentadores y accesorios de plomería para propiedades residenciales y comerciales.",
-      descriptionEn: "Leak repair, drain cleaning, pipes, water heaters and plumbing fixtures for residential and commercial properties.",
-      featuresEs: [
-        "Reparación de fugas",
-        "Destape de desagües",
-        "Reparación de tuberías",
-        "Calentadores de agua",
-        "Instalación de accesorios"
-      ],
-      featuresEn: [
-        "Leak repair",
-        "Drain cleaning",
-        "Pipe repair",
-        "Water heaters",
-        "Fixture installation"
-      ],
-      image: "/images/hero-plumbing.jpg"
-    },
-    {
-      id: "electrical",
-      href: "/services/electrical",
-      icon: Zap,
-      bgColor: "bg-yellow-500/10",
-      textColor: "text-yellow-600",
-      badgeColor: "bg-yellow-600",
-      hoverColor: "hover:text-yellow-600",
-      buttonColor: "bg-yellow-600 hover:bg-yellow-700 text-white",
-      nameEs: "Electricidad",
-      nameEn: "Electrical",
-      descriptionEs: "Instalaciones y reparaciones eléctricas para paneles, breakers, tomacorrientes, iluminación y abanicos de techo.",
-      descriptionEn: "Electrical installations and repairs for panels, breakers, outlets, lighting and ceiling fans.",
-      featuresEs: [
-        "Paneles eléctricos",
-        "Breakers",
-        "Tomacorrientes y switches",
-        "Iluminación interior y exterior",
-        "Abanicos de techo"
-      ],
-      featuresEn: [
-        "Electrical panels",
-        "Breakers",
-        "Outlets and switches",
-        "Interior and exterior lighting",
-        "Ceiling fans"
-      ],
-      image: "/images/hero-electrical.jpg"
-    },
-    {
       id: "landscaping",
       href: "/services/landscaping",
       icon: TreePine,
@@ -109,8 +51,8 @@ export default function ServicesIndexPage() {
       buttonColor: "bg-green-600 hover:bg-green-700 text-white",
       nameEs: "Jardinería",
       nameEn: "Landscaping",
-      descriptionEs: "Corte de grama, poda, mantenimiento de jardines y limpieza de áreas verdes para mantener tu propiedad presentable.",
-      descriptionEn: "Lawn mowing, pruning, garden maintenance and green area cleaning to keep your property presentable.",
+      descriptionEs: "Corte de grama, poda, limpieza exterior y mantenimiento de áreas verdes para que tu propiedad luzca cuidada.",
+      descriptionEn: "Lawn mowing, pruning, exterior cleaning and green area maintenance so your property looks well-kept.",
       featuresEs: [
         "Corte de grama",
         "Poda de árboles y arbustos",
@@ -138,8 +80,8 @@ export default function ServicesIndexPage() {
       buttonColor: "bg-blue-600 hover:bg-blue-700 text-white",
       nameEs: "Limpieza",
       nameEn: "Cleaning",
-      descriptionEs: "Limpieza residencial, comercial, profunda y post-construcción para hogares, oficinas, negocios y propiedades comerciales.",
-      descriptionEn: "Residential, commercial, deep and post-construction cleaning for homes, offices, businesses and commercial properties.",
+      descriptionEs: "Limpieza residencial, comercial, profunda y post-construcción para mantener tus espacios listos y presentables.",
+      descriptionEn: "Residential, commercial, deep and post-construction cleaning to keep your spaces ready and presentable.",
       featuresEs: [
         "Limpieza residencial",
         "Limpieza comercial",
@@ -155,10 +97,236 @@ export default function ServicesIndexPage() {
         "Regular maintenance"
       ],
       image: "/images/hero-cleaning.jpg"
+    },
+    {
+      id: "window-cleaning",
+      href: "/services/window-cleaning",
+      icon: Droplets,
+      bgColor: "bg-cyan-500/10",
+      textColor: "text-cyan-600",
+      badgeColor: "bg-cyan-600",
+      hoverColor: "hover:text-cyan-600",
+      buttonColor: "bg-cyan-600 hover:bg-cyan-700 text-white",
+      nameEs: "Window Cleaning",
+      nameEn: "Window Cleaning",
+      descriptionEs: "Limpieza de ventanas y cristales para mejorar la apariencia, entrada de luz y presentación de tu propiedad.",
+      descriptionEn: "Window and glass cleaning to improve the appearance, light entry and presentation of your property.",
+      featuresEs: [
+        "Limpieza de ventanas interiores y exteriores",
+        "Cristales y puertas de vidrio",
+        "Remoción de polvo y suciedad",
+        "Servicio residencial y comercial",
+        "Cotización según tamaño"
+      ],
+      featuresEn: [
+        "Interior and exterior window cleaning",
+        "Glass and glass doors",
+        "Dust and dirt removal",
+        "Residential and commercial service",
+        "Quote based on size"
+      ],
+      image: "/images/window-cleaning.png"
+    },
+    {
+      id: "screen-cleaning",
+      href: "/services/screen-cleaning",
+      icon: Grid3X3,
+      bgColor: "bg-teal-500/10",
+      textColor: "text-teal-600",
+      badgeColor: "bg-teal-600",
+      hoverColor: "hover:text-teal-600",
+      buttonColor: "bg-teal-600 hover:bg-teal-700 text-white",
+      nameEs: "Screen Cleaning",
+      nameEn: "Screen Cleaning",
+      descriptionEs: "Limpieza de screens y mallas para remover polvo, salitre y suciedad acumulada.",
+      descriptionEn: "Cleaning of screens and meshes to remove dust, salt and accumulated dirt.",
+      featuresEs: [
+        "Limpieza de screens",
+        "Remoción de polvo y salitre",
+        "Atención a mallas con suciedad",
+        "Servicio residencial y comercial",
+        "Cotización según cantidad"
+      ],
+      featuresEn: [
+        "Screen cleaning",
+        "Dust and salt removal",
+        "Attention to dirty meshes",
+        "Residential and commercial service",
+        "Quote based on quantity"
+      ],
+      image: "/images/screen-cleaning.png"
+    },
+    {
+      id: "christmas-lights",
+      href: "/services/christmas-lights",
+      icon: Sparkles,
+      bgColor: "bg-red-500/10",
+      textColor: "text-red-600",
+      badgeColor: "bg-red-600",
+      hoverColor: "hover:text-red-600",
+      buttonColor: "bg-red-600 hover:bg-red-700 text-white",
+      nameEs: "Christmas Lights",
+      nameEn: "Christmas Lights",
+      descriptionEs: "Instalación y montaje de luces navideñas para hogares, negocios y propiedades comerciales, según temporada y coordinación.",
+      descriptionEn: "Installation and setup of Christmas lights for homes, businesses and commercial properties, by season and coordination.",
+      featuresEs: [
+        "Instalación de luces navideñas",
+        "Montaje decorativo",
+        "Servicio para hogares y negocios",
+        "Coordinación por temporada",
+        "Orientación según diseño"
+      ],
+      featuresEn: [
+        "Christmas lights installation",
+        "Decorative setup",
+        "Service for homes and businesses",
+        "Seasonal coordination",
+        "Design guidance"
+      ],
+      image: "/images/christmas-lights.png"
+    },
+    {
+      id: "pressure-wash",
+      href: "/services/pressure-wash",
+      icon: Waves,
+      bgColor: "bg-slate-500/10",
+      textColor: "text-slate-700",
+      badgeColor: "bg-slate-700",
+      hoverColor: "hover:text-slate-700",
+      buttonColor: "bg-slate-700 hover:bg-slate-800 text-white",
+      nameEs: "Pressure Wash",
+      nameEn: "Pressure Wash",
+      descriptionEs: "Limpieza con presión para superficies resistentes como aceras, marquesinas, entradas, paredes y áreas exteriores.",
+      descriptionEn: "Pressure cleaning for resistant surfaces like sidewalks, carports, driveways, walls and exterior areas.",
+      featuresEs: [
+        "Aceras y entradas",
+        "Marquesinas y pisos exteriores",
+        "Paredes y superficies resistentes",
+        "Áreas comerciales exteriores",
+        "Cotización según superficie"
+      ],
+      featuresEn: [
+        "Sidewalks and driveways",
+        "Carports and outdoor floors",
+        "Walls and resistant surfaces",
+        "Outdoor commercial areas",
+        "Quote based on surface"
+      ],
+      image: "/images/pressure-wash.png"
+    },
+    {
+      id: "soft-wash",
+      href: "/services/soft-wash",
+      icon: Droplet,
+      bgColor: "bg-sky-500/10",
+      textColor: "text-sky-600",
+      badgeColor: "bg-sky-600",
+      hoverColor: "hover:text-sky-600",
+      buttonColor: "bg-sky-600 hover:bg-sky-700 text-white",
+      nameEs: "Soft Wash",
+      nameEn: "Soft Wash",
+      descriptionEs: "Lavado suave para superficies delicadas que necesitan limpieza exterior con menor presión.",
+      descriptionEn: "Soft washing for delicate surfaces that need exterior cleaning with lower pressure.",
+      featuresEs: [
+        "Fachadas y paredes exteriores",
+        "Superficies delicadas",
+        "Limpieza con menor presión",
+        "Atención a suciedad superficial",
+        "Cotización según material"
+      ],
+      featuresEn: [
+        "Facades and exterior walls",
+        "Delicate surfaces",
+        "Cleaning with lower pressure",
+        "Attention to surface dirt",
+        "Quote based on material"
+      ],
+      image: "/images/soft-wash.png"
+    },
+    {
+      id: "solar-panel-cleaning",
+      href: "/services/solar-panel-cleaning",
+      icon: Sun,
+      bgColor: "bg-amber-500/10",
+      textColor: "text-amber-600",
+      badgeColor: "bg-amber-600",
+      hoverColor: "hover:text-amber-600",
+      buttonColor: "bg-amber-600 hover:bg-amber-700 text-white",
+      nameEs: "Solar Panel Cleaning",
+      nameEn: "Solar Panel Cleaning",
+      descriptionEs: "Limpieza de paneles solares para remover polvo, salitre y suciedad sin prometer resultados energéticos específicos.",
+      descriptionEn: "Solar panel cleaning to remove dust, salt and dirt without promising specific energy results.",
+      featuresEs: [
+        "Limpieza exterior de paneles",
+        "Remoción de polvo y salitre",
+        "Atención a suciedad acumulada",
+        "Servicio residencial y comercial",
+        "Cotización según cantidad"
+      ],
+      featuresEn: [
+        "Exterior panel cleaning",
+        "Dust and salt removal",
+        "Attention to accumulated dirt",
+        "Residential and commercial service",
+        "Quote based on quantity"
+      ],
+      image: "/images/solar-panel-cleaning.png"
     }
   ]
 
   const comingSoonServices = [
+    {
+      id: "plumbing",
+      href: "/services/plumbing",
+      icon: Wrench,
+      bgColor: "bg-cyan-500/10",
+      textColor: "text-cyan-600",
+      badgeColor: "bg-cyan-500",
+      nameEs: "Plomería",
+      nameEn: "Plumbing",
+      descriptionEs: "Servicio próximamente disponible para fugas, destapes, tuberías, calentadores y accesorios de plomería.",
+      descriptionEn: "Service coming soon for leaks, drain cleaning, pipes, water heaters and plumbing fixtures.",
+      featuresEs: [
+        "Reparación de fugas",
+        "Destape de desagües",
+        "Reparación de tuberías",
+        "Calentadores de agua",
+        "Servicio en desarrollo"
+      ],
+      featuresEn: [
+        "Leak repair",
+        "Drain cleaning",
+        "Pipe repair",
+        "Water heaters",
+        "Service in development"
+      ]
+    },
+    {
+      id: "electrical",
+      href: "/services/electrical",
+      icon: Zap,
+      bgColor: "bg-yellow-500/10",
+      textColor: "text-yellow-600",
+      badgeColor: "bg-yellow-500",
+      nameEs: "Electricidad",
+      nameEn: "Electrical",
+      descriptionEs: "Servicio próximamente disponible para paneles, breakers, tomacorrientes, iluminación y abanicos de techo.",
+      descriptionEn: "Service coming soon for panels, breakers, outlets, lighting and ceiling fans.",
+      featuresEs: [
+        "Paneles eléctricos",
+        "Breakers",
+        "Tomacorrientes y switches",
+        "Iluminación",
+        "Servicio en desarrollo"
+      ],
+      featuresEn: [
+        "Electrical panels",
+        "Breakers",
+        "Outlets and switches",
+        "Lighting",
+        "Service in development"
+      ]
+    },
     {
       id: "water-damage",
       href: "/services/water-damage-mitigation",
@@ -168,8 +336,8 @@ export default function ServicesIndexPage() {
       badgeColor: "bg-teal-500",
       nameEs: "Mitigación de daños por agua",
       nameEn: "Water Damage Mitigation",
-      descriptionEs: "Servicio próximamente disponible para atender daños por agua, humedad y problemas relacionados en propiedades residenciales y comerciales.",
-      descriptionEn: "Service coming soon to address water damage, humidity and related issues in residential and commercial properties.",
+      descriptionEs: "Servicio próximamente disponible para atender daños por agua, humedad y problemas relacionados.",
+      descriptionEn: "Service coming soon to address water damage, humidity and related issues.",
       featuresEs: [
         "Evaluación de áreas afectadas",
         "Atención a humedad",
@@ -194,20 +362,20 @@ export default function ServicesIndexPage() {
       badgeColor: "bg-purple-500",
       nameEs: "Reparaciones handyman",
       nameEn: "Handyman Repairs",
-      descriptionEs: "Servicio próximamente disponible para reparaciones menores, instalaciones básicas y mantenimiento general de propiedades.",
-      descriptionEn: "Service coming soon for minor repairs, basic installations and general property maintenance.",
+      descriptionEs: "Servicio próximamente disponible para reparaciones menores, instalaciones básicas y mantenimiento general.",
+      descriptionEn: "Service coming soon for minor repairs, basic installations and general maintenance.",
       featuresEs: [
         "Reparaciones menores",
         "Instalaciones básicas",
         "Ajustes y mantenimiento",
-        "Soporte general para propiedades",
+        "Soporte general",
         "Servicio en desarrollo"
       ],
       featuresEn: [
         "Minor repairs",
         "Basic installations",
         "Adjustments and maintenance",
-        "General property support",
+        "General support",
         "Service in development"
       ]
     },
@@ -280,21 +448,14 @@ export default function ServicesIndexPage() {
             </h1>
             <p className="text-xl text-muted-foreground text-pretty max-w-2xl mx-auto mb-8">
               {language === "es" 
-                ? "Soluciones para proteger, reparar y mantener hogares, negocios y propiedades comerciales en Puerto Rico."
-                : "Solutions to protect, repair and maintain homes, businesses and commercial properties in Puerto Rico."}
+                ? "Soluciones para proteger, limpiar y mantener hogares, negocios y propiedades comerciales en Puerto Rico."
+                : "Solutions to protect, clean and maintain homes, businesses and commercial properties in Puerto Rico."}
             </p>
-            <div className="flex flex-wrap gap-2 justify-center">
+            {/* Active Services Chips */}
+            <div className="flex flex-wrap gap-2 justify-center mb-4">
               <span className="inline-flex items-center gap-1.5 rounded-full bg-primary/10 px-3 py-1 text-sm font-medium text-primary">
                 <Bug className="h-3.5 w-3.5" />
                 {language === "es" ? "Control de Plagas" : "Pest Control"}
-              </span>
-              <span className="inline-flex items-center gap-1.5 rounded-full bg-cyan-500/10 px-3 py-1 text-sm font-medium text-cyan-700">
-                <Wrench className="h-3.5 w-3.5" />
-                {language === "es" ? "Plomería" : "Plumbing"}
-              </span>
-              <span className="inline-flex items-center gap-1.5 rounded-full bg-yellow-500/10 px-3 py-1 text-sm font-medium text-yellow-700">
-                <Zap className="h-3.5 w-3.5" />
-                {language === "es" ? "Electricidad" : "Electrical"}
               </span>
               <span className="inline-flex items-center gap-1.5 rounded-full bg-green-500/10 px-3 py-1 text-sm font-medium text-green-700">
                 <TreePine className="h-3.5 w-3.5" />
@@ -304,21 +465,56 @@ export default function ServicesIndexPage() {
                 <SprayCan className="h-3.5 w-3.5" />
                 {language === "es" ? "Limpieza" : "Cleaning"}
               </span>
-              <span className="inline-flex items-center gap-1.5 rounded-full bg-teal-500/10 px-3 py-1 text-sm font-medium text-teal-700">
+              <span className="inline-flex items-center gap-1.5 rounded-full bg-cyan-500/10 px-3 py-1 text-sm font-medium text-cyan-700">
                 <Droplets className="h-3.5 w-3.5" />
-                {language === "es" ? "Mitigación de daños por agua" : "Water Damage Mitigation"}
+                Window Cleaning
               </span>
-              <span className="inline-flex items-center gap-1.5 rounded-full bg-purple-500/10 px-3 py-1 text-sm font-medium text-purple-700">
-                <HardHat className="h-3.5 w-3.5" />
-                {language === "es" ? "Reparaciones handyman" : "Handyman Repairs"}
+              <span className="inline-flex items-center gap-1.5 rounded-full bg-teal-500/10 px-3 py-1 text-sm font-medium text-teal-700">
+                <Grid3X3 className="h-3.5 w-3.5" />
+                Screen Cleaning
+              </span>
+              <span className="inline-flex items-center gap-1.5 rounded-full bg-red-500/10 px-3 py-1 text-sm font-medium text-red-700">
+                <Sparkles className="h-3.5 w-3.5" />
+                Christmas Lights
+              </span>
+              <span className="inline-flex items-center gap-1.5 rounded-full bg-slate-500/10 px-3 py-1 text-sm font-medium text-slate-700">
+                <Waves className="h-3.5 w-3.5" />
+                Pressure Wash
+              </span>
+              <span className="inline-flex items-center gap-1.5 rounded-full bg-sky-500/10 px-3 py-1 text-sm font-medium text-sky-700">
+                <Droplet className="h-3.5 w-3.5" />
+                Soft Wash
               </span>
               <span className="inline-flex items-center gap-1.5 rounded-full bg-amber-500/10 px-3 py-1 text-sm font-medium text-amber-700">
-                <Layers className="h-3.5 w-3.5" />
-                {language === "es" ? "Sellado de techos" : "Roof Sealing"}
+                <Sun className="h-3.5 w-3.5" />
+                Solar Panel Cleaning
               </span>
-              <span className="inline-flex items-center gap-1.5 rounded-full bg-orange-500/10 px-3 py-1 text-sm font-medium text-orange-700">
+            </div>
+            {/* Coming Soon Chips */}
+            <div className="flex flex-wrap gap-2 justify-center">
+              <span className="inline-flex items-center gap-1.5 rounded-full bg-muted px-3 py-1 text-sm font-medium text-muted-foreground">
+                <Wrench className="h-3.5 w-3.5" />
+                {language === "es" ? "Plomería — Próximamente" : "Plumbing — Coming Soon"}
+              </span>
+              <span className="inline-flex items-center gap-1.5 rounded-full bg-muted px-3 py-1 text-sm font-medium text-muted-foreground">
+                <Zap className="h-3.5 w-3.5" />
+                {language === "es" ? "Electricidad — Próximamente" : "Electrical — Coming Soon"}
+              </span>
+              <span className="inline-flex items-center gap-1.5 rounded-full bg-muted px-3 py-1 text-sm font-medium text-muted-foreground">
+                <Droplets className="h-3.5 w-3.5" />
+                {language === "es" ? "Mitigación de daños por agua — Próximamente" : "Water Damage — Coming Soon"}
+              </span>
+              <span className="inline-flex items-center gap-1.5 rounded-full bg-muted px-3 py-1 text-sm font-medium text-muted-foreground">
+                <HardHat className="h-3.5 w-3.5" />
+                {language === "es" ? "Reparaciones handyman — Próximamente" : "Handyman — Coming Soon"}
+              </span>
+              <span className="inline-flex items-center gap-1.5 rounded-full bg-muted px-3 py-1 text-sm font-medium text-muted-foreground">
+                <Layers className="h-3.5 w-3.5" />
+                {language === "es" ? "Sellado de techos — Próximamente" : "Roof Sealing — Coming Soon"}
+              </span>
+              <span className="inline-flex items-center gap-1.5 rounded-full bg-muted px-3 py-1 text-sm font-medium text-muted-foreground">
                 <Shield className="h-3.5 w-3.5" />
-                {language === "es" ? "Mitigación de plomo y asbesto" : "Lead & Asbestos Mitigation"}
+                {language === "es" ? "Mitigación de plomo y asbesto — Próximamente" : "Lead & Asbestos — Coming Soon"}
               </span>
             </div>
           </div>
@@ -417,7 +613,7 @@ export default function ServicesIndexPage() {
             </h2>
           </div>
 
-          <div className="grid md:grid-cols-2 gap-8">
+          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
             {comingSoonServices.map((service) => {
               const Icon = service.icon
               const name = language === "es" ? service.nameEs : service.nameEn
@@ -461,22 +657,24 @@ export default function ServicesIndexPage() {
         </div>
       </section>
 
-      {/* CTA Section */}
+      {/* CTA */}
       <section className="py-16 md:py-24 bg-primary text-primary-foreground">
         <div className="container mx-auto px-4">
           <div className="max-w-3xl mx-auto text-center">
             <h2 className="text-3xl md:text-4xl font-bold mb-4 text-balance">
-              {language === "es" ? "¿Listo para coordinar tu servicio?" : "Ready to coordinate your service?"}
+              {language === "es" 
+                ? "¿Listo para coordinar tu servicio?" 
+                : "Ready to coordinate your service?"}
             </h2>
             <p className="text-lg text-primary-foreground/80 mb-8 text-pretty">
-              {language === "es" 
-                ? "Dinos qué necesita tu propiedad y te orientamos con una cotización para control de plagas, plomería, electricidad, jardinería o limpieza."
-                : "Tell us what your property needs and we'll guide you with a quote for pest control, plumbing, electrical, landscaping or cleaning."}
+              {language === "es"
+                ? "Dinos qué necesita tu propiedad y te orientamos con una cotización para servicios activos como control de plagas, jardinería, limpieza, window cleaning, pressure wash, soft wash o solar panel cleaning."
+                : "Tell us what your property needs and we'll guide you with a quote for active services like pest control, landscaping, cleaning, window cleaning, pressure wash, soft wash or solar panel cleaning."}
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Button asChild size="lg" className="bg-accent text-accent-foreground hover:bg-accent/90 font-semibold">
                 <Link href="/contact">
-                  {language === "es" ? "Cotización Gratis" : "Free Quote"}
+                  {t.ui.getQuote}
                   <ArrowRight className="ml-2 h-5 w-5" />
                 </Link>
               </Button>
