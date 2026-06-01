@@ -12,11 +12,6 @@ import { Button } from "@/components/ui/button"
 import { useLanguage } from "@/lib/language-context"
 import { company } from "@/content/company"
 
-export const metadata = {
-  title: "Plomería Próximamente | Acosta Property Services",
-  description: "Servicio de plomería próximamente disponible para propiedades en Puerto Rico."
-}
-
 export default function PlumbingPage() {
   const { language, t } = useLanguage()
 
