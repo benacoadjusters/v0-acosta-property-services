@@ -17,10 +17,14 @@ export default function GalleryPage() {
   const galleryCategories = [
     { id: "all", name: language === "es" ? "Todos" : "All" },
     { id: "pest-control", name: language === "es" ? "Control de Plagas" : "Pest Control" },
-    { id: "plumbing", name: language === "es" ? "Plomería" : "Plumbing" },
-    { id: "electrical", name: language === "es" ? "Electricidad" : "Electrical" },
     { id: "landscaping", name: language === "es" ? "Jardinería" : "Landscaping" },
     { id: "cleaning", name: language === "es" ? "Limpieza" : "Cleaning" },
+    { id: "window-cleaning", name: "Window Cleaning" },
+    { id: "screen-cleaning", name: "Screen Cleaning" },
+    { id: "christmas-lights", name: "Christmas Lights" },
+    { id: "pressure-wash", name: "Pressure Wash" },
+    { id: "soft-wash", name: "Soft Wash" },
+    { id: "solar-panel-cleaning", name: "Solar Panel Cleaning" },
     { id: "residential", name: language === "es" ? "Residencial" : "Residential" },
     { id: "commercial", name: language === "es" ? "Comercial" : "Commercial" },
   ]
@@ -29,11 +33,28 @@ export default function GalleryPage() {
     ? galleryItems 
     : galleryItems.filter(item => item.category === activeCategory)
 
-  // Check if we have images for plumbing, electrical, or cleaning
-  const hasPlumbingImages = galleryItems.some(item => item.category === "plumbing")
-  const hasElectricalImages = galleryItems.some(item => item.category === "electrical")
+  // Check if we have images for all active services
   const hasCleaningImages = galleryItems.some(item => item.category === "cleaning")
-  const showComingSoonNotice = !hasPlumbingImages || !hasElectricalImages || !hasCleaningImages
+  const hasWindowCleaningImages = galleryItems.some(item => item.category === "window-cleaning")
+  const hasPressureWashImages = galleryItems.some(item => item.category === "pressure-wash")
+  const showComingSoonNotice = !hasCleaningImages || !hasWindowCleaningImages || !hasPressureWashImages
+
+  const getCategoryLabel = (category: string) => {
+    const labels: Record<string, { es: string; en: string }> = {
+      "pest-control": { es: "Control de Plagas", en: "Pest Control" },
+      "landscaping": { es: "Jardinería", en: "Landscaping" },
+      "cleaning": { es: "Limpieza", en: "Cleaning" },
+      "window-cleaning": { es: "Window Cleaning", en: "Window Cleaning" },
+      "screen-cleaning": { es: "Screen Cleaning", en: "Screen Cleaning" },
+      "christmas-lights": { es: "Christmas Lights", en: "Christmas Lights" },
+      "pressure-wash": { es: "Pressure Wash", en: "Pressure Wash" },
+      "soft-wash": { es: "Soft Wash", en: "Soft Wash" },
+      "solar-panel-cleaning": { es: "Solar Panel Cleaning", en: "Solar Panel Cleaning" },
+      "residential": { es: "Residencial", en: "Residential" },
+      "commercial": { es: "Comercial", en: "Commercial" },
+    }
+    return labels[category]?.[language] || category
+  }
 
   return (
     <>
@@ -49,8 +70,8 @@ export default function GalleryPage() {
             </h1>
             <p className="text-xl text-muted-foreground text-pretty">
               {language === "es" 
-                ? "Mira ejemplos visuales de los servicios que ofrecemos para propiedades en Puerto Rico."
-                : "See visual examples of the services we offer for properties in Puerto Rico."}
+                ? "Mira ejemplos visuales de los 9 servicios activos que ofrecemos para propiedades en Puerto Rico."
+                : "See visual examples of the 9 active services we offer for properties in Puerto Rico."}
             </p>
           </div>
         </div>
@@ -107,13 +128,7 @@ export default function GalleryPage() {
                 </div>
 
                 <div className="absolute top-3 left-3 px-3 py-1 bg-card/90 backdrop-blur rounded-full text-xs font-medium capitalize">
-                  {item.category === "pest-control" && (language === "es" ? "Control de Plagas" : "Pest Control")}
-                  {item.category === "plumbing" && (language === "es" ? "Plomería" : "Plumbing")}
-                  {item.category === "electrical" && (language === "es" ? "Electricidad" : "Electrical")}
-                  {item.category === "landscaping" && (language === "es" ? "Jardinería" : "Landscaping")}
-                  {item.category === "cleaning" && (language === "es" ? "Limpieza" : "Cleaning")}
-                  {item.category === "residential" && (language === "es" ? "Residencial" : "Residential")}
-                  {item.category === "commercial" && (language === "es" ? "Comercial" : "Commercial")}
+                  {getCategoryLabel(item.category)}
                 </div>
               </div>
             ))}
@@ -131,7 +146,7 @@ export default function GalleryPage() {
         </div>
       </section>
 
-      {/* Coming Soon Notice - only show if missing images for plumbing/electrical/cleaning */}
+      {/* Coming Soon Notice - only show if missing images for some services */}
       {showComingSoonNotice && (
         <section className="py-12 bg-secondary/50">
           <div className="container mx-auto px-4">
@@ -145,8 +160,8 @@ export default function GalleryPage() {
                 </h3>
                 <p className="text-muted-foreground text-sm">
                   {language === "es"
-                    ? "Estamos actualizando la galería para incluir trabajos de plomería, electricidad y limpieza."
-                    : "We are updating the gallery to include plumbing, electrical and cleaning work."}
+                    ? "Estamos actualizando la galería para incluir trabajos de todos nuestros 9 servicios activos."
+                    : "We are updating the gallery to include work from all our 9 active services."}
                 </p>
               </CardContent>
             </Card>

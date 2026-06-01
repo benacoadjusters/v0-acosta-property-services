@@ -11,10 +11,16 @@ const footerLinks = {
     services: [
       { name: "Todos los Servicios", href: "/services" },
       { name: "Control de Plagas", href: "/services/pest-control" },
-      { name: "Plomería", href: "/services/plumbing" },
-      { name: "Electricidad", href: "/services/electrical" },
       { name: "Jardinería", href: "/services/landscaping" },
       { name: "Limpieza", href: "/services/cleaning" },
+      { name: "Window Cleaning", href: "/services/window-cleaning" },
+      { name: "Screen Cleaning", href: "/services/screen-cleaning" },
+      { name: "Christmas Lights", href: "/services/christmas-lights" },
+      { name: "Pressure Wash", href: "/services/pressure-wash" },
+      { name: "Soft Wash", href: "/services/soft-wash" },
+      { name: "Solar Panel Cleaning", href: "/services/solar-panel-cleaning" },
+      { name: "Plomería", href: "/services/plumbing", badge: "Próximamente" },
+      { name: "Electricidad", href: "/services/electrical", badge: "Próximamente" },
       { name: "Mitigación de daños por agua", href: "/services/water-damage-mitigation", badge: "Próximamente" },
       { name: "Reparaciones handyman", href: "/services/handyman-repairs", badge: "Próximamente" },
       { name: "Sellado de techos", href: "/services/roof-sealing", badge: "Próximamente" },
@@ -35,10 +41,16 @@ const footerLinks = {
     services: [
       { name: "All Services", href: "/services" },
       { name: "Pest Control", href: "/services/pest-control" },
-      { name: "Plumbing", href: "/services/plumbing" },
-      { name: "Electrical", href: "/services/electrical" },
       { name: "Landscaping", href: "/services/landscaping" },
       { name: "Cleaning", href: "/services/cleaning" },
+      { name: "Window Cleaning", href: "/services/window-cleaning" },
+      { name: "Screen Cleaning", href: "/services/screen-cleaning" },
+      { name: "Christmas Lights", href: "/services/christmas-lights" },
+      { name: "Pressure Wash", href: "/services/pressure-wash" },
+      { name: "Soft Wash", href: "/services/soft-wash" },
+      { name: "Solar Panel Cleaning", href: "/services/solar-panel-cleaning" },
+      { name: "Plumbing", href: "/services/plumbing", badge: "Coming Soon" },
+      { name: "Electrical", href: "/services/electrical", badge: "Coming Soon" },
       { name: "Water Damage Mitigation", href: "/services/water-damage-mitigation", badge: "Coming Soon" },
       { name: "Handyman Repairs", href: "/services/handyman-repairs", badge: "Coming Soon" },
       { name: "Roof Sealing", href: "/services/roof-sealing", badge: "Coming Soon" },
@@ -141,12 +153,7 @@ export function SiteFooter() {
                   >
                     {link.name}
                     {link.badge && (
-                      <span className={`text-[10px] px-1.5 py-0.5 rounded ${
-                        link.href.includes('cleaning-maintenance') ? 'bg-blue-500/20 text-blue-300' :
-                        link.href.includes('repairs-painting') ? 'bg-purple-500/20 text-purple-300' :
-                        link.href.includes('mold-mitigation') ? 'bg-teal-500/20 text-teal-300' :
-                        'bg-orange-500/20 text-orange-300'
-                      }`}>
+                      <span className="text-[10px] px-1.5 py-0.5 rounded bg-orange-500/20 text-orange-300">
                         {link.badge}
                       </span>
                     )}

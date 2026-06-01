@@ -18,7 +18,7 @@ const faqData = {
     general: [
       {
         question: "¿Qué servicios ofrecen actualmente?",
-        answer: "Actualmente ofrecemos control de plagas, plomería, electricidad, jardinería y limpieza para hogares, negocios y propiedades comerciales en Puerto Rico."
+        answer: "Actualmente ofrecemos 9 servicios activos: control de plagas, jardinería, limpieza, window cleaning, screen cleaning, Christmas lights, pressure wash, soft wash y solar panel cleaning para hogares, negocios y propiedades comerciales en Puerto Rico."
       },
       {
         question: "¿Ofrecen cotizaciones gratis?",
@@ -55,34 +55,6 @@ const faqData = {
         answer: "Comunícate con nosotros para revisar la situación y orientarte sobre el próximo paso según el tipo de tratamiento realizado."
       }
     ],
-    plumbing: [
-      {
-        question: "¿Qué problemas de plomería atienden?",
-        answer: "Atendemos fugas, destapes, reparación de tuberías, calentadores de agua, grifos, inodoros y accesorios de plomería."
-      },
-      {
-        question: "¿Atienden destapes?",
-        answer: "Sí. Podemos ayudarte con destapes de desagües, inodoros, lavabos y líneas según la situación."
-      },
-      {
-        question: "¿Trabajan calentadores de agua?",
-        answer: "Sí. Atendemos instalación, reparación y mantenimiento de calentadores de agua según el tipo de equipo y condición."
-      }
-    ],
-    electrical: [
-      {
-        question: "¿Qué servicios eléctricos ofrecen?",
-        answer: "Ofrecemos servicios para paneles, breakers, tomacorrientes, switches, iluminación y abanicos de techo."
-      },
-      {
-        question: "¿Pueden instalar abanicos de techo?",
-        answer: "Sí. Podemos ayudarte con instalación de abanicos de techo y otros trabajos eléctricos relacionados."
-      },
-      {
-        question: "¿Atienden propiedades comerciales?",
-        answer: "Sí. Atendemos necesidades eléctricas en hogares, negocios y propiedades comerciales según el alcance del trabajo."
-      }
-    ],
     landscaping: [
       {
         question: "¿Qué incluye el servicio de jardinería?",
@@ -111,10 +83,90 @@ const faqData = {
         answer: "Sí. Atendemos limpieza después de construcción o remodelación para dejar el espacio listo para usarse."
       }
     ],
+    windowCleaning: [
+      {
+        question: "¿Qué incluye el servicio de window cleaning?",
+        answer: "Incluye limpieza profesional de ventanas interiores y exteriores, marcos, tracks y cristales de diferentes tipos."
+      },
+      {
+        question: "¿Limpian ventanas en edificios altos?",
+        answer: "Dependiendo del acceso y altura, podemos orientarte sobre las opciones disponibles para tu propiedad."
+      },
+      {
+        question: "¿Con qué frecuencia debo limpiar las ventanas?",
+        answer: "Recomendamos limpieza cada 3-6 meses dependiendo de la ubicación y exposición de tu propiedad."
+      }
+    ],
+    screenCleaning: [
+      {
+        question: "¿Qué incluye el servicio de screen cleaning?",
+        answer: "Incluye limpieza de screens, mosquiteros y mallas de ventanas para remover polvo, suciedad y residuos acumulados."
+      },
+      {
+        question: "¿Pueden reparar screens dañados?",
+        answer: "El servicio se enfoca en limpieza. Para reparaciones podemos orientarte según la condición del screen."
+      }
+    ],
+    christmasLights: [
+      {
+        question: "¿Qué incluye el servicio de Christmas lights?",
+        answer: "Incluye instalación profesional de luces navideñas, diseño de iluminación, retiro después de temporada y almacenamiento si lo necesitas."
+      },
+      {
+        question: "¿Cuándo debo coordinar la instalación?",
+        answer: "Recomendamos coordinar en octubre o noviembre para asegurar disponibilidad antes de la temporada."
+      },
+      {
+        question: "¿Proveen las luces o uso las mías?",
+        answer: "Podemos trabajar con tus luces existentes o ayudarte a seleccionar opciones según el diseño que desees."
+      }
+    ],
+    pressureWash: [
+      {
+        question: "¿Qué superficies pueden limpiar con pressure wash?",
+        answer: "Limpiamos concreto, aceras, entradas de auto, patios, paredes exteriores, cercas y otras superficies resistentes."
+      },
+      {
+        question: "¿Puede dañar mi propiedad el pressure wash?",
+        answer: "Usamos la presión adecuada para cada superficie. Para materiales delicados recomendamos soft wash."
+      },
+      {
+        question: "¿Cada cuánto debo hacer pressure wash?",
+        answer: "Depende de la exposición y condiciones de tu propiedad. Generalmente 1-2 veces al año mantiene las superficies limpias."
+      }
+    ],
+    softWash: [
+      {
+        question: "¿Qué es soft wash y cuándo se usa?",
+        answer: "Soft wash es una técnica de limpieza a baja presión con soluciones especializadas, ideal para techos, siding, estuco y superficies delicadas."
+      },
+      {
+        question: "¿Por qué soft wash en lugar de pressure wash?",
+        answer: "Soft wash es más seguro para materiales que pueden dañarse con alta presión, como tejas, madera y pintura."
+      },
+      {
+        question: "¿El soft wash remueve moho y hongos?",
+        answer: "Sí. Las soluciones especializadas eliminan moho, hongos, algas y otros contaminantes orgánicos."
+      }
+    ],
+    solarPanelCleaning: [
+      {
+        question: "¿Por qué debo limpiar mis paneles solares?",
+        answer: "La suciedad, polvo y residuos reducen la eficiencia de los paneles. Limpieza regular mantiene su producción óptima."
+      },
+      {
+        question: "¿Cada cuánto debo limpiar los paneles?",
+        answer: "Recomendamos limpieza cada 6-12 meses dependiendo de la exposición a polvo, hojas y otros residuos."
+      },
+      {
+        question: "¿Es seguro limpiar paneles solares?",
+        answer: "Sí. Usamos técnicas y equipos seguros que no dañan los paneles ni afectan su garantía."
+      }
+    ],
     comingSoon: [
       {
         question: "¿Qué servicios estarán disponibles próximamente?",
-        answer: "Próximamente estaremos trabajando servicios de mitigación de daños por agua, reparaciones handyman, sellado de techos y mitigación de plomo y asbesto."
+        answer: "Próximamente estaremos trabajando servicios de plomería, electricidad, mitigación de daños por agua, reparaciones handyman, sellado de techos y mitigación de plomo y asbesto."
       },
       {
         question: "¿Puedo pedir información sobre un servicio próximamente?",
@@ -126,7 +178,7 @@ const faqData = {
     general: [
       {
         question: "What services do you currently offer?",
-        answer: "We currently offer pest control, plumbing, electrical, landscaping and cleaning for homes, businesses and commercial properties in Puerto Rico."
+        answer: "We currently offer 9 active services: pest control, landscaping, cleaning, window cleaning, screen cleaning, Christmas lights, pressure wash, soft wash and solar panel cleaning for homes, businesses and commercial properties in Puerto Rico."
       },
       {
         question: "Do you offer free quotes?",
@@ -163,34 +215,6 @@ const faqData = {
         answer: "Contact us to review the situation and guide you on the next step based on the type of treatment performed."
       }
     ],
-    plumbing: [
-      {
-        question: "What plumbing problems do you handle?",
-        answer: "We handle leaks, drain cleaning, pipe repair, water heaters, faucets, toilets and plumbing fixtures."
-      },
-      {
-        question: "Do you handle drain cleaning?",
-        answer: "Yes. We can help you with drain cleaning for drains, toilets, sinks and lines depending on the situation."
-      },
-      {
-        question: "Do you work on water heaters?",
-        answer: "Yes. We handle installation, repair and maintenance of water heaters depending on the type of equipment and condition."
-      }
-    ],
-    electrical: [
-      {
-        question: "What electrical services do you offer?",
-        answer: "We offer services for panels, breakers, outlets, switches, lighting and ceiling fans."
-      },
-      {
-        question: "Can you install ceiling fans?",
-        answer: "Yes. We can help you with ceiling fan installation and other related electrical work."
-      },
-      {
-        question: "Do you serve commercial properties?",
-        answer: "Yes. We handle electrical needs in homes, businesses and commercial properties depending on the scope of work."
-      }
-    ],
     landscaping: [
       {
         question: "What does the landscaping service include?",
@@ -219,10 +243,90 @@ const faqData = {
         answer: "Yes. We handle cleaning after construction or remodeling to leave the space ready for use."
       }
     ],
+    windowCleaning: [
+      {
+        question: "What does window cleaning service include?",
+        answer: "It includes professional cleaning of interior and exterior windows, frames, tracks and various types of glass."
+      },
+      {
+        question: "Do you clean windows on tall buildings?",
+        answer: "Depending on access and height, we can guide you on available options for your property."
+      },
+      {
+        question: "How often should I clean windows?",
+        answer: "We recommend cleaning every 3-6 months depending on your property's location and exposure."
+      }
+    ],
+    screenCleaning: [
+      {
+        question: "What does screen cleaning service include?",
+        answer: "It includes cleaning of screens, mosquito nets and window meshes to remove dust, dirt and accumulated residue."
+      },
+      {
+        question: "Can you repair damaged screens?",
+        answer: "The service focuses on cleaning. For repairs we can guide you based on the screen condition."
+      }
+    ],
+    christmasLights: [
+      {
+        question: "What does Christmas lights service include?",
+        answer: "It includes professional installation of Christmas lights, lighting design, removal after the season and storage if needed."
+      },
+      {
+        question: "When should I schedule installation?",
+        answer: "We recommend scheduling in October or November to ensure availability before the season."
+      },
+      {
+        question: "Do you provide the lights or do I use mine?",
+        answer: "We can work with your existing lights or help you select options based on your desired design."
+      }
+    ],
+    pressureWash: [
+      {
+        question: "What surfaces can you clean with pressure wash?",
+        answer: "We clean concrete, sidewalks, driveways, patios, exterior walls, fences and other resistant surfaces."
+      },
+      {
+        question: "Can pressure wash damage my property?",
+        answer: "We use appropriate pressure for each surface. For delicate materials we recommend soft wash."
+      },
+      {
+        question: "How often should I pressure wash?",
+        answer: "It depends on exposure and conditions of your property. Generally 1-2 times per year keeps surfaces clean."
+      }
+    ],
+    softWash: [
+      {
+        question: "What is soft wash and when is it used?",
+        answer: "Soft wash is a low-pressure cleaning technique with specialized solutions, ideal for roofs, siding, stucco and delicate surfaces."
+      },
+      {
+        question: "Why soft wash instead of pressure wash?",
+        answer: "Soft wash is safer for materials that can be damaged by high pressure, like shingles, wood and paint."
+      },
+      {
+        question: "Does soft wash remove mold and mildew?",
+        answer: "Yes. Specialized solutions eliminate mold, mildew, algae and other organic contaminants."
+      }
+    ],
+    solarPanelCleaning: [
+      {
+        question: "Why should I clean my solar panels?",
+        answer: "Dirt, dust and debris reduce panel efficiency. Regular cleaning maintains their optimal production."
+      },
+      {
+        question: "How often should I clean the panels?",
+        answer: "We recommend cleaning every 6-12 months depending on exposure to dust, leaves and other debris."
+      },
+      {
+        question: "Is it safe to clean solar panels?",
+        answer: "Yes. We use safe techniques and equipment that don't damage panels or affect their warranty."
+      }
+    ],
     comingSoon: [
       {
         question: "What services will be available soon?",
-        answer: "Coming soon we'll be working on water damage mitigation, handyman repairs, roof sealing and lead & asbestos mitigation services."
+        answer: "Coming soon we'll be working on plumbing, electrical, water damage mitigation, handyman repairs, roof sealing and lead & asbestos mitigation services."
       },
       {
         question: "Can I request information about a coming soon service?",
@@ -240,18 +344,26 @@ export default function FAQPage() {
   const faqCategories = language === "es" ? [
     { id: "general", title: "Preguntas generales", data: currentFaqs.general },
     { id: "pestControl", title: "Control de Plagas", data: currentFaqs.pestControl },
-    { id: "plumbing", title: "Plomería", data: currentFaqs.plumbing },
-    { id: "electrical", title: "Electricidad", data: currentFaqs.electrical },
     { id: "landscaping", title: "Jardinería", data: currentFaqs.landscaping },
     { id: "cleaning", title: "Limpieza", data: currentFaqs.cleaning },
+    { id: "windowCleaning", title: "Window Cleaning", data: currentFaqs.windowCleaning },
+    { id: "screenCleaning", title: "Screen Cleaning", data: currentFaqs.screenCleaning },
+    { id: "christmasLights", title: "Christmas Lights", data: currentFaqs.christmasLights },
+    { id: "pressureWash", title: "Pressure Wash", data: currentFaqs.pressureWash },
+    { id: "softWash", title: "Soft Wash", data: currentFaqs.softWash },
+    { id: "solarPanelCleaning", title: "Solar Panel Cleaning", data: currentFaqs.solarPanelCleaning },
     { id: "comingSoon", title: "Servicios próximamente", data: currentFaqs.comingSoon },
   ] : [
     { id: "general", title: "General Questions", data: currentFaqs.general },
     { id: "pestControl", title: "Pest Control", data: currentFaqs.pestControl },
-    { id: "plumbing", title: "Plumbing", data: currentFaqs.plumbing },
-    { id: "electrical", title: "Electrical", data: currentFaqs.electrical },
     { id: "landscaping", title: "Landscaping", data: currentFaqs.landscaping },
     { id: "cleaning", title: "Cleaning", data: currentFaqs.cleaning },
+    { id: "windowCleaning", title: "Window Cleaning", data: currentFaqs.windowCleaning },
+    { id: "screenCleaning", title: "Screen Cleaning", data: currentFaqs.screenCleaning },
+    { id: "christmasLights", title: "Christmas Lights", data: currentFaqs.christmasLights },
+    { id: "pressureWash", title: "Pressure Wash", data: currentFaqs.pressureWash },
+    { id: "softWash", title: "Soft Wash", data: currentFaqs.softWash },
+    { id: "solarPanelCleaning", title: "Solar Panel Cleaning", data: currentFaqs.solarPanelCleaning },
     { id: "comingSoon", title: "Coming Soon Services", data: currentFaqs.comingSoon },
   ]
 
@@ -269,8 +381,8 @@ export default function FAQPage() {
             </h1>
             <p className="text-xl text-muted-foreground text-pretty">
               {language === "es" 
-                ? "Respuestas claras sobre nuestros servicios, cobertura y cotizaciones en Puerto Rico."
-                : "Clear answers about our services, coverage and quotes in Puerto Rico."}
+                ? "Respuestas claras sobre nuestros 9 servicios activos, cobertura y cotizaciones en Puerto Rico."
+                : "Clear answers about our 9 active services, coverage and quotes in Puerto Rico."}
             </p>
           </div>
         </div>

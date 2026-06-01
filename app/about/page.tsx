@@ -2,7 +2,7 @@
 
 import Link from "next/link"
 import Image from "next/image"
-import { CheckCircle2, Shield, Heart, Award, Users, Target, Phone, Bug, TreePine, HardHat, SprayCan, Droplets, ArrowRight, Wrench, Zap, Layers } from "lucide-react"
+import { CheckCircle2, Shield, Heart, Award, Users, Target, Phone, Bug, TreePine, SprayCan, Droplets, ArrowRight, Grid3X3, Sparkles, Zap, Waves, Sun } from "lucide-react"
 import { Button } from "@/components/ui/button"
 import { Card, CardContent } from "@/components/ui/card"
 import { company } from "@/content/company"
@@ -75,6 +75,18 @@ export default function AboutPage() {
     }
   ]
 
+  const services = [
+    { href: "/services/pest-control", icon: Bug, color: "text-primary", bgColor: "bg-primary/10", nameEs: "Control de Plagas", nameEn: "Pest Control" },
+    { href: "/services/landscaping", icon: TreePine, color: "text-green-600", bgColor: "bg-green-500/10", nameEs: "Jardinería", nameEn: "Landscaping" },
+    { href: "/services/cleaning", icon: SprayCan, color: "text-blue-600", bgColor: "bg-blue-500/10", nameEs: "Limpieza", nameEn: "Cleaning" },
+    { href: "/services/window-cleaning", icon: Droplets, color: "text-sky-600", bgColor: "bg-sky-500/10", nameEs: "Window Cleaning", nameEn: "Window Cleaning" },
+    { href: "/services/screen-cleaning", icon: Grid3X3, color: "text-slate-600", bgColor: "bg-slate-500/10", nameEs: "Screen Cleaning", nameEn: "Screen Cleaning" },
+    { href: "/services/christmas-lights", icon: Sparkles, color: "text-red-600", bgColor: "bg-red-500/10", nameEs: "Christmas Lights", nameEn: "Christmas Lights" },
+    { href: "/services/pressure-wash", icon: Zap, color: "text-orange-600", bgColor: "bg-orange-500/10", nameEs: "Pressure Wash", nameEn: "Pressure Wash" },
+    { href: "/services/soft-wash", icon: Waves, color: "text-teal-600", bgColor: "bg-teal-500/10", nameEs: "Soft Wash", nameEn: "Soft Wash" },
+    { href: "/services/solar-panel-cleaning", icon: Sun, color: "text-yellow-600", bgColor: "bg-yellow-500/10", nameEs: "Solar Panel Cleaning", nameEn: "Solar Panel Cleaning" },
+  ]
+
   return (
     <>
       {/* Hero */}
@@ -88,32 +100,32 @@ export default function AboutPage() {
               </h1>
               <p className="text-lg text-muted-foreground mb-6">
                 {language === "es" 
-                  ? "Desde 2022, ayudamos a hogares, negocios y propiedades comerciales con servicios de control de plagas, plomería, electricidad, jardinería y limpieza."
-                  : "Since 2022, we help homes, businesses and commercial properties with pest control, plumbing, electrical, landscaping and cleaning services."}
+                  ? "Desde 2022, ayudamos a hogares, negocios y propiedades comerciales con servicios de control de plagas, jardinería, limpieza y mantenimiento especializado de exteriores."
+                  : "Since 2022, we help homes, businesses and commercial properties with pest control, landscaping, cleaning and specialized exterior maintenance services."}
               </p>
               
-              {/* Service chips - 5 active services in order */}
+              {/* Service chips - 9 active services */}
               <div className="flex flex-wrap gap-2 mb-6">
-                <span className="inline-flex items-center gap-1.5 rounded-full bg-primary/10 px-3 py-1 text-sm font-medium text-primary">
-                  <Bug className="h-3.5 w-3.5" />
-                  {language === "es" ? "Control de Plagas" : "Pest Control"}
-                </span>
-                <span className="inline-flex items-center gap-1.5 rounded-full bg-cyan-500/10 px-3 py-1 text-sm font-medium text-cyan-700">
-                  <Wrench className="h-3.5 w-3.5" />
-                  {language === "es" ? "Plomería" : "Plumbing"}
-                </span>
-                <span className="inline-flex items-center gap-1.5 rounded-full bg-yellow-500/10 px-3 py-1 text-sm font-medium text-yellow-700">
-                  <Zap className="h-3.5 w-3.5" />
-                  {language === "es" ? "Electricidad" : "Electrical"}
-                </span>
-                <span className="inline-flex items-center gap-1.5 rounded-full bg-green-500/10 px-3 py-1 text-sm font-medium text-green-700">
-                  <TreePine className="h-3.5 w-3.5" />
-                  {language === "es" ? "Jardinería" : "Landscaping"}
-                </span>
-                <span className="inline-flex items-center gap-1.5 rounded-full bg-blue-500/10 px-3 py-1 text-sm font-medium text-blue-700">
-                  <SprayCan className="h-3.5 w-3.5" />
-                  {language === "es" ? "Limpieza" : "Cleaning"}
-                </span>
+                {services.slice(0, 5).map((service) => {
+                  const Icon = service.icon
+                  return (
+                    <span key={service.href} className={`inline-flex items-center gap-1.5 rounded-full ${service.bgColor} px-3 py-1 text-sm font-medium ${service.color}`}>
+                      <Icon className="h-3.5 w-3.5" />
+                      {language === "es" ? service.nameEs : service.nameEn}
+                    </span>
+                  )
+                })}
+              </div>
+              <div className="flex flex-wrap gap-2 mb-6">
+                {services.slice(5).map((service) => {
+                  const Icon = service.icon
+                  return (
+                    <span key={service.href} className={`inline-flex items-center gap-1.5 rounded-full ${service.bgColor} px-3 py-1 text-sm font-medium ${service.color}`}>
+                      <Icon className="h-3.5 w-3.5" />
+                      {language === "es" ? service.nameEs : service.nameEn}
+                    </span>
+                  )
+                })}
               </div>
               
               <div className="flex flex-col sm:flex-row gap-4">
@@ -129,122 +141,24 @@ export default function AboutPage() {
               </div>
             </div>
             
-            {/* Service cards grid - 5 active services */}
-            <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-5 gap-3">
-              <Link href="/services/pest-control" className="group relative">
-                <div className="relative aspect-square rounded-xl overflow-hidden shadow-lg">
-                  <Image
-                    src="/images/hero-pest-control.jpg"
-                    alt={language === "es" ? "Control de Plagas" : "Pest Control"}
-                    fill
-                    className="object-cover group-hover:scale-105 transition-transform duration-300"
-                  />
-                  <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-black/20 to-transparent" />
-                  <div className="absolute bottom-0 left-0 right-0 p-3">
-                    <div className="flex items-center gap-1.5 mb-1">
-                      <Bug className="h-3.5 w-3.5 text-white" />
+            {/* Service cards grid - 9 active services in 3x3 */}
+            <div className="grid grid-cols-3 gap-3">
+              {services.map((service) => {
+                const Icon = service.icon
+                return (
+                  <Link key={service.href} href={service.href} className="group relative">
+                    <div className="relative aspect-square rounded-xl overflow-hidden shadow-lg bg-muted">
+                      <div className={`absolute inset-0 ${service.bgColor} group-hover:opacity-80 transition-opacity`} />
+                      <div className="absolute inset-0 flex flex-col items-center justify-center p-2">
+                        <Icon className={`h-8 w-8 ${service.color} mb-2`} />
+                        <h3 className="text-foreground font-bold text-xs text-center leading-tight">
+                          {language === "es" ? service.nameEs : service.nameEn}
+                        </h3>
+                      </div>
                     </div>
-                    <h3 className="text-white font-bold text-sm">
-                      {language === "es" ? "Control de Plagas" : "Pest Control"}
-                    </h3>
-                    <p className="text-white/80 text-xs">
-                      {language === "es" ? "Fumigación y trampeo" : "Fumigation & trapping"}
-                    </p>
-                  </div>
-                </div>
-              </Link>
-              
-              <Link href="/services/plumbing" className="group relative">
-                <div className="relative aspect-square rounded-xl overflow-hidden shadow-lg">
-                  <Image
-                    src="/images/hero-plumbing.jpg"
-                    alt={language === "es" ? "Plomería" : "Plumbing"}
-                    fill
-                    className="object-cover group-hover:scale-105 transition-transform duration-300"
-                  />
-                  <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-black/20 to-transparent" />
-                  <div className="absolute bottom-0 left-0 right-0 p-3">
-                    <div className="flex items-center gap-1.5 mb-1">
-                      <Wrench className="h-3.5 w-3.5 text-white" />
-                    </div>
-                    <h3 className="text-white font-bold text-sm">
-                      {language === "es" ? "Plomería" : "Plumbing"}
-                    </h3>
-                    <p className="text-white/80 text-xs">
-                      {language === "es" ? "Reparaciones y destapes" : "Repairs & unclogging"}
-                    </p>
-                  </div>
-                </div>
-              </Link>
-              
-              <Link href="/services/electrical" className="group relative">
-                <div className="relative aspect-square rounded-xl overflow-hidden shadow-lg">
-                  <Image
-                    src="/images/hero-electrical.jpg"
-                    alt={language === "es" ? "Electricidad" : "Electrical"}
-                    fill
-                    className="object-cover group-hover:scale-105 transition-transform duration-300"
-                  />
-                  <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-black/20 to-transparent" />
-                  <div className="absolute bottom-0 left-0 right-0 p-3">
-                    <div className="flex items-center gap-1.5 mb-1">
-                      <Zap className="h-3.5 w-3.5 text-white" />
-                    </div>
-                    <h3 className="text-white font-bold text-sm">
-                      {language === "es" ? "Electricidad" : "Electrical"}
-                    </h3>
-                    <p className="text-white/80 text-xs">
-                      {language === "es" ? "Paneles e iluminación" : "Panels & lighting"}
-                    </p>
-                  </div>
-                </div>
-              </Link>
-              
-              <Link href="/services/landscaping" className="group relative">
-                <div className="relative aspect-square rounded-xl overflow-hidden shadow-lg">
-                  <Image
-                    src="/images/hero-landscaping.jpg"
-                    alt={language === "es" ? "Jardinería" : "Landscaping"}
-                    fill
-                    className="object-cover group-hover:scale-105 transition-transform duration-300"
-                  />
-                  <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-black/20 to-transparent" />
-                  <div className="absolute bottom-0 left-0 right-0 p-3">
-                    <div className="flex items-center gap-1.5 mb-1">
-                      <TreePine className="h-3.5 w-3.5 text-white" />
-                    </div>
-                    <h3 className="text-white font-bold text-sm">
-                      {language === "es" ? "Jardinería" : "Landscaping"}
-                    </h3>
-                    <p className="text-white/80 text-xs">
-                      {language === "es" ? "Corte y mantenimiento" : "Mowing & maintenance"}
-                    </p>
-                  </div>
-                </div>
-              </Link>
-              
-              <Link href="/services/cleaning" className="group relative sm:col-span-1 col-span-2">
-                <div className="relative aspect-square sm:aspect-square rounded-xl overflow-hidden shadow-lg max-w-[200px] sm:max-w-none mx-auto sm:mx-0">
-                  <Image
-                    src="/images/hero-cleaning.jpg"
-                    alt={language === "es" ? "Limpieza" : "Cleaning"}
-                    fill
-                    className="object-cover group-hover:scale-105 transition-transform duration-300"
-                  />
-                  <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-black/20 to-transparent" />
-                  <div className="absolute bottom-0 left-0 right-0 p-3">
-                    <div className="flex items-center gap-1.5 mb-1">
-                      <SprayCan className="h-3.5 w-3.5 text-white" />
-                    </div>
-                    <h3 className="text-white font-bold text-sm">
-                      {language === "es" ? "Limpieza" : "Cleaning"}
-                    </h3>
-                    <p className="text-white/80 text-xs">
-                      {language === "es" ? "Residencial y comercial" : "Residential & commercial"}
-                    </p>
-                  </div>
-                </div>
-              </Link>
+                  </Link>
+                )
+              })}
             </div>
           </div>
         </div>
@@ -263,7 +177,7 @@ export default function AboutPage() {
               <div className="text-sm opacity-80">{t.home.statsYears}</div>
             </div>
             <div className="text-center">
-              <div className="text-3xl md:text-4xl font-bold mb-1">5</div>
+              <div className="text-3xl md:text-4xl font-bold mb-1">9</div>
               <div className="text-sm opacity-80">{t.home.statsServices}</div>
             </div>
             <div className="text-center">
@@ -283,230 +197,138 @@ export default function AboutPage() {
             </h2>
             <p className="text-muted-foreground text-lg">
               {language === "es" 
-                ? "Reunimos servicios esenciales para que puedas proteger, reparar y mantener tu propiedad con un solo equipo." 
-                : "We bring together essential services so you can protect, repair and maintain your property with one team."}
+                ? "Reunimos 9 servicios activos para que puedas proteger, limpiar y mantener tu propiedad con un solo equipo." 
+                : "We bring together 9 active services so you can protect, clean and maintain your property with one team."}
             </p>
           </div>
 
-          {/* Active Services - 5 services in correct order */}
+          {/* Active Services - 9 services */}
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6 mb-8">
-            {/* 1. Control de Plagas */}
-            <Link href="/services/pest-control" className="group">
-              <Card className="h-full hover:shadow-lg transition-all hover:border-primary/50">
-                <CardContent className="p-6 flex items-center gap-4">
-                  <div className="flex h-14 w-14 shrink-0 items-center justify-center rounded-full bg-primary/10 group-hover:bg-primary/20 transition-colors">
-                    <Bug className="h-7 w-7 text-primary" />
-                  </div>
-                  <div className="flex-1">
-                    <h3 className="text-lg font-bold mb-1 group-hover:text-primary transition-colors">
-                      {language === "es" ? "Control de Plagas" : "Pest Control"}
-                    </h3>
-                    <p className="text-muted-foreground text-sm">
-                      {language === "es" ? "Fumigación, trampeo y control preventivo." : "Fumigation, trapping and preventive control."}
-                    </p>
-                  </div>
-                  <ArrowRight className="h-5 w-5 text-muted-foreground group-hover:text-primary group-hover:translate-x-1 transition-all" />
-                </CardContent>
-              </Card>
-            </Link>
-
-            {/* 2. Plomería */}
-            <Link href="/services/plumbing" className="group">
-              <Card className="h-full hover:shadow-lg transition-all hover:border-cyan-500/50">
-                <CardContent className="p-6 flex items-center gap-4">
-                  <div className="flex h-14 w-14 shrink-0 items-center justify-center rounded-full bg-cyan-500/10 group-hover:bg-cyan-500/20 transition-colors">
-                    <Wrench className="h-7 w-7 text-cyan-600" />
-                  </div>
-                  <div className="flex-1">
-                    <h3 className="text-lg font-bold mb-1 group-hover:text-cyan-600 transition-colors">
-                      {language === "es" ? "Plomería" : "Plumbing"}
-                    </h3>
-                    <p className="text-muted-foreground text-sm">
-                      {language === "es" ? "Fugas, destapes, calentadores y accesorios." : "Leaks, unclogging, heaters and fixtures."}
-                    </p>
-                  </div>
-                  <ArrowRight className="h-5 w-5 text-muted-foreground group-hover:text-cyan-600 group-hover:translate-x-1 transition-all" />
-                </CardContent>
-              </Card>
-            </Link>
-
-            {/* 3. Electricidad */}
-            <Link href="/services/electrical" className="group">
-              <Card className="h-full hover:shadow-lg transition-all hover:border-yellow-500/50">
-                <CardContent className="p-6 flex items-center gap-4">
-                  <div className="flex h-14 w-14 shrink-0 items-center justify-center rounded-full bg-yellow-500/10 group-hover:bg-yellow-500/20 transition-colors">
-                    <Zap className="h-7 w-7 text-yellow-600" />
-                  </div>
-                  <div className="flex-1">
-                    <h3 className="text-lg font-bold mb-1 group-hover:text-yellow-600 transition-colors">
-                      {language === "es" ? "Electricidad" : "Electrical"}
-                    </h3>
-                    <p className="text-muted-foreground text-sm">
-                      {language === "es" ? "Paneles, breakers, iluminación, tomacorrientes y abanicos." : "Panels, breakers, lighting, outlets and fans."}
-                    </p>
-                  </div>
-                  <ArrowRight className="h-5 w-5 text-muted-foreground group-hover:text-yellow-600 group-hover:translate-x-1 transition-all" />
-                </CardContent>
-              </Card>
-            </Link>
-
-            {/* 4. Jardinería */}
-            <Link href="/services/landscaping" className="group">
-              <Card className="h-full hover:shadow-lg transition-all hover:border-green-500/50">
-                <CardContent className="p-6 flex items-center gap-4">
-                  <div className="flex h-14 w-14 shrink-0 items-center justify-center rounded-full bg-green-500/10 group-hover:bg-green-500/20 transition-colors">
-                    <TreePine className="h-7 w-7 text-green-600" />
-                  </div>
-                  <div className="flex-1">
-                    <h3 className="text-lg font-bold mb-1 group-hover:text-green-600 transition-colors">
-                      {language === "es" ? "Jardinería" : "Landscaping"}
-                    </h3>
-                    <p className="text-muted-foreground text-sm">
-                      {language === "es" ? "Corte de grama, poda y mantenimiento exterior." : "Lawn mowing, pruning and exterior maintenance."}
-                    </p>
-                  </div>
-                  <ArrowRight className="h-5 w-5 text-muted-foreground group-hover:text-green-600 group-hover:translate-x-1 transition-all" />
-                </CardContent>
-              </Card>
-            </Link>
-
-            {/* 5. Limpieza */}
-            <Link href="/services/cleaning" className="group">
-              <Card className="h-full hover:shadow-lg transition-all hover:border-blue-500/50">
-                <CardContent className="p-6 flex items-center gap-4">
-                  <div className="flex h-14 w-14 shrink-0 items-center justify-center rounded-full bg-blue-500/10 group-hover:bg-blue-500/20 transition-colors">
-                    <SprayCan className="h-7 w-7 text-blue-600" />
-                  </div>
-                  <div className="flex-1">
-                    <h3 className="text-lg font-bold mb-1 group-hover:text-blue-600 transition-colors">
-                      {language === "es" ? "Limpieza" : "Cleaning"}
-                    </h3>
-                    <p className="text-muted-foreground text-sm">
-                      {language === "es" ? "Limpieza residencial, comercial y post-construcción." : "Residential, commercial and post-construction cleaning."}
-                    </p>
-                  </div>
-                  <ArrowRight className="h-5 w-5 text-muted-foreground group-hover:text-blue-600 group-hover:translate-x-1 transition-all" />
-                </CardContent>
-              </Card>
-            </Link>
+            {services.map((service) => {
+              const Icon = service.icon
+              return (
+                <Link key={service.href} href={service.href} className="group">
+                  <Card className="h-full hover:shadow-lg transition-all hover:border-primary/50">
+                    <CardContent className="p-6 flex items-center gap-4">
+                      <div className={`flex h-14 w-14 shrink-0 items-center justify-center rounded-full ${service.bgColor} group-hover:scale-110 transition-transform`}>
+                        <Icon className={`h-7 w-7 ${service.color}`} />
+                      </div>
+                      <div className="flex-1">
+                        <h3 className="text-lg font-bold mb-1 group-hover:text-primary transition-colors">
+                          {language === "es" ? service.nameEs : service.nameEn}
+                        </h3>
+                      </div>
+                      <ArrowRight className="h-5 w-5 text-muted-foreground group-hover:text-primary group-hover:translate-x-1 transition-all" />
+                    </CardContent>
+                  </Card>
+                </Link>
+              )
+            })}
           </div>
 
-          {/* Coming Soon Services */}
-          <div className="text-center mb-4">
-            <span className="inline-flex items-center gap-2 text-sm text-muted-foreground">
-              {language === "es" ? "Próximamente" : "Coming Soon"}
-            </span>
-          </div>
-          <div className="grid grid-cols-2 lg:grid-cols-4 gap-4">
-            <Card className="text-center p-4 opacity-80">
-              <div className="flex h-10 w-10 items-center justify-center rounded-full bg-teal-500/10 mx-auto mb-2">
-                <Droplets className="h-5 w-5 text-teal-600" />
-              </div>
-              <h3 className="font-semibold text-sm">{language === "es" ? "Mitigación de Daños por Agua" : "Water Damage Mitigation"}</h3>
-            </Card>
-            <Card className="text-center p-4 opacity-80">
-              <div className="flex h-10 w-10 items-center justify-center rounded-full bg-purple-500/10 mx-auto mb-2">
-                <HardHat className="h-5 w-5 text-purple-600" />
-              </div>
-              <h3 className="font-semibold text-sm">{language === "es" ? "Reparaciones Handyman" : "Handyman Repairs"}</h3>
-            </Card>
-            <Card className="text-center p-4 opacity-80">
-              <div className="flex h-10 w-10 items-center justify-center rounded-full bg-amber-500/10 mx-auto mb-2">
-                <Layers className="h-5 w-5 text-amber-600" />
-              </div>
-              <h3 className="font-semibold text-sm">{language === "es" ? "Sellado de Techos" : "Roof Sealing"}</h3>
-            </Card>
-            <Card className="text-center p-4 opacity-80">
-              <div className="flex h-10 w-10 items-center justify-center rounded-full bg-orange-500/10 mx-auto mb-2">
-                <Shield className="h-5 w-5 text-orange-600" />
-              </div>
-              <h3 className="font-semibold text-sm">{language === "es" ? "Mitigación de Plomo y Asbesto" : "Lead & Asbestos Mitigation"}</h3>
-            </Card>
+          <div className="text-center">
+            <Button asChild size="lg">
+              <Link href="/services">{language === "es" ? "Ver todos los servicios" : "View all services"}</Link>
+            </Button>
           </div>
         </div>
       </section>
 
-      {/* Mission & Values Combined */}
-      <section className="py-16 md:py-20 bg-secondary">
-        <div className="container mx-auto px-4">
-          {/* Mission - compact */}
-          <div className="max-w-2xl mx-auto text-center mb-12">
-            <div className="flex h-12 w-12 items-center justify-center rounded-full bg-primary/10 mx-auto mb-4">
-              <Target className="h-6 w-6 text-primary" />
-            </div>
-            <h2 className="text-2xl md:text-3xl font-bold text-foreground mb-3">
-              {language === "es" ? "Nuestra misión" : "Our mission"}
-            </h2>
-            <p className="text-muted-foreground">
-              {language === "es" 
-                ? "Ser el equipo de confianza para mantener propiedades en Puerto Rico seguras, funcionales y presentables."
-                : "To be the trusted team for keeping properties in Puerto Rico safe, functional and presentable."}
-            </p>
-          </div>
-
-          {/* Values */}
-          <div className="text-center mb-8">
-            <h3 className="text-xl font-bold text-foreground">{t.about.valuesTitle}</h3>
-          </div>
-
-          <div className="grid md:grid-cols-3 gap-6 max-w-4xl mx-auto">
-            <Card className="text-center p-6">
-              <div className="flex h-14 w-14 items-center justify-center rounded-full bg-primary/10 mx-auto mb-4">
-                <Shield className="h-7 w-7 text-primary" />
-              </div>
-              <h3 className="text-xl font-bold mb-2">{t.about.value1}</h3>
-              <p className="text-muted-foreground">{t.about.value1Desc}</p>
-            </Card>
-            <Card className="text-center p-6">
-              <div className="flex h-14 w-14 items-center justify-center rounded-full bg-primary/10 mx-auto mb-4">
-                <Award className="h-7 w-7 text-primary" />
-              </div>
-              <h3 className="text-xl font-bold mb-2">{t.about.value2}</h3>
-              <p className="text-muted-foreground">{t.about.value2Desc}</p>
-            </Card>
-            <Card className="text-center p-6">
-              <div className="flex h-14 w-14 items-center justify-center rounded-full bg-primary/10 mx-auto mb-4">
-                <Heart className="h-7 w-7 text-primary" />
-              </div>
-              <h3 className="text-xl font-bold mb-2">{t.about.value3}</h3>
-              <p className="text-muted-foreground">{t.about.value3Desc}</p>
-            </Card>
-          </div>
-        </div>
-      </section>
-
-      {/* Team */}
-      <section className="py-16 md:py-20 bg-background">
+      {/* Mission & Values */}
+      <section className="py-16 md:py-20 bg-muted/30">
         <div className="container mx-auto px-4">
           <div className="text-center max-w-2xl mx-auto mb-12">
-            <h2 className="text-3xl md:text-4xl font-bold text-foreground mb-4">{t.about.teamTitle}</h2>
-            <p className="text-muted-foreground text-lg">{t.about.teamDesc}</p>
+            <h2 className="text-3xl md:text-4xl font-bold text-foreground mb-4">
+              {language === "es" ? "Lo que nos impulsa" : "What drives us"}
+            </h2>
           </div>
-
-          {/* President card - featured */}
-          <div className="max-w-md mx-auto mb-10">
-            <Card className="overflow-hidden shadow-lg border-primary/20">
-              <div className="aspect-square relative bg-gradient-to-b from-secondary to-background">
-                <Image
-                  src={teamMembers[0].image}
-                  alt={teamMembers[0].name}
-                  fill
-                  className="object-cover object-top"
-                />
-              </div>
+          
+          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
+            <Card className="bg-card border-none shadow-md">
               <CardContent className="p-6 text-center">
-                <h3 className="font-bold text-xl">{teamMembers[0].name}</h3>
-                <p className="text-primary font-semibold mb-3">{teamMembers[0].role}</p>
-                <p className="text-muted-foreground text-sm">{teamMembers[0].description}</p>
+                <div className="flex h-14 w-14 mx-auto items-center justify-center rounded-full bg-primary/10 mb-4">
+                  <Target className="h-7 w-7 text-primary" />
+                </div>
+                <h3 className="text-lg font-bold mb-2">
+                  {language === "es" ? "Misión" : "Mission"}
+                </h3>
+                <p className="text-muted-foreground text-sm">
+                  {language === "es" 
+                    ? "Ofrecer soluciones integrales de mantenimiento que cuiden y mejoren el valor de las propiedades de nuestros clientes."
+                    : "Provide comprehensive maintenance solutions that care for and enhance the value of our clients properties."}
+                </p>
+              </CardContent>
+            </Card>
+
+            <Card className="bg-card border-none shadow-md">
+              <CardContent className="p-6 text-center">
+                <div className="flex h-14 w-14 mx-auto items-center justify-center rounded-full bg-green-500/10 mb-4">
+                  <Shield className="h-7 w-7 text-green-600" />
+                </div>
+                <h3 className="text-lg font-bold mb-2">
+                  {language === "es" ? "Compromiso" : "Commitment"}
+                </h3>
+                <p className="text-muted-foreground text-sm">
+                  {language === "es" 
+                    ? "Garantizamos resultados profesionales en cada servicio, cumpliendo con los más altos estándares de calidad."
+                    : "We guarantee professional results in every service, meeting the highest quality standards."}
+                </p>
+              </CardContent>
+            </Card>
+
+            <Card className="bg-card border-none shadow-md">
+              <CardContent className="p-6 text-center">
+                <div className="flex h-14 w-14 mx-auto items-center justify-center rounded-full bg-blue-500/10 mb-4">
+                  <Heart className="h-7 w-7 text-blue-600" />
+                </div>
+                <h3 className="text-lg font-bold mb-2">
+                  {language === "es" ? "Pasión" : "Passion"}
+                </h3>
+                <p className="text-muted-foreground text-sm">
+                  {language === "es" 
+                    ? "Amamos lo que hacemos y se refleja en cada proyecto que completamos para nuestros clientes."
+                    : "We love what we do and it shows in every project we complete for our clients."}
+                </p>
+              </CardContent>
+            </Card>
+
+            <Card className="bg-card border-none shadow-md">
+              <CardContent className="p-6 text-center">
+                <div className="flex h-14 w-14 mx-auto items-center justify-center rounded-full bg-orange-500/10 mb-4">
+                  <Award className="h-7 w-7 text-orange-600" />
+                </div>
+                <h3 className="text-lg font-bold mb-2">
+                  {language === "es" ? "Excelencia" : "Excellence"}
+                </h3>
+                <p className="text-muted-foreground text-sm">
+                  {language === "es" 
+                    ? "Nos esforzamos por superar las expectativas en cada servicio que proporcionamos."
+                    : "We strive to exceed expectations in every service we provide."}
+                </p>
               </CardContent>
             </Card>
           </div>
+        </div>
+      </section>
 
-          {/* Rest of team */}
-          <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-6">
-            {teamMembers.slice(1).map((member, i) => (
-              <Card key={i} className="overflow-hidden hover:shadow-lg transition-shadow">
-                <div className="aspect-square relative bg-gradient-to-b from-secondary to-background">
+      {/* Team Section */}
+      <section className="py-16 md:py-20 bg-background">
+        <div className="container mx-auto px-4">
+          <div className="text-center max-w-2xl mx-auto mb-12">
+            <h2 className="text-3xl md:text-4xl font-bold text-foreground mb-4">
+              {language === "es" ? "Nuestro equipo" : "Our team"}
+            </h2>
+            <p className="text-muted-foreground text-lg">
+              {language === "es" 
+                ? "Profesionales comprometidos con el cuidado de tu propiedad."
+                : "Professionals committed to caring for your property."}
+            </p>
+          </div>
+          
+          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+            {teamMembers.map((member, index) => (
+              <Card key={index} className="overflow-hidden hover:shadow-lg transition-shadow">
+                <div className="relative aspect-[4/3] bg-muted">
                   <Image
                     src={member.image}
                     alt={member.name}
@@ -514,9 +336,9 @@ export default function AboutPage() {
                     className="object-cover object-top"
                   />
                 </div>
-                <CardContent className="p-4 text-center">
-                  <h3 className="font-bold text-lg">{member.name}</h3>
-                  <p className="text-primary text-sm font-medium mb-2">{member.role}</p>
+                <CardContent className="p-6">
+                  <h3 className="text-xl font-bold text-foreground mb-1">{member.name}</h3>
+                  <p className="text-primary font-medium text-sm mb-3">{member.role}</p>
                   <p className="text-muted-foreground text-sm">{member.description}</p>
                 </CardContent>
               </Card>
@@ -525,25 +347,114 @@ export default function AboutPage() {
         </div>
       </section>
 
-      {/* CTA */}
+      {/* Why Choose Us */}
+      <section className="py-16 md:py-20 bg-muted/30">
+        <div className="container mx-auto px-4">
+          <div className="grid lg:grid-cols-2 gap-12 items-center">
+            <div>
+              <h2 className="text-3xl md:text-4xl font-bold text-foreground mb-6">
+                {language === "es" ? "¿Por qué elegirnos?" : "Why choose us?"}
+              </h2>
+              <div className="space-y-4">
+                {[
+                  { 
+                    titleEs: "Un solo equipo, múltiples servicios", 
+                    titleEn: "One team, multiple services",
+                    descEs: "No necesitas coordinar con múltiples proveedores. Nosotros nos encargamos de todo.",
+                    descEn: "No need to coordinate with multiple providers. We take care of everything."
+                  },
+                  { 
+                    titleEs: "Conocemos Puerto Rico", 
+                    titleEn: "We know Puerto Rico",
+                    descEs: "Entendemos las necesidades específicas de las propiedades en la isla.",
+                    descEn: "We understand the specific needs of properties on the island."
+                  },
+                  { 
+                    titleEs: "Respuesta rápida", 
+                    titleEn: "Fast response",
+                    descEs: "Te contactamos el mismo día y coordinamos visitas según tu disponibilidad.",
+                    descEn: "We contact you the same day and coordinate visits according to your availability."
+                  },
+                  { 
+                    titleEs: "Precios transparentes", 
+                    titleEn: "Transparent pricing",
+                    descEs: "Cotizaciones claras sin cargos ocultos ni sorpresas.",
+                    descEn: "Clear quotes with no hidden charges or surprises."
+                  },
+                ].map((item, index) => (
+                  <div key={index} className="flex items-start gap-3">
+                    <CheckCircle2 className="h-6 w-6 text-primary shrink-0 mt-0.5" />
+                    <div>
+                      <h3 className="font-bold text-foreground">{language === "es" ? item.titleEs : item.titleEn}</h3>
+                      <p className="text-muted-foreground text-sm">{language === "es" ? item.descEs : item.descEn}</p>
+                    </div>
+                  </div>
+                ))}
+              </div>
+            </div>
+            <div className="relative">
+              <div className="grid grid-cols-2 gap-4">
+                <div className="space-y-4">
+                  <div className="relative aspect-[4/3] rounded-xl overflow-hidden shadow-lg">
+                    <Image
+                      src="/images/hero-pest-control.jpg"
+                      alt="Pest Control"
+                      fill
+                      className="object-cover"
+                    />
+                  </div>
+                  <div className="relative aspect-square rounded-xl overflow-hidden shadow-lg">
+                    <Image
+                      src="/images/hero-cleaning.jpg"
+                      alt="Cleaning"
+                      fill
+                      className="object-cover"
+                    />
+                  </div>
+                </div>
+                <div className="space-y-4 pt-8">
+                  <div className="relative aspect-square rounded-xl overflow-hidden shadow-lg">
+                    <Image
+                      src="/images/hero-landscaping.jpg"
+                      alt="Landscaping"
+                      fill
+                      className="object-cover"
+                    />
+                  </div>
+                  <div className="relative aspect-[4/3] rounded-xl overflow-hidden shadow-lg">
+                    <Image
+                      src="/images/pressure-wash.png"
+                      alt="Pressure Wash"
+                      fill
+                      className="object-cover"
+                    />
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* CTA Section */}
       <section className="py-16 md:py-20 bg-primary text-primary-foreground">
         <div className="container mx-auto px-4 text-center">
           <h2 className="text-3xl md:text-4xl font-bold mb-4">
             {language === "es" ? "¿Necesitas ayuda con tu propiedad?" : "Need help with your property?"}
           </h2>
-          <p className="text-lg opacity-80 max-w-2xl mx-auto mb-8">
+          <p className="text-lg opacity-90 mb-8 max-w-2xl mx-auto">
             {language === "es" 
-              ? "Contáctanos para coordinar una cotización de control de plagas, plomería, electricidad, jardinería o limpieza."
-              : "Contact us to coordinate a quote for pest control, plumbing, electrical, landscaping or cleaning."}
+              ? "Contáctanos para coordinar una cotización de control de plagas, jardinería, limpieza o cualquiera de nuestros 9 servicios activos."
+              : "Contact us to coordinate a quote for pest control, landscaping, cleaning or any of our 9 active services."}
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <Button asChild size="lg" variant="secondary">
+            <Button asChild size="lg" className="bg-accent text-accent-foreground hover:bg-accent/90">
               <Link href="/contact">{t.ui.getQuote}</Link>
             </Button>
             <Button asChild size="lg" className="bg-transparent border-2 border-white text-white hover:bg-white/20">
               <a href={`tel:${company.phoneClean}`}>
                 <Phone className="mr-2 h-5 w-5" />
-                {t.ui.callNow}
+                {language === "es" ? "Llamar Ahora" : "Call Now"}
               </a>
             </Button>
           </div>

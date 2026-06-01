@@ -3,7 +3,7 @@
 import * as React from "react"
 import Link from "next/link"
 import Image from "next/image"
-import { Menu, Phone, Clock, Globe, Bug, TreePine, Wrench, SprayCan, Zap } from "lucide-react"
+import { Menu, Phone, Clock, Globe, Bug, TreePine, SprayCan, Droplets, Grid3X3, Sparkles, Zap as Lightning, Waves, Sun } from "lucide-react"
 import { Button } from "@/components/ui/button"
 import { Sheet, SheetContent, SheetTrigger, SheetTitle, SheetDescription } from "@/components/ui/sheet"
 import {
@@ -21,6 +21,99 @@ import { useLanguage } from "@/lib/language-context"
 export function SiteHeader() {
   const [isOpen, setIsOpen] = React.useState(false)
   const { language, setLanguage, t } = useLanguage()
+
+  const services = [
+    { 
+      href: "/services/pest-control", 
+      icon: Bug, 
+      color: "text-primary", 
+      bgColor: "bg-primary/10",
+      nameEs: "Control de Plagas", 
+      nameEn: "Pest Control",
+      descEs: "Fumigación y trampas",
+      descEn: "Fumigation & traps"
+    },
+    { 
+      href: "/services/landscaping", 
+      icon: TreePine, 
+      color: "text-green-600", 
+      bgColor: "bg-green-500/10",
+      nameEs: "Jardinería", 
+      nameEn: "Landscaping",
+      descEs: "Corte y poda",
+      descEn: "Mowing & pruning"
+    },
+    { 
+      href: "/services/cleaning", 
+      icon: SprayCan, 
+      color: "text-blue-600", 
+      bgColor: "bg-blue-500/10",
+      nameEs: "Limpieza", 
+      nameEn: "Cleaning",
+      descEs: "Limpieza profesional",
+      descEn: "Professional cleaning"
+    },
+    { 
+      href: "/services/window-cleaning", 
+      icon: Droplets, 
+      color: "text-sky-600", 
+      bgColor: "bg-sky-500/10",
+      nameEs: "Window Cleaning", 
+      nameEn: "Window Cleaning",
+      descEs: "Limpieza de ventanas",
+      descEn: "Window cleaning"
+    },
+    { 
+      href: "/services/screen-cleaning", 
+      icon: Grid3X3, 
+      color: "text-slate-600", 
+      bgColor: "bg-slate-500/10",
+      nameEs: "Screen Cleaning", 
+      nameEn: "Screen Cleaning",
+      descEs: "Limpieza de screens",
+      descEn: "Screen cleaning"
+    },
+    { 
+      href: "/services/christmas-lights", 
+      icon: Sparkles, 
+      color: "text-red-600", 
+      bgColor: "bg-red-500/10",
+      nameEs: "Christmas Lights", 
+      nameEn: "Christmas Lights",
+      descEs: "Instalación navideña",
+      descEn: "Holiday installation"
+    },
+    { 
+      href: "/services/pressure-wash", 
+      icon: Lightning, 
+      color: "text-orange-600", 
+      bgColor: "bg-orange-500/10",
+      nameEs: "Pressure Wash", 
+      nameEn: "Pressure Wash",
+      descEs: "Lavado a presión",
+      descEn: "Pressure washing"
+    },
+    { 
+      href: "/services/soft-wash", 
+      icon: Waves, 
+      color: "text-teal-600", 
+      bgColor: "bg-teal-500/10",
+      nameEs: "Soft Wash", 
+      nameEn: "Soft Wash",
+      descEs: "Lavado suave",
+      descEn: "Soft washing"
+    },
+    { 
+      href: "/services/solar-panel-cleaning", 
+      icon: Sun, 
+      color: "text-yellow-600", 
+      bgColor: "bg-yellow-500/10",
+      nameEs: "Solar Panel Cleaning", 
+      nameEn: "Solar Panel Cleaning",
+      descEs: "Limpieza de paneles",
+      descEn: "Panel cleaning"
+    },
+  ]
 
   return (
     <header className="sticky top-0 z-50 w-full">
@@ -98,7 +191,7 @@ export function SiteHeader() {
                   <ChevronDown className="h-4 w-4" />
                 </button>
               </DropdownMenuTrigger>
-              <DropdownMenuContent align="start" className="w-72">
+              <DropdownMenuContent align="start" className="w-72 max-h-[70vh] overflow-y-auto">
                 <DropdownMenuItem asChild>
                   <Link href="/services" className="flex flex-col items-start gap-1 p-3">
                     <span className="font-medium">{language === "es" ? "Todos los Servicios" : "All Services"}</span>
@@ -108,66 +201,22 @@ export function SiteHeader() {
                   </Link>
                 </DropdownMenuItem>
                 <DropdownMenuSeparator />
-                {/* 1. Control de Plagas */}
-                <DropdownMenuItem asChild>
-                  <Link href="/services/pest-control" className="flex items-center gap-3 p-3">
-                    <div className="flex h-8 w-8 shrink-0 items-center justify-center rounded-md bg-primary/10">
-                      <Bug className="h-4 w-4 text-primary" />
-                    </div>
-                    <div>
-                      <span className="font-medium">{language === "es" ? "Control de Plagas" : "Pest Control"}</span>
-                      <p className="text-xs text-muted-foreground">{language === "es" ? "Fumigación y trampas" : "Fumigation & traps"}</p>
-                    </div>
-                  </Link>
-                </DropdownMenuItem>
-                {/* 2. Plomería */}
-                <DropdownMenuItem asChild>
-                  <Link href="/services/plumbing" className="flex items-center gap-3 p-3">
-                    <div className="flex h-8 w-8 shrink-0 items-center justify-center rounded-md bg-cyan-500/10">
-                      <Wrench className="h-4 w-4 text-cyan-600" />
-                    </div>
-                    <div>
-                      <span className="font-medium">{language === "es" ? "Plomería" : "Plumbing"}</span>
-                      <p className="text-xs text-muted-foreground">{language === "es" ? "Reparaciones y destapes" : "Repairs & unclogging"}</p>
-                    </div>
-                  </Link>
-                </DropdownMenuItem>
-                {/* 3. Electricidad */}
-                <DropdownMenuItem asChild>
-                  <Link href="/services/electrical" className="flex items-center gap-3 p-3">
-                    <div className="flex h-8 w-8 shrink-0 items-center justify-center rounded-md bg-yellow-500/10">
-                      <Zap className="h-4 w-4 text-yellow-600" />
-                    </div>
-                    <div>
-                      <span className="font-medium">{language === "es" ? "Electricidad" : "Electrical"}</span>
-                      <p className="text-xs text-muted-foreground">{language === "es" ? "Instalaciones y reparaciones" : "Installations & repairs"}</p>
-                    </div>
-                  </Link>
-                </DropdownMenuItem>
-                {/* 4. Jardinería */}
-                <DropdownMenuItem asChild>
-                  <Link href="/services/landscaping" className="flex items-center gap-3 p-3">
-                    <div className="flex h-8 w-8 shrink-0 items-center justify-center rounded-md bg-green-500/10">
-                      <TreePine className="h-4 w-4 text-green-600" />
-                    </div>
-                    <div>
-                      <span className="font-medium">{language === "es" ? "Jardinería" : "Landscaping"}</span>
-                      <p className="text-xs text-muted-foreground">{language === "es" ? "Corte y poda" : "Mowing & pruning"}</p>
-                    </div>
-                  </Link>
-                </DropdownMenuItem>
-                {/* 5. Limpieza */}
-                <DropdownMenuItem asChild>
-                  <Link href="/services/cleaning" className="flex items-center gap-3 p-3">
-                    <div className="flex h-8 w-8 shrink-0 items-center justify-center rounded-md bg-blue-500/10">
-                      <SprayCan className="h-4 w-4 text-blue-600" />
-                    </div>
-                    <div>
-                      <span className="font-medium">{language === "es" ? "Limpieza" : "Cleaning"}</span>
-                      <p className="text-xs text-muted-foreground">{language === "es" ? "Limpieza profesional" : "Professional cleaning"}</p>
-                    </div>
-                  </Link>
-                </DropdownMenuItem>
+                {services.map((service) => {
+                  const Icon = service.icon
+                  return (
+                    <DropdownMenuItem key={service.href} asChild>
+                      <Link href={service.href} className="flex items-center gap-3 p-3">
+                        <div className={`flex h-8 w-8 shrink-0 items-center justify-center rounded-md ${service.bgColor}`}>
+                          <Icon className={`h-4 w-4 ${service.color}`} />
+                        </div>
+                        <div>
+                          <span className="font-medium">{language === "es" ? service.nameEs : service.nameEn}</span>
+                          <p className="text-xs text-muted-foreground">{language === "es" ? service.descEs : service.descEn}</p>
+                        </div>
+                      </Link>
+                    </DropdownMenuItem>
+                  )
+                })}
               </DropdownMenuContent>
             </DropdownMenu>
 
@@ -242,51 +291,20 @@ export function SiteHeader() {
                           {t.nav.services}
                         </Link>
                         <div className="mt-2 ml-4 space-y-1 border-l-2 border-muted pl-3">
-                          {/* 1. Control de Plagas */}
-                          <Link 
-                            href="/services/pest-control" 
-                            className="flex items-center gap-2 py-1.5 text-sm text-muted-foreground hover:text-primary transition-colors"
-                            onClick={() => setIsOpen(false)}
-                          >
-                            <Bug className="h-4 w-4 text-primary" />
-                            {language === "es" ? "Control de Plagas" : "Pest Control"}
-                          </Link>
-                          {/* 2. Plomería */}
-                          <Link 
-                            href="/services/plumbing" 
-                            className="flex items-center gap-2 py-1.5 text-sm text-muted-foreground hover:text-cyan-600 transition-colors"
-                            onClick={() => setIsOpen(false)}
-                          >
-                            <Wrench className="h-4 w-4 text-cyan-600" />
-                            {language === "es" ? "Plomería" : "Plumbing"}
-                          </Link>
-                          {/* 3. Electricidad */}
-                          <Link 
-                            href="/services/electrical" 
-                            className="flex items-center gap-2 py-1.5 text-sm text-muted-foreground hover:text-yellow-600 transition-colors"
-                            onClick={() => setIsOpen(false)}
-                          >
-                            <Zap className="h-4 w-4 text-yellow-600" />
-                            {language === "es" ? "Electricidad" : "Electrical"}
-                          </Link>
-                          {/* 4. Jardinería */}
-                          <Link 
-                            href="/services/landscaping" 
-                            className="flex items-center gap-2 py-1.5 text-sm text-muted-foreground hover:text-green-600 transition-colors"
-                            onClick={() => setIsOpen(false)}
-                          >
-                            <TreePine className="h-4 w-4 text-green-600" />
-                            {language === "es" ? "Jardinería" : "Landscaping"}
-                          </Link>
-                          {/* 5. Limpieza */}
-                          <Link 
-                            href="/services/cleaning" 
-                            className="flex items-center gap-2 py-1.5 text-sm text-muted-foreground hover:text-blue-600 transition-colors"
-                            onClick={() => setIsOpen(false)}
-                          >
-                            <SprayCan className="h-4 w-4 text-blue-600" />
-                            {language === "es" ? "Limpieza" : "Cleaning"}
-                          </Link>
+                          {services.map((service) => {
+                            const Icon = service.icon
+                            return (
+                              <Link 
+                                key={service.href}
+                                href={service.href} 
+                                className={`flex items-center gap-2 py-1.5 text-sm text-muted-foreground hover:${service.color} transition-colors`}
+                                onClick={() => setIsOpen(false)}
+                              >
+                                <Icon className={`h-4 w-4 ${service.color}`} />
+                                {language === "es" ? service.nameEs : service.nameEn}
+                              </Link>
+                            )
+                          })}
                         </div>
                       </div>
                     </li>
@@ -360,5 +378,3 @@ export function SiteHeader() {
     </header>
   )
 }
-
-
