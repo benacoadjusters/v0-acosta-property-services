@@ -11,24 +11,26 @@ import { useLanguage } from "@/lib/language-context"
 export default function AboutPage() {
   const { language, t } = useLanguage()
 
-  const teamMembers = language === "es" ? [
-    { 
-      name: "Gabriel Acosta", 
-      role: "Presidente e Inspector", 
-      description: "Fundador y líder de Acosta Property Services. Con visión empresarial y amplia experiencia en campo, dirige todas las operaciones de la empresa y realiza inspecciones especializadas para garantizar la calidad de cada servicio que ofrecemos a nuestros clientes.",
-      image: "/images/team/gabriel.png"
-    },
+  // Leader - Gabriel (displayed larger)
+  const teamLeader = language === "es" ? { 
+    name: "Gabriel Acosta", 
+    role: "Presidente e Inspector", 
+    description: "Fundador y líder de Acosta Property Services. Con visión empresarial y amplia experiencia en campo, dirige todas las operaciones de la empresa y realiza inspecciones especializadas para garantizar la calidad de cada servicio que ofrecemos a nuestros clientes.",
+    image: "/images/team/gabriel.png"
+  } : { 
+    name: "Gabriel Acosta", 
+    role: "President & Inspector", 
+    description: "Founder and leader of Acosta Property Services. With business vision and extensive field experience, he directs all company operations and performs specialized inspections to ensure the quality of every service we offer to our clients.",
+    image: "/images/team/gabriel.png"
+  }
+
+  // Middle row - Shari, Luis, Rode
+  const teamMiddle = language === "es" ? [
     { 
       name: "Sharimar Sánchez", 
       role: "Supervisora de Operaciones", 
       description: "Coordina y supervisa todas las operaciones diarias de la empresa, asegurando que cada servicio se ejecute con eficiencia, puntualidad y los más altos estándares de calidad para la satisfacción de nuestros clientes.",
       image: "/images/team/shari.png"
-    },
-    { 
-      name: "Víctor Camacho", 
-      role: "Exterminador", 
-      description: "Técnico certificado especializado en control de plagas con amplia experiencia en fumigación, tratamientos químicos y biológicos. Garantiza la eliminación efectiva de plagas en cada propiedad que visitamos.",
-      image: "/images/team/victor.png"
     },
     { 
       name: "Luis Muñoz", 
@@ -44,22 +46,10 @@ export default function AboutPage() {
     }
   ] : [
     { 
-      name: "Gabriel Acosta", 
-      role: "President & Inspector", 
-      description: "Founder and leader of Acosta Property Services. With business vision and extensive field experience, he directs all company operations and performs specialized inspections to ensure the quality of every service we offer to our clients.",
-      image: "/images/team/gabriel.png"
-    },
-    { 
       name: "Sharimar Sanchez", 
       role: "Operations Supervisor", 
       description: "Coordinates and supervises all daily company operations, ensuring each service is executed with efficiency, punctuality and the highest quality standards for our clients satisfaction.",
       image: "/images/team/shari.png"
-    },
-    { 
-      name: "Victor Camacho", 
-      role: "Exterminator", 
-      description: "Certified technician specialized in pest control with extensive experience in fumigation, chemical and biological treatments. Ensures effective pest elimination in every property we visit.",
-      image: "/images/team/victor.png"
     },
     { 
       name: "Luis Munoz", 
@@ -74,6 +64,19 @@ export default function AboutPage() {
       image: "/images/team/roderih.png"
     }
   ]
+
+  // Last row - Victor
+  const teamLast = language === "es" ? { 
+    name: "Víctor Camacho", 
+    role: "Exterminador", 
+    description: "Técnico certificado especializado en control de plagas con amplia experiencia en fumigación, tratamientos químicos y biológicos. Garantiza la eliminación efectiva de plagas en cada propiedad que visitamos.",
+    image: "/images/team/victor.png"
+  } : { 
+    name: "Victor Camacho", 
+    role: "Exterminator", 
+    description: "Certified technician specialized in pest control with extensive experience in fumigation, chemical and biological treatments. Ensures effective pest elimination in every property we visit.",
+    image: "/images/team/victor.png"
+  }
 
   const services = [
     { href: "/services/pest-control", icon: Bug, color: "text-primary", bgColor: "bg-primary/10", nameEs: "Control de Plagas", nameEn: "Pest Control" },
@@ -343,8 +346,28 @@ export default function AboutPage() {
             </p>
           </div>
           
-          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {teamMembers.map((member, index) => (
+          {/* Gabriel - Leader, centered and larger */}
+          <div className="flex justify-center mb-8">
+            <Card className="overflow-hidden hover:shadow-lg transition-shadow max-w-md w-full">
+              <div className="relative aspect-[4/3] bg-muted">
+                <Image
+                  src={teamLeader.image}
+                  alt={teamLeader.name}
+                  fill
+                  className="object-cover object-top"
+                />
+              </div>
+              <CardContent className="p-6">
+                <h3 className="text-2xl font-bold text-foreground mb-1">{teamLeader.name}</h3>
+                <p className="text-primary font-medium text-sm mb-3">{teamLeader.role}</p>
+                <p className="text-muted-foreground text-sm">{teamLeader.description}</p>
+              </CardContent>
+            </Card>
+          </div>
+
+          {/* Shari, Luis, Rode - Middle row */}
+          <div className="grid md:grid-cols-3 gap-6 mb-8">
+            {teamMiddle.map((member, index) => (
               <Card key={index} className="overflow-hidden hover:shadow-lg transition-shadow">
                 <div className="relative aspect-[4/3] bg-muted">
                   <Image
@@ -354,13 +377,32 @@ export default function AboutPage() {
                     className="object-cover object-top"
                   />
                 </div>
-                <CardContent className="p-6">
-                  <h3 className="text-xl font-bold text-foreground mb-1">{member.name}</h3>
-                  <p className="text-primary font-medium text-sm mb-3">{member.role}</p>
+                <CardContent className="p-5">
+                  <h3 className="text-lg font-bold text-foreground mb-1">{member.name}</h3>
+                  <p className="text-primary font-medium text-sm mb-2">{member.role}</p>
                   <p className="text-muted-foreground text-sm">{member.description}</p>
                 </CardContent>
               </Card>
             ))}
+          </div>
+
+          {/* Victor - Last, centered */}
+          <div className="flex justify-center">
+            <Card className="overflow-hidden hover:shadow-lg transition-shadow max-w-sm w-full">
+              <div className="relative aspect-[4/3] bg-muted">
+                <Image
+                  src={teamLast.image}
+                  alt={teamLast.name}
+                  fill
+                  className="object-cover object-top"
+                />
+              </div>
+              <CardContent className="p-5">
+                <h3 className="text-lg font-bold text-foreground mb-1">{teamLast.name}</h3>
+                <p className="text-primary font-medium text-sm mb-2">{teamLast.role}</p>
+                <p className="text-muted-foreground text-sm">{teamLast.description}</p>
+              </CardContent>
+            </Card>
           </div>
         </div>
       </section>
