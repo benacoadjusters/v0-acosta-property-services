@@ -1,4 +1,6 @@
-"use client"
+""use client"
+
+// Solar Panel Cleaning Service Page"
 
 import Link from "next/link"
 import Image from "next/image"
