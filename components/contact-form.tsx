@@ -41,13 +41,6 @@ const serviceOptions = {
     { value: "pressure-wash", label: "Lavado a presión (Pressure Wash)", group: "exterior" },
     { value: "soft-wash", label: "Lavado suave (Soft Wash)", group: "exterior" },
     { value: "solar-panel-cleaning", label: "Limpieza de paneles solares (Solar Panel Cleaning)", group: "exterior" },
-    // Coming soon services
-    { value: "plumbing", label: "Plomería — Próximamente", group: "proximamente" },
-    { value: "electrical", label: "Electricidad — Próximamente", group: "proximamente" },
-    { value: "water-damage", label: "Mitigación de daños por agua — Próximamente", group: "proximamente" },
-    { value: "handyman", label: "Reparaciones handyman — Próximamente", group: "proximamente" },
-    { value: "roof-sealing", label: "Sellado de techos — Próximamente", group: "proximamente" },
-    { value: "lead-asbestos", label: "Mitigación de plomo y asbesto — Próximamente", group: "proximamente" },
     // Other
     { value: "commercial", label: "Servicios Comerciales", group: "otros" },
     { value: "inspection", label: "Inspección Gratis", group: "otros" },
@@ -74,13 +67,6 @@ const serviceOptions = {
     { value: "pressure-wash", label: "Pressure Wash", group: "exterior" },
     { value: "soft-wash", label: "Soft Wash", group: "exterior" },
     { value: "solar-panel-cleaning", label: "Solar Panel Cleaning", group: "exterior" },
-    // Coming soon services
-    { value: "plumbing", label: "Plumbing — Coming Soon", group: "comingsoon" },
-    { value: "electrical", label: "Electrical — Coming Soon", group: "comingsoon" },
-    { value: "water-damage", label: "Water Damage Mitigation — Coming Soon", group: "comingsoon" },
-    { value: "handyman", label: "Handyman Repairs — Coming Soon", group: "comingsoon" },
-    { value: "roof-sealing", label: "Roof Sealing — Coming Soon", group: "comingsoon" },
-    { value: "lead-asbestos", label: "Lead & Asbestos Mitigation — Coming Soon", group: "comingsoon" },
     // Other
     { value: "commercial", label: "Commercial Services", group: "other" },
     { value: "inspection", label: "Free Inspection", group: "other" },
@@ -229,25 +215,7 @@ export function ContactForm() {
                       {option.label.split(" - ")[1]}
                     </SelectItem>
                   ))}
-                  {/* 2. Plomería */}
-                  <SelectItem value="header-plumbing" disabled className="font-semibold text-cyan-600">
-                    {language === "es" ? "-- Plomería --" : "-- Plumbing --"}
-                  </SelectItem>
-                  {serviceOptions[language].filter(o => o.group === (language === "es" ? "plomeria" : "plumbing")).map((option) => (
-                    <SelectItem key={option.value} value={option.value}>
-                      {option.label.split(" - ")[1]}
-                    </SelectItem>
-                  ))}
-                  {/* 3. Electricidad */}
-                  <SelectItem value="header-electrical" disabled className="font-semibold text-yellow-600">
-                    {language === "es" ? "-- Electricidad --" : "-- Electrical --"}
-                  </SelectItem>
-                  {serviceOptions[language].filter(o => o.group === (language === "es" ? "electricidad" : "electrical")).map((option) => (
-                    <SelectItem key={option.value} value={option.value}>
-                      {option.label.split(" - ")[1]}
-                    </SelectItem>
-                  ))}
-                  {/* 4. Jardinería */}
+                  {/* 2. Jardinería */}
                   <SelectItem value="header-landscaping" disabled className="font-semibold text-green-600">
                     {language === "es" ? "-- Jardinería --" : "-- Landscaping --"}
                   </SelectItem>
@@ -256,7 +224,7 @@ export function ContactForm() {
                       {option.label.split(" - ")[1]}
                     </SelectItem>
                   ))}
-                  {/* 5. Limpieza */}
+                  {/* 3. Limpieza */}
                   <SelectItem value="header-cleaning" disabled className="font-semibold text-blue-600">
                     {language === "es" ? "-- Limpieza --" : "-- Cleaning --"}
                   </SelectItem>
@@ -265,11 +233,11 @@ export function ContactForm() {
                       {option.label.split(" - ")[1]}
                     </SelectItem>
                   ))}
-                  {/* Próximamente */}
-                  <SelectItem value="header-comingsoon" disabled className="font-semibold text-muted-foreground">
-                    {language === "es" ? "-- Próximamente --" : "-- Coming Soon --"}
+                  {/* 4. Servicios Exteriores */}
+                  <SelectItem value="header-exterior" disabled className="font-semibold text-cyan-600">
+                    {language === "es" ? "-- Servicios Exteriores --" : "-- Exterior Services --"}
                   </SelectItem>
-                  {serviceOptions[language].filter(o => o.group === (language === "es" ? "proximamente" : "comingsoon")).map((option) => (
+                  {serviceOptions[language].filter(o => o.group === "exterior").map((option) => (
                     <SelectItem key={option.value} value={option.value}>
                       {option.label}
                     </SelectItem>
