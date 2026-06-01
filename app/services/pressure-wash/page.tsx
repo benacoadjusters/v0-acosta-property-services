@@ -15,11 +15,6 @@ import { Card } from "@/components/ui/card"
 import { useLanguage } from "@/lib/language-context"
 import { company } from "@/content/company"
 
-export const metadata = {
-  title: "Pressure Wash en Puerto Rico | Acosta Property Services",
-  description: "Limpieza con presión para superficies exteriores resistentes en hogares, negocios y propiedades comerciales."
-}
-
 export default function PressureWashPage() {
   const { language, t } = useLanguage()
 

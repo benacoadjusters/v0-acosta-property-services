@@ -15,11 +15,6 @@ import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/com
 import { useLanguage } from "@/lib/language-context"
 import { company } from "@/content/company"
 
-export const metadata = {
-  title: "Window Cleaning en Puerto Rico | Acosta Property Services",
-  description: "Limpieza de ventanas y cristales para hogares, negocios y propiedades comerciales en Puerto Rico."
-}
-
 export default function WindowCleaningPage() {
   const { language, t } = useLanguage()
 

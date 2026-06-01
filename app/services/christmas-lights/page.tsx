@@ -15,11 +15,6 @@ import { Card } from "@/components/ui/card"
 import { useLanguage } from "@/lib/language-context"
 import { company } from "@/content/company"
 
-export const metadata = {
-  title: "Christmas Lights en Puerto Rico | Acosta Property Services",
-  description: "Instalación y montaje de luces navideñas para hogares, negocios y propiedades comerciales."
-}
-
 export default function ChristmasLightsPage() {
   const { language, t } = useLanguage()
 

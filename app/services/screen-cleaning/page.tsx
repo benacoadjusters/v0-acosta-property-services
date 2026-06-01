@@ -15,11 +15,6 @@ import { Card } from "@/components/ui/card"
 import { useLanguage } from "@/lib/language-context"
 import { company } from "@/content/company"
 
-export const metadata = {
-  title: "Screen Cleaning en Puerto Rico | Acosta Property Services",
-  description: "Limpieza de screens y mallas para remover polvo, salitre y suciedad acumulada."
-}
-
 export default function ScreenCleaningPage() {
   const { language, t } = useLanguage()
 
