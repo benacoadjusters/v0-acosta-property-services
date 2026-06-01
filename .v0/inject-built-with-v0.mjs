@@ -1,24 +1,4 @@
 import fs from 'node:fs'
-import path from 'node:path'
-
-// Force overwrite cached service pages with current versions
-const servicePages = [
-  'app/services/window-cleaning/page.tsx',
-  'app/services/screen-cleaning/page.tsx',
-  'app/services/soft-wash/page.tsx',
-  'app/services/solar-panel-cleaning/page.tsx',
-]
-
-for (const pagePath of servicePages) {
-  if (fs.existsSync(pagePath)) {
-    const content = fs.readFileSync(pagePath, 'utf8')
-    // Force file to be recognized as changed by adding timestamp comment
-    const timestamp = `// Build timestamp: ${Date.now()}\n`
-    if (!content.startsWith('// Build timestamp:')) {
-      fs.writeFileSync(pagePath, timestamp + content)
-    }
-  }
-}
 
 const anchor = null
 const url = null
