@@ -1,4 +1,26 @@
 {
   "buildCommand": "node .v0/inject-built-with-v0.mjs && next build",
-  "cacheVersion": "force-rebuild-20260601"
+  "cacheVersion": "force-rebuild-20260601-v2",
+  "redirects": [
+    {
+      "source": "/services/window-cleaning",
+      "destination": "/services/windows",
+      "permanent": true
+    },
+    {
+      "source": "/services/screen-cleaning",
+      "destination": "/services/screens",
+      "permanent": true
+    },
+    {
+      "source": "/services/soft-wash",
+      "destination": "/services/softwash",
+      "permanent": true
+    },
+    {
+      "source": "/services/solar-panel-cleaning",
+      "destination": "/services/solarpanel",
+      "permanent": true
+    }
+  ]
 }
