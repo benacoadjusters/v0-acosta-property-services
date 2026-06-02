@@ -219,15 +219,15 @@ export default function HomePage() {
           </div>
         </section>
 
-        {/* Contexto Local de Puerto Rico */}
+        {/* Expertos en el clima de Puerto Rico */}
         <section className="py-16 md:py-24 bg-secondary/30">
           <div className="container mx-auto px-4">
             <div className="text-center max-w-3xl mx-auto mb-12">
               <h2 className="text-3xl md:text-4xl font-bold text-foreground mb-4 text-balance">
-                Puerto Rico desgasta las propiedades más rápido
+                Expertos en el clima de Puerto Rico
               </h2>
               <p className="text-lg text-muted-foreground text-pretty">
-                El salitre, la humedad, la lluvia, el polvo, el calor, las plagas y el crecimiento constante de áreas verdes hacen que el mantenimiento no pueda esperar demasiado.
+                Conocemos los retos únicos de la isla y sabemos exactamente cómo mantener tu propiedad en óptimas condiciones todo el año.
               </p>
             </div>
 
@@ -236,9 +236,9 @@ export default function HomePage() {
                 <div className="flex h-12 w-12 items-center justify-center rounded-full bg-cyan-500/10 mb-4">
                   <Droplets className="h-6 w-6 text-cyan-600" />
                 </div>
-                <h3 className="font-semibold text-foreground mb-2">Salitre y humedad</h3>
+                <h3 className="font-semibold text-foreground mb-2">Protección contra salitre</h3>
                 <p className="text-muted-foreground text-sm">
-                  Afectan cristales, mallas, superficies, exteriores y áreas expuestas.
+                  Mantenemos cristales, mallas y superficies protegidas del ambiente costero.
                 </p>
               </div>
 
@@ -246,29 +246,29 @@ export default function HomePage() {
                 <div className="flex h-12 w-12 items-center justify-center rounded-full bg-amber-500/10 mb-4">
                   <Thermometer className="h-6 w-6 text-amber-600" />
                 </div>
-                <h3 className="font-semibold text-foreground mb-2">Lluvia y calor</h3>
+                <h3 className="font-semibold text-foreground mb-2">Preparados para el trópico</h3>
                 <p className="text-muted-foreground text-sm">
-                  Aceleran el sucio, el crecimiento de vegetación y el desgaste visual.
-                </p>
-              </div>
-
-              <div className="bg-background rounded-xl p-6 shadow-sm">
-                <div className="flex h-12 w-12 items-center justify-center rounded-full bg-red-500/10 mb-4">
-                  <Bug className="h-6 w-6 text-red-600" />
-                </div>
-                <h3 className="font-semibold text-foreground mb-2">Plagas y señales tempranas</h3>
-                <p className="text-muted-foreground text-sm">
-                  Lo pequeño puede crecer rápido si no se atiende a tiempo.
+                  Servicios adaptados al clima tropical para que tu propiedad luzca siempre bien.
                 </p>
               </div>
 
               <div className="bg-background rounded-xl p-6 shadow-sm">
                 <div className="flex h-12 w-12 items-center justify-center rounded-full bg-green-500/10 mb-4">
-                  <Building2 className="h-6 w-6 text-green-600" />
+                  <Bug className="h-6 w-6 text-green-600" />
                 </div>
-                <h3 className="font-semibold text-foreground mb-2">Imagen de la propiedad</h3>
+                <h3 className="font-semibold text-foreground mb-2">Control preventivo</h3>
                 <p className="text-muted-foreground text-sm">
-                  Lo que se ve desde afuera influye en clientes, visitas, residentes e inquilinos.
+                  Actuamos antes de que los problemas crezcan. Prevención inteligente y efectiva.
+                </p>
+              </div>
+
+              <div className="bg-background rounded-xl p-6 shadow-sm">
+                <div className="flex h-12 w-12 items-center justify-center rounded-full bg-primary/10 mb-4">
+                  <Building2 className="h-6 w-6 text-primary" />
+                </div>
+                <h3 className="font-semibold text-foreground mb-2">Propiedades que impresionan</h3>
+                <p className="text-muted-foreground text-sm">
+                  Una propiedad bien cuidada atrae mejores oportunidades y genera confianza.
                 </p>
               </div>
             </div>
