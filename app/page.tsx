@@ -131,7 +131,7 @@ export default function HomePage() {
                 <p className="text-sm opacity-80 mt-1">Municipios Cubiertos</p>
               </div>
               <div className="text-center">
-                <p className="text-2xl md:text-3xl font-bold">Res. y Com.</p>
+                <p className="text-xl md:text-2xl font-bold">Residencial y Comercial</p>
                 <p className="text-sm opacity-80 mt-1">Tipo de Propiedad</p>
               </div>
             </div>
@@ -283,7 +283,7 @@ export default function HomePage() {
                 ¿Buscas un servicio específico?
               </h2>
               <p className="text-muted-foreground mb-6 text-pretty">
-                La lista completa de servicios activos y próximos está organizada en una p��gina aparte para que puedas comparar y elegir mejor.
+                Explora todos nuestros servicios disponibles para encontrar exactamente lo que necesitas.
               </p>
               <Button asChild size="lg">
                 <Link href="/services">
