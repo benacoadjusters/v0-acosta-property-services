@@ -79,7 +79,10 @@ export default function HomePage() {
           
           {/* CTA Buttons Overlay */}
           <div className="absolute inset-0 flex flex-col justify-end pb-16 md:pb-20">
-            <div className="container mx-auto px-4">
+            <div className="container mx-auto px-4 text-center">
+              <h1 className="text-3xl md:text-5xl lg:text-6xl font-bold text-white mb-6 text-balance drop-shadow-lg">
+                9 servicios. Un solo equipo.
+              </h1>
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
                 <Button asChild size="lg" className="bg-accent hover:bg-accent/90 text-accent-foreground font-semibold text-lg px-8">
                   <Link href="/contact">
@@ -137,15 +140,15 @@ export default function HomePage() {
           </div>
         </section>
 
-        {/* Diagnóstico del Cliente */}
+        {/* Diagnóstico del Cliente - Neuromarketing */}
         <section className="py-16 md:py-24 bg-background">
           <div className="container mx-auto px-4">
             <div className="text-center max-w-3xl mx-auto mb-12">
               <h2 className="text-3xl md:text-4xl font-bold text-foreground mb-4 text-balance">
-                ¿Qué está diciendo tu propiedad?
+                Cada semana sin actuar, el problema crece
               </h2>
               <p className="text-lg text-muted-foreground text-pretty">
-                Antes de cotizar, muchas veces el problema ya se nota: en la entrada, en los cristales, en el exterior, en las áreas verdes o en señales que aparecen sin avisar.
+                Lo que hoy es una molestia menor, mañana puede costarte el doble. Identifica qué necesita tu propiedad ahora.
               </p>
             </div>
 
@@ -156,10 +159,10 @@ export default function HomePage() {
                     <div className="flex h-10 w-10 shrink-0 items-center justify-center rounded-full bg-amber-500/10">
                       <Eye className="h-5 w-5 text-amber-600" />
                     </div>
-                    <h3 className="font-semibold text-foreground">Se ve descuidada desde la entrada</h3>
+                    <h3 className="font-semibold text-foreground">La primera impresión se pierde</h3>
                   </div>
                   <p className="text-muted-foreground text-sm">
-                    Cristales opacos, áreas verdes fuera de forma o exteriores con sucio acumulado afectan la primera impresión.
+                    Ventanas opacas, grama alta o fachadas sucias alejan clientes, inquilinos y oportunidades antes de que entren.
                   </p>
                 </CardContent>
               </Card>
@@ -170,10 +173,10 @@ export default function HomePage() {
                     <div className="flex h-10 w-10 shrink-0 items-center justify-center rounded-full bg-red-500/10">
                       <AlertTriangle className="h-5 w-5 text-red-600" />
                     </div>
-                    <h3 className="font-semibold text-foreground">Aparecen señales que no debes ignorar</h3>
+                    <h3 className="font-semibold text-foreground">Pequeños daños se vuelven costosos</h3>
                   </div>
                   <p className="text-muted-foreground text-sm">
-                    Plagas, humedad, salitre, manchas o acumulación pueden convertirse en problemas mayores si se dejan pasar.
+                    Plagas, salitre, humedad y manchas ignoradas hoy significan reparaciones mayores y más caras mañana.
                   </p>
                 </CardContent>
               </Card>
@@ -184,10 +187,10 @@ export default function HomePage() {
                     <div className="flex h-10 w-10 shrink-0 items-center justify-center rounded-full bg-blue-500/10">
                       <ClipboardList className="h-5 w-5 text-blue-600" />
                     </div>
-                    <h3 className="font-semibold text-foreground">Tienes demasiados pendientes separados</h3>
+                    <h3 className="font-semibold text-foreground">Coordinar múltiples proveedores agota</h3>
                   </div>
                   <p className="text-muted-foreground text-sm">
-                    Cuando cada necesidad requiere un proveedor distinto, pierdes tiempo coordinando y dando seguimiento.
+                    Llamar, cotizar, agendar y supervisar a 5 personas diferentes consume tu tiempo y tu paciencia.
                   </p>
                 </CardContent>
               </Card>
@@ -198,10 +201,10 @@ export default function HomePage() {
                     <div className="flex h-10 w-10 shrink-0 items-center justify-center rounded-full bg-green-500/10">
                       <Calendar className="h-5 w-5 text-green-600" />
                     </div>
-                    <h3 className="font-semibold text-foreground">Quieres preparar la propiedad</h3>
+                    <h3 className="font-semibold text-foreground">Una propiedad lista vende confianza</h3>
                   </div>
                   <p className="text-muted-foreground text-sm">
-                    Una propiedad lista transmite orden, cuidado y confianza desde el primer vistazo para clientes, visitas o temporada.
+                    Clientes, huéspedes e inquilinos notan el cuidado. Una propiedad impecable atrae mejores oportunidades.
                   </p>
                 </CardContent>
               </Card>
@@ -210,7 +213,7 @@ export default function HomePage() {
             <div className="text-center mt-10">
               <Button asChild size="lg" variant="outline">
                 <Link href="/services">
-                  Ver qué servicio necesito
+                  Explorar los 9 servicios
                   <ArrowRight className="ml-2 h-5 w-5" />
                 </Link>
               </Button>
