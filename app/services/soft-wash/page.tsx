@@ -84,7 +84,7 @@ export default function SoftWashPage() {
               </div>
             </div>
             <div className="relative aspect-[4/3] rounded-2xl overflow-hidden shadow-2xl">
-              <Image src="/images/soft-wash.png" alt="Soft Wash" fill className="object-cover" priority />
+              <Image src="/images/services/soft-wash-1.png" alt="Soft Wash" fill className="object-cover" priority />
             </div>
           </div>
         </div>

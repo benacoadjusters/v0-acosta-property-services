@@ -241,7 +241,7 @@ export default function ServicesIndexPage() {
         "Attention to surface dirt",
         "Quote based on material"
       ],
-      image: "/images/soft-wash.png"
+      image: "/images/services/soft-wash-1.png"
     },
     {
       id: "solar-panel-cleaning",
