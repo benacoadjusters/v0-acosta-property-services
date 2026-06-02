@@ -3,7 +3,7 @@
 import Link from "next/link"
 import Image from "next/image"
 import { useState, useEffect } from "react"
-import { Phone, ArrowRight, Shield, Clock, Award, CheckCircle2, Bug, TreePine, HardHat, SprayCan, Droplets, Users, Layers, Wrench, Zap, Grid3X3, Sparkles, Waves, Droplet, Sun, Eye, AlertTriangle, ClipboardList, Calendar, MapPin, Building2, Home as HomeIcon, Thermometer, CloudRain } from "lucide-react"
+import { Phone, ArrowRight, Shield, Clock, Award, CheckCircle2, Bug, TreePine, HardHat, SprayCan, Droplets, Users, Layers, Wrench, Zap, Grid3X3, Sparkles, Waves, Droplet, Sun, Eye, AlertTriangle, ClipboardList, Calendar, MapPin, Building2, Home as HomeIcon, Thermometer, CloudRain, Headphones } from "lucide-react"
 import { Button } from "@/components/ui/button"
 import { Card, CardContent } from "@/components/ui/card"
 import { company } from "@/content/company"
@@ -219,56 +219,56 @@ export default function HomePage() {
           </div>
         </section>
 
-        {/* Expertos en el clima de Puerto Rico */}
+        {/* Servicios que marcan la diferencia */}
         <section className="py-16 md:py-24 bg-secondary/30">
           <div className="container mx-auto px-4">
             <div className="text-center max-w-3xl mx-auto mb-12">
               <h2 className="text-3xl md:text-4xl font-bold text-foreground mb-4 text-balance">
-                Expertos en el clima de Puerto Rico
+                Servicios que marcan la diferencia
               </h2>
               <p className="text-lg text-muted-foreground text-pretty">
-                Conocemos los retos únicos de la isla y sabemos exactamente cómo mantener tu propiedad en óptimas condiciones todo el año.
+                Calidad, compromiso y atención al detalle en cada servicio que ofrecemos para tu propiedad.
               </p>
             </div>
 
             <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
               <div className="bg-background rounded-xl p-6 shadow-sm">
-                <div className="flex h-12 w-12 items-center justify-center rounded-full bg-cyan-500/10 mb-4">
-                  <Droplets className="h-6 w-6 text-cyan-600" />
+                <div className="flex h-12 w-12 items-center justify-center rounded-full bg-primary/10 mb-4">
+                  <CheckCircle2 className="h-6 w-6 text-primary" />
                 </div>
-                <h3 className="font-semibold text-foreground mb-2">Protección contra salitre</h3>
+                <h3 className="font-semibold text-foreground mb-2">Trabajo garantizado</h3>
                 <p className="text-muted-foreground text-sm">
-                  Mantenemos cristales, mallas y superficies protegidas del ambiente costero.
+                  Cada servicio con estándares de calidad. Si no quedas satisfecho, lo resolvemos.
                 </p>
               </div>
 
               <div className="bg-background rounded-xl p-6 shadow-sm">
-                <div className="flex h-12 w-12 items-center justify-center rounded-full bg-amber-500/10 mb-4">
-                  <Thermometer className="h-6 w-6 text-amber-600" />
+                <div className="flex h-12 w-12 items-center justify-center rounded-full bg-accent/10 mb-4">
+                  <Sparkles className="h-6 w-6 text-accent" />
                 </div>
-                <h3 className="font-semibold text-foreground mb-2">Preparados para el trópico</h3>
+                <h3 className="font-semibold text-foreground mb-2">Resultados visibles</h3>
                 <p className="text-muted-foreground text-sm">
-                  Servicios adaptados al clima tropical para que tu propiedad luzca siempre bien.
+                  Trabajamos para que notes la diferencia desde el primer servicio.
                 </p>
               </div>
 
               <div className="bg-background rounded-xl p-6 shadow-sm">
                 <div className="flex h-12 w-12 items-center justify-center rounded-full bg-green-500/10 mb-4">
-                  <Bug className="h-6 w-6 text-green-600" />
+                  <Headphones className="h-6 w-6 text-green-600" />
                 </div>
-                <h3 className="font-semibold text-foreground mb-2">Control preventivo</h3>
+                <h3 className="font-semibold text-foreground mb-2">Comunicación directa</h3>
                 <p className="text-muted-foreground text-sm">
-                  Actuamos antes de que los problemas crezcan. Prevención inteligente y efectiva.
+                  Siempre accesibles. Respondemos rápido y mantenemos todo claro.
                 </p>
               </div>
 
               <div className="bg-background rounded-xl p-6 shadow-sm">
-                <div className="flex h-12 w-12 items-center justify-center rounded-full bg-primary/10 mb-4">
-                  <Building2 className="h-6 w-6 text-primary" />
+                <div className="flex h-12 w-12 items-center justify-center rounded-full bg-blue-500/10 mb-4">
+                  <Calendar className="h-6 w-6 text-blue-600" />
                 </div>
-                <h3 className="font-semibold text-foreground mb-2">Propiedades que impresionan</h3>
+                <h3 className="font-semibold text-foreground mb-2">Flexibilidad de horarios</h3>
                 <p className="text-muted-foreground text-sm">
-                  Una propiedad bien cuidada atrae mejores oportunidades y genera confianza.
+                  Nos adaptamos a tu agenda para que el servicio sea conveniente para ti.
                 </p>
               </div>
             </div>
