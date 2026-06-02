@@ -56,72 +56,60 @@ export default function HomePage() {
   if (language === "es") {
     return (
       <>
-        {/* Hero Section - Spanish with Carousel */}
-        <section className="relative bg-gradient-to-br from-primary/5 via-background to-secondary/30 overflow-hidden">
-          <div className="container mx-auto px-4 py-12 md:py-20 lg:py-28">
-            <div className="grid lg:grid-cols-2 gap-8 lg:gap-12 items-center">
-              <div className="space-y-6">
-                <div className="inline-flex items-center gap-2 rounded-full bg-primary/10 px-4 py-1.5 text-sm font-medium text-primary">
-                  <Shield className="h-4 w-4" />
-                  Servicio local en Puerto Rico
-                </div>
-                <h1 className="text-3xl md:text-4xl lg:text-5xl font-bold text-foreground leading-tight text-balance">
-                  Tu propiedad bajo control, sin perseguir proveedores
-                </h1>
-                <p className="text-lg text-muted-foreground max-w-lg text-pretty">
-                  Un equipo local para ayudarte a proteger, mantener y presentar tu hogar, negocio o propiedad comercial en Puerto Rico.
-                </p>
-                <div className="flex flex-col sm:flex-row gap-4">
-                  <Button asChild size="lg" className="bg-accent hover:bg-accent/90 text-accent-foreground font-semibold">
-                    <Link href="/contact">
-                      Cotización Gratis
-                      <ArrowRight className="ml-2 h-5 w-5" />
-                    </Link>
-                  </Button>
-                  <Button asChild size="lg" variant="outline">
-                    <Link href="/services">
-                      Ver Servicios
-                    </Link>
-                  </Button>
-                </div>
-              </div>
-              
-              {/* Hero Carousel */}
-              <div className="relative aspect-[4/3] lg:aspect-[16/10] rounded-2xl overflow-hidden shadow-2xl">
-                {heroImages.map((image, index) => (
-                  <div
-                    key={image.src}
-                    className={`absolute inset-0 transition-opacity duration-700 ${
-                      index === currentSlide ? "opacity-100" : "opacity-0"
-                    }`}
-                  >
-                    <Image
-                      src={image.src}
-                      alt={image.alt}
-                      fill
-                      className="object-cover"
-                      priority={index === 0}
-                    />
-                    <div className="absolute inset-0 bg-gradient-to-t from-black/30 via-transparent to-transparent" />
-                  </div>
-                ))}
-                {/* Carousel indicators */}
-                <div className="absolute bottom-4 left-1/2 -translate-x-1/2 flex gap-2">
-                  {heroImages.map((_, index) => (
-                    <button
-                      key={index}
-                      onClick={() => setCurrentSlide(index)}
-                      className={`w-2 h-2 rounded-full transition-all ${
-                        index === currentSlide 
-                          ? "bg-white w-6" 
-                          : "bg-white/50 hover:bg-white/70"
-                      }`}
-                      aria-label={`Ir a imagen ${index + 1}`}
-                    />
-                  ))}
-                </div>
+        {/* Hero Section - Spanish with Carousel - Full width images with CTA overlay */}
+        <section className="relative h-[70vh] md:h-[80vh] overflow-hidden">
+          {/* Carousel Images */}
+          {heroImages.map((image, index) => (
+            <div
+              key={image.src}
+              className={`absolute inset-0 transition-opacity duration-700 ${
+                index === currentSlide ? "opacity-100" : "opacity-0"
+              }`}
+            >
+              <Image
+                src={image.src}
+                alt={image.alt}
+                fill
+                className="object-cover"
+                priority={index === 0}
+              />
+              <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-black/20 to-transparent" />
+            </div>
+          ))}
+          
+          {/* CTA Buttons Overlay */}
+          <div className="absolute inset-0 flex flex-col justify-end pb-16 md:pb-20">
+            <div className="container mx-auto px-4">
+              <div className="flex flex-col sm:flex-row gap-4 justify-center">
+                <Button asChild size="lg" className="bg-accent hover:bg-accent/90 text-accent-foreground font-semibold text-lg px-8">
+                  <Link href="/contact">
+                    Cotización Gratis
+                    <ArrowRight className="ml-2 h-5 w-5" />
+                  </Link>
+                </Button>
+                <Button asChild size="lg" variant="outline" className="bg-white/10 backdrop-blur-sm border-white/30 text-white hover:bg-white/20 text-lg px-8">
+                  <Link href="/services">
+                    Ver Servicios
+                  </Link>
+                </Button>
               </div>
             </div>
+          </div>
+          
+          {/* Carousel indicators */}
+          <div className="absolute bottom-6 left-1/2 -translate-x-1/2 flex gap-2">
+            {heroImages.map((_, index) => (
+              <button
+                key={index}
+                onClick={() => setCurrentSlide(index)}
+                className={`w-2 h-2 rounded-full transition-all ${
+                  index === currentSlide 
+                    ? "bg-white w-6" 
+                    : "bg-white/50 hover:bg-white/70"
+                }`}
+                aria-label={`Ir a imagen ${index + 1}`}
+              />
+            ))}
           </div>
         </section>
 
