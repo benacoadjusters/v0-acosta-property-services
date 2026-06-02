@@ -78,24 +78,22 @@ export default function HomePage() {
           ))}
           
           {/* CTA Buttons Overlay */}
-          <div className="absolute inset-0 flex flex-col justify-end pb-16 md:pb-20">
-            <div className="container mx-auto px-4 text-center">
-              <h1 className="text-3xl md:text-5xl lg:text-6xl font-bold text-white mb-6 text-balance drop-shadow-lg">
-                9 servicios. Un solo equipo.
-              </h1>
-              <div className="flex flex-col sm:flex-row gap-4 justify-center">
-                <Button asChild size="lg" className="bg-accent hover:bg-accent/90 text-accent-foreground font-semibold text-lg px-8">
-                  <Link href="/contact">
-                    Cotización Gratis
-                    <ArrowRight className="ml-2 h-5 w-5" />
-                  </Link>
-                </Button>
-                <Button asChild size="lg" variant="outline" className="bg-white/10 backdrop-blur-sm border-white/30 text-white hover:bg-white/20 text-lg px-8">
-                  <Link href="/services">
-                    Ver Servicios
-                  </Link>
-                </Button>
-              </div>
+          <div className="absolute inset-0 flex flex-col items-center justify-center">
+            <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-white mb-8 text-center text-balance drop-shadow-lg px-4">
+              Cuidamos cada detalle por ti
+            </h1>
+            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+              <Button asChild size="lg" className="bg-accent hover:bg-accent/90 text-accent-foreground font-semibold text-lg px-8">
+                <Link href="/contact">
+                  Cotización Gratis
+                  <ArrowRight className="ml-2 h-5 w-5" />
+                </Link>
+              </Button>
+              <Button asChild size="lg" variant="outline" className="bg-white/10 backdrop-blur-sm border-white/30 text-white hover:bg-white/20 text-lg px-8">
+                <Link href="/services">
+                  Ver Servicios
+                </Link>
+              </Button>
             </div>
           </div>
           
@@ -140,57 +138,43 @@ export default function HomePage() {
           </div>
         </section>
 
-        {/* Diagnóstico del Cliente - Neuromarketing */}
+        {/* Beneficios - Enfoque positivo */}
         <section className="py-16 md:py-24 bg-background">
           <div className="container mx-auto px-4">
             <div className="text-center max-w-3xl mx-auto mb-12">
               <h2 className="text-3xl md:text-4xl font-bold text-foreground mb-4 text-balance">
-                Cada semana sin actuar, el problema crece
+                Más tiempo para ti, nosotros nos encargamos
               </h2>
               <p className="text-lg text-muted-foreground text-pretty">
-                Lo que hoy es una molestia menor, mañana puede costarte el doble. Identifica qué necesita tu propiedad ahora.
+                Con un solo equipo de confianza, tu propiedad siempre luce impecable mientras tú te enfocas en lo que importa.
               </p>
             </div>
 
             <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
-              <Card className="border-l-4 border-l-amber-500">
+              <Card className="border-l-4 border-l-primary">
                 <CardContent className="p-5">
                   <div className="flex items-center gap-3 mb-3">
-                    <div className="flex h-10 w-10 shrink-0 items-center justify-center rounded-full bg-amber-500/10">
-                      <Eye className="h-5 w-5 text-amber-600" />
+                    <div className="flex h-10 w-10 shrink-0 items-center justify-center rounded-full bg-primary/10">
+                      <Users className="h-5 w-5 text-primary" />
                     </div>
-                    <h3 className="font-semibold text-foreground">La primera impresión se pierde</h3>
+                    <h3 className="font-semibold text-foreground">Un solo equipo de confianza</h3>
                   </div>
                   <p className="text-muted-foreground text-sm">
-                    Ventanas opacas, grama alta o fachadas sucias alejan clientes, inquilinos y oportunidades antes de que entren.
+                    Olvídate de coordinar múltiples proveedores. Un equipo, una llamada, todo resuelto.
                   </p>
                 </CardContent>
               </Card>
 
-              <Card className="border-l-4 border-l-red-500">
+              <Card className="border-l-4 border-l-accent">
                 <CardContent className="p-5">
                   <div className="flex items-center gap-3 mb-3">
-                    <div className="flex h-10 w-10 shrink-0 items-center justify-center rounded-full bg-red-500/10">
-                      <AlertTriangle className="h-5 w-5 text-red-600" />
+                    <div className="flex h-10 w-10 shrink-0 items-center justify-center rounded-full bg-accent/10">
+                      <MapPin className="h-5 w-5 text-accent" />
                     </div>
-                    <h3 className="font-semibold text-foreground">Pequeños daños se vuelven costosos</h3>
+                    <h3 className="font-semibold text-foreground">Profesionales locales</h3>
                   </div>
                   <p className="text-muted-foreground text-sm">
-                    Plagas, salitre, humedad y manchas ignoradas hoy significan reparaciones mayores y más caras mañana.
-                  </p>
-                </CardContent>
-              </Card>
-
-              <Card className="border-l-4 border-l-blue-500">
-                <CardContent className="p-5">
-                  <div className="flex items-center gap-3 mb-3">
-                    <div className="flex h-10 w-10 shrink-0 items-center justify-center rounded-full bg-blue-500/10">
-                      <ClipboardList className="h-5 w-5 text-blue-600" />
-                    </div>
-                    <h3 className="font-semibold text-foreground">Coordinar múltiples proveedores agota</h3>
-                  </div>
-                  <p className="text-muted-foreground text-sm">
-                    Llamar, cotizar, agendar y supervisar a 5 personas diferentes consume tu tiempo y tu paciencia.
+                    Conocemos Puerto Rico y entendemos lo que tu propiedad necesita en este clima.
                   </p>
                 </CardContent>
               </Card>
@@ -199,12 +183,26 @@ export default function HomePage() {
                 <CardContent className="p-5">
                   <div className="flex items-center gap-3 mb-3">
                     <div className="flex h-10 w-10 shrink-0 items-center justify-center rounded-full bg-green-500/10">
-                      <Calendar className="h-5 w-5 text-green-600" />
+                      <Clock className="h-5 w-5 text-green-600" />
                     </div>
-                    <h3 className="font-semibold text-foreground">Una propiedad lista vende confianza</h3>
+                    <h3 className="font-semibold text-foreground">Recupera tu tiempo</h3>
                   </div>
                   <p className="text-muted-foreground text-sm">
-                    Clientes, huéspedes e inquilinos notan el cuidado. Una propiedad impecable atrae mejores oportunidades.
+                    Mientras nosotros trabajamos, tú disfrutas de tu propiedad sin preocupaciones.
+                  </p>
+                </CardContent>
+              </Card>
+
+              <Card className="border-l-4 border-l-blue-500">
+                <CardContent className="p-5">
+                  <div className="flex items-center gap-3 mb-3">
+                    <div className="flex h-10 w-10 shrink-0 items-center justify-center rounded-full bg-blue-500/10">
+                      <Shield className="h-5 w-5 text-blue-600" />
+                    </div>
+                    <h3 className="font-semibold text-foreground">Tranquilidad garantizada</h3>
+                  </div>
+                  <p className="text-muted-foreground text-sm">
+                    Tu propiedad en las mejores manos. Servicio profesional con resultados que se notan.
                   </p>
                 </CardContent>
               </Card>
@@ -213,7 +211,7 @@ export default function HomePage() {
             <div className="text-center mt-10">
               <Button asChild size="lg" variant="outline">
                 <Link href="/services">
-                  Explorar los 9 servicios
+                  Conoce nuestros 9 servicios
                   <ArrowRight className="ml-2 h-5 w-5" />
                 </Link>
               </Button>
@@ -331,7 +329,7 @@ export default function HomePage() {
                 ¿Buscas un servicio específico?
               </h2>
               <p className="text-muted-foreground mb-6 text-pretty">
-                La lista completa de servicios activos y próximos está organizada en una página aparte para que puedas comparar y elegir mejor.
+                La lista completa de servicios activos y próximos está organizada en una p��gina aparte para que puedas comparar y elegir mejor.
               </p>
               <Button asChild size="lg">
                 <Link href="/services">
