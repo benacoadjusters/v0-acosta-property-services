@@ -275,52 +275,6 @@ export default function HomePage() {
           </div>
         </section>
 
-        {/* Proceso Simple */}
-        <section className="py-16 md:py-24 bg-background">
-          <div className="container mx-auto px-4">
-            <div className="text-center max-w-3xl mx-auto mb-12">
-              <h2 className="text-3xl md:text-4xl font-bold text-foreground mb-4 text-balance">
-                De pendiente a plan claro
-              </h2>
-              <p className="text-lg text-muted-foreground text-pretty">
-                Te ayudamos a identificar la prioridad y avanzar hacia la cotización correcta sin complicarte.
-              </p>
-            </div>
-
-            <div className="grid md:grid-cols-3 gap-8 max-w-4xl mx-auto">
-              <div className="text-center">
-                <div className="flex h-16 w-16 items-center justify-center rounded-full bg-primary text-primary-foreground text-2xl font-bold mx-auto mb-4">
-                  1
-                </div>
-                <h3 className="font-semibold text-foreground text-lg mb-2">Nos dices qué está pasando</h3>
-                <p className="text-muted-foreground text-sm">
-                  Nos cuentas el tipo de propiedad, municipio y lo que quieres resolver.
-                </p>
-              </div>
-
-              <div className="text-center">
-                <div className="flex h-16 w-16 items-center justify-center rounded-full bg-primary text-primary-foreground text-2xl font-bold mx-auto mb-4">
-                  2
-                </div>
-                <h3 className="font-semibold text-foreground text-lg mb-2">Identificamos la prioridad</h3>
-                <p className="text-muted-foreground text-sm">
-                  Te orientamos según urgencia, condición, acceso y alcance del trabajo.
-                </p>
-              </div>
-
-              <div className="text-center">
-                <div className="flex h-16 w-16 items-center justify-center rounded-full bg-primary text-primary-foreground text-2xl font-bold mx-auto mb-4">
-                  3
-                </div>
-                <h3 className="font-semibold text-foreground text-lg mb-2">Te guiamos al servicio correcto</h3>
-                <p className="text-muted-foreground text-sm">
-                  Coordinamos la cotización sin que tengas que adivinar por dónde empezar.
-                </p>
-              </div>
-            </div>
-          </div>
-        </section>
-
         {/* Bloque compacto hacia /services */}
         <section className="py-12 md:py-16 bg-secondary/30">
           <div className="container mx-auto px-4">
