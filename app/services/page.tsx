@@ -154,7 +154,7 @@ export default function ServicesIndexPage() {
         "Residential and commercial service",
         "Quote based on quantity"
       ],
-      image: "/images/screen-cleaning.png"
+      image: "/images/services/screen-cleaning-new.png"
     },
     {
       id: "christmas-lights",
