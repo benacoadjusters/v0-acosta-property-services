@@ -146,7 +146,7 @@ export default function HomePage() {
                 Más tiempo para ti, nosotros nos encargamos
               </h2>
               <p className="text-lg text-muted-foreground text-pretty">
-                Con un solo equipo de confianza, tu propiedad siempre luce impecable mientras tú te enfocas en lo que importa.
+                Control de plagas, jardinería, mantenimiento exterior y más. Todo lo que tu propiedad necesita, con un solo proveedor.
               </p>
             </div>
 
@@ -160,7 +160,7 @@ export default function HomePage() {
                     <h3 className="font-semibold text-foreground">Un solo equipo de confianza</h3>
                   </div>
                   <p className="text-muted-foreground text-sm">
-                    Olvídate de coordinar múltiples proveedores. Un equipo, una llamada, todo resuelto.
+                    9 servicios, un solo contacto. Sin coordinar múltiples proveedores ni perseguir cotizaciones.
                   </p>
                 </CardContent>
               </Card>
@@ -174,7 +174,7 @@ export default function HomePage() {
                     <h3 className="font-semibold text-foreground">Profesionales locales</h3>
                   </div>
                   <p className="text-muted-foreground text-sm">
-                    Conocemos Puerto Rico y entendemos lo que tu propiedad necesita en este clima.
+                    Equipo en Puerto Rico que conoce las necesidades reales de propiedades residenciales y comerciales.
                   </p>
                 </CardContent>
               </Card>
@@ -188,7 +188,7 @@ export default function HomePage() {
                     <h3 className="font-semibold text-foreground">Recupera tu tiempo</h3>
                   </div>
                   <p className="text-muted-foreground text-sm">
-                    Mientras nosotros trabajamos, tú disfrutas de tu propiedad sin preocupaciones.
+                    Nos encargamos del mantenimiento para que tú te enfoques en tu negocio, familia o lo que importa.
                   </p>
                 </CardContent>
               </Card>
@@ -202,7 +202,7 @@ export default function HomePage() {
                     <h3 className="font-semibold text-foreground">Tranquilidad garantizada</h3>
                   </div>
                   <p className="text-muted-foreground text-sm">
-                    Tu propiedad en las mejores manos. Servicio profesional con resultados que se notan.
+                    Servicio profesional con compromiso. Tu propiedad protegida, mantenida y lista cuando la necesites.
                   </p>
                 </CardContent>
               </Card>
