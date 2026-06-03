@@ -311,125 +311,81 @@ export default function AboutPage() {
       {/* Why Choose Us */}
       <section className="py-16 md:py-20 bg-muted/30">
         <div className="container mx-auto px-4">
-          <div className="grid lg:grid-cols-2 gap-12 items-center">
-            <div>
-              <h2 className="text-3xl md:text-4xl font-bold text-foreground mb-6">
-                {language === "es" ? "¿Por qué elegirnos?" : "Why choose us?"}
-              </h2>
-              <div className="space-y-4">
-                {[
-                  { 
-                    titleEs: "Un solo equipo, múltiples servicios", 
-                    titleEn: "One team, multiple services",
-                    descEs: "No necesitas coordinar con múltiples proveedores. Nosotros nos encargamos de todo.",
-                    descEn: "No need to coordinate with multiple providers. We take care of everything."
-                  },
-                  { 
-                    titleEs: "Conocemos Puerto Rico", 
-                    titleEn: "We know Puerto Rico",
-                    descEs: "Entendemos las necesidades específicas de las propiedades en la isla.",
-                    descEn: "We understand the specific needs of properties on the island."
-                  },
-                  { 
-                    titleEs: "Respuesta rápida", 
-                    titleEn: "Fast response",
-                    descEs: "Te contactamos el mismo día y coordinamos visitas según tu disponibilidad.",
-                    descEn: "We contact you the same day and coordinate visits according to your availability."
-                  },
-                  { 
-                    titleEs: "Precios transparentes", 
-                    titleEn: "Transparent pricing",
-                    descEs: "Cotizaciones claras sin cargos ocultos ni sorpresas.",
-                    descEn: "Clear quotes with no hidden charges or surprises."
-                  },
-                ].map((item, index) => (
-                  <div key={index} className="flex items-start gap-3">
-                    <CheckCircle2 className="h-6 w-6 text-primary shrink-0 mt-0.5" />
-                    <div>
-                      <h3 className="font-bold text-foreground">{language === "es" ? item.titleEs : item.titleEn}</h3>
-                      <p className="text-muted-foreground text-sm">{language === "es" ? item.descEs : item.descEn}</p>
-                    </div>
-                  </div>
-                ))}
-              </div>
-            </div>
-            <div className="relative">
-              <div className="grid grid-cols-3 gap-3">
-                {/* 9 servicios activos en grid 3x3 */}
-                <div className="relative aspect-square rounded-xl overflow-hidden shadow-lg">
-                  <Image
-                    src="/images/hero-pest-control.jpg"
-                    alt="Pest Control"
-                    fill
-                    className="object-cover"
-                  />
+          <div className="text-center max-w-3xl mx-auto mb-12">
+            <h2 className="text-3xl md:text-4xl font-bold text-foreground mb-4">
+              {language === "es" ? "¿Por qué elegirnos?" : "Why choose us?"}
+            </h2>
+            <p className="text-lg text-muted-foreground">
+              {language === "es" 
+                ? "Nos diferenciamos por nuestro compromiso con cada cliente y cada propiedad."
+                : "We stand out for our commitment to every client and every property."}
+            </p>
+          </div>
+
+          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
+            <Card className="text-center border-0 shadow-lg">
+              <CardContent className="p-6">
+                <div className="flex h-16 w-16 items-center justify-center rounded-full bg-primary/10 mx-auto mb-4">
+                  <Users className="h-8 w-8 text-primary" />
                 </div>
-                <div className="relative aspect-square rounded-xl overflow-hidden shadow-lg">
-                  <Image
-                    src="/images/hero-landscaping.jpg"
-                    alt="Landscaping"
-                    fill
-                    className="object-cover"
-                  />
+                <h3 className="font-bold text-foreground text-lg mb-2">
+                  {language === "es" ? "Un solo equipo" : "One team"}
+                </h3>
+                <p className="text-muted-foreground text-sm">
+                  {language === "es" 
+                    ? "9 servicios bajo un mismo equipo. Sin coordinar múltiples proveedores."
+                    : "9 services under one team. No coordinating multiple providers."}
+                </p>
+              </CardContent>
+            </Card>
+
+            <Card className="text-center border-0 shadow-lg">
+              <CardContent className="p-6">
+                <div className="flex h-16 w-16 items-center justify-center rounded-full bg-accent/10 mx-auto mb-4">
+                  <Target className="h-8 w-8 text-accent" />
                 </div>
-                <div className="relative aspect-square rounded-xl overflow-hidden shadow-lg">
-                  <Image
-                    src="/images/hero-cleaning.jpg"
-                    alt="Cleaning"
-                    fill
-                    className="object-cover"
-                  />
+                <h3 className="font-bold text-foreground text-lg mb-2">
+                  {language === "es" ? "Conocemos Puerto Rico" : "We know Puerto Rico"}
+                </h3>
+                <p className="text-muted-foreground text-sm">
+                  {language === "es" 
+                    ? "Entendemos las necesidades específicas de las propiedades en la isla."
+                    : "We understand the specific needs of properties on the island."}
+                </p>
+              </CardContent>
+            </Card>
+
+            <Card className="text-center border-0 shadow-lg">
+              <CardContent className="p-6">
+                <div className="flex h-16 w-16 items-center justify-center rounded-full bg-green-500/10 mx-auto mb-4">
+                  <Shield className="h-8 w-8 text-green-600" />
                 </div>
-                <div className="relative aspect-square rounded-xl overflow-hidden shadow-lg">
-                  <Image
-                    src="/images/window-cleaning.png"
-                    alt="Window Cleaning"
-                    fill
-                    className="object-cover"
-                  />
+                <h3 className="font-bold text-foreground text-lg mb-2">
+                  {language === "es" ? "Respuesta rápida" : "Fast response"}
+                </h3>
+                <p className="text-muted-foreground text-sm">
+                  {language === "es" 
+                    ? "Te contactamos el mismo día y coordinamos según tu disponibilidad."
+                    : "We contact you the same day and coordinate according to your availability."}
+                </p>
+              </CardContent>
+            </Card>
+
+            <Card className="text-center border-0 shadow-lg">
+              <CardContent className="p-6">
+                <div className="flex h-16 w-16 items-center justify-center rounded-full bg-blue-500/10 mx-auto mb-4">
+                  <Award className="h-8 w-8 text-blue-600" />
                 </div>
-                <div className="relative aspect-square rounded-xl overflow-hidden shadow-lg">
-                  <Image
-                    src="/images/hero-screen-cleaning.png"
-                    alt="Screen Cleaning"
-                    fill
-                    className="object-cover"
-                  />
-                </div>
-                <div className="relative aspect-square rounded-xl overflow-hidden shadow-lg">
-                  <Image
-                    src="/images/hero-christmas-lights.png"
-                    alt="Christmas Lights"
-                    fill
-                    className="object-cover"
-                  />
-                </div>
-                <div className="relative aspect-square rounded-xl overflow-hidden shadow-lg">
-                  <Image
-                    src="/images/pressure-wash.png"
-                    alt="Pressure Wash"
-                    fill
-                    className="object-cover"
-                  />
-                </div>
-                <div className="relative aspect-square rounded-xl overflow-hidden shadow-lg">
-                  <Image
-                    src="/images/hero-soft-wash.png"
-                    alt="Soft Wash"
-                    fill
-                    className="object-cover"
-                  />
-                </div>
-                <div className="relative aspect-square rounded-xl overflow-hidden shadow-lg">
-                  <Image
-                    src="/images/hero-solar-panel.png"
-                    alt="Solar Panel Cleaning"
-                    fill
-                    className="object-cover"
-                  />
-                </div>
-              </div>
-            </div>
+                <h3 className="font-bold text-foreground text-lg mb-2">
+                  {language === "es" ? "Precios transparentes" : "Transparent pricing"}
+                </h3>
+                <p className="text-muted-foreground text-sm">
+                  {language === "es" 
+                    ? "Cotizaciones claras sin cargos ocultos ni sorpresas."
+                    : "Clear quotes with no hidden charges or surprises."}
+                </p>
+              </CardContent>
+            </Card>
           </div>
         </div>
       </section>
