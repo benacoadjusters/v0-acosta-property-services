@@ -3,9 +3,8 @@
 import { useState } from "react"
 import Image from "next/image"
 import Link from "next/link"
-import { MapPin, Filter, Camera } from "lucide-react"
+import { MapPin, Filter } from "lucide-react"
 import { Button } from "@/components/ui/button"
-import { Card, CardContent } from "@/components/ui/card"
 import { galleryItems } from "@/content/gallery"
 import { cn } from "@/lib/utils"
 import { useLanguage } from "@/lib/language-context"
@@ -17,41 +16,31 @@ export default function GalleryPage() {
   const galleryCategories = [
     { id: "all", name: language === "es" ? "Todos" : "All" },
     { id: "pest-control", name: language === "es" ? "Control de Plagas" : "Pest Control" },
-    { id: "landscaping", name: language === "es" ? "Jardinería" : "Landscaping" },
+    { id: "landscaping", name: language === "es" ? "Jardineria" : "Landscaping" },
     { id: "cleaning", name: language === "es" ? "Limpieza" : "Cleaning" },
-    { id: "window-cleaning", name: language === "es" ? "Limpieza de ventanas" : "Window Cleaning" },
-    { id: "screen-cleaning", name: language === "es" ? "Limpieza de mallas" : "Screen Cleaning" },
-    { id: "christmas-lights", name: language === "es" ? "Luces navideñas" : "Christmas Lights" },
-    { id: "pressure-wash", name: language === "es" ? "Lavado a presión" : "Pressure Wash" },
-    { id: "soft-wash", name: language === "es" ? "Lavado suave" : "Soft Wash" },
-    { id: "solar-panel-cleaning", name: language === "es" ? "Paneles solares" : "Solar Panel Cleaning" },
-    { id: "residential", name: language === "es" ? "Residencial" : "Residential" },
-    { id: "commercial", name: language === "es" ? "Comercial" : "Commercial" },
+    { id: "window-cleaning", name: language === "es" ? "Limpieza de Ventanas" : "Window Cleaning" },
+    { id: "screen-cleaning", name: language === "es" ? "Limpieza de Mallas" : "Screen Cleaning" },
+    { id: "pressure-wash", name: language === "es" ? "Lavado a Presion" : "Pressure Wash" },
+    { id: "soft-wash", name: language === "es" ? "Lavado Suave" : "Soft Wash" },
+    { id: "solar-panel", name: language === "es" ? "Paneles Solares" : "Solar Panels" },
+    { id: "christmas-lights", name: language === "es" ? "Luces Navidenas" : "Christmas Lights" },
   ]
 
   const filteredItems = activeCategory === "all" 
     ? galleryItems 
     : galleryItems.filter(item => item.category === activeCategory)
 
-  // Check if we have images for all active services
-  const hasCleaningImages = galleryItems.some(item => item.category === "cleaning")
-  const hasWindowCleaningImages = galleryItems.some(item => item.category === "window-cleaning")
-  const hasPressureWashImages = galleryItems.some(item => item.category === "pressure-wash")
-  const showComingSoonNotice = !hasCleaningImages || !hasWindowCleaningImages || !hasPressureWashImages
-
   const getCategoryLabel = (category: string) => {
     const labels: Record<string, { es: string; en: string }> = {
       "pest-control": { es: "Control de Plagas", en: "Pest Control" },
-      "landscaping": { es: "Jardinería", en: "Landscaping" },
+      "landscaping": { es: "Jardineria", en: "Landscaping" },
       "cleaning": { es: "Limpieza", en: "Cleaning" },
-      "window-cleaning": { es: "Limpieza de ventanas", en: "Window Cleaning" },
-      "screen-cleaning": { es: "Limpieza de mallas", en: "Screen Cleaning" },
-      "christmas-lights": { es: "Luces navideñas", en: "Christmas Lights" },
-      "pressure-wash": { es: "Lavado a presión", en: "Pressure Wash" },
-      "soft-wash": { es: "Lavado suave", en: "Soft Wash" },
-      "solar-panel-cleaning": { es: "Paneles solares", en: "Solar Panel Cleaning" },
-      "residential": { es: "Residencial", en: "Residential" },
-      "commercial": { es: "Comercial", en: "Commercial" },
+      "window-cleaning": { es: "Limpieza de Ventanas", en: "Window Cleaning" },
+      "screen-cleaning": { es: "Limpieza de Mallas", en: "Screen Cleaning" },
+      "pressure-wash": { es: "Lavado a Presion", en: "Pressure Wash" },
+      "soft-wash": { es: "Lavado Suave", en: "Soft Wash" },
+      "solar-panel": { es: "Paneles Solares", en: "Solar Panels" },
+      "christmas-lights": { es: "Luces Navidenas", en: "Christmas Lights" },
     }
     return labels[category]?.[language] || category
   }
@@ -111,7 +100,7 @@ export default function GalleryPage() {
               >
                 <Image
                   src={item.image}
-                  alt={item.title}
+                  alt={language === "es" ? item.title : (item.titleEn || item.title)}
                   fill
                   className="object-cover transition-transform duration-300 group-hover:scale-105"
                 />
@@ -119,8 +108,12 @@ export default function GalleryPage() {
                 <div className="absolute inset-0 bg-gradient-to-t from-foreground/90 via-foreground/40 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
                 
                 <div className="absolute inset-0 p-4 flex flex-col justify-end translate-y-4 group-hover:translate-y-0 opacity-0 group-hover:opacity-100 transition-all duration-300">
-                  <h3 className="font-semibold text-background text-lg">{item.title}</h3>
-                  <p className="text-sm text-background/80 mb-2">{item.description}</p>
+                  <h3 className="font-semibold text-background text-lg">
+                    {language === "es" ? item.title : (item.titleEn || item.title)}
+                  </h3>
+                  <p className="text-sm text-background/80 mb-2">
+                    {language === "es" ? item.description : (item.descriptionEn || item.description)}
+                  </p>
                   <div className="flex items-center gap-1 text-sm text-background/70">
                     <MapPin className="h-4 w-4" />
                     <span>{item.location}</span>
@@ -146,39 +139,16 @@ export default function GalleryPage() {
         </div>
       </section>
 
-      {/* Coming Soon Notice - only show if missing images for some services */}
-      {showComingSoonNotice && (
-        <section className="py-12 bg-secondary/50">
-          <div className="container mx-auto px-4">
-            <Card className="max-w-xl mx-auto">
-              <CardContent className="p-6 text-center">
-                <div className="flex h-12 w-12 items-center justify-center rounded-full bg-primary/10 mx-auto mb-4">
-                  <Camera className="h-6 w-6 text-primary" />
-                </div>
-                <h3 className="text-lg font-bold text-foreground mb-2">
-                  {language === "es" ? "Más fotos próximamente" : "More photos coming soon"}
-                </h3>
-                <p className="text-muted-foreground text-sm">
-                  {language === "es"
-                    ? "Estamos actualizando la galería para incluir trabajos de todos nuestros 9 servicios activos."
-                    : "We are updating the gallery to include work from all our 9 active services."}
-                </p>
-              </CardContent>
-            </Card>
-          </div>
-        </section>
-      )}
-
-      {/* Info Section - Updated CTA */}
+      {/* Info Section */}
       <section className="py-12 bg-secondary">
         <div className="container mx-auto px-4">
           <div className="max-w-3xl mx-auto text-center">
             <h2 className="text-2xl font-bold text-foreground mb-4">
-              {language === "es" ? "¿Quieres ver tu propiedad lista y funcionando?" : "Want to see your property ready and working?"}
+              {language === "es" ? "¿Quieres ver tu propiedad asi?" : "Want to see your property like this?"}
             </h2>
             <p className="text-muted-foreground mb-6">
               {language === "es"
-                ? "Cotiza el servicio que necesitas y coordinamos la atención según tu propiedad."
+                ? "Cotiza el servicio que necesitas y coordinamos la atencion segun tu propiedad."
                 : "Quote the service you need and we'll coordinate attention according to your property."}
             </p>
             <Button asChild>
