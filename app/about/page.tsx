@@ -2,7 +2,7 @@
 
 import Link from "next/link"
 import Image from "next/image"
-import { CheckCircle2, Shield, Heart, Award, Users, Target, Phone, Bug, TreePine, SprayCan, Droplets, ArrowRight, Grid3X3, Sparkles, Zap, Waves, Sun } from "lucide-react"
+import { Shield, Heart, Award, Users, Target, Phone, CheckCircle2 } from "lucide-react"
 import { Button } from "@/components/ui/button"
 import { Card, CardContent } from "@/components/ui/card"
 import { company } from "@/content/company"
@@ -78,58 +78,27 @@ export default function AboutPage() {
     image: "/images/team/victor.png"
   }
 
-  const services = [
-    { href: "/services/pest-control", icon: Bug, color: "text-primary", bgColor: "bg-primary/10", nameEs: "Control de Plagas", nameEn: "Pest Control" },
-    { href: "/services/landscaping", icon: TreePine, color: "text-green-600", bgColor: "bg-green-500/10", nameEs: "Jardinería", nameEn: "Landscaping" },
-    { href: "/services/cleaning", icon: SprayCan, color: "text-blue-600", bgColor: "bg-blue-500/10", nameEs: "Limpieza", nameEn: "Cleaning" },
-    { href: "/services/window-cleaning", icon: Droplets, color: "text-sky-600", bgColor: "bg-sky-500/10", nameEs: "Window Cleaning", nameEn: "Window Cleaning" },
-    { href: "/services/screen-cleaning", icon: Grid3X3, color: "text-slate-600", bgColor: "bg-slate-500/10", nameEs: "Screen Cleaning", nameEn: "Screen Cleaning" },
-    { href: "/services/christmas-lights", icon: Sparkles, color: "text-red-600", bgColor: "bg-red-500/10", nameEs: "Christmas Lights", nameEn: "Christmas Lights" },
-    { href: "/services/pressure-wash", icon: Zap, color: "text-orange-600", bgColor: "bg-orange-500/10", nameEs: "Pressure Wash", nameEn: "Pressure Wash" },
-    { href: "/services/soft-wash", icon: Waves, color: "text-teal-600", bgColor: "bg-teal-500/10", nameEs: "Soft Wash", nameEn: "Soft Wash" },
-    { href: "/services/solar-panel-cleaning", icon: Sun, color: "text-yellow-600", bgColor: "bg-yellow-500/10", nameEs: "Solar Panel Cleaning", nameEn: "Solar Panel Cleaning" },
-  ]
-
   return (
     <>
-      {/* Hero */}
-      <section className="bg-secondary py-16 md:py-20">
+      {/* Hero - About Us focused */}
+      <section className="bg-secondary py-16 md:py-24">
         <div className="container mx-auto px-4">
           <div className="grid lg:grid-cols-2 gap-12 items-center">
             <div>
               <span className="text-primary font-semibold text-sm uppercase tracking-wider">{t.about.title}</span>
-              <h1 className="text-4xl md:text-5xl font-bold text-foreground mt-3 mb-4 text-balance">
-                {language === "es" ? "Un equipo local para cuidar propiedades en Puerto Rico" : "A local team to care for properties in Puerto Rico"}
+              <h1 className="text-4xl md:text-5xl font-bold text-foreground mt-3 mb-6 text-balance">
+                {language === "es" ? "Nacimos para simplificar el cuidado de tu propiedad" : "We were born to simplify the care of your property"}
               </h1>
               <p className="text-lg text-muted-foreground mb-6">
                 {language === "es" 
-                  ? "Desde 2022, ayudamos a hogares, negocios y propiedades comerciales con servicios de control de plagas, jardinería, limpieza y mantenimiento especializado de exteriores."
-                  : "Since 2022, we help homes, businesses and commercial properties with pest control, landscaping, cleaning and specialized exterior maintenance services."}
+                  ? "En 2022, Gabriel Acosta identifico un problema comun: los propietarios perdian tiempo y energia coordinando multiples proveedores para mantener sus propiedades. Asi nacio Acosta Property Services, con la vision de ofrecer todos los servicios de mantenimiento bajo un solo equipo de confianza."
+                  : "In 2022, Gabriel Acosta identified a common problem: property owners were losing time and energy coordinating multiple providers to maintain their properties. That's how Acosta Property Services was born, with the vision of offering all maintenance services under one trusted team."}
               </p>
-              
-              {/* Service chips - 9 active services */}
-              <div className="flex flex-wrap gap-2 mb-6">
-                {services.slice(0, 5).map((service) => {
-                  const Icon = service.icon
-                  return (
-                    <span key={service.href} className={`inline-flex items-center gap-1.5 rounded-full ${service.bgColor} px-3 py-1 text-sm font-medium ${service.color}`}>
-                      <Icon className="h-3.5 w-3.5" />
-                      {language === "es" ? service.nameEs : service.nameEn}
-                    </span>
-                  )
-                })}
-              </div>
-              <div className="flex flex-wrap gap-2 mb-6">
-                {services.slice(5).map((service) => {
-                  const Icon = service.icon
-                  return (
-                    <span key={service.href} className={`inline-flex items-center gap-1.5 rounded-full ${service.bgColor} px-3 py-1 text-sm font-medium ${service.color}`}>
-                      <Icon className="h-3.5 w-3.5" />
-                      {language === "es" ? service.nameEs : service.nameEn}
-                    </span>
-                  )
-                })}
-              </div>
+              <p className="text-lg text-muted-foreground mb-8">
+                {language === "es" 
+                  ? "Hoy servimos a mas de 300 clientes en los 78 municipios de Puerto Rico, con un equipo local comprometido con la excelencia."
+                  : "Today we serve more than 300 clients in all 78 municipalities of Puerto Rico, with a local team committed to excellence."}
+              </p>
               
               <div className="flex flex-col sm:flex-row gap-4">
                 <Button asChild size="lg">
@@ -144,42 +113,20 @@ export default function AboutPage() {
               </div>
             </div>
             
-            {/* Service cards grid - 9 active services with real images */}
-            <div className="grid grid-cols-3 gap-3">
-              {[
-                { href: "/services/pest-control", image: "/images/hero-pest-control.jpg", nameEs: "Control de Plagas", nameEn: "Pest Control", icon: Bug, color: "text-white" },
-                { href: "/services/landscaping", image: "/images/hero-landscaping.jpg", nameEs: "Jardinería", nameEn: "Landscaping", icon: TreePine, color: "text-white" },
-                { href: "/services/cleaning", image: "/images/hero-cleaning.jpg", nameEs: "Limpieza", nameEn: "Cleaning", icon: SprayCan, color: "text-white" },
-                { href: "/services/window-cleaning", image: "/images/window-cleaning.png", nameEs: "Limpieza de ventanas", nameEn: "Window Cleaning", icon: Droplets, color: "text-white" },
-                { href: "/services/screen-cleaning", image: "/images/hero-screen-cleaning.png", nameEs: "Limpieza de mallas", nameEn: "Screen Cleaning", icon: Grid3X3, color: "text-white" },
-                { href: "/services/christmas-lights", image: "/images/hero-christmas-lights.png", nameEs: "Luces navideñas", nameEn: "Christmas Lights", icon: Sparkles, color: "text-white" },
-                { href: "/services/pressure-wash", image: "/images/pressure-wash.png", nameEs: "Lavado a presión", nameEn: "Pressure Wash", icon: Zap, color: "text-white" },
-                { href: "/services/soft-wash", image: "/images/hero-soft-wash.png", nameEs: "Lavado suave", nameEn: "Soft Wash", icon: Waves, color: "text-white" },
-                { href: "/services/solar-panel-cleaning", image: "/images/hero-solar-panel.png", nameEs: "Paneles solares", nameEn: "Solar Panel", icon: Sun, color: "text-white" },
-              ].map((service) => {
-                const Icon = service.icon
-                return (
-                  <Link key={service.href} href={service.href} className="group relative">
-                    <div className="relative aspect-square rounded-xl overflow-hidden shadow-lg">
-                      <Image
-                        src={service.image}
-                        alt={language === "es" ? service.nameEs : service.nameEn}
-                        fill
-                        className="object-cover group-hover:scale-105 transition-transform duration-300"
-                      />
-                      <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-black/20 to-transparent" />
-                      <div className="absolute bottom-2 left-2 right-2">
-                        <div className="flex items-center gap-1.5">
-                          <Icon className="h-3 w-3 text-white" />
-                          <h3 className="text-white font-semibold text-[10px] sm:text-xs leading-tight">
-                            {language === "es" ? service.nameEs : service.nameEn}
-                          </h3>
-                        </div>
-                      </div>
-                    </div>
-                  </Link>
-                )
-              })}
+            {/* Company image */}
+            <div className="relative aspect-[4/3] rounded-2xl overflow-hidden shadow-2xl">
+              <Image
+                src="/images/team/gabriel.png"
+                alt={language === "es" ? "Equipo Acosta Property Services" : "Acosta Property Services Team"}
+                fill
+                className="object-cover"
+                priority
+              />
+              <div className="absolute inset-0 bg-gradient-to-t from-black/40 via-transparent to-transparent" />
+              <div className="absolute bottom-4 left-4 right-4">
+                <p className="text-white font-semibold text-lg">Gabriel Acosta</p>
+                <p className="text-white/80 text-sm">{language === "es" ? "Fundador y Presidente" : "Founder & President"}</p>
+              </div>
             </div>
           </div>
         </div>
@@ -194,8 +141,8 @@ export default function AboutPage() {
               <div className="text-sm opacity-80">{t.home.statsClients}</div>
             </div>
             <div className="text-center">
-              <div className="text-3xl md:text-4xl font-bold mb-1">4</div>
-              <div className="text-sm opacity-80">{t.home.statsYears}</div>
+              <div className="text-3xl md:text-4xl font-bold mb-1">2022</div>
+              <div className="text-sm opacity-80">{language === "es" ? "Ano de fundacion" : "Year founded"}</div>
             </div>
             <div className="text-center">
               <div className="text-3xl md:text-4xl font-bold mb-1">9</div>
@@ -205,52 +152,6 @@ export default function AboutPage() {
               <div className="text-3xl md:text-4xl font-bold mb-1">78</div>
               <div className="text-sm opacity-80">{t.home.statsMunicipios}</div>
             </div>
-          </div>
-        </div>
-      </section>
-
-      {/* Our Services - Lo que resolvemos */}
-      <section className="py-16 md:py-20 bg-background">
-        <div className="container mx-auto px-4">
-          <div className="text-center max-w-2xl mx-auto mb-12">
-            <h2 className="text-3xl md:text-4xl font-bold text-foreground mb-4">
-              {language === "es" ? "Lo que resolvemos para tu propiedad" : "What we solve for your property"}
-            </h2>
-            <p className="text-muted-foreground text-lg">
-              {language === "es" 
-                ? "Reunimos 9 servicios activos para que puedas proteger, limpiar y mantener tu propiedad con un solo equipo." 
-                : "We bring together 9 active services so you can protect, clean and maintain your property with one team."}
-            </p>
-          </div>
-
-          {/* Active Services - 9 services */}
-          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6 mb-8">
-            {services.map((service) => {
-              const Icon = service.icon
-              return (
-                <Link key={service.href} href={service.href} className="group">
-                  <Card className="h-full hover:shadow-lg transition-all hover:border-primary/50">
-                    <CardContent className="p-6 flex items-center gap-4">
-                      <div className={`flex h-14 w-14 shrink-0 items-center justify-center rounded-full ${service.bgColor} group-hover:scale-110 transition-transform`}>
-                        <Icon className={`h-7 w-7 ${service.color}`} />
-                      </div>
-                      <div className="flex-1">
-                        <h3 className="text-lg font-bold mb-1 group-hover:text-primary transition-colors">
-                          {language === "es" ? service.nameEs : service.nameEn}
-                        </h3>
-                      </div>
-                      <ArrowRight className="h-5 w-5 text-muted-foreground group-hover:text-primary group-hover:translate-x-1 transition-all" />
-                    </CardContent>
-                  </Card>
-                </Link>
-              )
-            })}
-          </div>
-
-          <div className="text-center">
-            <Button asChild size="lg">
-              <Link href="/services">{language === "es" ? "Ver todos los servicios" : "View all services"}</Link>
-            </Button>
           </div>
         </div>
       </section>
