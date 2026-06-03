@@ -91,12 +91,12 @@ export default function AboutPage() {
               </h1>
               <p className="text-lg text-muted-foreground mb-6">
                 {language === "es" 
-                  ? "En 2022, Gabriel Acosta identifico un problema comun: los propietarios perdian tiempo y energia coordinando multiples proveedores para mantener sus propiedades. Asi nacio Acosta Property Services, con la vision de ofrecer todos los servicios de mantenimiento bajo un solo equipo de confianza."
+                  ? "En 2022, Gabriel Acosta identificó un problema común: los propietarios perdían tiempo y energía coordinando múltiples proveedores para mantener sus propiedades. Así nació Acosta Property Services, con la visión de ofrecer todos los servicios de mantenimiento bajo un solo equipo de confianza."
                   : "In 2022, Gabriel Acosta identified a common problem: property owners were losing time and energy coordinating multiple providers to maintain their properties. That's how Acosta Property Services was born, with the vision of offering all maintenance services under one trusted team."}
               </p>
               <p className="text-lg text-muted-foreground mb-8">
                 {language === "es" 
-                  ? "Hoy servimos a mas de 300 clientes en los 78 municipios de Puerto Rico, con un equipo local comprometido con la excelencia."
+                  ? "Hoy servimos a más de 300 clientes en los 78 municipios de Puerto Rico, con un equipo local comprometido con la excelencia."
                   : "Today we serve more than 300 clients in all 78 municipalities of Puerto Rico, with a local team committed to excellence."}
               </p>
               
@@ -114,12 +114,12 @@ export default function AboutPage() {
             </div>
             
             {/* Company image */}
-            <div className="relative aspect-[4/3] rounded-2xl overflow-hidden shadow-2xl">
+            <div className="relative aspect-square md:aspect-[3/4] rounded-2xl overflow-hidden shadow-2xl">
               <Image
                 src="/images/team/gabriel.png"
                 alt={language === "es" ? "Equipo Acosta Property Services" : "Acosta Property Services Team"}
                 fill
-                className="object-cover"
+                className="object-cover object-top"
                 priority
               />
               <div className="absolute inset-0 bg-gradient-to-t from-black/40 via-transparent to-transparent" />
@@ -141,8 +141,8 @@ export default function AboutPage() {
               <div className="text-sm opacity-80">{t.home.statsClients}</div>
             </div>
             <div className="text-center">
-              <div className="text-3xl md:text-4xl font-bold mb-1">2022</div>
-              <div className="text-sm opacity-80">{language === "es" ? "Ano de fundacion" : "Year founded"}</div>
+              <div className="text-3xl md:text-4xl font-bold mb-1">4</div>
+              <div className="text-sm opacity-80">{t.home.statsYears}</div>
             </div>
             <div className="text-center">
               <div className="text-3xl md:text-4xl font-bold mb-1">9</div>
