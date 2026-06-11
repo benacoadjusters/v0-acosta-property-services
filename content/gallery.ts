@@ -94,17 +94,6 @@ export const galleryItems = [
     image: "/images/services/soft-wash-1.png",
     featured: true
   },
-  {
-    id: 9,
-    title: "Lavado Suave Residencial",
-    titleEn: "Residential Soft Wash",
-    description: "Tratamiento de paredes exteriores con cuidado",
-    descriptionEn: "Exterior wall treatment with care",
-    category: "soft-wash",
-    location: "Guaynabo, PR",
-    image: "/images/services/soft-wash-2.png",
-    featured: true
-  },
   // Solar Panel Cleaning
   {
     id: 10,
