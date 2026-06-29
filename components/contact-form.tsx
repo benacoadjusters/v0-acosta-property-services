@@ -21,51 +21,27 @@ const municipalities = [
 
 const serviceOptions = {
   es: [
-    // Active services - 9 services
+    // Servicios activos
     { value: "pest-general", label: "Control de Plagas - General", group: "plagas" },
     { value: "pest-termite", label: "Control de Plagas - Termitas", group: "plagas" },
     { value: "pest-rodent", label: "Control de Plagas - Roedores", group: "plagas" },
     { value: "pest-mosquito", label: "Control de Plagas - Mosquitos", group: "plagas" },
     { value: "pest-bed-bug", label: "Control de Plagas - Chinches", group: "plagas" },
-    { value: "landscaping-lawn", label: "Jardinería - Corte de Grama", group: "jardineria" },
-    { value: "landscaping-pruning", label: "Jardinería - Poda", group: "jardineria" },
-    { value: "landscaping-design", label: "Jardinería - Diseño Paisajístico", group: "jardineria" },
-    { value: "landscaping-maintenance", label: "Jardinería - Mantenimiento", group: "jardineria" },
-    { value: "cleaning-deep", label: "Limpieza - Profunda", group: "limpieza" },
-    { value: "cleaning-office", label: "Limpieza - Oficinas", group: "limpieza" },
-    { value: "cleaning-post-construction", label: "Limpieza - Post-Construcción", group: "limpieza" },
-    { value: "cleaning-maintenance", label: "Limpieza - Mantenimiento", group: "limpieza" },
-    { value: "window-cleaning", label: "Limpieza de ventanas y cristales (Window Cleaning)", group: "exterior" },
-    { value: "screen-cleaning", label: "Limpieza de mallas para ventanas (Screen Cleaning)", group: "exterior" },
-    { value: "christmas-lights", label: "Instalación de luces navideñas (Christmas Lights)", group: "exterior" },
     { value: "pressure-wash", label: "Lavado a presión (Pressure Wash)", group: "exterior" },
-    { value: "soft-wash", label: "Lavado suave (Soft Wash)", group: "exterior" },
     { value: "solar-panel-cleaning", label: "Limpieza de paneles solares (Solar Panel Cleaning)", group: "exterior" },
-    // Other
+    // Otros
     { value: "commercial", label: "Servicios Comerciales", group: "otros" },
     { value: "inspection", label: "Inspección Gratis", group: "otros" },
     { value: "other", label: "Otro", group: "otros" },
   ],
   en: [
-    // Active services - 9 services
+    // Active services
     { value: "pest-general", label: "Pest Control - General", group: "pests" },
     { value: "pest-termite", label: "Pest Control - Termites", group: "pests" },
     { value: "pest-rodent", label: "Pest Control - Rodents", group: "pests" },
     { value: "pest-mosquito", label: "Pest Control - Mosquitoes", group: "pests" },
     { value: "pest-bed-bug", label: "Pest Control - Bed Bugs", group: "pests" },
-    { value: "landscaping-lawn", label: "Landscaping - Lawn Mowing", group: "landscaping" },
-    { value: "landscaping-pruning", label: "Landscaping - Pruning", group: "landscaping" },
-    { value: "landscaping-design", label: "Landscaping - Design", group: "landscaping" },
-    { value: "landscaping-maintenance", label: "Landscaping - Maintenance", group: "landscaping" },
-    { value: "cleaning-deep", label: "Cleaning - Deep Cleaning", group: "cleaning" },
-    { value: "cleaning-office", label: "Cleaning - Office", group: "cleaning" },
-    { value: "cleaning-post-construction", label: "Cleaning - Post-Construction", group: "cleaning" },
-    { value: "cleaning-maintenance", label: "Cleaning - Maintenance", group: "cleaning" },
-    { value: "window-cleaning", label: "Window Cleaning", group: "exterior" },
-    { value: "screen-cleaning", label: "Screen Cleaning", group: "exterior" },
-    { value: "christmas-lights", label: "Christmas Lights", group: "exterior" },
     { value: "pressure-wash", label: "Pressure Wash", group: "exterior" },
-    { value: "soft-wash", label: "Soft Wash", group: "exterior" },
     { value: "solar-panel-cleaning", label: "Solar Panel Cleaning", group: "exterior" },
     // Other
     { value: "commercial", label: "Commercial Services", group: "other" },
@@ -215,25 +191,7 @@ export function ContactForm() {
                       {option.label.split(" - ")[1]}
                     </SelectItem>
                   ))}
-                  {/* 2. Jardinería */}
-                  <SelectItem value="header-landscaping" disabled className="font-semibold text-green-600">
-                    {language === "es" ? "-- Jardinería --" : "-- Landscaping --"}
-                  </SelectItem>
-                  {serviceOptions[language].filter(o => o.group === (language === "es" ? "jardineria" : "landscaping")).map((option) => (
-                    <SelectItem key={option.value} value={option.value}>
-                      {option.label.split(" - ")[1]}
-                    </SelectItem>
-                  ))}
-                  {/* 3. Limpieza */}
-                  <SelectItem value="header-cleaning" disabled className="font-semibold text-blue-600">
-                    {language === "es" ? "-- Limpieza --" : "-- Cleaning --"}
-                  </SelectItem>
-                  {serviceOptions[language].filter(o => o.group === (language === "es" ? "limpieza" : "cleaning")).map((option) => (
-                    <SelectItem key={option.value} value={option.value}>
-                      {option.label.split(" - ")[1]}
-                    </SelectItem>
-                  ))}
-                  {/* 4. Servicios Exteriores */}
+                  {/* 2. Servicios Exteriores */}
                   <SelectItem value="header-exterior" disabled className="font-semibold text-cyan-600">
                     {language === "es" ? "-- Servicios Exteriores --" : "-- Exterior Services --"}
                   </SelectItem>

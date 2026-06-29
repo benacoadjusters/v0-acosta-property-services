@@ -34,85 +34,34 @@ export function SiteHeader() {
       descEn: "Fumigation & traps"
     },
     { 
-      href: "/services/landscaping", 
-      icon: TreePine, 
-      color: "text-green-600", 
-      bgColor: "bg-green-500/10",
-      nameEs: "Jardinería", 
-      nameEn: "Landscaping",
-      descEs: "Corte y poda",
-      descEn: "Mowing & pruning"
-    },
-    { 
-      href: "/services/cleaning", 
-      icon: SprayCan, 
-      color: "text-blue-600", 
-      bgColor: "bg-blue-500/10",
-      nameEs: "Limpieza", 
-      nameEn: "Cleaning",
-      descEs: "Limpieza profesional",
-      descEn: "Professional cleaning"
-    },
-    { 
-      href: "/services/window-cleaning", 
-      icon: Droplets, 
-      color: "text-sky-600", 
-      bgColor: "bg-sky-500/10",
-      nameEs: "Limpieza de ventanas y cristales (Window Cleaning)", 
-      nameEn: "Window Cleaning",
-      descEs: "Ventanas y cristales",
-      descEn: "Window cleaning"
-    },
-    { 
-      href: "/services/screen-cleaning", 
-      icon: Grid3X3, 
-      color: "text-slate-600", 
-      bgColor: "bg-slate-500/10",
-      nameEs: "Limpieza de mallas (Screen Cleaning)", 
-      nameEn: "Screen Cleaning",
-      descEs: "Mallas para ventanas",
-      descEn: "Screen cleaning"
-    },
-    { 
-      href: "/services/christmas-lights", 
-      icon: Sparkles, 
-      color: "text-red-600", 
-      bgColor: "bg-red-500/10",
-      nameEs: "Luces navideñas (Christmas Lights)", 
-      nameEn: "Christmas Lights",
-      descEs: "Instalación navideña",
-      descEn: "Holiday installation"
-    },
-    { 
       href: "/services/pressure-wash", 
       icon: Lightning, 
-      color: "text-orange-600", 
-      bgColor: "bg-orange-500/10",
+      color: "text-slate-700", 
+      bgColor: "bg-slate-500/10",
       nameEs: "Lavado a presión (Pressure Wash)", 
       nameEn: "Pressure Wash",
       descEs: "Lavado a presión",
       descEn: "Pressure washing"
     },
     { 
-      href: "/services/soft-wash", 
-      icon: Waves, 
-      color: "text-teal-600", 
-      bgColor: "bg-teal-500/10",
-      nameEs: "Lavado suave (Soft Wash)", 
-      nameEn: "Soft Wash",
-      descEs: "Lavado suave exterior",
-      descEn: "Soft washing"
-    },
-    { 
       href: "/services/solar-panel-cleaning", 
       icon: Sun, 
-      color: "text-yellow-600", 
-      bgColor: "bg-yellow-500/10",
+      color: "text-amber-600", 
+      bgColor: "bg-amber-500/10",
       nameEs: "Paneles solares (Solar Panel Cleaning)", 
       nameEn: "Solar Panel Cleaning",
       descEs: "Limpieza de paneles",
       descEn: "Panel cleaning"
     },
+  ]
+
+  const comingSoonServices = [
+    { href: "/services/landscaping", icon: TreePine, color: "text-muted-foreground", bgColor: "bg-muted", nameEs: "Jardinería", nameEn: "Landscaping" },
+    { href: "/services/cleaning", icon: SprayCan, color: "text-muted-foreground", bgColor: "bg-muted", nameEs: "Limpieza", nameEn: "Cleaning" },
+    { href: "/services/window-cleaning", icon: Droplets, color: "text-muted-foreground", bgColor: "bg-muted", nameEs: "Limpieza de ventanas", nameEn: "Window Cleaning" },
+    { href: "/services/screen-cleaning", icon: Grid3X3, color: "text-muted-foreground", bgColor: "bg-muted", nameEs: "Limpieza de mallas", nameEn: "Screen Cleaning" },
+    { href: "/services/christmas-lights", icon: Sparkles, color: "text-muted-foreground", bgColor: "bg-muted", nameEs: "Luces navideñas", nameEn: "Christmas Lights" },
+    { href: "/services/soft-wash", icon: Waves, color: "text-muted-foreground", bgColor: "bg-muted", nameEs: "Lavado suave", nameEn: "Soft Wash" },
   ]
 
   return (
@@ -217,6 +166,28 @@ export function SiteHeader() {
                     </DropdownMenuItem>
                   )
                 })}
+                <DropdownMenuSeparator />
+                <div className="px-3 py-1.5 text-xs font-semibold uppercase tracking-wider text-muted-foreground">
+                  {language === "es" ? "Próximamente" : "Coming Soon"}
+                </div>
+                {comingSoonServices.map((service) => {
+                  const Icon = service.icon
+                  return (
+                    <DropdownMenuItem key={service.href} asChild>
+                      <Link href={service.href} className="flex items-center gap-3 p-3 opacity-70">
+                        <div className="flex h-8 w-8 shrink-0 items-center justify-center rounded-md bg-muted">
+                          <Icon className="h-4 w-4 text-muted-foreground" />
+                        </div>
+                        <div className="flex items-center gap-2">
+                          <span className="font-medium">{language === "es" ? service.nameEs : service.nameEn}</span>
+                          <span className="rounded-full bg-muted px-2 py-0.5 text-[10px] font-medium text-muted-foreground">
+                            {language === "es" ? "Próximamente" : "Soon"}
+                          </span>
+                        </div>
+                      </Link>
+                    </DropdownMenuItem>
+                  )
+                })}
               </DropdownMenuContent>
             </DropdownMenu>
 
@@ -302,6 +273,26 @@ export function SiteHeader() {
                               >
                                 <Icon className={`h-4 w-4 ${service.color}`} />
                                 {language === "es" ? service.nameEs : service.nameEn}
+                              </Link>
+                            )
+                          })}
+                          <p className="pt-2 text-xs font-semibold uppercase tracking-wider text-muted-foreground">
+                            {language === "es" ? "Próximamente" : "Coming Soon"}
+                          </p>
+                          {comingSoonServices.map((service) => {
+                            const Icon = service.icon
+                            return (
+                              <Link 
+                                key={service.href}
+                                href={service.href} 
+                                className="flex items-center gap-2 py-1.5 text-sm text-muted-foreground/70 transition-colors"
+                                onClick={() => setIsOpen(false)}
+                              >
+                                <Icon className="h-4 w-4 text-muted-foreground/70" />
+                                {language === "es" ? service.nameEs : service.nameEn}
+                                <span className="rounded-full bg-muted px-1.5 py-0.5 text-[10px] font-medium">
+                                  {language === "es" ? "Pronto" : "Soon"}
+                                </span>
                               </Link>
                             )
                           })}

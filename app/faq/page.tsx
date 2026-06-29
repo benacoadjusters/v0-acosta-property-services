@@ -18,7 +18,7 @@ const faqData = {
     general: [
       {
         question: "¿Qué servicios ofrecen actualmente?",
-        answer: "Actualmente ofrecemos 9 servicios activos: control de plagas, jardinería, limpieza, limpieza de ventanas y cristales (window cleaning), limpieza de mallas para ventanas (screen cleaning), instalación de luces navideñas (Christmas lights), lavado a presión (pressure wash), lavado suave (soft wash) y limpieza de paneles solares (solar panel cleaning) para hogares, negocios y propiedades comerciales en Puerto Rico."
+        answer: "Actualmente ofrecemos 3 servicios activos: control de plagas, lavado a presión (pressure wash) y limpieza de paneles solares (solar panel cleaning) para hogares, negocios y propiedades comerciales en Puerto Rico. Próximamente añadiremos jardinería, limpieza, window cleaning, screen cleaning, luces navideñas y soft wash."
       },
       {
         question: "¿Ofrecen cotizaciones gratis?",
@@ -232,7 +232,7 @@ const faqData = {
     comingSoon: [
       {
         question: "¿Qué servicios estarán disponibles próximamente?",
-        answer: "Próximamente estaremos trabajando servicios de plomería, electricidad, mitigación de daños por agua, reparaciones handyman, sellado de techos y mitigación de plomo y asbesto."
+        answer: "Próximamente estaremos activando jardinería, limpieza, limpieza de ventanas (window cleaning), limpieza de mallas (screen cleaning), luces navideñas (Christmas lights) y lavado suave (soft wash). También trabajamos en servicios de plomería, electricidad, mitigación de daños por agua, reparaciones handyman, sellado de techos y mitigación de plomo y asbesto."
       },
       {
         question: "¿Puedo pedir información sobre un servicio próximamente?",
@@ -244,7 +244,7 @@ const faqData = {
     general: [
       {
         question: "What services do you currently offer?",
-        answer: "We currently offer 9 active services: pest control, landscaping, cleaning, window cleaning, screen cleaning, Christmas lights, pressure wash, soft wash and solar panel cleaning for homes, businesses and commercial properties in Puerto Rico."
+        answer: "We currently offer 3 active services: pest control, pressure wash and solar panel cleaning for homes, businesses and commercial properties in Puerto Rico. Coming soon we'll add landscaping, cleaning, window cleaning, screen cleaning, Christmas lights and soft wash."
       },
       {
         question: "Do you offer free quotes?",
@@ -392,7 +392,7 @@ const faqData = {
     comingSoon: [
       {
         question: "What services will be available soon?",
-        answer: "Coming soon we'll be working on plumbing, electrical, water damage mitigation, handyman repairs, roof sealing and lead & asbestos mitigation services."
+        answer: "Coming soon we'll activate landscaping, cleaning, window cleaning, screen cleaning, Christmas lights and soft wash. We're also working on plumbing, electrical, water damage mitigation, handyman repairs, roof sealing and lead & asbestos mitigation services."
       },
       {
         question: "Can I request information about a coming soon service?",
@@ -410,25 +410,13 @@ export default function FAQPage() {
   const faqCategories = language === "es" ? [
     { id: "general", title: "Preguntas generales", data: currentFaqs.general },
     { id: "pestControl", title: "Control de Plagas", data: currentFaqs.pestControl },
-    { id: "landscaping", title: "Jardinería", data: currentFaqs.landscaping },
-    { id: "cleaning", title: "Limpieza", data: currentFaqs.cleaning },
-    { id: "windowCleaning", title: "Limpieza de ventanas (Window Cleaning)", data: currentFaqs.windowCleaning },
-    { id: "screenCleaning", title: "Limpieza de mallas (Screen Cleaning)", data: currentFaqs.screenCleaning },
-    { id: "christmasLights", title: "Luces navideñas (Christmas Lights)", data: currentFaqs.christmasLights },
     { id: "pressureWash", title: "Lavado a presión (Pressure Wash)", data: currentFaqs.pressureWash },
-    { id: "softWash", title: "Lavado suave (Soft Wash)", data: currentFaqs.softWash },
     { id: "solarPanelCleaning", title: "Limpieza de paneles solares (Solar Panel Cleaning)", data: currentFaqs.solarPanelCleaning },
     { id: "comingSoon", title: "Servicios próximamente", data: currentFaqs.comingSoon },
   ] : [
     { id: "general", title: "General Questions", data: currentFaqs.general },
     { id: "pestControl", title: "Pest Control", data: currentFaqs.pestControl },
-    { id: "landscaping", title: "Landscaping", data: currentFaqs.landscaping },
-    { id: "cleaning", title: "Cleaning", data: currentFaqs.cleaning },
-    { id: "windowCleaning", title: "Window Cleaning", data: currentFaqs.windowCleaning },
-    { id: "screenCleaning", title: "Screen Cleaning", data: currentFaqs.screenCleaning },
-    { id: "christmasLights", title: "Christmas Lights", data: currentFaqs.christmasLights },
     { id: "pressureWash", title: "Pressure Wash", data: currentFaqs.pressureWash },
-    { id: "softWash", title: "Soft Wash", data: currentFaqs.softWash },
     { id: "solarPanelCleaning", title: "Solar Panel Cleaning", data: currentFaqs.solarPanelCleaning },
     { id: "comingSoon", title: "Coming Soon Services", data: currentFaqs.comingSoon },
   ]
