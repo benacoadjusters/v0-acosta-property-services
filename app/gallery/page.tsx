@@ -16,14 +16,8 @@ export default function GalleryPage() {
   const galleryCategories = [
     { id: "all", name: language === "es" ? "Todos" : "All" },
     { id: "pest-control", name: language === "es" ? "Control de Plagas" : "Pest Control" },
-    { id: "landscaping", name: language === "es" ? "Jardineria" : "Landscaping" },
-    { id: "cleaning", name: language === "es" ? "Limpieza" : "Cleaning" },
-    { id: "window-cleaning", name: language === "es" ? "Limpieza de Ventanas" : "Window Cleaning" },
-    { id: "screen-cleaning", name: language === "es" ? "Limpieza de Mallas" : "Screen Cleaning" },
-    { id: "pressure-wash", name: language === "es" ? "Lavado a Presion" : "Pressure Wash" },
-    { id: "soft-wash", name: language === "es" ? "Lavado Suave" : "Soft Wash" },
+    { id: "pressure-wash", name: language === "es" ? "Lavado a Presión" : "Pressure Wash" },
     { id: "solar-panel", name: language === "es" ? "Paneles Solares" : "Solar Panels" },
-    { id: "christmas-lights", name: language === "es" ? "Luces Navidenas" : "Christmas Lights" },
   ]
 
   const filteredItems = activeCategory === "all" 
@@ -33,14 +27,8 @@ export default function GalleryPage() {
   const getCategoryLabel = (category: string) => {
     const labels: Record<string, { es: string; en: string }> = {
       "pest-control": { es: "Control de Plagas", en: "Pest Control" },
-      "landscaping": { es: "Jardineria", en: "Landscaping" },
-      "cleaning": { es: "Limpieza", en: "Cleaning" },
-      "window-cleaning": { es: "Limpieza de Ventanas", en: "Window Cleaning" },
-      "screen-cleaning": { es: "Limpieza de Mallas", en: "Screen Cleaning" },
-      "pressure-wash": { es: "Lavado a Presion", en: "Pressure Wash" },
-      "soft-wash": { es: "Lavado Suave", en: "Soft Wash" },
+      "pressure-wash": { es: "Lavado a Presión", en: "Pressure Wash" },
       "solar-panel": { es: "Paneles Solares", en: "Solar Panels" },
-      "christmas-lights": { es: "Luces Navidenas", en: "Christmas Lights" },
     }
     return labels[category]?.[language] || category
   }
@@ -59,8 +47,8 @@ export default function GalleryPage() {
             </h1>
             <p className="text-xl text-muted-foreground text-pretty">
               {language === "es" 
-                ? "Mira ejemplos visuales de los 9 servicios activos que ofrecemos para propiedades en Puerto Rico."
-                : "See visual examples of the 9 active services we offer for properties in Puerto Rico."}
+                ? "Mira ejemplos visuales de nuestros servicios activos: control de plagas, lavado a presión y limpieza de paneles solares."
+                : "See visual examples of our active services: pest control, pressure wash and solar panel cleaning."}
             </p>
           </div>
         </div>

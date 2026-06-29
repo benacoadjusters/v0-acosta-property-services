@@ -145,7 +145,7 @@ export default function AboutPage() {
               <div className="text-sm opacity-80">{t.home.statsYears}</div>
             </div>
             <div className="text-center">
-              <div className="text-3xl md:text-4xl font-bold mb-1">9</div>
+              <div className="text-3xl md:text-4xl font-bold mb-1">3</div>
               <div className="text-sm opacity-80">{t.home.statsServices}</div>
             </div>
             <div className="text-center">
@@ -333,8 +333,8 @@ export default function AboutPage() {
                 </h3>
                 <p className="text-muted-foreground text-sm">
                   {language === "es" 
-                    ? "9 servicios bajo un mismo equipo. Sin coordinar múltiples proveedores."
-                    : "9 services under one team. No coordinating multiple providers."}
+                  ? "Todos nuestros servicios bajo un mismo equipo. Sin coordinar múltiples proveedores."
+                  : "All our services under one team. No coordinating multiple providers."}
                 </p>
               </CardContent>
             </Card>
@@ -398,8 +398,8 @@ export default function AboutPage() {
           </h2>
           <p className="text-lg opacity-90 mb-8 max-w-2xl mx-auto">
             {language === "es" 
-              ? "Contáctanos para coordinar una cotización de control de plagas, jardinería, limpieza o cualquiera de nuestros 9 servicios activos."
-              : "Contact us to coordinate a quote for pest control, landscaping, cleaning or any of our 9 active services."}
+                ? "Contáctanos para coordinar una cotización de control de plagas, lavado a presión o limpieza de paneles solares."
+                : "Contact us to coordinate a quote for pest control, pressure wash or solar panel cleaning."}
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <Button asChild size="lg" className="bg-accent text-accent-foreground hover:bg-accent/90">

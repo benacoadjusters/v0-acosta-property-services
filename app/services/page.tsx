@@ -41,151 +41,6 @@ export default function ServicesIndexPage() {
       image: "/images/hero-pest-control.jpg"
     },
     {
-      id: "landscaping",
-      href: "/services/landscaping",
-      icon: TreePine,
-      bgColor: "bg-green-500/10",
-      textColor: "text-green-600",
-      badgeColor: "bg-green-600",
-      hoverColor: "hover:text-green-600",
-      buttonColor: "bg-green-600 hover:bg-green-700 text-white",
-      nameEs: "Jardinería",
-      nameEn: "Landscaping",
-      descriptionEs: "Corte de grama, poda, limpieza exterior y mantenimiento de áreas verdes para que tu propiedad luzca cuidada.",
-      descriptionEn: "Lawn mowing, pruning, exterior cleaning and green area maintenance so your property looks well-kept.",
-      featuresEs: [
-        "Corte de grama",
-        "Poda de árboles y arbustos",
-        "Mantenimiento de jardines",
-        "Limpieza de áreas verdes",
-        "Diseño y mejoras exteriores"
-      ],
-      featuresEn: [
-        "Lawn mowing",
-        "Tree and shrub pruning",
-        "Garden maintenance",
-        "Green area cleaning",
-        "Exterior design and improvements"
-      ],
-      image: "/images/hero-landscaping.jpg"
-    },
-    {
-      id: "cleaning",
-      href: "/services/cleaning",
-      icon: SprayCan,
-      bgColor: "bg-blue-500/10",
-      textColor: "text-blue-600",
-      badgeColor: "bg-blue-600",
-      hoverColor: "hover:text-blue-600",
-      buttonColor: "bg-blue-600 hover:bg-blue-700 text-white",
-      nameEs: "Limpieza",
-      nameEn: "Cleaning",
-      descriptionEs: "Limpieza residencial, comercial, profunda y post-construcción para mantener tus espacios listos y presentables.",
-      descriptionEn: "Residential, commercial, deep and post-construction cleaning to keep your spaces ready and presentable.",
-      featuresEs: [
-        "Limpieza residencial",
-        "Limpieza comercial",
-        "Limpieza profunda",
-        "Limpieza post-construcción",
-        "Mantenimiento regular"
-      ],
-      featuresEn: [
-        "Residential cleaning",
-        "Commercial cleaning",
-        "Deep cleaning",
-        "Post-construction cleaning",
-        "Regular maintenance"
-      ],
-      image: "/images/hero-cleaning.jpg"
-    },
-    {
-      id: "window-cleaning",
-      href: "/services/window-cleaning",
-      icon: Droplets,
-      bgColor: "bg-cyan-500/10",
-      textColor: "text-cyan-600",
-      badgeColor: "bg-cyan-600",
-      hoverColor: "hover:text-cyan-600",
-      buttonColor: "bg-cyan-600 hover:bg-cyan-700 text-white",
-      nameEs: "Limpieza de ventanas y cristales (Window Cleaning)",
-      nameEn: "Window Cleaning",
-      descriptionEs: "Limpieza de ventanas, cristales y puertas de vidrio para hogares, negocios y propiedades comerciales.",
-      descriptionEn: "Window and glass cleaning to improve the appearance, light entry and presentation of your property.",
-      featuresEs: [
-        "Limpieza de ventanas interiores y exteriores",
-        "Cristales y puertas de vidrio",
-        "Remoción de polvo y suciedad",
-        "Servicio residencial y comercial",
-        "Cotización según tamaño"
-      ],
-      featuresEn: [
-        "Interior and exterior window cleaning",
-        "Glass and glass doors",
-        "Dust and dirt removal",
-        "Residential and commercial service",
-        "Quote based on size"
-      ],
-      image: "/images/window-cleaning.png"
-    },
-    {
-      id: "screen-cleaning",
-      href: "/services/screen-cleaning",
-      icon: Grid3X3,
-      bgColor: "bg-teal-500/10",
-      textColor: "text-teal-600",
-      badgeColor: "bg-teal-600",
-      hoverColor: "hover:text-teal-600",
-      buttonColor: "bg-teal-600 hover:bg-teal-700 text-white",
-      nameEs: "Limpieza de mallas para ventanas (Screen Cleaning)",
-      nameEn: "Screen Cleaning",
-      descriptionEs: "Remoción de polvo, salitre y suciedad acumulada en mallas de ventanas y puertas.",
-      descriptionEn: "Cleaning of screens and meshes to remove dust, salt and accumulated dirt.",
-      featuresEs: [
-        "Limpieza de mallas para ventanas",
-        "Remoción de polvo y salitre",
-        "Atención a mallas con suciedad",
-        "Servicio residencial y comercial",
-        "Cotización según cantidad"
-      ],
-      featuresEn: [
-        "Screen cleaning",
-        "Dust and salt removal",
-        "Attention to dirty meshes",
-        "Residential and commercial service",
-        "Quote based on quantity"
-      ],
-      image: "/images/services/screen-cleaning-new.png"
-    },
-    {
-      id: "christmas-lights",
-      href: "/services/christmas-lights",
-      icon: Sparkles,
-      bgColor: "bg-red-500/10",
-      textColor: "text-red-600",
-      badgeColor: "bg-red-600",
-      hoverColor: "hover:text-red-600",
-      buttonColor: "bg-red-600 hover:bg-red-700 text-white",
-      nameEs: "Instalación de luces navideñas (Christmas Lights)",
-      nameEn: "Christmas Lights",
-      descriptionEs: "Instalación y montaje de luces navideñas para hogares, negocios y propiedades comerciales, según temporada.",
-      descriptionEn: "Installation and setup of Christmas lights for homes, businesses and commercial properties, by season and coordination.",
-      featuresEs: [
-        "Instalación de luces navideñas",
-        "Montaje decorativo",
-        "Servicio para hogares y negocios",
-        "Coordinación por temporada",
-        "Orientación según diseño"
-      ],
-      featuresEn: [
-        "Christmas lights installation",
-        "Decorative setup",
-        "Service for homes and businesses",
-        "Seasonal coordination",
-        "Design guidance"
-      ],
-      image: "/images/christmas-lights.png"
-    },
-    {
       id: "pressure-wash",
       href: "/services/pressure-wash",
       icon: Waves,
@@ -213,35 +68,6 @@ export default function ServicesIndexPage() {
         "Quote based on surface"
       ],
       image: "/images/pressure-wash.png"
-    },
-    {
-      id: "soft-wash",
-      href: "/services/soft-wash",
-      icon: Droplet,
-      bgColor: "bg-sky-500/10",
-      textColor: "text-sky-600",
-      badgeColor: "bg-sky-600",
-      hoverColor: "hover:text-sky-600",
-      buttonColor: "bg-sky-600 hover:bg-sky-700 text-white",
-      nameEs: "Lavado suave (Soft Wash)",
-      nameEn: "Soft Wash",
-      descriptionEs: "Lavado exterior con menor presión para superficies delicadas que requieren más cuidado.",
-      descriptionEn: "Soft washing for delicate surfaces that need exterior cleaning with lower pressure.",
-      featuresEs: [
-        "Fachadas y paredes exteriores",
-        "Superficies delicadas",
-        "Limpieza con menor presión",
-        "Atención a suciedad superficial",
-        "Cotización según material"
-      ],
-      featuresEn: [
-        "Facades and exterior walls",
-        "Delicate surfaces",
-        "Cleaning with lower pressure",
-        "Attention to surface dirt",
-        "Quote based on material"
-      ],
-      image: "/images/services/soft-wash-1.png"
     },
     {
       id: "solar-panel-cleaning",
@@ -275,6 +101,162 @@ export default function ServicesIndexPage() {
   ]
 
   const comingSoonServices = [
+    {
+      id: "landscaping",
+      href: "/services/landscaping",
+      icon: TreePine,
+      bgColor: "bg-green-500/10",
+      textColor: "text-green-600",
+      badgeColor: "bg-green-600",
+      nameEs: "Jardinería",
+      nameEn: "Landscaping",
+      descriptionEs: "Corte de grama, poda, limpieza exterior y mantenimiento de áreas verdes para que tu propiedad luzca cuidada.",
+      descriptionEn: "Lawn mowing, pruning, exterior cleaning and green area maintenance so your property looks well-kept.",
+      featuresEs: [
+        "Corte de grama",
+        "Poda de árboles y arbustos",
+        "Mantenimiento de jardines",
+        "Limpieza de áreas verdes",
+        "Servicio en desarrollo"
+      ],
+      featuresEn: [
+        "Lawn mowing",
+        "Tree and shrub pruning",
+        "Garden maintenance",
+        "Green area cleaning",
+        "Service in development"
+      ]
+    },
+    {
+      id: "cleaning",
+      href: "/services/cleaning",
+      icon: SprayCan,
+      bgColor: "bg-blue-500/10",
+      textColor: "text-blue-600",
+      badgeColor: "bg-blue-600",
+      nameEs: "Limpieza",
+      nameEn: "Cleaning",
+      descriptionEs: "Limpieza residencial, comercial, profunda y post-construcción para mantener tus espacios listos y presentables.",
+      descriptionEn: "Residential, commercial, deep and post-construction cleaning to keep your spaces ready and presentable.",
+      featuresEs: [
+        "Limpieza residencial",
+        "Limpieza comercial",
+        "Limpieza profunda",
+        "Limpieza post-construcción",
+        "Servicio en desarrollo"
+      ],
+      featuresEn: [
+        "Residential cleaning",
+        "Commercial cleaning",
+        "Deep cleaning",
+        "Post-construction cleaning",
+        "Service in development"
+      ]
+    },
+    {
+      id: "window-cleaning",
+      href: "/services/window-cleaning",
+      icon: Droplets,
+      bgColor: "bg-cyan-500/10",
+      textColor: "text-cyan-600",
+      badgeColor: "bg-cyan-600",
+      nameEs: "Limpieza de ventanas y cristales (Window Cleaning)",
+      nameEn: "Window Cleaning",
+      descriptionEs: "Limpieza de ventanas, cristales y puertas de vidrio para hogares, negocios y propiedades comerciales.",
+      descriptionEn: "Window and glass cleaning to improve the appearance, light entry and presentation of your property.",
+      featuresEs: [
+        "Limpieza de ventanas interiores y exteriores",
+        "Cristales y puertas de vidrio",
+        "Remoción de polvo y suciedad",
+        "Servicio residencial y comercial",
+        "Servicio en desarrollo"
+      ],
+      featuresEn: [
+        "Interior and exterior window cleaning",
+        "Glass and glass doors",
+        "Dust and dirt removal",
+        "Residential and commercial service",
+        "Service in development"
+      ]
+    },
+    {
+      id: "screen-cleaning",
+      href: "/services/screen-cleaning",
+      icon: Grid3X3,
+      bgColor: "bg-teal-500/10",
+      textColor: "text-teal-600",
+      badgeColor: "bg-teal-600",
+      nameEs: "Limpieza de mallas para ventanas (Screen Cleaning)",
+      nameEn: "Screen Cleaning",
+      descriptionEs: "Remoción de polvo, salitre y suciedad acumulada en mallas de ventanas y puertas.",
+      descriptionEn: "Cleaning of screens and meshes to remove dust, salt and accumulated dirt.",
+      featuresEs: [
+        "Limpieza de mallas para ventanas",
+        "Remoción de polvo y salitre",
+        "Atención a mallas con suciedad",
+        "Servicio residencial y comercial",
+        "Servicio en desarrollo"
+      ],
+      featuresEn: [
+        "Screen cleaning",
+        "Dust and salt removal",
+        "Attention to dirty meshes",
+        "Residential and commercial service",
+        "Service in development"
+      ]
+    },
+    {
+      id: "christmas-lights",
+      href: "/services/christmas-lights",
+      icon: Sparkles,
+      bgColor: "bg-red-500/10",
+      textColor: "text-red-600",
+      badgeColor: "bg-red-600",
+      nameEs: "Instalación de luces navideñas (Christmas Lights)",
+      nameEn: "Christmas Lights",
+      descriptionEs: "Instalación y montaje de luces navideñas para hogares, negocios y propiedades comerciales, según temporada.",
+      descriptionEn: "Installation and setup of Christmas lights for homes, businesses and commercial properties, by season and coordination.",
+      featuresEs: [
+        "Instalación de luces navideñas",
+        "Montaje decorativo",
+        "Servicio para hogares y negocios",
+        "Coordinación por temporada",
+        "Servicio en desarrollo"
+      ],
+      featuresEn: [
+        "Christmas lights installation",
+        "Decorative setup",
+        "Service for homes and businesses",
+        "Seasonal coordination",
+        "Service in development"
+      ]
+    },
+    {
+      id: "soft-wash",
+      href: "/services/soft-wash",
+      icon: Droplet,
+      bgColor: "bg-sky-500/10",
+      textColor: "text-sky-600",
+      badgeColor: "bg-sky-600",
+      nameEs: "Lavado suave (Soft Wash)",
+      nameEn: "Soft Wash",
+      descriptionEs: "Lavado exterior con menor presión para superficies delicadas que requieren más cuidado.",
+      descriptionEn: "Soft washing for delicate surfaces that need exterior cleaning with lower pressure.",
+      featuresEs: [
+        "Fachadas y paredes exteriores",
+        "Superficies delicadas",
+        "Limpieza con menor presión",
+        "Atención a suciedad superficial",
+        "Servicio en desarrollo"
+      ],
+      featuresEn: [
+        "Facades and exterior walls",
+        "Delicate surfaces",
+        "Cleaning with lower pressure",
+        "Attention to surface dirt",
+        "Service in development"
+      ]
+    },
     {
       id: "plumbing",
       href: "/services/plumbing",
@@ -457,33 +439,9 @@ export default function ServicesIndexPage() {
                 <Bug className="h-3.5 w-3.5" />
                 {language === "es" ? "Control de Plagas" : "Pest Control"}
               </span>
-              <span className="inline-flex items-center gap-1.5 rounded-full bg-green-500/10 px-3 py-1 text-sm font-medium text-green-700">
-                <TreePine className="h-3.5 w-3.5" />
-                {language === "es" ? "Jardinería" : "Landscaping"}
-              </span>
-              <span className="inline-flex items-center gap-1.5 rounded-full bg-blue-500/10 px-3 py-1 text-sm font-medium text-blue-700">
-                <SprayCan className="h-3.5 w-3.5" />
-                {language === "es" ? "Limpieza" : "Cleaning"}
-              </span>
-              <span className="inline-flex items-center gap-1.5 rounded-full bg-cyan-500/10 px-3 py-1 text-sm font-medium text-cyan-700">
-                <Droplets className="h-3.5 w-3.5" />
-                {language === "es" ? "Limpieza de ventanas" : "Window Cleaning"}
-              </span>
-              <span className="inline-flex items-center gap-1.5 rounded-full bg-teal-500/10 px-3 py-1 text-sm font-medium text-teal-700">
-                <Grid3X3 className="h-3.5 w-3.5" />
-                {language === "es" ? "Limpieza de mallas" : "Screen Cleaning"}
-              </span>
-              <span className="inline-flex items-center gap-1.5 rounded-full bg-red-500/10 px-3 py-1 text-sm font-medium text-red-700">
-                <Sparkles className="h-3.5 w-3.5" />
-                {language === "es" ? "Luces navideñas" : "Christmas Lights"}
-              </span>
               <span className="inline-flex items-center gap-1.5 rounded-full bg-slate-500/10 px-3 py-1 text-sm font-medium text-slate-700">
                 <Waves className="h-3.5 w-3.5" />
                 {language === "es" ? "Lavado a presión" : "Pressure Wash"}
-              </span>
-              <span className="inline-flex items-center gap-1.5 rounded-full bg-sky-500/10 px-3 py-1 text-sm font-medium text-sky-700">
-                <Droplet className="h-3.5 w-3.5" />
-                {language === "es" ? "Lavado suave" : "Soft Wash"}
               </span>
               <span className="inline-flex items-center gap-1.5 rounded-full bg-amber-500/10 px-3 py-1 text-sm font-medium text-amber-700">
                 <Sun className="h-3.5 w-3.5" />
@@ -492,6 +450,30 @@ export default function ServicesIndexPage() {
             </div>
             {/* Coming Soon Chips */}
             <div className="flex flex-wrap gap-2 justify-center">
+              <span className="inline-flex items-center gap-1.5 rounded-full bg-muted px-3 py-1 text-sm font-medium text-muted-foreground">
+                <TreePine className="h-3.5 w-3.5" />
+                {language === "es" ? "Jardinería — Próximamente" : "Landscaping — Coming Soon"}
+              </span>
+              <span className="inline-flex items-center gap-1.5 rounded-full bg-muted px-3 py-1 text-sm font-medium text-muted-foreground">
+                <SprayCan className="h-3.5 w-3.5" />
+                {language === "es" ? "Limpieza — Próximamente" : "Cleaning — Coming Soon"}
+              </span>
+              <span className="inline-flex items-center gap-1.5 rounded-full bg-muted px-3 py-1 text-sm font-medium text-muted-foreground">
+                <Droplets className="h-3.5 w-3.5" />
+                {language === "es" ? "Limpieza de ventanas — Próximamente" : "Window Cleaning — Coming Soon"}
+              </span>
+              <span className="inline-flex items-center gap-1.5 rounded-full bg-muted px-3 py-1 text-sm font-medium text-muted-foreground">
+                <Grid3X3 className="h-3.5 w-3.5" />
+                {language === "es" ? "Limpieza de mallas — Próximamente" : "Screen Cleaning — Coming Soon"}
+              </span>
+              <span className="inline-flex items-center gap-1.5 rounded-full bg-muted px-3 py-1 text-sm font-medium text-muted-foreground">
+                <Sparkles className="h-3.5 w-3.5" />
+                {language === "es" ? "Luces navideñas — Próximamente" : "Christmas Lights — Coming Soon"}
+              </span>
+              <span className="inline-flex items-center gap-1.5 rounded-full bg-muted px-3 py-1 text-sm font-medium text-muted-foreground">
+                <Droplet className="h-3.5 w-3.5" />
+                {language === "es" ? "Lavado suave — Próximamente" : "Soft Wash — Coming Soon"}
+              </span>
               <span className="inline-flex items-center gap-1.5 rounded-full bg-muted px-3 py-1 text-sm font-medium text-muted-foreground">
                 <Wrench className="h-3.5 w-3.5" />
                 {language === "es" ? "Plomería — Próximamente" : "Plumbing — Coming Soon"}
@@ -668,8 +650,8 @@ export default function ServicesIndexPage() {
             </h2>
             <p className="text-lg text-primary-foreground/80 mb-8 text-pretty">
               {language === "es"
-                ? "Dinos qué necesita tu propiedad y te orientamos con una cotización para servicios activos como control de plagas, jardinería, limpieza, window cleaning, pressure wash, soft wash o solar panel cleaning."
-                : "Tell us what your property needs and we'll guide you with a quote for active services like pest control, landscaping, cleaning, window cleaning, pressure wash, soft wash or solar panel cleaning."}
+                ? "Dinos qué necesita tu propiedad y te orientamos con una cotización para nuestros servicios activos: control de plagas, lavado a presión y limpieza de paneles solares."
+                : "Tell us what your property needs and we'll guide you with a quote for our active services: pest control, pressure wash and solar panel cleaning."}
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Button asChild size="lg" className="bg-accent text-accent-foreground hover:bg-accent/90 font-semibold">

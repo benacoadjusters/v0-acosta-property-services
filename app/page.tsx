@@ -3,7 +3,7 @@
 import Link from "next/link"
 import Image from "next/image"
 import { useState, useEffect } from "react"
-import { Phone, ArrowRight, Shield, Clock, Award, CheckCircle2, Bug, TreePine, HardHat, SprayCan, Droplets, Users, Layers, Wrench, Zap, Grid3X3, Sparkles, Waves, Droplet, Sun, Eye, AlertTriangle, ClipboardList, Calendar, MapPin, Building2, Home as HomeIcon, Thermometer, CloudRain, Headphones } from "lucide-react"
+import { Phone, ArrowRight, Shield, Clock, Award, CheckCircle2, Bug, Users, Layers, Sparkles, Waves, Sun, Eye, AlertTriangle, ClipboardList, Calendar, MapPin, Building2, Home as HomeIcon, Thermometer, CloudRain, Headphones } from "lucide-react"
 import { Button } from "@/components/ui/button"
 import { Card, CardContent } from "@/components/ui/card"
 import { company } from "@/content/company"
@@ -146,7 +146,7 @@ export default function HomePage() {
                 Más tiempo para ti, nosotros nos encargamos
               </h2>
               <p className="text-lg text-muted-foreground text-pretty">
-                Control de plagas, jardinería, mantenimiento exterior y más. Todo lo que tu propiedad necesita, con un solo proveedor.
+                Control de plagas, lavado a presión y limpieza de paneles solares. Lo que tu propiedad necesita, con un solo proveedor de confianza.
               </p>
             </div>
 
@@ -160,7 +160,7 @@ export default function HomePage() {
                     <h3 className="font-semibold text-foreground">Un solo equipo de confianza</h3>
                   </div>
                   <p className="text-muted-foreground text-sm">
-                    9 servicios, un solo contacto. Sin coordinar múltiples proveedores ni perseguir cotizaciones.
+                    Varios servicios, un solo contacto. Sin coordinar múltiples proveedores ni perseguir cotizaciones.
                   </p>
                 </CardContent>
               </Card>
@@ -211,7 +211,7 @@ export default function HomePage() {
             <div className="text-center mt-10">
               <Button asChild size="lg" variant="outline">
                 <Link href="/services">
-                  Conoce nuestros 9 servicios
+                  Conoce nuestros servicios
                   <ArrowRight className="ml-2 h-5 w-5" />
                 </Link>
               </Button>
@@ -475,7 +475,7 @@ export default function HomePage() {
                 Your property clean, protected and ready to impress
               </h1>
               <p className="text-lg text-muted-foreground max-w-lg text-pretty">
-                Pest control, landscaping, cleaning and specialized exterior services for homes, businesses and commercial properties in Puerto Rico.
+                Pest control, pressure wash and solar panel cleaning for homes, businesses and commercial properties in Puerto Rico.
               </p>
               {/* Service badges */}
               <div className="flex flex-wrap gap-2">
@@ -483,33 +483,9 @@ export default function HomePage() {
                   <Bug className="h-3.5 w-3.5" />
                   Pest Control
                 </span>
-                <span className="inline-flex items-center gap-1.5 rounded-full bg-green-500/10 px-3 py-1 text-sm font-medium text-green-700">
-                  <TreePine className="h-3.5 w-3.5" />
-                  Landscaping
-                </span>
-                <span className="inline-flex items-center gap-1.5 rounded-full bg-blue-500/10 px-3 py-1 text-sm font-medium text-blue-700">
-                  <SprayCan className="h-3.5 w-3.5" />
-                  Cleaning
-                </span>
-                <span className="inline-flex items-center gap-1.5 rounded-full bg-cyan-500/10 px-3 py-1 text-sm font-medium text-cyan-700">
-                  <Droplets className="h-3.5 w-3.5" />
-                  Window Cleaning
-                </span>
-                <span className="inline-flex items-center gap-1.5 rounded-full bg-teal-500/10 px-3 py-1 text-sm font-medium text-teal-700">
-                  <Grid3X3 className="h-3.5 w-3.5" />
-                  Screen Cleaning
-                </span>
-                <span className="inline-flex items-center gap-1.5 rounded-full bg-red-500/10 px-3 py-1 text-sm font-medium text-red-700">
-                  <Sparkles className="h-3.5 w-3.5" />
-                  Christmas Lights
-                </span>
                 <span className="inline-flex items-center gap-1.5 rounded-full bg-slate-500/10 px-3 py-1 text-sm font-medium text-slate-700">
                   <Waves className="h-3.5 w-3.5" />
                   Pressure Wash
-                </span>
-                <span className="inline-flex items-center gap-1.5 rounded-full bg-sky-500/10 px-3 py-1 text-sm font-medium text-sky-700">
-                  <Droplet className="h-3.5 w-3.5" />
-                  Soft Wash
                 </span>
                 <span className="inline-flex items-center gap-1.5 rounded-full bg-amber-500/10 px-3 py-1 text-sm font-medium text-amber-700">
                   <Sun className="h-3.5 w-3.5" />
@@ -532,9 +508,8 @@ export default function HomePage() {
               </div>
             </div>
             <div className="relative pb-8">
-              {/* Grid de 9 servicios activos */}
+              {/* Grid de 3 servicios activos */}
               <div className="grid grid-cols-3 gap-2">
-                {/* Row 1 */}
                 <div className="relative aspect-square rounded-xl overflow-hidden bg-muted shadow-lg group">
                   <Image src="/images/hero-pest-control.jpg" alt="Pest Control" fill className="object-cover object-center group-hover:scale-105 transition-transform duration-300" priority />
                   <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-transparent to-transparent" />
@@ -546,74 +521,12 @@ export default function HomePage() {
                   </div>
                 </div>
                 <div className="relative aspect-square rounded-xl overflow-hidden bg-muted shadow-lg group">
-                  <Image src="/images/hero-landscaping.jpg" alt="Landscaping" fill className="object-cover object-center group-hover:scale-105 transition-transform duration-300" priority />
-                  <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-transparent to-transparent" />
-                  <div className="absolute bottom-2 left-2 right-2">
-                    <div className="flex items-center gap-1.5">
-                      <TreePine className="h-3 w-3 text-white" />
-                      <p className="text-white text-[10px] sm:text-xs font-medium">Landscaping</p>
-                    </div>
-                  </div>
-                </div>
-                <div className="relative aspect-square rounded-xl overflow-hidden bg-muted shadow-lg group">
-                  <Image src="/images/hero-cleaning.jpg" alt="Cleaning" fill className="object-cover object-center group-hover:scale-105 transition-transform duration-300" priority />
-                  <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-transparent to-transparent" />
-                  <div className="absolute bottom-2 left-2 right-2">
-                    <div className="flex items-center gap-1.5">
-                      <SprayCan className="h-3 w-3 text-white" />
-                      <p className="text-white text-[10px] sm:text-xs font-medium">Cleaning</p>
-                    </div>
-                  </div>
-                </div>
-                {/* Row 2 */}
-                <div className="relative aspect-square rounded-xl overflow-hidden bg-muted shadow-lg group">
-                  <Image src="/images/window-cleaning.png" alt="Window Cleaning" fill className="object-cover object-center group-hover:scale-105 transition-transform duration-300" priority />
-                  <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-transparent to-transparent" />
-                  <div className="absolute bottom-2 left-2 right-2">
-                    <div className="flex items-center gap-1.5">
-                      <Droplets className="h-3 w-3 text-white" />
-                      <p className="text-white text-[10px] sm:text-xs font-medium">Window Cleaning</p>
-                    </div>
-                  </div>
-                </div>
-                <div className="relative aspect-square rounded-xl overflow-hidden bg-muted shadow-lg group">
-                  <Image src="/images/hero-screen-cleaning.png" alt="Screen Cleaning" fill className="object-cover object-center group-hover:scale-105 transition-transform duration-300" priority />
-                  <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-transparent to-transparent" />
-                  <div className="absolute bottom-2 left-2 right-2">
-                    <div className="flex items-center gap-1.5">
-                      <Grid3X3 className="h-3 w-3 text-white" />
-                      <p className="text-white text-[10px] sm:text-xs font-medium">Screen Cleaning</p>
-                    </div>
-                  </div>
-                </div>
-                <div className="relative aspect-square rounded-xl overflow-hidden bg-muted shadow-lg group">
-                  <Image src="/images/hero-christmas-lights.png" alt="Christmas Lights" fill className="object-cover object-center group-hover:scale-105 transition-transform duration-300" priority />
-                  <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-transparent to-transparent" />
-                  <div className="absolute bottom-2 left-2 right-2">
-                    <div className="flex items-center gap-1.5">
-                      <Sparkles className="h-3 w-3 text-white" />
-                      <p className="text-white text-[10px] sm:text-xs font-medium">Christmas Lights</p>
-                    </div>
-                  </div>
-                </div>
-                {/* Row 3 */}
-                <div className="relative aspect-square rounded-xl overflow-hidden bg-muted shadow-lg group">
                   <Image src="/images/pressure-wash.png" alt="Pressure Wash" fill className="object-cover object-center group-hover:scale-105 transition-transform duration-300" priority />
                   <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-transparent to-transparent" />
                   <div className="absolute bottom-2 left-2 right-2">
                     <div className="flex items-center gap-1.5">
                       <Waves className="h-3 w-3 text-white" />
                       <p className="text-white text-[10px] sm:text-xs font-medium">Pressure Wash</p>
-                    </div>
-                  </div>
-                </div>
-                <div className="relative aspect-square rounded-xl overflow-hidden bg-muted shadow-lg group">
-                  <Image src="/images/hero-soft-wash.png" alt="Soft Wash" fill className="object-cover object-center group-hover:scale-105 transition-transform duration-300" priority />
-                  <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-transparent to-transparent" />
-                  <div className="absolute bottom-2 left-2 right-2">
-                    <div className="flex items-center gap-1.5">
-                      <Droplet className="h-3 w-3 text-white" />
-                      <p className="text-white text-[10px] sm:text-xs font-medium">Soft Wash</p>
                     </div>
                   </div>
                 </div>
@@ -646,7 +559,7 @@ export default function HomePage() {
               <p className="text-sm opacity-80 mt-1">{t.home.statsYears}</p>
             </div>
             <div className="text-center">
-              <p className="text-3xl md:text-4xl font-bold">9</p>
+              <p className="text-3xl md:text-4xl font-bold">3</p>
               <p className="text-sm opacity-80 mt-1">{t.home.statsServices}</p>
             </div>
             <div className="text-center">
@@ -707,7 +620,7 @@ export default function HomePage() {
                   </div>
                   <div>
                     <h3 className="font-semibold text-foreground">Nine active services</h3>
-                    <p className="text-muted-foreground text-sm">Pest control, landscaping, cleaning, window cleaning, screen cleaning, Christmas lights, pressure wash, soft wash and solar panel cleaning.</p>
+                    <p className="text-muted-foreground text-sm">Pest control, pressure wash and solar panel cleaning, with more services coming soon.</p>
                   </div>
                 </div>
                 <div className="flex items-start gap-4">
@@ -736,25 +649,7 @@ export default function HomePage() {
                   <Image src="/images/hero-pest-control.jpg" alt="Pest Control" fill className="object-cover object-center" />
                 </div>
                 <div className="relative aspect-square rounded-2xl overflow-hidden shadow-lg">
-                  <Image src="/images/hero-landscaping.jpg" alt="Landscaping" fill className="object-cover object-center" />
-                </div>
-                <div className="relative aspect-square rounded-2xl overflow-hidden shadow-lg">
-                  <Image src="/images/hero-cleaning.jpg" alt="Cleaning" fill className="object-cover object-center" />
-                </div>
-                <div className="relative aspect-square rounded-2xl overflow-hidden shadow-lg">
-                  <Image src="/images/window-cleaning.png" alt="Window Cleaning" fill className="object-cover object-center" />
-                </div>
-                <div className="relative aspect-square rounded-2xl overflow-hidden shadow-lg">
-                  <Image src="/images/hero-screen-cleaning.png" alt="Screen Cleaning" fill className="object-cover object-center" />
-                </div>
-                <div className="relative aspect-square rounded-2xl overflow-hidden shadow-lg">
-                  <Image src="/images/hero-christmas-lights.png" alt="Christmas Lights" fill className="object-cover object-center" />
-                </div>
-                <div className="relative aspect-square rounded-2xl overflow-hidden shadow-lg">
                   <Image src="/images/pressure-wash.png" alt="Pressure Wash" fill className="object-cover object-center" />
-                </div>
-                <div className="relative aspect-square rounded-2xl overflow-hidden shadow-lg">
-                  <Image src="/images/hero-soft-wash.png" alt="Soft Wash" fill className="object-cover object-center" />
                 </div>
                 <div className="relative aspect-square rounded-2xl overflow-hidden shadow-lg">
                   <Image src="/images/hero-solar-panel.png" alt="Solar Panel Cleaning" fill className="object-cover object-center" />
@@ -821,7 +716,7 @@ export default function HomePage() {
               What does your property need today?
             </h2>
             <p className="text-lg text-primary-foreground/80 mb-8 text-pretty">
-              Tell us if you need pest control, landscaping, cleaning, window cleaning, screen cleaning, Christmas lights, pressure wash, soft wash or solar panel cleaning. We guide you and coordinate a quote.
+              Tell us if you need pest control, pressure wash or solar panel cleaning. We guide you and coordinate a quote.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Button asChild size="lg" className="bg-accent text-accent-foreground hover:bg-accent/90 font-semibold">
