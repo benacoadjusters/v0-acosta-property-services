@@ -133,7 +133,7 @@ export default function HomePage() {
                 Más tiempo para ti, nosotros nos encargamos
               </h2>
               <p className="text-lg text-muted-foreground text-pretty">
-                Control de plagas, lavado a presión y limpieza de paneles solares. Lo que tu propiedad necesita, con un solo proveedor de confianza.
+                Control de plagas, lavado a presión y limpieza de paneles solares. Todo lo que tu propiedad necesita, respaldado por un equipo de confianza.
               </p>
             </div>
 
@@ -144,10 +144,10 @@ export default function HomePage() {
                     <div className="flex h-10 w-10 shrink-0 items-center justify-center rounded-full bg-primary/10">
                       <Users className="h-5 w-5 text-primary" />
                     </div>
-                    <h3 className="font-semibold text-foreground">Un solo equipo de confianza</h3>
+                    <h3 className="font-semibold text-foreground">Tu equipo de confianza</h3>
                   </div>
                   <p className="text-muted-foreground text-sm">
-                    Varios servicios, un solo contacto. Sin coordinar múltiples proveedores ni perseguir cotizaciones.
+                    Múltiples servicios, un contacto directo. Sin coordinar proveedores ni perseguir cotizaciones.
                   </p>
                 </CardContent>
               </Card>
@@ -299,7 +299,7 @@ export default function HomePage() {
                       <Phone className="h-5 w-5 text-primary" />
                     </div>
                     <div>
-                      <h3 className="font-semibold text-foreground">Un solo punto de contacto</h3>
+                      <h3 className="font-semibold text-foreground">Contacto directo, siempre</h3>
                       <p className="text-muted-foreground text-sm">
                         Evitas coordinar cada necesidad con un proveedor diferente.
                       </p>

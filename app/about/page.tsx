@@ -91,8 +91,8 @@ export default function AboutPage() {
               </h1>
               <p className="text-lg text-muted-foreground mb-6">
                 {language === "es" 
-                  ? "Acosta Property Services nació de la visión de ofrecer todos los servicios de mantenimiento bajo un solo equipo de confianza. Entendemos que tu propiedad requiere atención constante, por eso nos dedicamos a simplificar tu gestión de mantenimiento."
-                  : "Acosta Property Services was created to offer all maintenance services under one trusted team. We understand that your property requires constant attention, which is why we're dedicated to simplifying your maintenance management."}
+                  ? "En Acosta Property Services creemos que tu propiedad merece atención constante y resultados reales. Por eso reunimos todos los servicios de mantenimiento en un equipo comprometido, confiable y siempre disponible para ti."
+                  : "At Acosta Property Services we believe your property deserves consistent attention and real results. That's why we bring together all maintenance services into one committed, reliable team — always available for you."}
               </p>
               <p className="text-lg text-muted-foreground mb-8">
                 {language === "es" 
@@ -305,7 +305,7 @@ export default function AboutPage() {
                   <Users className="h-8 w-8 text-primary" />
                 </div>
                 <h3 className="font-bold text-foreground text-lg mb-2">
-                  {language === "es" ? "Un solo equipo" : "One team"}
+                  {language === "es" ? "Un equipo unido" : "One unified team"}
                 </h3>
                 <p className="text-muted-foreground text-sm">
                   {language === "es" 
