@@ -282,16 +282,16 @@ export default function HomePage() {
           </div>
         </section>
 
-        {/* Menos proveedores, más control */}
+        {/* Cuidado integral para tu propiedad */}
         <section className="py-16 md:py-24 bg-background">
           <div className="container mx-auto px-4">
             <div className="grid lg:grid-cols-2 gap-12 items-center">
               <div>
                 <h2 className="text-3xl md:text-4xl font-bold text-foreground mb-6 text-balance">
-                  Menos proveedores, más control sobre tu propiedad
+                  Cuidado integral para tu propiedad
                 </h2>
                 <p className="text-lg text-muted-foreground mb-8 text-pretty">
-                  Coordinas diferentes necesidades desde un mismo equipo, con orientación clara según el tipo de propiedad y el alcance del trabajo.
+                  Ofrecemos soluciones completas y personalizadas para mantener tu propiedad en perfecto estado, respaldadas por un equipo experto disponible para ti.
                 </p>
                 <div className="space-y-4">
                   <div className="flex items-start gap-4">
