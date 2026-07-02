@@ -87,12 +87,12 @@ export default function AboutPage() {
             <div>
               <span className="text-primary font-semibold text-sm uppercase tracking-wider">{t.about.title}</span>
               <h1 className="text-4xl md:text-5xl font-bold text-foreground mt-3 mb-6 text-balance">
-                {language === "es" ? "Nacimos para simplificar el cuidado de tu propiedad" : "We were born to simplify the care of your property"}
+                {language === "es" ? "Tu Propiedad en buenas manos." : "Your Property in Good Hands."}
               </h1>
               <p className="text-lg text-muted-foreground mb-6">
                 {language === "es" 
-                  ? "En 2022, Gabriel Acosta identificó un problema común: los propietarios perdían tiempo y energía coordinando múltiples proveedores para mantener sus propiedades. Así nació Acosta Property Services, con la visión de ofrecer todos los servicios de mantenimiento bajo un solo equipo de confianza."
-                  : "In 2022, Gabriel Acosta identified a common problem: property owners were losing time and energy coordinating multiple providers to maintain their properties. That's how Acosta Property Services was born, with the vision of offering all maintenance services under one trusted team."}
+                  ? "Acosta Property Services nació de la visión de ofrecer todos los servicios de mantenimiento bajo un solo equipo de confianza. Entendemos que tu propiedad requiere atención constante, por eso nos dedicamos a simplificar tu gestión de mantenimiento."
+                  : "Acosta Property Services was created to offer all maintenance services under one trusted team. We understand that your property requires constant attention, which is why we're dedicated to simplifying your maintenance management."}
               </p>
               <p className="text-lg text-muted-foreground mb-8">
                 {language === "es" 
