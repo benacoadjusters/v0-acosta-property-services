@@ -145,10 +145,6 @@ export default function AboutPage() {
               <div className="text-sm opacity-80">{t.home.statsYears}</div>
             </div>
             <div className="text-center">
-              <div className="text-3xl md:text-4xl font-bold mb-1">3</div>
-              <div className="text-sm opacity-80">{t.home.statsServices}</div>
-            </div>
-            <div className="text-center">
               <div className="text-3xl md:text-4xl font-bold mb-1">78</div>
               <div className="text-sm opacity-80">{t.home.statsMunicipios}</div>
             </div>
