@@ -132,26 +132,6 @@ export default function AboutPage() {
         </div>
       </section>
 
-      {/* Stats */}
-      <section className="py-12 bg-primary text-primary-foreground">
-        <div className="container mx-auto px-4">
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-6">
-            <div className="text-center">
-              <div className="text-3xl md:text-4xl font-bold mb-1">300+</div>
-              <div className="text-sm opacity-80">{t.home.statsClients}</div>
-            </div>
-            <div className="text-center">
-              <div className="text-3xl md:text-4xl font-bold mb-1">4</div>
-              <div className="text-sm opacity-80">{t.home.statsYears}</div>
-            </div>
-            <div className="text-center">
-              <div className="text-3xl md:text-4xl font-bold mb-1">78</div>
-              <div className="text-sm opacity-80">{t.home.statsMunicipios}</div>
-            </div>
-          </div>
-        </div>
-      </section>
-
       {/* Mission & Values */}
       <section className="py-16 md:py-20 bg-muted/30">
         <div className="container mx-auto px-4">
