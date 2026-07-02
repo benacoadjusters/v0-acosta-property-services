@@ -410,8 +410,8 @@ export default function FAQPage() {
   const faqCategories = language === "es" ? [
     { id: "general", title: "Preguntas generales", data: currentFaqs.general },
     { id: "pestControl", title: "Control de Plagas", data: currentFaqs.pestControl },
-    { id: "pressureWash", title: "Lavado a presión (Pressure Wash)", data: currentFaqs.pressureWash },
-    { id: "solarPanelCleaning", title: "Limpieza de paneles solares (Solar Panel Cleaning)", data: currentFaqs.solarPanelCleaning },
+    { id: "pressureWash", title: "Lavado a presión", data: currentFaqs.pressureWash },
+    { id: "solarPanelCleaning", title: "Limpieza de paneles solares", data: currentFaqs.solarPanelCleaning },
     { id: "comingSoon", title: "Servicios próximamente", data: currentFaqs.comingSoon },
   ] : [
     { id: "general", title: "General Questions", data: currentFaqs.general },

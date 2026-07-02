@@ -27,8 +27,8 @@ const serviceOptions = {
     { value: "pest-rodent", label: "Control de Plagas - Roedores", group: "plagas" },
     { value: "pest-mosquito", label: "Control de Plagas - Mosquitos", group: "plagas" },
     { value: "pest-bed-bug", label: "Control de Plagas - Chinches", group: "plagas" },
-    { value: "pressure-wash", label: "Lavado a presión (Pressure Wash)", group: "exterior" },
-    { value: "solar-panel-cleaning", label: "Limpieza de paneles solares (Solar Panel Cleaning)", group: "exterior" },
+    { value: "pressure-wash", label: "Lavado a presión", group: "exterior" },
+    { value: "solar-panel-cleaning", label: "Limpieza de paneles solares", group: "exterior" },
     // Otros
     { value: "commercial", label: "Servicios Comerciales", group: "otros" },
     { value: "inspection", label: "Inspección Gratis", group: "otros" },

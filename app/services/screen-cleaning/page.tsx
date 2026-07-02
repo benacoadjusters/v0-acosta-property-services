@@ -64,10 +64,10 @@ export default function ScreenCleaningPage() {
             <div>
               <div className="inline-flex items-center gap-2 rounded-full bg-slate-500/10 px-4 py-1.5 text-sm font-medium text-slate-700 mb-4">
                 <Grid3X3 className="h-4 w-4" />
-                {language === "es" ? "Limpieza de mallas (Screen Cleaning)" : "Screen Cleaning"}
+                {language === "es" ? "Limpieza de mallas" : "Screen Cleaning"}
               </div>
               <h1 className="text-4xl md:text-5xl font-bold text-foreground mb-6 text-balance">
-                {language === "es" ? "Limpieza de mallas para ventanas (Screen Cleaning)" : "Clean screens for better ventilation and view"}
+                {language === "es" ? "Limpieza de mallas para ventanas" : "Clean screens for better ventilation and view"}
               </h1>
               <p className="text-xl text-muted-foreground text-pretty mb-8">
                 {language === "es"

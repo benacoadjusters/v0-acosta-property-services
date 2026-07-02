@@ -64,10 +64,10 @@ export default function SoftWashPage() {
             <div>
               <div className="inline-flex items-center gap-2 rounded-full bg-teal-500/10 px-4 py-1.5 text-sm font-medium text-teal-700 mb-4">
                 <Droplet className="h-4 w-4" />
-                {language === "es" ? "Lavado suave (Soft Wash)" : "Soft Wash"}
+                {language === "es" ? "Lavado suave" : "Soft Wash"}
               </div>
               <h1 className="text-4xl md:text-5xl font-bold text-foreground mb-6 text-balance">
-                {language === "es" ? "Lavado suave (Soft Wash)" : "Gentle washing for delicate surfaces"}
+                {language === "es" ? "Lavado suave" : "Gentle washing for delicate surfaces"}
               </h1>
               <p className="text-xl text-muted-foreground text-pretty mb-8">
                 {language === "es"

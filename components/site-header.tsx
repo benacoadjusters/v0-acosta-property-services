@@ -38,7 +38,7 @@ export function SiteHeader() {
       icon: Lightning, 
       color: "text-slate-700", 
       bgColor: "bg-slate-500/10",
-      nameEs: "Lavado a presión (Pressure Wash)", 
+      nameEs: "Lavado a presión", 
       nameEn: "Pressure Wash",
       descEs: "Lavado a presión",
       descEn: "Pressure washing"
@@ -48,7 +48,7 @@ export function SiteHeader() {
       icon: Sun, 
       color: "text-amber-600", 
       bgColor: "bg-amber-500/10",
-      nameEs: "Paneles solares (Solar Panel Cleaning)", 
+      nameEs: "Limpieza de paneles solares", 
       nameEn: "Solar Panel Cleaning",
       descEs: "Limpieza de paneles",
       descEn: "Panel cleaning"

@@ -65,10 +65,10 @@ export default function WindowCleaningPage() {
             <div>
               <div className="inline-flex items-center gap-2 rounded-full bg-cyan-500/10 px-4 py-1.5 text-sm font-medium text-cyan-700 mb-4">
                 <Droplets className="h-4 w-4" />
-                {language === "es" ? "Limpieza de ventanas (Window Cleaning)" : "Window Cleaning"}
+                {language === "es" ? "Limpieza de ventanas" : "Window Cleaning"}
               </div>
               <h1 className="text-4xl md:text-5xl font-bold text-foreground mb-6 text-balance">
-                {language === "es" ? "Limpieza de ventanas y cristales (Window Cleaning)" : "Crystal clear windows that transform your space"}
+                {language === "es" ? "Limpieza de ventanas y cristales" : "Crystal clear windows that transform your space"}
               </h1>
               <p className="text-xl text-muted-foreground text-pretty mb-8">
                 {language === "es"
