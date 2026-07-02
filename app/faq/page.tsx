@@ -435,8 +435,8 @@ export default function FAQPage() {
             </h1>
             <p className="text-xl text-muted-foreground text-pretty">
               {language === "es" 
-                ? "Respuestas claras sobre nuestros 9 servicios activos, cobertura y cotizaciones en Puerto Rico."
-                : "Clear answers about our 9 active services, coverage and quotes in Puerto Rico."}
+                ? "Respuestas claras sobre nuestros 3 servicios activos, cobertura y cotizaciones en Puerto Rico."
+                : "Clear answers about our 3 active services, coverage and quotes in Puerto Rico."}
             </p>
           </div>
         </div>
