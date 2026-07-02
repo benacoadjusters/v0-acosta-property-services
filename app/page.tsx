@@ -82,19 +82,6 @@ export default function HomePage() {
             <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-white mb-8 text-center text-balance drop-shadow-lg px-4">
               Cuidamos cada detalle por ti
             </h1>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <Button asChild size="lg" className="bg-accent hover:bg-accent/90 text-accent-foreground font-semibold text-lg px-8">
-                <Link href="/contact">
-                  Cotización Gratis
-                  <ArrowRight className="ml-2 h-5 w-5" />
-                </Link>
-              </Button>
-              <Button asChild size="lg" variant="outline" className="bg-white/10 backdrop-blur-sm border-white/30 text-white hover:bg-white/20 text-lg px-8">
-                <Link href="/services">
-                  Ver Servicios
-                </Link>
-              </Button>
-            </div>
           </div>
           
           {/* Carousel indicators */}
