@@ -24,25 +24,40 @@ export default function ServicesPage() {
       {/* Hero */}
       <section className="bg-secondary py-16 md:py-20">
         <div className="container mx-auto px-4">
-          <div className="max-w-3xl">
-            <span className="text-primary font-semibold text-sm uppercase tracking-wider">{language === "es" ? "Control de Plagas" : "Pest Control"}</span>
-            <h1 className="text-4xl md:text-5xl font-bold text-foreground mt-3 mb-6 text-balance">
-              {language === "es" ? "Protege tu propiedad antes de que la plaga avance" : "Protect your property before pests spread"}
-            </h1>
-            <p className="text-xl text-muted-foreground text-pretty mb-6">
-              {language === "es"
-                ? "Fumigación, trampeo y control preventivo para hogares, negocios y propiedades comerciales en Puerto Rico."
-                : "Fumigation, trapping and preventive control for homes, businesses and commercial properties in Puerto Rico."}
-            </p>
-            <div className="flex flex-wrap gap-3">
-              <span className="inline-flex items-center gap-2 bg-primary/10 border border-primary/20 text-primary px-4 py-2 rounded-full text-sm font-medium">
-                <CheckCircle2 className="h-4 w-4" />
-                {language === "es" ? "Categoría 8-A: Control de Plagas en Estructuras" : "Category 8-A: Structural Pest Control"}
-              </span>
-              <span className="inline-flex items-center gap-2 bg-primary/10 border border-primary/20 text-primary px-4 py-2 rounded-full text-sm font-medium">
-                <CheckCircle2 className="h-4 w-4" />
-                {language === "es" ? "Categoría 4: Control de Plagas en Césped y Ornamentales" : "Category 4: Lawn & Ornamental Pest Control"}
-              </span>
+          <div className="grid lg:grid-cols-2 gap-10 items-center">
+            <div>
+              <span className="text-primary font-semibold text-sm uppercase tracking-wider">{language === "es" ? "Control de Plagas" : "Pest Control"}</span>
+              <h1 className="text-4xl md:text-5xl font-bold text-foreground mt-3 mb-6 text-balance">
+                {language === "es" ? "Protege tu propiedad antes de que la plaga avance" : "Protect your property before pests spread"}
+              </h1>
+              <p className="text-xl text-muted-foreground text-pretty mb-6">
+                {language === "es"
+                  ? "Eliminamos plagas en tu hogar o negocio de forma segura, rápida y sin complicaciones. Tú no tienes que saber nada de plagas, para eso estamos nosotros."
+                  : "We eliminate pests from your home or business safely, quickly and hassle-free. You don't need to know anything about pests — that's what we're here for."}
+              </p>
+              <div className="flex flex-wrap gap-3">
+                <span className="inline-flex items-center gap-2 bg-primary/10 border border-primary/20 text-primary px-4 py-2 rounded-full text-sm font-medium">
+                  <CheckCircle2 className="h-4 w-4" />
+                  {language === "es" ? "Tratamiento interior y exterior" : "Indoor & outdoor treatment"}
+                </span>
+                <span className="inline-flex items-center gap-2 bg-primary/10 border border-primary/20 text-primary px-4 py-2 rounded-full text-sm font-medium">
+                  <CheckCircle2 className="h-4 w-4" />
+                  {language === "es" ? "Jardines y áreas verdes incluidas" : "Lawns & green areas included"}
+                </span>
+                <span className="inline-flex items-center gap-2 bg-primary/10 border border-primary/20 text-primary px-4 py-2 rounded-full text-sm font-medium">
+                  <CheckCircle2 className="h-4 w-4" />
+                  {language === "es" ? "Licencia profesional certificada" : "Certified professional license"}
+                </span>
+              </div>
+            </div>
+            <div className="relative rounded-2xl overflow-hidden shadow-xl aspect-[4/3]">
+              <Image
+                src="/images/pest-control-hero.png"
+                alt={language === "es" ? "Técnico de control de plagas trabajando en una propiedad" : "Pest control technician working on a property"}
+                fill
+                className="object-cover object-center"
+                priority
+              />
             </div>
           </div>
         </div>
