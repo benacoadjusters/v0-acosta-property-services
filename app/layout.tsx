@@ -34,6 +34,9 @@ export const metadata: Metadata = {
     "plagas comercial"
   ],
   authors: [{ name: company.name }],
+  icons: {
+    icon: '/favicon.png',
+  },
   openGraph: {
     type: "website",
     locale: "es_PR",
