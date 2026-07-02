@@ -80,7 +80,7 @@ export default function HomePage() {
           {/* CTA Buttons Overlay */}
           <div className="absolute inset-0 flex flex-col items-center justify-center">
             <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-white mb-8 text-center text-balance drop-shadow-lg px-4">
-              Cuidamos cada detalle por ti
+              Excelencia en cuidado de propiedades
             </h1>
           </div>
           
