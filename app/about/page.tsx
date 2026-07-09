@@ -113,19 +113,37 @@ export default function AboutPage() {
               </div>
             </div>
             
-            {/* Company image */}
-            <div className="relative aspect-square md:aspect-[3/4] rounded-2xl overflow-hidden shadow-2xl">
-              <Image
-                src="/images/team/gabriel.png"
-                alt={language === "es" ? "Equipo Acosta Property Services" : "Acosta Property Services Team"}
-                fill
-                className="object-cover object-top"
-                priority
-              />
-              <div className="absolute inset-0 bg-gradient-to-t from-black/40 via-transparent to-transparent" />
-              <div className="absolute bottom-4 left-4 right-4">
-                <p className="text-white font-semibold text-lg">Gabriel Acosta</p>
-                <p className="text-white/80 text-sm">{language === "es" ? "Fundador y Presidente" : "Founder & President"}</p>
+            {/* Hero image: team + gabriel portrait stacked */}
+            <div className="flex flex-col gap-4 items-center">
+              {/* Team photo */}
+              <div className="relative w-full aspect-[4/3] rounded-2xl overflow-hidden shadow-2xl">
+                <Image
+                  src="/images/team/gabriel-team.png"
+                  alt={language === "es" ? "Gabriel Acosta y su equipo" : "Gabriel Acosta and his team"}
+                  fill
+                  className="object-cover object-center"
+                  priority
+                />
+                <div className="absolute inset-0 bg-gradient-to-t from-black/40 via-transparent to-transparent" />
+                <div className="absolute bottom-4 left-4 right-4">
+                  <p className="text-white font-semibold text-base">{language === "es" ? "Nuestro equipo" : "Our team"}</p>
+                </div>
+              </div>
+
+              {/* Gabriel portrait - smaller */}
+              <div className="flex items-center gap-4 bg-white/70 backdrop-blur-sm border border-border rounded-2xl px-5 py-4 shadow w-full">
+                <div className="relative w-16 h-16 rounded-full overflow-hidden shrink-0 shadow">
+                  <Image
+                    src="/images/team/gabriel.png"
+                    alt="Gabriel Acosta"
+                    fill
+                    className="object-cover object-top"
+                  />
+                </div>
+                <div>
+                  <p className="font-bold text-foreground text-base">Gabriel Acosta</p>
+                  <p className="text-primary text-sm font-medium">{language === "es" ? "Presidente" : "President"}</p>
+                </div>
               </div>
             </div>
           </div>
