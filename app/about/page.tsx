@@ -223,26 +223,7 @@ export default function AboutPage() {
             </p>
           </div>
           
-          {/* Gabriel - Leader, centered and larger */}
-          <div className="flex justify-center mb-8">
-            <Card className="overflow-hidden hover:shadow-lg transition-shadow max-w-md w-full">
-              <div className="relative aspect-[4/3] bg-muted">
-                <Image
-                  src={teamLeader.image}
-                  alt={teamLeader.name}
-                  fill
-                  className="object-cover object-top"
-                />
-              </div>
-              <CardContent className="p-6">
-                <h3 className="text-2xl font-bold text-foreground mb-1">{teamLeader.name}</h3>
-                <p className="text-primary font-medium text-sm mb-3">{teamLeader.role}</p>
-                <p className="text-muted-foreground text-sm">{teamLeader.description}</p>
-              </CardContent>
-            </Card>
-          </div>
-
-          {/* Shari, Luis, Rode - Middle row */}
+          {/* Shari, Luis, Rode - Top row */}
           <div className="grid md:grid-cols-3 gap-6 mb-8">
             {teamMiddle.map((member, index) => (
               <Card key={index} className="overflow-hidden hover:shadow-lg transition-shadow">
