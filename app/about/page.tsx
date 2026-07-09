@@ -113,38 +113,15 @@ export default function AboutPage() {
               </div>
             </div>
             
-            {/* Hero image: team + gabriel portrait stacked */}
-            <div className="flex flex-col gap-4 items-center">
-              {/* Team photo */}
-              <div className="relative w-full aspect-[4/3] rounded-2xl overflow-hidden shadow-2xl">
-                <Image
-                  src="/images/team/gabriel-team.png"
-                  alt={language === "es" ? "Gabriel Acosta y su equipo" : "Gabriel Acosta and his team"}
-                  fill
-                  className="object-cover object-center"
-                  priority
-                />
-                <div className="absolute inset-0 bg-gradient-to-t from-black/40 via-transparent to-transparent" />
-                <div className="absolute bottom-4 left-4 right-4">
-                  <p className="text-white font-semibold text-base">{language === "es" ? "Nuestro equipo" : "Our team"}</p>
-                </div>
-              </div>
-
-              {/* Gabriel portrait - smaller */}
-              <div className="flex items-center gap-4 bg-white/70 backdrop-blur-sm border border-border rounded-2xl px-5 py-4 shadow w-full">
-                <div className="relative w-16 h-16 rounded-full overflow-hidden shrink-0 shadow">
-                  <Image
-                    src="/images/team/gabriel.png"
-                    alt="Gabriel Acosta"
-                    fill
-                    className="object-cover object-top"
-                  />
-                </div>
-                <div>
-                  <p className="font-bold text-foreground text-base">Gabriel Acosta</p>
-                  <p className="text-primary text-sm font-medium">{language === "es" ? "Presidente" : "President"}</p>
-                </div>
-              </div>
+            {/* Property image */}
+            <div className="relative aspect-[4/3] rounded-2xl overflow-hidden shadow-2xl">
+              <Image
+                src="/images/about-hero.png"
+                alt={language === "es" ? "Propiedad bien mantenida por Acosta Property Services" : "Well-maintained property by Acosta Property Services"}
+                fill
+                className="object-cover object-center"
+                priority
+              />
             </div>
           </div>
         </div>
@@ -241,6 +218,25 @@ export default function AboutPage() {
             </p>
           </div>
           
+          {/* Gabriel - centered, slightly smaller */}
+          <div className="flex justify-center mb-8">
+            <Card className="overflow-hidden hover:shadow-lg transition-shadow w-full max-w-xs">
+              <div className="relative aspect-square bg-muted">
+                <Image
+                  src={teamLeader.image}
+                  alt={teamLeader.name}
+                  fill
+                  className="object-cover object-top"
+                />
+              </div>
+              <CardContent className="p-5">
+                <h3 className="text-lg font-bold text-foreground mb-1">{teamLeader.name}</h3>
+                <p className="text-primary font-medium text-sm mb-2">{language === "es" ? "Presidente" : "President"}</p>
+                <p className="text-muted-foreground text-sm">{teamLeader.description}</p>
+              </CardContent>
+            </Card>
+          </div>
+
           {/* Shari, Luis, Rode - Top row */}
           <div className="grid md:grid-cols-3 gap-6 mb-8">
             {teamMiddle.map((member, index) => (
