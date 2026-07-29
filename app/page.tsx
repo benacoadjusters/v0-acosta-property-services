@@ -65,7 +65,7 @@ export default function HomePage() {
     return (
       <>
         {/* Hero Section - Spanish with Carousel - Full width images with CTA overlay */}
-        <section className="relative h-[70vh] md:h-[80vh] overflow-hidden">
+        <section className="relative h-[85vh] md:h-[95vh] overflow-hidden">
           {/* Carousel Images */}
           {heroImages.map((image, index) => (
             <div
