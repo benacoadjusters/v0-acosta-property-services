@@ -14,7 +14,8 @@ const heroImages = [
   {
     src: "/images/hero/lavado-hero-2.png",
     alt: "Técnico de Acosta Property Services realizando lavado a presión en entrada de hogar",
-    position: "bottom"
+    position: "center center",
+    fit: "contain" as const
   },
   {
     src: "/images/hero/solar-hero-2.png",
@@ -84,7 +85,7 @@ export default function HomePage() {
                 src={image.src}
                 alt={image.alt}
                 fill
-                className="object-cover"
+                className={image.fit === "contain" ? "object-contain" : "object-cover"}
                 style={{ objectPosition: image.position }}
                 priority={index === 0}
               />
