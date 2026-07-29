@@ -13,27 +13,33 @@ import { useLanguage } from "@/lib/language-context"
 const heroImages = [
   {
     src: "/images/hero/lavado-hero-2.png",
-    alt: "Técnico de Acosta Property Services realizando lavado a presión en entrada de hogar"
+    alt: "Técnico de Acosta Property Services realizando lavado a presión en entrada de hogar",
+    position: "center 70%"
   },
   {
     src: "/images/hero/solar-hero-2.png",
-    alt: "Técnico de Acosta Property Services limpiando paneles solares en techo"
+    alt: "Técnico de Acosta Property Services limpiando paneles solares en techo",
+    position: "center center"
   },
   {
     src: "/images/hero/pest-hero-2.png",
-    alt: "Técnico de Acosta Property Services aplicando tratamiento profesional de plagas en cocina"
+    alt: "Técnico de Acosta Property Services aplicando tratamiento profesional de plagas en cocina",
+    position: "center center"
   },
   {
     src: "/images/hero/lavado-hero-1.png",
-    alt: "Técnico de Acosta Property Services realizando lavado a presión en pared exterior"
+    alt: "Técnico de Acosta Property Services realizando lavado a presión en pared exterior",
+    position: "center center"
   },
   {
     src: "/images/hero/solar-hero-1.png",
-    alt: "Técnico limpiando paneles solares en tejado residencial"
+    alt: "Técnico limpiando paneles solares en tejado residencial",
+    position: "center center"
   },
   {
     src: "/images/hero/pest-hero-1.png",
-    alt: "Técnico aplicando tratamiento profesional de control de plagas en instalación industrial"
+    alt: "Técnico aplicando tratamiento profesional de control de plagas en instalación industrial",
+    position: "center center"
   }
 ]
 
@@ -79,6 +85,7 @@ export default function HomePage() {
                 alt={image.alt}
                 fill
                 className="object-cover"
+                style={{ objectPosition: image.position }}
                 priority={index === 0}
               />
               <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-black/20 to-transparent" />
