@@ -2,13 +2,15 @@
 
 import Link from "next/link"
 import Image from "next/image"
-import { ArrowRight, Bug, TreePine, HardHat, SprayCan, Droplets, CheckCircle2, Clock, Phone, Wrench, Zap, Layers, Shield, Grid3X3, Sparkles, Waves, Droplet, Sun } from "lucide-react"
+import { ArrowRight, Bug, TreePine, HardHat, SprayCan, Droplets, CheckCircle2, Clock, Phone, Wrench, Zap, Layers, Shield, Grid3X3, Sparkles, Waves, Droplet, Sun, ChevronDown } from "lucide-react"
+import { useState } from "react"
 import { Button } from "@/components/ui/button"
 import { useLanguage } from "@/lib/language-context"
 import { company } from "@/content/company"
 
 export default function ServicesIndexPage() {
   const { language, t } = useLanguage()
+  const [accordionOpen, setAccordionOpen] = useState(false)
 
   const activeServices = [
     {
@@ -582,63 +584,6 @@ export default function ServicesIndexPage() {
         </div>
       </section>
 
-      {/* Coming Soon Services */}
-      <section className="py-16 md:py-24 bg-muted/30">
-        <div className="container mx-auto px-4">
-          <div className="text-center mb-12">
-            <span className="inline-flex items-center gap-2 rounded-full bg-muted px-4 py-2 text-sm font-medium text-muted-foreground mb-4">
-              <Clock className="h-4 w-4" />
-              {language === "es" ? "Próximamente" : "Coming Soon"}
-            </span>
-            <h2 className="text-3xl md:text-4xl font-bold text-foreground">
-              {language === "es" ? "Servicios en Desarrollo" : "Services in Development"}
-            </h2>
-          </div>
-
-          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {comingSoonServices.map((service) => {
-              const Icon = service.icon
-              const name = language === "es" ? service.nameEs : service.nameEn
-              const description = language === "es" ? service.descriptionEs : service.descriptionEn
-              const features = language === "es" ? service.featuresEs : service.featuresEn
-
-              return (
-                <Link 
-                  key={service.id}
-                  href={service.href}
-                  className="bg-card border rounded-2xl p-6 shadow-sm hover:shadow-md transition-shadow"
-                >
-                  <div className="flex items-start gap-4 mb-4">
-                    <div className={`flex h-12 w-12 items-center justify-center rounded-full ${service.bgColor} shrink-0`}>
-                      <Icon className={`h-6 w-6 ${service.textColor}`} />
-                    </div>
-                    <div>
-                      <span className={`inline-flex items-center gap-1.5 rounded-full ${service.badgeColor} px-2.5 py-0.5 text-xs font-medium text-white mb-2`}>
-                        {language === "es" ? "Próximamente" : "Coming Soon"}
-                      </span>
-                      <h3 className="text-xl font-bold text-foreground">
-                        {name}
-                      </h3>
-                    </div>
-                  </div>
-                  <p className="text-muted-foreground mb-4 text-pretty">
-                    {description}
-                  </p>
-                  <div className="space-y-2">
-                    {features.map((feature, i) => (
-                      <div key={i} className="flex items-center gap-2">
-                        <CheckCircle2 className={`h-4 w-4 shrink-0 ${service.textColor}`} />
-                        <span className="text-sm text-muted-foreground">{feature}</span>
-                      </div>
-                    ))}
-                  </div>
-                </Link>
-              )
-            })}
-          </div>
-        </div>
-      </section>
-
       {/* CTA */}
       <section className="py-16 md:py-24 bg-primary text-primary-foreground">
         <div className="container mx-auto px-4">
@@ -666,6 +611,73 @@ export default function ServicesIndexPage() {
                   {company.phone}
                 </a>
               </Button>
+            </div>
+          </div>
+        </div>
+      </section>
+      {/* Coming Soon Accordion */}
+      <section className="py-10 bg-muted/20 border-t border-border/50">
+        <div className="container mx-auto px-4 max-w-5xl">
+          <button
+            type="button"
+            aria-expanded={accordionOpen}
+            aria-controls="coming-soon-panel"
+            onClick={() => setAccordionOpen(prev => !prev)}
+            className="w-full flex items-center justify-between gap-4 text-left rounded-xl border border-border/60 bg-card px-6 py-4 shadow-sm focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary transition-colors hover:bg-muted/40"
+            style={{ ['--reduce-motion' as string]: 'none' }}
+          >
+            <div className="flex items-center gap-3">
+              <Clock className="h-5 w-5 text-muted-foreground shrink-0" />
+              <div>
+                <p className="font-semibold text-foreground text-base">
+                  {language === "es" ? "Servicios que estamos preparando" : "Services we are preparing"}
+                </p>
+                <p className="text-sm text-muted-foreground mt-0.5">
+                  {language === "es"
+                    ? "Conoce los próximos servicios de Acosta Property Services."
+                    : "Discover the upcoming services from Acosta Property Services."}
+                </p>
+              </div>
+            </div>
+            <ChevronDown
+              className="h-5 w-5 text-muted-foreground shrink-0 transition-transform duration-200 motion-reduce:transition-none"
+              style={{ transform: accordionOpen ? 'rotate(180deg)' : 'rotate(0deg)' }}
+              aria-hidden="true"
+            />
+          </button>
+
+          <div
+            id="coming-soon-panel"
+            role="region"
+            aria-labelledby="coming-soon-trigger"
+            hidden={!accordionOpen}
+            className="mt-4"
+          >
+            <div className="grid md:grid-cols-2 gap-3">
+              {comingSoonServices.map((service) => {
+                const Icon = service.icon
+                const name = language === "es" ? service.nameEs : service.nameEn
+                const description = language === "es" ? service.descriptionEs : service.descriptionEn
+                return (
+                  <div
+                    key={service.id}
+                    className="flex items-start gap-3 rounded-lg border border-border/50 bg-background px-4 py-3"
+                  >
+                    <div className={`flex h-9 w-9 items-center justify-center rounded-full ${service.bgColor} shrink-0 mt-0.5`}>
+                      <Icon className={`h-4 w-4 ${service.textColor}`} />
+                    </div>
+                    <div className="min-w-0">
+                      <div className="flex items-center gap-2 flex-wrap">
+                        <span className="font-medium text-sm text-foreground">{name}</span>
+                        <span className="inline-flex items-center rounded-full bg-muted px-2 py-0.5 text-xs font-medium text-muted-foreground">
+                          {language === "es" ? "Próximamente" : "Coming Soon"}
+                        </span>
+                      </div>
+                      <p className="text-xs text-muted-foreground mt-0.5 text-pretty leading-relaxed">{description}</p>
+                    </div>
+                  </div>
+                )
+              })}
             </div>
           </div>
         </div>
