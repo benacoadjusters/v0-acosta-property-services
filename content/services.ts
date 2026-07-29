@@ -8,7 +8,7 @@ export const services = {
       nameEn: "Professional treatment",
       shortDescEs: "Tratamiento profesional para el control de plagas mediante productos registrados en la EPA.",
       shortDescEn: "Professional pest control treatment using EPA-registered products.",
-      descriptionEs: "Nuestro servicio utiliza productos de última generación registrados en la EPA. Antes de cada tratamiento, proporcionamos instrucciones detalladas de preparación y precaución para garantizar la protección adecuada de tu familia y mascotas. Aplicamos tratamientos interiores y exteriores para el control y reducción de la población de plagas mediante tratamientos seleccionados según la inspección, el tipo de plaga y las condiciones de la propiedad.",
+      descriptionEs: "Nuestro servicio utiliza productos registrados en la EPA. Antes de cada tratamiento, proporcionamos instrucciones de preparación y precaución. Aplicamos tratamientos interiores o exteriores, cuando correspondan, siguiendo las instrucciones del producto y las condiciones identificadas durante la evaluación.",
       descriptionEn: "Our service uses state-of-the-art EPA-registered products. Before each treatment, we provide detailed preparation and precautionary instructions to ensure proper protection for your family and pets. We apply indoor and outdoor treatments for the control and reduction of pest populations through treatments selected based on the inspection, pest type, and property conditions.",
       icon: "spray",
       image: "/images/pest-control/fumigation.jpg",
@@ -31,7 +31,7 @@ export const services = {
     },
     {
       id: "traps",
-      nameEs: "Exterminación por Trampas",
+      nameEs: "Exterminación por trampas",
       nameEn: "Trap Extermination",
       shortDescEs: "Sistema de trampas profesionales para roedores y plagas específicas.",
       shortDescEn: "Professional trap systems for rodents and specific pests.",
@@ -62,7 +62,7 @@ export const services = {
       nameEn: "Biological Control",
       shortDescEs: "Estrategia sostenible usando enemigos naturales de las plagas.",
       shortDescEn: "Sustainable strategy using natural pest enemies.",
-      descriptionEs: "El control biológico es una estrategia sostenible y eficiente que utiliza enemigos naturales como depredadores, parasitoides y microorganismos para combatir plagas, reduciendo la dependencia de productos químicos. Ideal para jardines, invernaderos, césped y áreas verdes donde se busca mantener la calidad estética sin dañar el medio ambiente. Utilizamos agentes como mariquitas, crisopas, avispas parasitoides, ácaros depredadores, nematodos entomopatógenos y bacterias como Bacillus thuringiensis según el tipo de plaga.",
+      descriptionEs: "El control biológico es una estrategia sostenible que utiliza enemigos naturales como depredadores y microorganismos para reducir la presencia de plagas, disminuyendo la dependencia de productos químicos. Ideal para jardines, cesped y áreas verdes donde se busca mantener la calidad del entorno. Su aplicación se define según la plaga identificada, las condiciones del área y la disponibilidad de los agentes apropiados.",
       descriptionEn: "Biological control is a sustainable and efficient strategy that uses natural enemies such as predators, parasitoids and microorganisms to combat pests, reducing dependence on chemicals. Ideal for gardens, greenhouses, lawns and green areas where aesthetic quality is sought without harming the environment. We use agents such as ladybugs, lacewings, parasitoid wasps, predatory mites, entomopathogenic nematodes and bacteria like Bacillus thuringiensis depending on the pest type.",
       icon: "leaf",
       image: "/images/pest-control/biological.jpg",
@@ -70,7 +70,7 @@ export const services = {
         es: [
           "Ecológico y sostenible",
           "Sin residuos químicos",
-          "Seguro para plantas y animales",
+          "Menor impacto en el entorno",
           "Control a largo plazo",
           "Ideal para césped y ornamentales"
         ],
@@ -295,21 +295,21 @@ export const services = {
       id: "residential",
       nameEs: "Residencial",
       nameEn: "Residential",
-      descriptionEs: "Protección completa para tu hogar y familia contra todo tipo de plagas.",
-      descriptionEn: "Complete protection for your home and family against all types of pests.",
+      descriptionEs: "Programas de control para plagas comunes en hogares y propiedades de Puerto Rico.",
+      descriptionEn: "Pest management programs for common pests in homes and properties in Puerto Rico.",
       icon: "home",
       features: {
         es: [
-          "Inspección gratuita del hogar",
-          "Tratamiento interior y exterior",
-          "Productos seguros para familias",
+          "Inspección inicial de la propiedad",
+          "Tratamiento interior o exterior según corresponda",
+          "Productos aplicados conforme a su etiqueta e instrucciones de seguridad",
           "Programas de mantenimiento",
           "Garantía condicionada"
         ],
         en: [
-          "Free home inspection",
-          "Interior and exterior treatment",
-          "Family-safe products",
+          "Initial property inspection",
+          "Interior or exterior treatment as applicable",
+          "Products applied per label and safety instructions",
           "Maintenance programs",
           "Conditional guarantee"
         ]
@@ -324,7 +324,7 @@ export const services = {
       icon: "building",
       features: {
         es: [
-          "Cumplimiento HACCP y sanitario",
+          "Programas de servicio y documentación según el alcance contratado",
           "Documentación para inspecciones",
           "Servicio discreto y flexible",
           "Contratos de mantenimiento",
