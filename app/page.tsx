@@ -53,7 +53,7 @@ export default function HomePage() {
 
   // Autoplay carousel
   useEffect(() => {
-    if (reducedMotion || language === "en") return
+    if (reducedMotion) return
     const interval = setInterval(() => {
       setCurrentSlide((prev) => (prev + 1) % heroImages.length)
     }, 5500)
@@ -457,87 +457,47 @@ export default function HomePage() {
   // English version - Original design (unchanged)
   return (
     <>
-      {/* Hero Section - English */}
-      <section className="relative bg-gradient-to-br from-primary/5 via-background to-secondary/30">
-        <div className="container mx-auto px-4 py-16 md:py-24 lg:py-32">
-          <div className="grid lg:grid-cols-2 gap-12 items-center">
-            <div className="space-y-6">
-              <div className="inline-flex items-center gap-2 rounded-full bg-primary/10 px-4 py-1.5 text-sm font-medium text-primary">
-                <Shield className="h-4 w-4" />
-                Trusted by over 300 clients in Puerto Rico
-              </div>
-              <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-foreground leading-tight text-balance">
-                Your property clean, protected and ready to impress
-              </h1>
-              <p className="text-lg text-muted-foreground max-w-lg text-pretty">
-                Pest control, pressure wash and solar panel cleaning for homes, businesses and commercial properties in Puerto Rico.
-              </p>
-              {/* Service badges */}
-              <div className="flex flex-wrap gap-2">
-                <span className="inline-flex items-center gap-1.5 rounded-full bg-primary/10 px-3 py-1 text-sm font-medium text-primary">
-                  <Bug className="h-3.5 w-3.5" />
-                  Pest Control
-                </span>
-                <span className="inline-flex items-center gap-1.5 rounded-full bg-slate-500/10 px-3 py-1 text-sm font-medium text-slate-700">
-                  <Waves className="h-3.5 w-3.5" />
-                  Pressure Wash
-                </span>
-                <span className="inline-flex items-center gap-1.5 rounded-full bg-amber-500/10 px-3 py-1 text-sm font-medium text-amber-700">
-                  <Sun className="h-3.5 w-3.5" />
-                  Solar Panel Cleaning
-                </span>
-              </div>
-              <div className="flex flex-col sm:flex-row gap-4">
-                <Button asChild size="lg" className="bg-accent hover:bg-accent/90 text-accent-foreground font-semibold">
-                  <Link href="/contact">
-                    {t.ui.getQuote}
-                    <ArrowRight className="ml-2 h-5 w-5" />
-                  </Link>
-                </Button>
-                <Button asChild size="lg" variant="outline">
-                  <a href={`tel:${company.phoneClean}`}>
-                    <Phone className="mr-2 h-5 w-5" />
-                    {t.ui.callNow}
-                  </a>
-                </Button>
-              </div>
-            </div>
-            <div className="relative pb-8">
-              {/* Grid de 3 servicios activos */}
-              <div className="grid grid-cols-3 gap-2">
-                <div className="relative aspect-square rounded-xl overflow-hidden bg-muted shadow-lg group">
-                  <Image src="/images/hero/pest-hero-1.png" alt="Pest Control" fill className="object-cover object-center group-hover:scale-105 transition-transform duration-300" priority />
-                  <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-transparent to-transparent" />
-                  <div className="absolute bottom-2 left-2 right-2">
-                    <div className="flex items-center gap-1.5">
-                      <Bug className="h-3 w-3 text-white" />
-                      <p className="text-white text-[10px] sm:text-xs font-medium">Pest Control</p>
-                    </div>
-                  </div>
-                </div>
-                <div className="relative aspect-square rounded-xl overflow-hidden bg-muted shadow-lg group">
-                  <Image src="/images/hero/lavado-hero-1.png" alt="Pressure Wash" fill className="object-cover object-center group-hover:scale-105 transition-transform duration-300" priority />
-                  <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-transparent to-transparent" />
-                  <div className="absolute bottom-2 left-2 right-2">
-                    <div className="flex items-center gap-1.5">
-                      <Waves className="h-3 w-3 text-white" />
-                      <p className="text-white text-[10px] sm:text-xs font-medium">Pressure Wash</p>
-                    </div>
-                  </div>
-                </div>
-                <div className="relative aspect-square rounded-xl overflow-hidden bg-muted shadow-lg group">
-                  <Image src="/images/hero/solar-hero-1.png" alt="Solar Panel Cleaning" fill className="object-cover object-center group-hover:scale-105 transition-transform duration-300" priority />
-                  <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-transparent to-transparent" />
-                  <div className="absolute bottom-2 left-2 right-2">
-                    <div className="flex items-center gap-1.5">
-                      <Sun className="h-3 w-3 text-white" />
-                      <p className="text-white text-[10px] sm:text-xs font-medium">Solar Panel</p>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
+      {/* Hero Section - English - Full screen carousel identical to Spanish */}
+      <section className="relative h-screen overflow-hidden">
+        {heroImages.map((image, index) => (
+          <div
+            key={image.src}
+            className={`absolute inset-0 transition-opacity duration-700 ${
+              index === currentSlide ? "opacity-100" : "opacity-0"
+            }`}
+          >
+            <Image
+              src={image.src}
+              alt={image.alt}
+              fill
+              className="object-cover"
+              priority={index === 0}
+            />
+            <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-black/20 to-transparent" />
           </div>
+        ))}
+
+        {/* CTA Overlay */}
+        <div className="absolute inset-0 flex flex-col items-center justify-center">
+          <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-white mb-8 text-center text-balance drop-shadow-lg px-4">
+            Excellence in property care
+          </h1>
+        </div>
+
+        {/* Carousel indicators */}
+        <div className="absolute bottom-6 left-1/2 -translate-x-1/2 flex gap-2">
+          {heroImages.map((_, index) => (
+            <button
+              key={index}
+              onClick={() => setCurrentSlide(index)}
+              className={`w-2 h-2 rounded-full transition-all ${
+                index === currentSlide
+                  ? "bg-white w-6"
+                  : "bg-white/50 hover:bg-white/70"
+              }`}
+              aria-label={`Go to image ${index + 1}`}
+            />
+          ))}
         </div>
       </section>
 
