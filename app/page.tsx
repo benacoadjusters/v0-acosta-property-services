@@ -12,20 +12,28 @@ import { useLanguage } from "@/lib/language-context"
 // Hero carousel images
 const heroImages = [
   {
-    src: "/images/hero/casa-moderna-exterior.png",
-    alt: "Mantenimiento exterior de propiedad residencial en Puerto Rico"
+    src: "/images/hero/lavado-hero-2.png",
+    alt: "Técnico de Acosta Property Services realizando lavado a presión en entrada de hogar"
   },
   {
-    src: "/images/hero/edificio-comercial.png",
-    alt: "Servicios para propiedad comercial en Puerto Rico"
+    src: "/images/hero/solar-hero-2.png",
+    alt: "Técnico de Acosta Property Services limpiando paneles solares en techo"
   },
   {
-    src: "/images/hero/villa-tropical-solar.png",
-    alt: "Cuidado de propiedad tropical con placas solares"
+    src: "/images/hero/pest-hero-2.png",
+    alt: "Técnico de Acosta Property Services aplicando tratamiento profesional de plagas en cocina"
   },
   {
-    src: "/images/hero/villa-navidad.png",
-    alt: "Instalación de luces navideñas en propiedad tropical"
+    src: "/images/hero/lavado-hero-1.png",
+    alt: "Técnico de Acosta Property Services realizando lavado a presión en pared exterior"
+  },
+  {
+    src: "/images/hero/solar-hero-1.png",
+    alt: "Técnico limpiando paneles solares en tejado residencial"
+  },
+  {
+    src: "/images/hero/pest-hero-1.png",
+    alt: "Técnico aplicando tratamiento profesional de control de plagas en instalación industrial"
   }
 ]
 
