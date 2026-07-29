@@ -14,7 +14,7 @@ const heroImages = [
   {
     src: "/images/hero/lavado-hero-2.png",
     alt: "Técnico de Acosta Property Services realizando lavado a presión en entrada de hogar",
-    position: "center 70%"
+    position: "bottom"
   },
   {
     src: "/images/hero/solar-hero-2.png",
