@@ -450,57 +450,7 @@ export default function ServicesIndexPage() {
                 {language === "es" ? "Paneles solares" : "Solar Panel Cleaning"}
               </span>
             </div>
-            {/* Coming Soon Chips */}
-            <div className="flex flex-wrap gap-2 justify-center">
-              <span className="inline-flex items-center gap-1.5 rounded-full bg-muted px-3 py-1 text-sm font-medium text-muted-foreground">
-                <TreePine className="h-3.5 w-3.5" />
-                {language === "es" ? "Jardinería — Próximamente" : "Landscaping — Coming Soon"}
-              </span>
-              <span className="inline-flex items-center gap-1.5 rounded-full bg-muted px-3 py-1 text-sm font-medium text-muted-foreground">
-                <SprayCan className="h-3.5 w-3.5" />
-                {language === "es" ? "Limpieza — Próximamente" : "Cleaning — Coming Soon"}
-              </span>
-              <span className="inline-flex items-center gap-1.5 rounded-full bg-muted px-3 py-1 text-sm font-medium text-muted-foreground">
-                <Droplets className="h-3.5 w-3.5" />
-                {language === "es" ? "Limpieza de ventanas — Próximamente" : "Window Cleaning — Coming Soon"}
-              </span>
-              <span className="inline-flex items-center gap-1.5 rounded-full bg-muted px-3 py-1 text-sm font-medium text-muted-foreground">
-                <Grid3X3 className="h-3.5 w-3.5" />
-                {language === "es" ? "Limpieza de mallas — Próximamente" : "Screen Cleaning — Coming Soon"}
-              </span>
-              <span className="inline-flex items-center gap-1.5 rounded-full bg-muted px-3 py-1 text-sm font-medium text-muted-foreground">
-                <Sparkles className="h-3.5 w-3.5" />
-                {language === "es" ? "Luces navideñas — Próximamente" : "Christmas Lights — Coming Soon"}
-              </span>
-              <span className="inline-flex items-center gap-1.5 rounded-full bg-muted px-3 py-1 text-sm font-medium text-muted-foreground">
-                <Droplet className="h-3.5 w-3.5" />
-                {language === "es" ? "Lavado suave — Próximamente" : "Soft Wash — Coming Soon"}
-              </span>
-              <span className="inline-flex items-center gap-1.5 rounded-full bg-muted px-3 py-1 text-sm font-medium text-muted-foreground">
-                <Wrench className="h-3.5 w-3.5" />
-                {language === "es" ? "Plomería — Próximamente" : "Plumbing — Coming Soon"}
-              </span>
-              <span className="inline-flex items-center gap-1.5 rounded-full bg-muted px-3 py-1 text-sm font-medium text-muted-foreground">
-                <Zap className="h-3.5 w-3.5" />
-                {language === "es" ? "Electricidad — Próximamente" : "Electrical — Coming Soon"}
-              </span>
-              <span className="inline-flex items-center gap-1.5 rounded-full bg-muted px-3 py-1 text-sm font-medium text-muted-foreground">
-                <Droplets className="h-3.5 w-3.5" />
-                {language === "es" ? "Mitigación de daños por agua — Próximamente" : "Water Damage — Coming Soon"}
-              </span>
-              <span className="inline-flex items-center gap-1.5 rounded-full bg-muted px-3 py-1 text-sm font-medium text-muted-foreground">
-                <HardHat className="h-3.5 w-3.5" />
-                {language === "es" ? "Reparaciones handyman — Próximamente" : "Handyman — Coming Soon"}
-              </span>
-              <span className="inline-flex items-center gap-1.5 rounded-full bg-muted px-3 py-1 text-sm font-medium text-muted-foreground">
-                <Layers className="h-3.5 w-3.5" />
-                {language === "es" ? "Sellado de techos — Próximamente" : "Roof Sealing — Coming Soon"}
-              </span>
-              <span className="inline-flex items-center gap-1.5 rounded-full bg-muted px-3 py-1 text-sm font-medium text-muted-foreground">
-                <Shield className="h-3.5 w-3.5" />
-                {language === "es" ? "Mitigación de plomo y asbesto — Próximamente" : "Lead & Asbestos — Coming Soon"}
-              </span>
-            </div>
+
           </div>
         </div>
       </section>

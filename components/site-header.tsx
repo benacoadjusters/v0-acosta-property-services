@@ -3,7 +3,7 @@
 import * as React from "react"
 import Link from "next/link"
 import Image from "next/image"
-import { Menu, Phone, Clock, Globe, Bug, TreePine, SprayCan, Droplets, Grid3X3, Sparkles, Zap as Lightning, Waves, Sun } from "lucide-react"
+import { Menu, Phone, Clock, Globe, Bug, Zap as Lightning, Sun } from "lucide-react"
 import { Button } from "@/components/ui/button"
 import { Sheet, SheetContent, SheetTrigger, SheetTitle, SheetDescription } from "@/components/ui/sheet"
 import {
@@ -55,14 +55,7 @@ export function SiteHeader() {
     },
   ]
 
-  const comingSoonServices = [
-    { href: "/services/landscaping", icon: TreePine, color: "text-muted-foreground", bgColor: "bg-muted", nameEs: "Jardinería", nameEn: "Landscaping" },
-    { href: "/services/cleaning", icon: SprayCan, color: "text-muted-foreground", bgColor: "bg-muted", nameEs: "Limpieza", nameEn: "Cleaning" },
-    { href: "/services/window-cleaning", icon: Droplets, color: "text-muted-foreground", bgColor: "bg-muted", nameEs: "Limpieza de ventanas", nameEn: "Window Cleaning" },
-    { href: "/services/screen-cleaning", icon: Grid3X3, color: "text-muted-foreground", bgColor: "bg-muted", nameEs: "Limpieza de mallas", nameEn: "Screen Cleaning" },
-    { href: "/services/christmas-lights", icon: Sparkles, color: "text-muted-foreground", bgColor: "bg-muted", nameEs: "Luces navideñas", nameEn: "Christmas Lights" },
-    { href: "/services/soft-wash", icon: Waves, color: "text-muted-foreground", bgColor: "bg-muted", nameEs: "Lavado suave", nameEn: "Soft Wash" },
-  ]
+
 
   return (
     <header className="sticky top-0 z-50 w-full">
@@ -140,7 +133,7 @@ export function SiteHeader() {
                   <ChevronDown className="h-4 w-4" />
                 </button>
               </DropdownMenuTrigger>
-              <DropdownMenuContent align="start" className="w-72 max-h-[70vh] overflow-y-auto">
+              <DropdownMenuContent align="start" className="w-72">
                 <DropdownMenuItem asChild>
                   <Link href="/services" className="flex flex-col items-start gap-1 p-3">
                     <span className="font-medium">{language === "es" ? "Todos los Servicios" : "All Services"}</span>
@@ -161,28 +154,6 @@ export function SiteHeader() {
                         <div>
                           <span className="font-medium">{language === "es" ? service.nameEs : service.nameEn}</span>
                           <p className="text-xs text-muted-foreground">{language === "es" ? service.descEs : service.descEn}</p>
-                        </div>
-                      </Link>
-                    </DropdownMenuItem>
-                  )
-                })}
-                <DropdownMenuSeparator />
-                <div className="px-3 py-1.5 text-xs font-semibold uppercase tracking-wider text-muted-foreground">
-                  {language === "es" ? "Próximamente" : "Coming Soon"}
-                </div>
-                {comingSoonServices.map((service) => {
-                  const Icon = service.icon
-                  return (
-                    <DropdownMenuItem key={service.href} asChild>
-                      <Link href={service.href} className="flex items-center gap-3 p-3 opacity-70">
-                        <div className="flex h-8 w-8 shrink-0 items-center justify-center rounded-md bg-muted">
-                          <Icon className="h-4 w-4 text-muted-foreground" />
-                        </div>
-                        <div className="flex items-center gap-2">
-                          <span className="font-medium">{language === "es" ? service.nameEs : service.nameEn}</span>
-                          <span className="rounded-full bg-muted px-2 py-0.5 text-[10px] font-medium text-muted-foreground">
-                            {language === "es" ? "Próximamente" : "Soon"}
-                          </span>
                         </div>
                       </Link>
                     </DropdownMenuItem>
@@ -273,26 +244,6 @@ export function SiteHeader() {
                               >
                                 <Icon className={`h-4 w-4 ${service.color}`} />
                                 {language === "es" ? service.nameEs : service.nameEn}
-                              </Link>
-                            )
-                          })}
-                          <p className="pt-2 text-xs font-semibold uppercase tracking-wider text-muted-foreground">
-                            {language === "es" ? "Próximamente" : "Coming Soon"}
-                          </p>
-                          {comingSoonServices.map((service) => {
-                            const Icon = service.icon
-                            return (
-                              <Link 
-                                key={service.href}
-                                href={service.href} 
-                                className="flex items-center gap-2 py-1.5 text-sm text-muted-foreground/70 transition-colors"
-                                onClick={() => setIsOpen(false)}
-                              >
-                                <Icon className="h-4 w-4 text-muted-foreground/70" />
-                                {language === "es" ? service.nameEs : service.nameEn}
-                                <span className="rounded-full bg-muted px-1.5 py-0.5 text-[10px] font-medium">
-                                  {language === "es" ? "Pronto" : "Soon"}
-                                </span>
                               </Link>
                             )
                           })}
