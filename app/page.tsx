@@ -506,7 +506,7 @@ export default function HomePage() {
               {/* Grid de 3 servicios activos */}
               <div className="grid grid-cols-3 gap-2">
                 <div className="relative aspect-square rounded-xl overflow-hidden bg-muted shadow-lg group">
-                  <Image src="/images/hero-pest-control.jpg" alt="Pest Control" fill className="object-cover object-center group-hover:scale-105 transition-transform duration-300" priority />
+                  <Image src="/images/hero/pest-hero-1.png" alt="Pest Control" fill className="object-cover object-center group-hover:scale-105 transition-transform duration-300" priority />
                   <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-transparent to-transparent" />
                   <div className="absolute bottom-2 left-2 right-2">
                     <div className="flex items-center gap-1.5">
@@ -516,7 +516,7 @@ export default function HomePage() {
                   </div>
                 </div>
                 <div className="relative aspect-square rounded-xl overflow-hidden bg-muted shadow-lg group">
-                  <Image src="/images/pressure-wash.png" alt="Pressure Wash" fill className="object-cover object-center group-hover:scale-105 transition-transform duration-300" priority />
+                  <Image src="/images/hero/lavado-hero-1.png" alt="Pressure Wash" fill className="object-cover object-center group-hover:scale-105 transition-transform duration-300" priority />
                   <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-transparent to-transparent" />
                   <div className="absolute bottom-2 left-2 right-2">
                     <div className="flex items-center gap-1.5">
@@ -526,7 +526,7 @@ export default function HomePage() {
                   </div>
                 </div>
                 <div className="relative aspect-square rounded-xl overflow-hidden bg-muted shadow-lg group">
-                  <Image src="/images/hero-solar-panel.png" alt="Solar Panel Cleaning" fill className="object-cover object-center group-hover:scale-105 transition-transform duration-300" priority />
+                  <Image src="/images/hero/solar-hero-1.png" alt="Solar Panel Cleaning" fill className="object-cover object-center group-hover:scale-105 transition-transform duration-300" priority />
                   <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-transparent to-transparent" />
                   <div className="absolute bottom-2 left-2 right-2">
                     <div className="flex items-center gap-1.5">
