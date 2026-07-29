@@ -294,12 +294,12 @@ export default function ServicesIndexPage() {
       badgeColor: "bg-yellow-500",
       nameEs: "Electricidad",
       nameEn: "Electrical",
-      descriptionEs: "Servicio próximamente disponible para paneles, breakers, tomacorrientes, iluminación y abanicos de techo.",
+      descriptionEs: "Servicio próximamente disponible para paneles, interruptores automáticos, tomacorrientes, iluminación y abanicos de techo.",
       descriptionEn: "Service coming soon for panels, breakers, outlets, lighting and ceiling fans.",
       featuresEs: [
         "Paneles eléctricos",
-        "Breakers",
-        "Tomacorrientes y switches",
+        "Interruptores automáticos",
+        "Tomacorrientes e interruptores",
         "Iluminación",
         "Servicio en desarrollo"
       ],
@@ -344,7 +344,7 @@ export default function ServicesIndexPage() {
       bgColor: "bg-purple-500/10",
       textColor: "text-purple-600",
       badgeColor: "bg-purple-500",
-      nameEs: "Reparaciones handyman",
+      nameEs: "Reparaciones y mantenimiento general",
       nameEn: "Handyman Repairs",
       descriptionEs: "Servicio próximamente disponible para reparaciones menores, instalaciones básicas y mantenimiento general.",
       descriptionEn: "Service coming soon for minor repairs, basic installations and general maintenance.",
@@ -425,10 +425,10 @@ export default function ServicesIndexPage() {
           <div className="max-w-4xl mx-auto text-center">
             <span className="inline-flex items-center gap-2 rounded-full bg-primary/10 px-4 py-1.5 text-sm font-medium text-primary mb-6">
               <CheckCircle2 className="h-4 w-4" />
-              {language === "es" ? "Servicios Profesionales" : "Professional Services"}
+              {language === "es" ? "Servicios profesionales" : "Professional Services"}
             </span>
             <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-foreground mb-6 text-balance">
-              {language === "es" ? "Nuestros Servicios" : "Our Services"}
+              {language === "es" ? "Nuestros servicios" : "Our Services"}
             </h1>
             <p className="text-xl text-muted-foreground text-pretty max-w-2xl mx-auto mb-8">
               {language === "es" 
@@ -493,7 +493,7 @@ export default function ServicesIndexPage() {
                   <div className={isReversed ? 'lg:order-1' : ''}>
                     <div className={`inline-flex items-center gap-2 rounded-full ${service.bgColor} px-3 py-1 text-sm font-medium ${service.textColor} mb-4`}>
                       <Icon className="h-4 w-4" />
-                      {language === "es" ? "Servicio Activo" : "Active Service"}
+                      {language === "es" ? "Servicio activo" : "Active Service"}
                     </div>
                     <h2 className="text-3xl md:text-4xl font-bold text-foreground mb-4">
                       {name}
@@ -516,7 +516,7 @@ export default function ServicesIndexPage() {
                     <div className="flex flex-col sm:flex-row gap-3">
                       <Button asChild size="lg" className={service.buttonColor}>
                         <Link href={service.href}>
-                          {language === "es" ? "Saber Más" : "Learn More"}
+                          {language === "es" ? "Conocer el servicio" : "Learn More"}
                           <ArrowRight className="ml-2 h-4 w-4" />
                         </Link>
                       </Button>
@@ -546,7 +546,7 @@ export default function ServicesIndexPage() {
             <p className="text-lg text-primary-foreground/80 mb-8 text-pretty">
               {language === "es"
                 ? "Dinos qué necesita tu propiedad y te orientamos con una cotización para nuestros servicios activos: control de plagas, lavado a presión y limpieza de paneles solares."
-                : "Tell us what your property needs and we'll guide you with a quote for our active services: pest control, pressure wash and solar panel cleaning."}
+                : "Tell us what your property needs and we'll guide you with a quote for our active services: pest control, pressure washing and solar panel cleaning."}
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Button asChild size="lg" className="bg-accent text-accent-foreground hover:bg-accent/90 font-semibold">

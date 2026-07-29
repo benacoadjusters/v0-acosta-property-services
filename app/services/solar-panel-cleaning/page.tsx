@@ -46,10 +46,10 @@ export default function SolarPanelCleaningPage() {
   ]
 
   const benefits = language === "es" ? [
-    { icon: Zap, title: "Mayor Eficiencia", description: "Paneles limpios generan hasta 25% más energía." },
-    { icon: TrendingUp, title: "Mejor Rendimiento", description: "Maximiza tu inversión en energía solar." },
-    { icon: ShieldCheck, title: "Sin Daños", description: "Técnicas seguras que protegen tus paneles." },
-    { icon: Sparkles, title: "Aspecto Impecable", description: "Tu sistema solar luciendo como nuevo." }
+    { icon: Zap, title: "Mayor eficiencia", description: "Paneles limpios generan hasta 25% más energía." },
+    { icon: TrendingUp, title: "Mejor rendimiento", description: "Maximiza tu inversión en energía solar." },
+    { icon: ShieldCheck, title: "Sin daños", description: "Técnicas seguras que protegen tus paneles." },
+    { icon: Sparkles, title: "Aspecto impecable", description: "Tu sistema solar luciendo como nuevo." }
   ] : [
     { icon: Zap, title: "Higher Efficiency", description: "Clean panels generate up to 25% more energy." },
     { icon: TrendingUp, title: "Better Performance", description: "Maximize your solar energy investment." },
@@ -95,7 +95,7 @@ export default function SolarPanelCleaningPage() {
         <div className="container mx-auto px-4">
           <div className="text-center max-w-3xl mx-auto mb-12">
             <h2 className="text-3xl md:text-4xl font-bold text-foreground mb-4">
-              {language === "es" ? "Servicios de Solar Panel Cleaning" : "Solar Panel Cleaning Services"}
+              {language === "es" ? "Servicios de limpieza de paneles solares" : "Solar Panel Cleaning Services"}
             </h2>
           </div>
           <div className="grid md:grid-cols-2 gap-8 max-w-4xl mx-auto">

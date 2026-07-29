@@ -115,7 +115,7 @@ export default function RepairsHandymanPage() {
             </div>
             <h1 className="text-4xl md:text-5xl font-bold text-foreground mb-6 text-balance">
               {language === "es" 
-                ? "Reparaciones handyman para mantenimiento general" 
+                ? "Reparaciones y mantenimiento general" 
                 : "Handyman repairs for general maintenance"}
             </h1>
             <p className="text-xl text-muted-foreground text-pretty max-w-2xl mx-auto mb-8">
@@ -131,7 +131,7 @@ export default function RepairsHandymanPage() {
               </div>
               <div className="text-left">
                 <p className="font-bold text-purple-800">
-                  {language === "es" ? "En Desarrollo" : "Under Development"}
+                  {language === "es" ? "En desarrollo" : "Under Development"}
                 </p>
                 <p className="text-sm text-purple-600">
                   {language === "es" ? "Contáctanos para más información" : "Contact us for more information"}
@@ -166,7 +166,7 @@ export default function RepairsHandymanPage() {
             </h2>
             <p className="text-lg text-muted-foreground">
               {language === "es"
-                ? "Estos son los servicios de reparaciones handyman que estaremos ofreciendo próximamente."
+                ? "Estos son los servicios de reparaciones y mantenimiento general que estaremos ofreciendo próximamente."
                 : "These are the handyman repair services we will be offering soon."}
             </p>
           </div>
@@ -317,7 +317,7 @@ export default function RepairsHandymanPage() {
             </h2>
             <p className="text-lg text-white/80 mb-8 text-pretty">
               {language === "es" 
-                ? "Déjanos tus datos y te orientamos cuando el servicio de reparaciones handyman esté listo."
+                ? "Déjanos tus datos y te orientamos cuando el servicio de reparaciones y mantenimiento general esté listo."
                 : "Leave us your information and we'll guide you when the handyman repairs service is ready."}
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
