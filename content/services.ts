@@ -4,24 +4,24 @@ export const services = {
   methods: [
     {
       id: "fumigation",
-      nameEs: "Fumigación",
-      nameEn: "Fumigation",
-      shortDescEs: "Tratamiento químico profesional para eliminar plagas de manera efectiva.",
-      shortDescEn: "Professional chemical treatment to effectively eliminate pests.",
-      descriptionEs: "Nuestro servicio de fumigación utiliza productos de última generación registrados en la EPA. Antes de cada tratamiento, proporcionamos instrucciones detalladas de preparación y precaución para garantizar la protección adecuada de tu familia y mascotas. Aplicamos tratamientos en interiores y exteriores para la eliminación completa de plagas.",
-      descriptionEn: "Our fumigation service uses state-of-the-art EPA-registered products. Before each treatment, we provide detailed preparation and precautionary instructions to ensure proper protection for your family and pets. We apply treatments indoors and outdoors for complete pest elimination.",
+      nameEs: "Tratamiento profesional",
+      nameEn: "Professional treatment",
+      shortDescEs: "Tratamiento profesional para el control de plagas mediante productos registrados en la EPA.",
+      shortDescEn: "Professional pest control treatment using EPA-registered products.",
+      descriptionEs: "Nuestro servicio utiliza productos de última generación registrados en la EPA. Antes de cada tratamiento, proporcionamos instrucciones detalladas de preparación y precaución para garantizar la protección adecuada de tu familia y mascotas. Aplicamos tratamientos interiores y exteriores para el control y reducción de la población de plagas mediante tratamientos seleccionados según la inspección, el tipo de plaga y las condiciones de la propiedad.",
+      descriptionEn: "Our service uses state-of-the-art EPA-registered products. Before each treatment, we provide detailed preparation and precautionary instructions to ensure proper protection for your family and pets. We apply indoor and outdoor treatments for the control and reduction of pest populations through treatments selected based on the inspection, pest type, and property conditions.",
       icon: "spray",
       image: "/images/pest-control/fumigation.jpg",
       benefits: {
         es: [
-          "Eliminación rápida y efectiva",
+          "Control efectivo de plagas",
           "Productos registrados en la EPA",
           "Cobertura interior y exterior",
           "Efecto residual de protección",
           "Garantía condicionada de servicio"
         ],
         en: [
-          "Fast and effective elimination",
+          "Effective pest control",
           "EPA registered products",
           "Indoor and outdoor coverage",
           "Residual protection effect",
@@ -35,8 +35,8 @@ export const services = {
       nameEn: "Trap Extermination",
       shortDescEs: "Sistema de trampas profesionales para roedores y plagas específicas.",
       shortDescEn: "Professional trap systems for rodents and specific pests.",
-      descriptionEs: "Utilizamos sistemas de trampas profesionales para el control de roedores y otras plagas. Este método es ideal para áreas donde se prefiere evitar productos químicos o como complemento a la fumigación.",
-      descriptionEn: "We use professional trap systems for rodent and pest control. This method is ideal for areas where chemical products should be avoided or as a complement to fumigation.",
+      descriptionEs: "Utilizamos sistemas de trampas profesionales para el control de roedores y otras plagas. Este método es ideal para áreas donde se prefiere evitar productos químicos o como complemento al tratamiento profesional.",
+      descriptionEn: "We use professional trap systems for rodent and pest control. This method is ideal for areas where chemical products should be avoided or as a complement to professional treatment.",
       icon: "target",
       image: "/images/pest-control/trapping.jpg",
       benefits: {

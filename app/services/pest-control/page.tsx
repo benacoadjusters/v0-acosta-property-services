@@ -141,12 +141,12 @@ export default function ServicesPage() {
               const name = language === "es" ? pest.nameEs : pest.nameEn
               const methodLabels = pest.methods.map(m => {
                 if (language === "es") {
-                  if (m === "fumigation") return "Fumigación"
+                  if (m === "fumigation") return "Tratamiento profesional"
                   if (m === "traps") return "Trampas"
                   if (m === "biological") return "Control Biológico"
                   return m
                 } else {
-                  if (m === "fumigation") return "Fumigation"
+                  if (m === "fumigation") return "Professional treatment"
                   if (m === "traps") return "Traps"
                   if (m === "biological") return "Biological Control"
                   return m
@@ -200,12 +200,12 @@ export default function ServicesPage() {
                 <DialogDescription>
                   {selectedPest.methods.map(m => {
                     if (language === "es") {
-                      if (m === "fumigation") return "Fumigación"
+                      if (m === "fumigation") return "Tratamiento profesional"
                       if (m === "traps") return "Trampas"
                       if (m === "biological") return "Control Biológico"
                       return m
                     } else {
-                      if (m === "fumigation") return "Fumigation"
+                      if (m === "fumigation") return "Professional treatment"
                       if (m === "traps") return "Traps"
                       if (m === "biological") return "Biological Control"
                       return m
@@ -273,8 +273,8 @@ export default function ServicesPage() {
                     {selectedPest.methods.map(method => {
                       const MethodIcon = method === "fumigation" ? SprayCan : method === "biological" ? Leaf : Target
                       const label = language === "es"
-                        ? (method === "fumigation" ? "Fumigación" : method === "biological" ? "Control Biológico" : "Trampas")
-                        : (method === "fumigation" ? "Fumigation" : method === "biological" ? "Biological Control" : "Traps")
+                        ? (method === "fumigation" ? "Tratamiento profesional" : method === "biological" ? "Control Biológico" : "Trampas")
+                        : (method === "fumigation" ? "Professional treatment" : method === "biological" ? "Biological Control" : "Traps")
                       return (
                         <span 
                           key={method}

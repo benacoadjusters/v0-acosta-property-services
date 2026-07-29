@@ -30,8 +30,8 @@ export function SiteHeader() {
       bgColor: "bg-primary/10",
       nameEs: "Control de Plagas", 
       nameEn: "Pest Control",
-      descEs: "Fumigación y trampas",
-      descEn: "Fumigation & traps"
+      descEs: "Tratamiento profesional y trampas",
+      descEn: "Professional treatment & traps"
     },
     { 
       href: "/services/pressure-wash", 

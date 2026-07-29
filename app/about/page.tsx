@@ -69,12 +69,12 @@ export default function AboutPage() {
   const teamLast = language === "es" ? { 
     name: "Víctor Camacho", 
     role: "Exterminador", 
-    description: "Técnico certificado especializado en control de plagas con amplia experiencia en fumigación, tratamientos químicos y biológicos. Garantiza la eliminación efectiva de plagas en cada propiedad que visitamos.",
+    description: "Técnico certificado especializado en control de plagas con amplia experiencia en tratamientos profesionales, químicos y biológicos. Garantiza el control y reducción efectiva de plagas en cada propiedad que visitamos.",
     image: "/images/team/victor.png"
   } : { 
     name: "Victor Camacho", 
     role: "Exterminator", 
-    description: "Certified technician specialized in pest control with extensive experience in fumigation, chemical and biological treatments. Ensures effective pest elimination in every property we visit.",
+    description: "Certified technician specialized in pest control with extensive experience in professional, chemical and biological treatments. Ensures effective pest control and reduction in every property we visit.",
     image: "/images/team/victor.png"
   }
 

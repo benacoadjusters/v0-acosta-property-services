@@ -22,17 +22,17 @@ export default function ServicesIndexPage() {
       buttonColor: "",
       nameEs: "Control de Plagas",
       nameEn: "Pest Control",
-      descriptionEs: "Fumigación, trampeo y control preventivo para proteger hogares y negocios contra plagas comunes en Puerto Rico.",
-      descriptionEn: "Fumigation, trapping and preventive control to protect homes and businesses against common pests in Puerto Rico.",
+      descriptionEs: "Tratamiento profesional para el control de plagas, trampeo y control preventivo para proteger hogares y negocios contra plagas comunes en Puerto Rico.",
+      descriptionEn: "Professional pest control treatment, trapping and preventive control to protect homes and businesses against common pests in Puerto Rico.",
       featuresEs: [
-        "Fumigación profesional",
+        "Tratamiento profesional para el control de plagas",
         "Trampeo para roedores",
         "Control preventivo",
         "Servicio residencial y comercial",
         "Atención a plagas comunes en Puerto Rico"
       ],
       featuresEn: [
-        "Professional fumigation",
+        "Professional pest control treatment",
         "Rodent trapping",
         "Preventive control",
         "Residential and commercial service",
