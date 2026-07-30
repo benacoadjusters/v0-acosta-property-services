@@ -319,7 +319,7 @@ export const services = {
       id: "commercial",
       nameEs: "Comercial",
       nameEn: "Commercial",
-      descriptionEs: "Servicios especializados para negocios cumpliendo regulaciones sanitarias.",
+      descriptionEs: "Programas de manejo de plagas para negocios, con documentación de servicio disponible según el alcance contratado.",
       descriptionEn: "Pest management programs for businesses, with service documentation available per contracted scope.",
       icon: "building",
       features: {
