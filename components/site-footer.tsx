@@ -94,8 +94,9 @@ export function SiteFooter() {
               <div className="flex items-start gap-3 text-background/80">
                 <Clock className="h-4 w-4 text-accent mt-0.5" />
                 <div>
-                  <p>{t.contact.weekdays}: 8AM-6PM</p>
-                  <p>{t.contact.saturday}: 9AM-2PM</p>
+                  <p>{t.contact.weekdays}: {language === "es" ? "8:00 a.\u00a0m.–6:00 p.\u00a0m." : "8:00 AM–6:00 PM"}</p>
+                  <p>{t.contact.saturday}: {language === "es" ? "9:00 a.\u00a0m.–2:00 p.\u00a0m." : "9:00 AM–2:00 PM"}</p>
+                  <p>{t.contact.sunday}: {t.contact.closed}</p>
                 </div>
               </div>
               <div className="flex items-start gap-3 text-background/80">

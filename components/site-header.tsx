@@ -69,7 +69,7 @@ export function SiteHeader() {
             </a>
             <div className="flex items-center gap-2">
               <Clock className="h-4 w-4" />
-              <span>{language === "es" ? "Lun-Vie: 8AM-6PM" : "Mon-Fri: 8AM-6PM"}</span>
+              <span>{language === "es" ? "Lun–vie: 8:00 a.\u00a0m.–6:00 p.\u00a0m." : "Mon–Fri: 8:00 AM–6:00 PM"}</span>
             </div>
           </div>
           <div className="flex w-full items-center justify-between gap-2 md:w-auto md:justify-end md:gap-4">
