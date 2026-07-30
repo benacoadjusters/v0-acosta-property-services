@@ -9,7 +9,7 @@ export const services = {
       shortDescEs: "Tratamiento profesional para el control de plagas mediante productos registrados en la EPA.",
       shortDescEn: "Professional pest control treatment using EPA-registered products.",
       descriptionEs: "Nuestro servicio utiliza productos registrados en la EPA. Antes de cada tratamiento, proporcionamos instrucciones de preparación y precaución. Aplicamos tratamientos interiores o exteriores, cuando correspondan, siguiendo las instrucciones del producto y las condiciones identificadas durante la evaluación.",
-      descriptionEn: "Our service uses state-of-the-art EPA-registered products. Before each treatment, we provide detailed preparation and precautionary instructions to ensure proper protection for your family and pets. We apply indoor and outdoor treatments for the control and reduction of pest populations through treatments selected based on the inspection, pest type, and property conditions.",
+      descriptionEn: "Our service uses EPA-registered products. Before each treatment, we provide preparation and safety instructions. We apply indoor or exterior treatments, when applicable, following product instructions and the conditions identified during the evaluation.",
       icon: "spray",
       image: "/images/pest-control/fumigation.jpg",
       benefits: {
@@ -63,7 +63,7 @@ export const services = {
       shortDescEs: "Estrategia sostenible usando enemigos naturales de las plagas.",
       shortDescEn: "Sustainable strategy using natural pest enemies.",
       descriptionEs: "El control biológico es una estrategia sostenible que utiliza enemigos naturales como depredadores y microorganismos para reducir la presencia de plagas, disminuyendo la dependencia de productos químicos. Ideal para jardines, cesped y áreas verdes donde se busca mantener la calidad del entorno. Su aplicación se define según la plaga identificada, las condiciones del área y la disponibilidad de los agentes apropiados.",
-      descriptionEn: "Biological control is a sustainable and efficient strategy that uses natural enemies such as predators, parasitoids and microorganisms to combat pests, reducing dependence on chemicals. Ideal for gardens, greenhouses, lawns and green areas where aesthetic quality is sought without harming the environment. We use agents such as ladybugs, lacewings, parasitoid wasps, predatory mites, entomopathogenic nematodes and bacteria like Bacillus thuringiensis depending on the pest type.",
+      descriptionEn: "Biological control is a sustainable strategy that uses natural enemies such as predators and microorganisms to reduce pest presence, lowering dependence on chemical products. Ideal for gardens, lawns and green areas. Its application is defined based on the identified pest, area conditions and the availability of appropriate agents.",
       icon: "leaf",
       image: "/images/pest-control/biological.jpg",
       benefits: {
@@ -77,7 +77,7 @@ export const services = {
         en: [
           "Ecological and sustainable",
           "No chemical residues",
-          "Safe for plants and animals",
+          "Lower impact on the environment",
           "Long-term control",
           "Ideal for lawns and ornamentals"
         ]
@@ -320,7 +320,7 @@ export const services = {
       nameEs: "Comercial",
       nameEn: "Commercial",
       descriptionEs: "Servicios especializados para negocios cumpliendo regulaciones sanitarias.",
-      descriptionEn: "Specialized services for businesses meeting health regulations.",
+      descriptionEn: "Pest management programs for businesses, with service documentation available per contracted scope.",
       icon: "building",
       features: {
         es: [
@@ -331,7 +331,7 @@ export const services = {
           "Respuesta de emergencia"
         ],
         en: [
-          "HACCP and health compliance",
+          "Service and documentation programs per contracted scope",
           "Documentation for inspections",
           "Discreet and flexible service",
           "Maintenance contracts",
