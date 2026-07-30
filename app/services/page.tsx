@@ -491,10 +491,6 @@ export default function ServicesIndexPage() {
 
                   {/* Content */}
                   <div className={isReversed ? 'lg:order-1' : ''}>
-                    <div className={`inline-flex items-center gap-2 rounded-full ${service.bgColor} px-3 py-1 text-sm font-medium ${service.textColor} mb-4`}>
-                      <Icon className="h-4 w-4" />
-                      {language === "es" ? "Servicio activo" : "Active Service"}
-                    </div>
                     <h2 className="text-3xl md:text-4xl font-bold text-foreground mb-4">
                       {name}
                     </h2>
@@ -515,14 +511,14 @@ export default function ServicesIndexPage() {
                     {/* CTA */}
                     <div className="flex flex-col sm:flex-row gap-3">
                       <Button asChild size="lg" className={service.buttonColor}>
-                        <Link href={service.href}>
-                          {language === "es" ? "Conocer el servicio" : "Learn More"}
+                        <Link href="/contact">
+                          {language === "es" ? "Solicitar cotización" : "Request an estimate"}
                           <ArrowRight className="ml-2 h-4 w-4" />
                         </Link>
                       </Button>
                       <Button asChild size="lg" variant="outline">
-                        <Link href="/contact">
-                          {language === "es" ? "Cotización Gratis" : "Free Quote"}
+                        <Link href={service.href}>
+                          {language === "es" ? "Conocer el servicio" : "View service"}
                         </Link>
                       </Button>
                     </div>
