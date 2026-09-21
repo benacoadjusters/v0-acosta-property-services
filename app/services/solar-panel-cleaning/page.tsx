@@ -28,8 +28,8 @@ export default function SolarPanelCleaningPage() {
       icon: Home,
       nameEs: "Paneles Residenciales",
       nameEn: "Residential Panels",
-      descriptionEs: "Limpieza profesional de paneles solares para tu hogar. Maximiza la eficiencia de tu sistema solar.",
-      descriptionEn: "Professional solar panel cleaning for your home. Maximize the efficiency of your solar system.",
+      descriptionEs: "Limpieza de paneles solares para hogares que ayuda a mantener la apariencia y el rendimiento del sistema.",
+      descriptionEn: "Solar panel cleaning for homes that helps maintain the appearance and performance of the system.",
       featuresEs: ["Limpieza sin rayas", "Inspección visual", "Reporte de condición", "Programación flexible"],
       featuresEn: ["Streak-free cleaning", "Visual inspection", "Condition report", "Flexible scheduling"]
     },
@@ -46,15 +46,15 @@ export default function SolarPanelCleaningPage() {
   ]
 
   const benefits = language === "es" ? [
-    { icon: Zap, title: "Mayor Eficiencia", description: "Paneles limpios generan hasta 25% más energía." },
-    { icon: TrendingUp, title: "Mejor Rendimiento", description: "Maximiza tu inversión en energía solar." },
-    { icon: ShieldCheck, title: "Sin Daños", description: "Técnicas seguras que protegen tus paneles." },
-    { icon: Sparkles, title: "Aspecto Impecable", description: "Tu sistema solar luciendo como nuevo." }
+    { icon: Zap, title: "Mayor eficiencia", description: "La limpieza periódica puede ayudar a mantener el rendimiento del sistema al remover polvo, salitre y suciedad acumulada." },
+    { icon: TrendingUp, title: "Mejor rendimiento", description: "Ayuda a mantener la eficiencia y la apariencia de tu sistema solar." },
+    { icon: ShieldCheck, title: "Cuidado en el proceso", description: "Métodos y equipos seleccionados para reducir el riesgo de daños durante la limpieza." },
+    { icon: Sparkles, title: "Aspecto impecable", description: "Tu sistema solar luciendo como nuevo." }
   ] : [
-    { icon: Zap, title: "Higher Efficiency", description: "Clean panels generate up to 25% more energy." },
-    { icon: TrendingUp, title: "Better Performance", description: "Maximize your solar energy investment." },
-    { icon: ShieldCheck, title: "No Damage", description: "Safe techniques that protect your panels." },
-    { icon: Sparkles, title: "Spotless Look", description: "Your solar system looking like new." }
+    { icon: Zap, title: "System maintenance", description: "Regular cleaning can help maintain system performance by removing dust, salt and accumulated dirt." },
+    { icon: TrendingUp, title: "Better performance", description: "Helps maintain the efficiency and appearance of your solar system." },
+    { icon: ShieldCheck, title: "Careful process", description: "Methods and equipment selected to reduce the risk of damage during cleaning." },
+    { icon: Sparkles, title: "Spotless look", description: "Your solar system looking like new." }
   ]
 
   return (
@@ -68,7 +68,7 @@ export default function SolarPanelCleaningPage() {
                 {language === "es" ? "Limpieza de paneles solares" : "Solar Panel Cleaning"}
               </div>
               <h1 className="text-4xl md:text-5xl font-bold text-foreground mb-6 text-balance">
-                {language === "es" ? "Limpieza de paneles solares" : "Clean solar panels, maximum efficiency"}
+                {language === "es" ? "Limpieza de paneles solares" : "Solar panel cleaning service"}
               </h1>
               <p className="text-xl text-muted-foreground text-pretty mb-8">
                 {language === "es"
@@ -95,7 +95,7 @@ export default function SolarPanelCleaningPage() {
         <div className="container mx-auto px-4">
           <div className="text-center max-w-3xl mx-auto mb-12">
             <h2 className="text-3xl md:text-4xl font-bold text-foreground mb-4">
-              {language === "es" ? "Servicios de Solar Panel Cleaning" : "Solar Panel Cleaning Services"}
+              {language === "es" ? "Servicios de limpieza de paneles solares" : "Solar Panel Cleaning Services"}
             </h2>
           </div>
           <div className="grid md:grid-cols-2 gap-8 max-w-4xl mx-auto">

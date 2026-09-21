@@ -2,13 +2,15 @@
 
 import Link from "next/link"
 import Image from "next/image"
-import { ArrowRight, Bug, TreePine, HardHat, SprayCan, Droplets, CheckCircle2, Clock, Phone, Wrench, Zap, Layers, Shield, Grid3X3, Sparkles, Waves, Droplet, Sun } from "lucide-react"
+import { ArrowRight, Bug, TreePine, HardHat, SprayCan, Droplets, CheckCircle2, Clock, Phone, Wrench, Zap, Layers, Shield, Grid3X3, Sparkles, Waves, Droplet, Sun, ChevronDown } from "lucide-react"
+import { useState } from "react"
 import { Button } from "@/components/ui/button"
 import { useLanguage } from "@/lib/language-context"
 import { company } from "@/content/company"
 
 export default function ServicesIndexPage() {
   const { language, t } = useLanguage()
+  const [accordionOpen, setAccordionOpen] = useState(false)
 
   const activeServices = [
     {
@@ -22,17 +24,17 @@ export default function ServicesIndexPage() {
       buttonColor: "",
       nameEs: "Control de Plagas",
       nameEn: "Pest Control",
-      descriptionEs: "Fumigación, trampeo y control preventivo para proteger hogares y negocios contra plagas comunes en Puerto Rico.",
-      descriptionEn: "Fumigation, trapping and preventive control to protect homes and businesses against common pests in Puerto Rico.",
+      descriptionEs: "Tratamiento profesional para el control de plagas, trampeo y control preventivo para proteger hogares y negocios contra plagas comunes en Puerto Rico.",
+      descriptionEn: "Professional pest control treatment, trapping and preventive control to protect homes and businesses against common pests in Puerto Rico.",
       featuresEs: [
-        "Fumigación profesional",
+        "Tratamiento profesional para el control de plagas",
         "Trampeo para roedores",
         "Control preventivo",
         "Servicio residencial y comercial",
         "Atención a plagas comunes en Puerto Rico"
       ],
       featuresEn: [
-        "Professional fumigation",
+        "Professional pest control treatment",
         "Rodent trapping",
         "Preventive control",
         "Residential and commercial service",
@@ -292,12 +294,12 @@ export default function ServicesIndexPage() {
       badgeColor: "bg-yellow-500",
       nameEs: "Electricidad",
       nameEn: "Electrical",
-      descriptionEs: "Servicio próximamente disponible para paneles, breakers, tomacorrientes, iluminación y abanicos de techo.",
+      descriptionEs: "Servicio próximamente disponible para paneles, interruptores automáticos, tomacorrientes, iluminación y abanicos de techo.",
       descriptionEn: "Service coming soon for panels, breakers, outlets, lighting and ceiling fans.",
       featuresEs: [
         "Paneles eléctricos",
-        "Breakers",
-        "Tomacorrientes y switches",
+        "Interruptores automáticos",
+        "Tomacorrientes e interruptores",
         "Iluminación",
         "Servicio en desarrollo"
       ],
@@ -342,7 +344,7 @@ export default function ServicesIndexPage() {
       bgColor: "bg-purple-500/10",
       textColor: "text-purple-600",
       badgeColor: "bg-purple-500",
-      nameEs: "Reparaciones handyman",
+      nameEs: "Reparaciones y mantenimiento general",
       nameEn: "Handyman Repairs",
       descriptionEs: "Servicio próximamente disponible para reparaciones menores, instalaciones básicas y mantenimiento general.",
       descriptionEn: "Service coming soon for minor repairs, basic installations and general maintenance.",
@@ -423,10 +425,10 @@ export default function ServicesIndexPage() {
           <div className="max-w-4xl mx-auto text-center">
             <span className="inline-flex items-center gap-2 rounded-full bg-primary/10 px-4 py-1.5 text-sm font-medium text-primary mb-6">
               <CheckCircle2 className="h-4 w-4" />
-              {language === "es" ? "Servicios Profesionales" : "Professional Services"}
+              {language === "es" ? "Servicios profesionales" : "Professional Services"}
             </span>
             <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-foreground mb-6 text-balance">
-              {language === "es" ? "Nuestros Servicios" : "Our Services"}
+              {language === "es" ? "Nuestros servicios" : "Our Services"}
             </h1>
             <p className="text-xl text-muted-foreground text-pretty max-w-2xl mx-auto mb-8">
               {language === "es" 
@@ -448,57 +450,7 @@ export default function ServicesIndexPage() {
                 {language === "es" ? "Paneles solares" : "Solar Panel Cleaning"}
               </span>
             </div>
-            {/* Coming Soon Chips */}
-            <div className="flex flex-wrap gap-2 justify-center">
-              <span className="inline-flex items-center gap-1.5 rounded-full bg-muted px-3 py-1 text-sm font-medium text-muted-foreground">
-                <TreePine className="h-3.5 w-3.5" />
-                {language === "es" ? "Jardinería — Próximamente" : "Landscaping — Coming Soon"}
-              </span>
-              <span className="inline-flex items-center gap-1.5 rounded-full bg-muted px-3 py-1 text-sm font-medium text-muted-foreground">
-                <SprayCan className="h-3.5 w-3.5" />
-                {language === "es" ? "Limpieza — Próximamente" : "Cleaning — Coming Soon"}
-              </span>
-              <span className="inline-flex items-center gap-1.5 rounded-full bg-muted px-3 py-1 text-sm font-medium text-muted-foreground">
-                <Droplets className="h-3.5 w-3.5" />
-                {language === "es" ? "Limpieza de ventanas — Próximamente" : "Window Cleaning — Coming Soon"}
-              </span>
-              <span className="inline-flex items-center gap-1.5 rounded-full bg-muted px-3 py-1 text-sm font-medium text-muted-foreground">
-                <Grid3X3 className="h-3.5 w-3.5" />
-                {language === "es" ? "Limpieza de mallas — Próximamente" : "Screen Cleaning — Coming Soon"}
-              </span>
-              <span className="inline-flex items-center gap-1.5 rounded-full bg-muted px-3 py-1 text-sm font-medium text-muted-foreground">
-                <Sparkles className="h-3.5 w-3.5" />
-                {language === "es" ? "Luces navideñas — Próximamente" : "Christmas Lights — Coming Soon"}
-              </span>
-              <span className="inline-flex items-center gap-1.5 rounded-full bg-muted px-3 py-1 text-sm font-medium text-muted-foreground">
-                <Droplet className="h-3.5 w-3.5" />
-                {language === "es" ? "Lavado suave — Próximamente" : "Soft Wash — Coming Soon"}
-              </span>
-              <span className="inline-flex items-center gap-1.5 rounded-full bg-muted px-3 py-1 text-sm font-medium text-muted-foreground">
-                <Wrench className="h-3.5 w-3.5" />
-                {language === "es" ? "Plomería — Próximamente" : "Plumbing — Coming Soon"}
-              </span>
-              <span className="inline-flex items-center gap-1.5 rounded-full bg-muted px-3 py-1 text-sm font-medium text-muted-foreground">
-                <Zap className="h-3.5 w-3.5" />
-                {language === "es" ? "Electricidad — Próximamente" : "Electrical — Coming Soon"}
-              </span>
-              <span className="inline-flex items-center gap-1.5 rounded-full bg-muted px-3 py-1 text-sm font-medium text-muted-foreground">
-                <Droplets className="h-3.5 w-3.5" />
-                {language === "es" ? "Mitigación de daños por agua — Próximamente" : "Water Damage — Coming Soon"}
-              </span>
-              <span className="inline-flex items-center gap-1.5 rounded-full bg-muted px-3 py-1 text-sm font-medium text-muted-foreground">
-                <HardHat className="h-3.5 w-3.5" />
-                {language === "es" ? "Reparaciones handyman — Próximamente" : "Handyman — Coming Soon"}
-              </span>
-              <span className="inline-flex items-center gap-1.5 rounded-full bg-muted px-3 py-1 text-sm font-medium text-muted-foreground">
-                <Layers className="h-3.5 w-3.5" />
-                {language === "es" ? "Sellado de techos — Próximamente" : "Roof Sealing — Coming Soon"}
-              </span>
-              <span className="inline-flex items-center gap-1.5 rounded-full bg-muted px-3 py-1 text-sm font-medium text-muted-foreground">
-                <Shield className="h-3.5 w-3.5" />
-                {language === "es" ? "Mitigación de plomo y asbesto — Próximamente" : "Lead & Asbestos — Coming Soon"}
-              </span>
-            </div>
+
           </div>
         </div>
       </section>
@@ -539,10 +491,6 @@ export default function ServicesIndexPage() {
 
                   {/* Content */}
                   <div className={isReversed ? 'lg:order-1' : ''}>
-                    <div className={`inline-flex items-center gap-2 rounded-full ${service.bgColor} px-3 py-1 text-sm font-medium ${service.textColor} mb-4`}>
-                      <Icon className="h-4 w-4" />
-                      {language === "es" ? "Servicio Activo" : "Active Service"}
-                    </div>
                     <h2 className="text-3xl md:text-4xl font-bold text-foreground mb-4">
                       {name}
                     </h2>
@@ -563,76 +511,19 @@ export default function ServicesIndexPage() {
                     {/* CTA */}
                     <div className="flex flex-col sm:flex-row gap-3">
                       <Button asChild size="lg" className={service.buttonColor}>
-                        <Link href={service.href}>
-                          {language === "es" ? "Saber Más" : "Learn More"}
+                        <Link href="/contact">
+                          {language === "es" ? "Solicitar cotización" : "Request an estimate"}
                           <ArrowRight className="ml-2 h-4 w-4" />
                         </Link>
                       </Button>
                       <Button asChild size="lg" variant="outline">
-                        <Link href="/contact">
-                          {language === "es" ? "Cotización Gratis" : "Free Quote"}
+                        <Link href={service.href}>
+                          {language === "es" ? "Conocer el servicio" : "View service"}
                         </Link>
                       </Button>
                     </div>
                   </div>
                 </div>
-              )
-            })}
-          </div>
-        </div>
-      </section>
-
-      {/* Coming Soon Services */}
-      <section className="py-16 md:py-24 bg-muted/30">
-        <div className="container mx-auto px-4">
-          <div className="text-center mb-12">
-            <span className="inline-flex items-center gap-2 rounded-full bg-muted px-4 py-2 text-sm font-medium text-muted-foreground mb-4">
-              <Clock className="h-4 w-4" />
-              {language === "es" ? "Próximamente" : "Coming Soon"}
-            </span>
-            <h2 className="text-3xl md:text-4xl font-bold text-foreground">
-              {language === "es" ? "Servicios en Desarrollo" : "Services in Development"}
-            </h2>
-          </div>
-
-          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {comingSoonServices.map((service) => {
-              const Icon = service.icon
-              const name = language === "es" ? service.nameEs : service.nameEn
-              const description = language === "es" ? service.descriptionEs : service.descriptionEn
-              const features = language === "es" ? service.featuresEs : service.featuresEn
-
-              return (
-                <Link 
-                  key={service.id}
-                  href={service.href}
-                  className="bg-card border rounded-2xl p-6 shadow-sm hover:shadow-md transition-shadow"
-                >
-                  <div className="flex items-start gap-4 mb-4">
-                    <div className={`flex h-12 w-12 items-center justify-center rounded-full ${service.bgColor} shrink-0`}>
-                      <Icon className={`h-6 w-6 ${service.textColor}`} />
-                    </div>
-                    <div>
-                      <span className={`inline-flex items-center gap-1.5 rounded-full ${service.badgeColor} px-2.5 py-0.5 text-xs font-medium text-white mb-2`}>
-                        {language === "es" ? "Próximamente" : "Coming Soon"}
-                      </span>
-                      <h3 className="text-xl font-bold text-foreground">
-                        {name}
-                      </h3>
-                    </div>
-                  </div>
-                  <p className="text-muted-foreground mb-4 text-pretty">
-                    {description}
-                  </p>
-                  <div className="space-y-2">
-                    {features.map((feature, i) => (
-                      <div key={i} className="flex items-center gap-2">
-                        <CheckCircle2 className={`h-4 w-4 shrink-0 ${service.textColor}`} />
-                        <span className="text-sm text-muted-foreground">{feature}</span>
-                      </div>
-                    ))}
-                  </div>
-                </Link>
               )
             })}
           </div>
@@ -651,7 +542,7 @@ export default function ServicesIndexPage() {
             <p className="text-lg text-primary-foreground/80 mb-8 text-pretty">
               {language === "es"
                 ? "Dinos qué necesita tu propiedad y te orientamos con una cotización para nuestros servicios activos: control de plagas, lavado a presión y limpieza de paneles solares."
-                : "Tell us what your property needs and we'll guide you with a quote for our active services: pest control, pressure wash and solar panel cleaning."}
+                : "Tell us what your property needs and we'll guide you with a quote for our active services: pest control, pressure washing and solar panel cleaning."}
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Button asChild size="lg" className="bg-accent text-accent-foreground hover:bg-accent/90 font-semibold">
@@ -666,6 +557,73 @@ export default function ServicesIndexPage() {
                   {company.phone}
                 </a>
               </Button>
+            </div>
+          </div>
+        </div>
+      </section>
+      {/* Coming Soon Accordion */}
+      <section className="py-10 bg-muted/20 border-t border-border/50">
+        <div className="container mx-auto px-4 max-w-5xl">
+          <button
+            type="button"
+            aria-expanded={accordionOpen}
+            aria-controls="coming-soon-panel"
+            onClick={() => setAccordionOpen(prev => !prev)}
+            className="w-full flex items-center justify-between gap-4 text-left rounded-xl border border-border/60 bg-card px-6 py-4 shadow-sm focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary transition-colors hover:bg-muted/40"
+            style={{ ['--reduce-motion' as string]: 'none' }}
+          >
+            <div className="flex items-center gap-3">
+              <Clock className="h-5 w-5 text-muted-foreground shrink-0" />
+              <div>
+                <p className="font-semibold text-foreground text-base">
+                  {language === "es" ? "Servicios que estamos preparando" : "Services we are preparing"}
+                </p>
+                <p className="text-sm text-muted-foreground mt-0.5">
+                  {language === "es"
+                    ? "Conoce los próximos servicios de Acosta Property Services."
+                    : "Discover the upcoming services from Acosta Property Services."}
+                </p>
+              </div>
+            </div>
+            <ChevronDown
+              className="h-5 w-5 text-muted-foreground shrink-0 transition-transform duration-200 motion-reduce:transition-none"
+              style={{ transform: accordionOpen ? 'rotate(180deg)' : 'rotate(0deg)' }}
+              aria-hidden="true"
+            />
+          </button>
+
+          <div
+            id="coming-soon-panel"
+            role="region"
+            aria-labelledby="coming-soon-trigger"
+            hidden={!accordionOpen}
+            className="mt-4"
+          >
+            <div className="grid md:grid-cols-2 gap-3">
+              {comingSoonServices.map((service) => {
+                const Icon = service.icon
+                const name = language === "es" ? service.nameEs : service.nameEn
+                const description = language === "es" ? service.descriptionEs : service.descriptionEn
+                return (
+                  <div
+                    key={service.id}
+                    className="flex items-start gap-3 rounded-lg border border-border/50 bg-background px-4 py-3"
+                  >
+                    <div className={`flex h-9 w-9 items-center justify-center rounded-full ${service.bgColor} shrink-0 mt-0.5`}>
+                      <Icon className={`h-4 w-4 ${service.textColor}`} />
+                    </div>
+                    <div className="min-w-0">
+                      <div className="flex items-center gap-2 flex-wrap">
+                        <span className="font-medium text-sm text-foreground">{name}</span>
+                        <span className="inline-flex items-center rounded-full bg-muted px-2 py-0.5 text-xs font-medium text-muted-foreground">
+                          {language === "es" ? "Próximamente" : "Coming Soon"}
+                        </span>
+                      </div>
+                      <p className="text-xs text-muted-foreground mt-0.5 text-pretty leading-relaxed">{description}</p>
+                    </div>
+                  </div>
+                )
+              })}
             </div>
           </div>
         </div>

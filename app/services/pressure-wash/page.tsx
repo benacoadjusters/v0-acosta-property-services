@@ -52,7 +52,7 @@ export default function PressureWashPage() {
       icon: Home,
       nameEs: "Residencial",
       nameEn: "Residential",
-      descriptionEs: "Pressure wash para casas, apartamentos y propiedades residenciales.",
+      descriptionEs: "Lavado a presión para hogares, apartamentos y propiedades residenciales.",
       descriptionEn: "Pressure wash for houses, apartments and residential properties."
     },
     {
@@ -105,7 +105,7 @@ export default function PressureWashPage() {
               <div className="relative aspect-[4/3] rounded-2xl overflow-hidden shadow-2xl">
                 <Image
                   src="/images/pressure-wash.png"
-                  alt={language === "es" ? "Pressure Wash Profesional" : "Professional Pressure Wash"}
+                  alt={language === "es" ? "Lavado a presión profesional" : "Professional Pressure Wash"}
                   fill
                   className="object-cover object-center"
                   priority
@@ -144,7 +144,7 @@ export default function PressureWashPage() {
         <div className="container mx-auto px-4">
           <div className="text-center max-w-3xl mx-auto mb-12">
             <h2 className="text-3xl md:text-4xl font-bold text-foreground mb-4">
-              {language === "es" ? "Servicios para Todo Tipo de Propiedad" : "Services for All Property Types"}
+              {language === "es" ? "Servicios para todo tipo de propiedad" : "Services for All Property Types"}
             </h2>
           </div>
 
@@ -190,7 +190,7 @@ export default function PressureWashPage() {
             </h2>
             <p className="text-lg text-white/80 mb-8 text-pretty">
               {language === "es" 
-                ? "Solicita una cotización para pressure wash según el tipo de superficie y nivel de suciedad."
+                ? "Solicita una cotización para lavado a presión según el tipo de superficie y nivel de suciedad."
                 : "Request a quote for pressure wash based on surface type and dirt level."}
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">

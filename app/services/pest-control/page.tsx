@@ -32,8 +32,8 @@ export default function ServicesPage() {
               </h1>
               <p className="text-xl text-muted-foreground text-pretty mb-6">
                 {language === "es"
-                  ? "Eliminamos plagas en tu hogar o negocio de forma segura, rápida y sin complicaciones. Tú no tienes que saber nada de plagas, para eso estamos nosotros."
-                  : "We eliminate pests from your home or business safely, quickly and hassle-free. You don't need to know anything about pests — that's what we're here for."}
+                  ? "Ayudamos a controlar y reducir las plagas en hogares y negocios mediante tratamientos seleccionados según la inspección, el tipo de plaga y las condiciones de la propiedad."
+                  : "We help control and reduce pests in homes and businesses through treatments selected based on the inspection, pest type, and property conditions."}
               </p>
               <div className="flex flex-wrap gap-3">
                 <span className="inline-flex items-center gap-2 bg-primary/10 border border-primary/20 text-primary px-4 py-2 rounded-full text-sm font-medium">
@@ -46,7 +46,7 @@ export default function ServicesPage() {
                 </span>
                 <span className="inline-flex items-center gap-2 bg-primary/10 border border-primary/20 text-primary px-4 py-2 rounded-full text-sm font-medium">
                   <CheckCircle2 className="h-4 w-4" />
-                  {language === "es" ? "Licencia profesional certificada" : "Certified professional license"}
+                  {language === "es" ? "Servicio realizado por personal debidamente certificado" : "Service performed by properly certified staff"}
                 </span>
               </div>
             </div>
@@ -141,12 +141,12 @@ export default function ServicesPage() {
               const name = language === "es" ? pest.nameEs : pest.nameEn
               const methodLabels = pest.methods.map(m => {
                 if (language === "es") {
-                  if (m === "fumigation") return "Fumigación"
+                  if (m === "fumigation") return "Tratamiento profesional"
                   if (m === "traps") return "Trampas"
                   if (m === "biological") return "Control Biológico"
                   return m
                 } else {
-                  if (m === "fumigation") return "Fumigation"
+                  if (m === "fumigation") return "Professional treatment"
                   if (m === "traps") return "Traps"
                   if (m === "biological") return "Biological Control"
                   return m
@@ -200,12 +200,12 @@ export default function ServicesPage() {
                 <DialogDescription>
                   {selectedPest.methods.map(m => {
                     if (language === "es") {
-                      if (m === "fumigation") return "Fumigación"
+                      if (m === "fumigation") return "Tratamiento profesional"
                       if (m === "traps") return "Trampas"
                       if (m === "biological") return "Control Biológico"
                       return m
                     } else {
-                      if (m === "fumigation") return "Fumigation"
+                      if (m === "fumigation") return "Professional treatment"
                       if (m === "traps") return "Traps"
                       if (m === "biological") return "Biological Control"
                       return m
@@ -273,8 +273,8 @@ export default function ServicesPage() {
                     {selectedPest.methods.map(method => {
                       const MethodIcon = method === "fumigation" ? SprayCan : method === "biological" ? Leaf : Target
                       const label = language === "es"
-                        ? (method === "fumigation" ? "Fumigación" : method === "biological" ? "Control Biológico" : "Trampas")
-                        : (method === "fumigation" ? "Fumigation" : method === "biological" ? "Biological Control" : "Traps")
+                        ? (method === "fumigation" ? "Tratamiento profesional" : method === "biological" ? "Control Biológico" : "Trampas")
+                        : (method === "fumigation" ? "Professional treatment" : method === "biological" ? "Biological Control" : "Traps")
                       return (
                         <span 
                           key={method}
@@ -290,7 +290,7 @@ export default function ServicesPage() {
                 
                 <Button asChild className="w-full">
                   <Link href="/contact">
-                    {language === "es" ? "Solicitar Tratamiento" : "Request Treatment"}
+                    {language === "es" ? "Solicitar tratamiento" : "Request Treatment"}
                     <ArrowRight className="ml-2 h-4 w-4" />
                   </Link>
                 </Button>
@@ -306,7 +306,7 @@ export default function ServicesPage() {
         <div className="container mx-auto px-4">
           <div className="text-center max-w-2xl mx-auto mb-12">
             <h2 className="text-3xl md:text-4xl font-bold text-foreground mb-4">
-              {language === "es" ? "Servicios Por Tipo de Propiedad" : "Services by Property Type"}
+              {language === "es" ? "Servicios por tipo de propiedad" : "Services by Property Type"}
             </h2>
           </div>
 

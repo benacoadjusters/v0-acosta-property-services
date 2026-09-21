@@ -85,7 +85,7 @@ export default function PlumbingPage() {
                     {language === "es" ? "En desarrollo" : "In development"}
                   </span>
                   <h3 className="text-xl font-bold text-foreground">
-                    {language === "es" ? "Plomería Profesional" : "Professional Plumbing"}
+                    {language === "es" ? "Plomería profesional" : "Professional Plumbing"}
                   </h3>
                 </div>
               </div>
@@ -109,7 +109,7 @@ export default function PlumbingPage() {
 
               <Button asChild size="lg" variant="outline" className="w-full">
                 <Link href="/contact">
-                  {language === "es" ? "Consultar Disponibilidad" : "Check Availability"}
+                  {language === "es" ? "Consultar disponibilidad" : "Check Availability"}
                   <ArrowRight className="ml-2 h-4 w-4" />
                 </Link>
               </Button>
@@ -129,13 +129,13 @@ export default function PlumbingPage() {
             </h2>
             <p className="text-muted-foreground mb-8">
               {language === "es"
-                ? "Actualmente ofrecemos control de plagas, jardinería, limpieza, window cleaning, screen cleaning, Christmas lights, pressure wash, soft wash y solar panel cleaning."
+                ? "Actualmente ofrecemos control de plagas, jardinería, limpieza, limpieza de ventanas, limpieza de mallas, luces navideñas, lavado a presión, lavado suave y limpieza de paneles solares."
                 : "We currently offer pest control, landscaping, cleaning, window cleaning, screen cleaning, Christmas lights, pressure wash, soft wash and solar panel cleaning."}
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Button asChild size="lg">
                 <Link href="/services">
-                  {language === "es" ? "Ver Todos los Servicios" : "View All Services"}
+                  {language === "es" ? "Ver todos los servicios" : "View All Services"}
                   <ArrowRight className="ml-2 h-5 w-5" />
                 </Link>
               </Button>

@@ -21,11 +21,11 @@ export default function ElectricalPage() {
       nameEn: "Electrical panels"
     },
     {
-      nameEs: "Breakers",
+      nameEs: "Interruptores automáticos",
       nameEn: "Breakers"
     },
     {
-      nameEs: "Tomacorrientes y switches",
+      nameEs: "Tomacorrientes e interruptores",
       nameEn: "Outlets and switches"
     },
     {
@@ -53,7 +53,7 @@ export default function ElectricalPage() {
             </h1>
             <p className="text-xl text-muted-foreground text-pretty mb-8">
               {language === "es"
-                ? "Servicio próximamente disponible para paneles, breakers, tomacorrientes, iluminación y abanicos de techo."
+                ? "Servicio próximamente disponible para paneles, interruptores automáticos, tomacorrientes, iluminación y abanicos de techo."
                 : "Service coming soon for panels, breakers, outlets, lighting and ceiling fans."}
             </p>
           </div>
@@ -85,7 +85,7 @@ export default function ElectricalPage() {
                     {language === "es" ? "En desarrollo" : "In development"}
                   </span>
                   <h3 className="text-xl font-bold text-foreground">
-                    {language === "es" ? "Servicios Eléctricos" : "Electrical Services"}
+                    {language === "es" ? "Servicios eléctricos" : "Electrical Services"}
                   </h3>
                 </div>
               </div>
@@ -129,13 +129,13 @@ export default function ElectricalPage() {
             </h2>
             <p className="text-muted-foreground mb-8">
               {language === "es"
-                ? "Actualmente ofrecemos control de plagas, jardinería, limpieza, window cleaning, screen cleaning, Christmas lights, pressure wash, soft wash y solar panel cleaning."
+                ? "Actualmente ofrecemos control de plagas, jardinería, limpieza, limpieza de ventanas, limpieza de mallas, luces navideñas, lavado a presión, lavado suave y limpieza de paneles solares."
                 : "We currently offer pest control, landscaping, cleaning, window cleaning, screen cleaning, Christmas lights, pressure wash, soft wash and solar panel cleaning."}
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Button asChild size="lg">
                 <Link href="/services">
-                  {language === "es" ? "Ver Todos los Servicios" : "View All Services"}
+                  {language === "es" ? "Ver todos los servicios" : "View All Services"}
                   <ArrowRight className="ml-2 h-5 w-5" />
                 </Link>
               </Button>

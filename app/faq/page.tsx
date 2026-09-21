@@ -18,7 +18,7 @@ const faqData = {
     general: [
       {
         question: "¿Qué servicios ofrecen actualmente?",
-        answer: "Actualmente ofrecemos 3 servicios activos: control de plagas, lavado a presión (pressure wash) y limpieza de paneles solares (solar panel cleaning) para hogares, negocios y propiedades comerciales en Puerto Rico. Próximamente añadiremos jardinería, limpieza, window cleaning, screen cleaning, luces navideñas y soft wash."
+        answer: "Actualmente ofrecemos 3 servicios activos: control de plagas, lavado a presión y limpieza de paneles solares para hogares, negocios y propiedades comerciales en Puerto Rico. Próximamente añadiremos jardinería, limpieza, limpieza de ventanas, limpieza de mallas, luces navideñas y lavado suave."
       },
       {
         question: "¿Ofrecen cotizaciones gratis?",
@@ -189,15 +189,15 @@ const faqData = {
     ],
     pressureWash: [
       {
-        question: "¿Qué superficies pueden limpiar con pressure wash?",
+        question: "¿Qué superficies pueden limpiar con lavado a presión?",
         answer: "Limpiamos concreto, aceras, entradas de auto, patios, paredes exteriores, cercas y otras superficies resistentes."
       },
       {
-        question: "¿Puede dañar mi propiedad el pressure wash?",
-        answer: "Usamos la presión adecuada para cada superficie. Para materiales delicados recomendamos soft wash."
+        question: "¿Puede dañar mi propiedad el lavado a presión?",
+        answer: "Usamos la presión adecuada para cada superficie. Para materiales delicados recomendamos lavado suave."
       },
       {
-        question: "¿Cada cuánto debo hacer pressure wash?",
+        question: "¿Cada cuánto debo hacer lavado a presión?",
         answer: "Depende de la exposición y condiciones de tu propiedad. Generalmente 1-2 veces al año mantiene las superficies limpias."
       }
     ],
@@ -207,8 +207,8 @@ const faqData = {
         answer: "Soft wash es una técnica de limpieza a baja presión con soluciones especializadas, ideal para techos, siding, estuco y superficies delicadas."
       },
       {
-        question: "¿Por qué soft wash en lugar de pressure wash?",
-        answer: "Soft wash es más seguro para materiales que pueden dañarse con alta presión, como tejas, madera y pintura."
+        question: "¿Por qué lavado suave en lugar de lavado a presión?",
+        answer: "El lavado suave es más seguro para materiales que pueden dañarse con alta presión, como tejas, madera y pintura."
       },
       {
         question: "¿El soft wash remueve moho y hongos?",
@@ -232,7 +232,7 @@ const faqData = {
     comingSoon: [
       {
         question: "¿Qué servicios estarán disponibles próximamente?",
-        answer: "Próximamente estaremos activando jardinería, limpieza, limpieza de ventanas (window cleaning), limpieza de mallas (screen cleaning), luces navideñas (Christmas lights) y lavado suave (soft wash). También trabajamos en servicios de plomería, electricidad, mitigación de daños por agua, reparaciones handyman, sellado de techos y mitigación de plomo y asbesto."
+        answer: "Próximamente estaremos activando jardinería, limpieza, limpieza de ventanas, limpieza de mallas, luces navideñas y lavado suave. También trabajamos en servicios de plomería, electricidad, mitigación de daños por agua, reparaciones y mantenimiento general, sellado de techos y mitigación de plomo y asbesto."
       },
       {
         question: "¿Puedo pedir información sobre un servicio próximamente?",

@@ -41,7 +41,7 @@ export const faqs = {
       },
       {
         question: "¿Necesito salir de mi casa durante el tratamiento?",
-        answer: "Depende del tipo de tratamiento. Para fumigaciones y ciertos tratamientos, es obligatorio desalojar la propiedad por el tiempo que indique el técnico. El re-ingreso antes del tiempo indicado es bajo tu propia responsabilidad y puede ser peligroso para tu salud. Te proporcionaremos instrucciones escritas específicas que debes seguir estrictamente. Personas con condiciones respiratorias, mujeres embarazadas, ancianos y niños deben informarnos antes del tratamiento para tomar precauciones adicionales."
+        answer: "Depende del tipo de tratamiento. Para ciertos tratamientos profesionales, es obligatorio desalojar la propiedad por el tiempo que indique el técnico. El re-ingreso antes del tiempo indicado es bajo tu propia responsabilidad y puede ser peligroso para tu salud. Te proporcionaremos instrucciones escritas específicas que debes seguir estrictamente. Personas con condiciones respiratorias, mujeres embarazadas, ancianos y niños deben informarnos antes del tratamiento para tomar precauciones adicionales."
       },
       {
         question: "¿Qué pasa si veo plagas después del tratamiento?",
@@ -56,7 +56,7 @@ export const faqs = {
       },
       {
         question: "¿Cuánto tiempo toma el tratamiento de termitas?",
-        answer: "El tiempo varía según el método utilizado, tamaño de la propiedad y severidad de la infestación. El tratamiento inicial puede tomar de 1 a varios días. Sin embargo, la eliminación completa de colonias de termitas es un proceso que puede tomar semanas o meses, y requiere monitoreo continuo. Un solo tratamiento no garantiza eliminación permanente; las termitas pueden reinfestar si no se mantiene un programa de prevención."
+        answer: "El tiempo varía según el método utilizado, tamaño de la propiedad y severidad de la infestación. El tratamiento inicial puede tomar de 1 a varios días. Sin embargo, el control y reducción de la población de colonias de termitas es un proceso que puede tomar semanas o meses, y requiere monitoreo continuo. Un tratamiento no garantiza control permanente; las termitas pueden reinfestar si no se mantiene un programa de prevención."
       },
       {
         question: "¿El seguro del hogar cubre los tratamientos de termitas?",
@@ -210,7 +210,7 @@ export const faqs = {
       },
       {
         question: "Do I need to leave my home during treatment?",
-        answer: "It depends on the treatment type. For fumigations and certain treatments, vacating the property for the time indicated by the technician is mandatory. Re-entry before the indicated time is at your own risk and may be hazardous to your health. We will provide specific written instructions that you must strictly follow. People with respiratory conditions, pregnant women, elderly, and children should inform us before treatment so additional precautions can be taken."
+        answer: "It depends on the treatment type. For certain professional treatments, vacating the property for the time indicated by the technician is mandatory. Re-entry before the indicated time is at your own risk and may be hazardous to your health. We will provide specific written instructions that you must strictly follow. People with respiratory conditions, pregnant women, elderly, and children should inform us before treatment so additional precautions can be taken."
       },
       {
         question: "What if I see pests after treatment?",
@@ -225,7 +225,7 @@ export const faqs = {
       },
       {
         question: "How long does termite treatment take?",
-        answer: "Time varies based on the method used, property size, and infestation severity. Initial treatment may take from 1 to several days. However, complete elimination of termite colonies is a process that may take weeks or months and requires continuous monitoring. A single treatment does not guarantee permanent elimination; termites may reinfest if a prevention program is not maintained."
+        answer: "Time varies based on the method used, property size, and infestation severity. Initial treatment may take from 1 to several days. However, the control and reduction of termite colony populations is a process that may take weeks or months and requires continuous monitoring. A treatment does not guarantee permanent control; termites may reinfest if a prevention program is not maintained."
       },
       {
         question: "Are termite treatments covered by homeowner's insurance?",

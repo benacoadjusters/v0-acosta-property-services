@@ -124,11 +124,11 @@ export default function ContactPage() {
                     <div className="text-sm space-y-1">
                       <div className="flex justify-between gap-4">
                         <span>{t.contact.weekdays}:</span>
-                        <span className="font-medium">8AM-6PM</span>
+                        <span className="font-medium">{language === "es" ? "8:00 a.\u00a0m.–6:00 p.\u00a0m." : "8:00 AM–6:00 PM"}</span>
                       </div>
                       <div className="flex justify-between gap-4">
                         <span>{t.contact.saturday}:</span>
-                        <span className="font-medium">9AM-2PM</span>
+                        <span className="font-medium">{language === "es" ? "9:00 a.\u00a0m.–2:00 p.\u00a0m." : "9:00 AM–2:00 PM"}</span>
                       </div>
                       <div className="flex justify-between gap-4 text-muted-foreground">
                         <span>{t.contact.sunday}:</span>
